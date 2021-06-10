@@ -56,7 +56,7 @@
         <div>
             <p>De punt-, lijn- of gebiedsobjecten om te bufferen. De invoerlagen moeten in een geprojecteerd co&ouml;rdinaatsysteem of de processing ruimtelijke referentie moet worden ingesteld op een geprojecteerd co&ouml;rdinaatsysteem met behulp van de  <b>Analysis Environments</b>.
             </p>
-            <p>Naast het kiezen van een laag van uw kaart, kunt u kiezen voor  <b>Blader door lagen</b> aan de onderkant van de drop-downlijst om in uw content te zoeken naar een groot gedeeld databestand of objectlaag.
+            <p>Naast het kiezen van een laag van uw kaart, kunt u kiezen voor  <b>Analyselaag kiezen</b> onderaan de keuzelijst om in uw inhoud te zoeken naar een big data file share-dataset of objectlaag. U kunt optioneel een filter toepassen op uw invoerlaag of een selectie toepassen op gehoste lagen die aan uw kaart zijn toegevoegd. Filters en selecties worden alleen toegepast voor analyse. 
             </p>
         </div>
     </div>
@@ -70,7 +70,7 @@
                     </li>
                     <li>Geef een veld op de invoerlaag op die de afstandswaarde bevat. U kunt een stringveld of een numeriek veld gebruiken. Indien een lineaire eenheid niet is gedefinieerd, worden de eenheden van de ruimtelijke referentie gebruikt. Als u gebruik maakt van een geografisch co&ouml;rdinaatsysteem, wordt aangenomen dat het veld zonder eenheden in meters is. 
                     </li>
-                    <li>Bouw een expressie met meerdere velden en wiskundige operators.
+                    <li>Bouw een expressie met meerdere velden en wiskundige operators. Bijvoorbeeld, om 10 keer de waarde van een veld met de naam  <i>wind_speed</i> te bufferen, voegt u de expressie <i>$feature[&quot;wind_speed&quot;] x 10</i>toe.
                     </li>
                 </ul>
                 
@@ -124,7 +124,7 @@
         <div><h2>Statistieken toevoegen (optioneel)</h2></div>
         <hr/>
         <div>
-            <p> U kunt statistieken berekenen over objecten die zijn samengevat. Op numerieke velden kunt u het volgende berekenen:
+            <p>U kunt statistieken berekenen over objecten die zijn samengevat. U kunt het volgende berekenen in numerieke velden: 
                 <ul>
                     <li>Count&mdash;Berekent het aantal non-nulwaarden. Kan gebruikt worden op numerieke velden of strings. De telling van [nul, 0, 2] is 2.
                     </li>
@@ -138,21 +138,21 @@
                     </li>
                     <li>Bereik&mdash;Het bereik van een numeriek veld. Dit wordt berekend als de minimumwaarden afgetrokken van de maximumwaarde. Het bereik van [0, nul, 1] is 1. Het bereik van [nul, 4] is 0.
                     </li>
-                    <li>Variantie&mdash;De variantie van een numeriek veld in een track. De variantie van [1] is nul. De variantie van [null, 1,1,1] is 1.
+                    <li>Variantie&mdash;De variantie van een numeriek veld in een track. De variantie van [1] is nul. De variantie van [null, 1,0,1,1] is 0,25.
                     </li>
-                    <li>Standaarddeviatie&mdash;De standaarddeviatie van een numeriek veld. De standaarddeviatie van [1] is nul. De standaarddeviatie van [null, 1,1,1] is 1. 
+                    <li>Standaarddeviatie&mdash;De standaarddeviatie van een numeriek veld. De standaarddeviatie van [1] is nul. De standaarddeviatie van [null, 1,0,1,1] is 0,5. 
                     </li>
                 </ul>
                 
             </p>
-            <p>Op stringvelden kunt u het volgende berekenen:
+            <p>U kunt het volgende berekenen in stringvelden:
                 <ul>
                     <li>Telling&mdash;Het aantal non-nul strings.
                     </li>
                     <li>Elke&mdash;Deze statistiek is een willekeurig voorbeeld van een stringwaarde in het gespecificeerde veld.
                     </li>
                 </ul>
-                Alle statistieken worden berekend op nonnull waarden. De resultaatlaag zal een nieuw veld bevatten voor elke statistiek die wordt berekend. Andere statistieken kunnen worden toegevoegd door een attribuut en statistiek te kiezen. 
+                Alle statistieken worden berekend op nonnull waarden. De resultaatlaag zal een nieuw veld bevatten voor elke statistiek die wordt berekend. Andere statistieken kunnen worden toegevoegd door een attribuut en statistiek te kiezen.
             </p>
         </div>
     </div>
@@ -160,16 +160,16 @@
         <div><h2>Kies een ArcGIS Data Store om de resultaten in op te slaan</h2></div>
         <hr/>
         <div>
-            <p>GeoAnalytische resultaten worden opgeslagen in een ArcGIS Data Store en weergegeven als een objectlaag in  Portal for ArcGIS. In de meeste gevallen moeten de resultaten worden opgeslagen in de spatiotemporele data-opslag en dit is de standaardinstelling. In sommige gevallen is het opslaan van de resultaten in de relationele data-opslag een goede optie. Hier volgen redenen waarom u resultaten zou willen opslaan in een relationele data-opslag: 
+            <p>GeoAnalytic-resultaten worden opgeslagen in een datastore en weergegeven als een objectlaag in  Portal for ArcGIS. In de meeste gevallen moeten de resultaten worden opgeslagen in de spatiotemporele data store en dit is de standaardinstelling. In sommige gevallen is het opslaan van de resultaten in de relationele data-opslag een goede optie. Hier volgen redenen waarom u resultaten zou willen opslaan in een relationele data-opslag: 
                 <ul>
-                    <li>Om uw resultaten te gebruiken voor portaalsamenwerking.
+                    <li>U kunt resultaten gebruiken in portaal-tot-portaal samenwerking.
                     </li>
                     <li>Om synchronisatiemogelijkheden met uw resultaten mogelijk te maken.
                     </li>
                 </ul>
                 
             </p>
-            <p>U moet geen gebruik maken van een relationele data-opslag als u verwacht dat uw GeoAnalytics-resultaten toenemen en u wilt profiteren van de mogelijkheden van de spatiotemporele big data-opslag om grote hoeveelheden gegevens te verwerken. 
+            <p>U moet geen gebruik maken van een relationele data-opslag als u verwacht dat uw GeoAnalytics-resultaten toenemen en u wilt profiteren van de mogelijkheden van de spatiotemporele big data-opslag om grote hoeveelheden gegevens te verwerken.
             </p>
         </div>
     </div>
@@ -177,9 +177,9 @@
         <div><h2>Resultaat laagnaam</h2></div>
         <hr/>
         <div>
-            <p> Dit is de naam van de kaartlaag die in <b>Mijn Content</b> wordt gemaakt en aan de kaart wordt toegevoegd.  De standaardnaam is gebaseerd op de toolnaam en de naam van de invoerlaag. Als de laag al bestaat, zal de tool falen.
+            <p> De naam van de laag die wordt gemaakt. Als u naar een ArcGIS Data Store schrijft, worden uw resultaten opgeslagen in  <b>Mijn Content</b> en toegevoegd aan de kaart. Als u naar een big data file share schrijft, worden uw resultaten opgeslagen in de big data file share en toegevoegd aan het bijhorende manifest. Ze zullen niet worden toegevoegd aan de kaart. De standaardnaam is gebaseerd op de toolnaam en de naam van de invoerlaag. Als de laag al bestaat, zal de tool falen.
             </p>
-            <p>Als u in de vervolgkeuzelijst  <b>Resultaat opslaan</b> gebruikt, kunt u de naam opgeven van een map in <b>Mijn Content</b> waarin het resultaat wordt opgeslagen.
+            <p>Wanneer u schrijft naar  ArcGIS Data Store (relationele of spatiotemporele big datastore) met behulp van de vervolgkeuzelijst  <b>Resultaat opslaan in</b>, kunt u de naam van een map opgeven in <b>Mijn Content</b>, waar het resultaat wordt opgeslagen.
             </p>
         </div>
     </div>

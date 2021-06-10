@@ -1,4 +1,4 @@
-// COPYRIGHT © 2017 Esri
+// COPYRIGHT © 2021 Esri
 //
 // All rights reserved under the copyright laws of the United States
 // and applicable international laws, treaties, and conventions.
@@ -20,6 +20,6 @@
 //
 // email: contracts@esri.com
 //
-// See http://js.arcgis.com/3.21/esri/copyright.txt for details.
+// See http://js.arcgis.com/3.36/esri/copyright.txt for details.
 
-define(["dojo/_base/array","dojo/Deferred","dojo/when"],function(e,r,n){"use strict";var o=e.forEach;return function(e){function t(e,r){f[r]=e,c.progress([e,r]),0===--l&&c.resolve(f)}var a,s;e instanceof Array?s=e:e&&"object"==typeof e&&(a=e);var f,i=[];if(a){s=[];for(var u in a)Object.hasOwnProperty.call(a,u)&&(i.push(u),s.push(a[u]));f={}}else s&&(f=[]);if(!s||!s.length)return(new r).resolve(f);var c=new r;c.promise.always(function(){f=i=null});var l=s.length;return o(s,function(e,r){a||i.push(r),n(e,function(e){t(e,i[r])},function(e){t(e,i[r])})}),c.promise}});
+define(["dojo/_base/array","dojo/Deferred","dojo/when"],(function(e,r,n){"use strict";var o=e.forEach;return function(e){var i,t,s;e instanceof Array?t=e:e&&"object"==typeof e&&(i=e);var f=[];if(i){for(var u in t=[],i)Object.hasOwnProperty.call(i,u)&&(f.push(u),t.push(i[u]));s={}}else t&&(s=[]);if(!t||!t.length)return(new r).resolve(s);var a=new r;a.promise.always((function(){s=f=null}));var l=t.length;function c(e,r){s[r]=e,a.progress([e,r]),0==--l&&a.resolve(s)}return o(t,(function(e,r){i||f.push(r),n(e,(function(e){a.isFulfilled()||c(e,f[r])}),(function(e){a.isFulfilled()||c(e,f[r])}))})),a.promise}}));

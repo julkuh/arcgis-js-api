@@ -44,7 +44,7 @@
         <p>La caja de herramientas An&aacute;lisis de entidades contiene una serie de herramientas a las que puede acceder y utilizar.  Estas tareas se clasifican en categor&iacute;as; las categor&iacute;as son simplemente agrupaciones l&oacute;gicas y no afectan en modo alguno a la forma en que accede o utiliza las tareas.
         </p>
     </div>
-    <div id="SummarizeDataCategory" class="regularsize">
+    <div id="SummarizeDataCategory" class="largesize">
         <h2>Resumir datos</h2>
         <hr/>
         <p>Estas herramientas calculan recuentos totales, longitudes, &aacute;reas y estad&iacute;sticas descriptivas b&aacute;sicas de entidades y sus atributos que se encuentran dentro de &aacute;reas o cerca de otras entidades.
@@ -56,6 +56,8 @@
                 <li> <b>Resumir cerca de</b> calcula estad&iacute;sticas de entidades y sus atributos que se encuentran dentro de una distancia especificada.
                 </li>
                 <li> <b>Resumir dentro de</b> calcula estad&iacute;sticas de entidades de &aacute;rea y atributos que se superponen entre s&iacute;.
+                </li>
+                <li> <b>Resumir centro y dispersi&oacute;n</b> calcula entidades centrales y distribuciones direccionales.
                 </li>
             </ul>
             
@@ -89,9 +91,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Entidades de unión</h2></td>
+                    <td><h2>Unir entidades</h2></td>
                     <td>
-                    <img src="../images/GUID-2230E8B8-8956-475C-9C65-68A92359BB48-web.png" class="titleImage" alt="Entidades de uni&oacute;n">
+                    <img src="../images/GUID-2230E8B8-8956-475C-9C65-68A92359BB48-web.png" class="titleImage" alt="Unir entidades">
                     </td>
                 </tr></tbody>
             </table>
@@ -146,9 +148,35 @@
 <hr/>
             <p>Busca &aacute;reas (y porciones de &aacute;reas) que se superponen entre dos capas y calcula estad&iacute;sticas sobre la superposici&oacute;n. Por ejemplo:
                 <ul>
-                    <li>Dada una capa de &aacute;reas de cuencas hidrogr&aacute;ficas y una capa de &aacute;reas de uso del suelo, calcula la superficie total del tipo de uso del suelo para cada cuenca hidrogr&aacute;fica. 
+                    <li>Dada una capa de &aacute;reas de cuencas hidrogr&aacute;ficas y una capa de &aacute;reas de uso del suelo, calcule la superficie total del tipo de uso del suelo para cada cuenca hidrogr&aacute;fica. 
                     </li>
-                    <li>Dada una capa de parcelas de un condado y una capa de l&iacute;mites de ciudades, resume el valor medio de las parcelas vac&iacute;as en cada ciudad.
+                    <li>Dada una capa de parcelas de un condado y una capa de l&iacute;mites de ciudades, resuma el valor medio de las parcelas vac&iacute;as en cada ciudad.
+                    </li>
+                </ul>
+                
+            </p>
+            <br/>
+        </div>
+        <div id="SummarizeCenterAndDispersionTool" class="largesize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Resumir centro y dispersión</h2></td>
+                    <td>
+                    <img src="../images/GUID-D2D53CA4-8A35-4163-9765-77BF232E569D-web.png" class="titleImage" alt="Resumir centro y dispersi&oacute;n">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Esta herramienta utiliza entidades de puntos para calcular la entidad central, el centro medio, el centro mediano o la elipse (distribuci&oacute;n). Por ejemplo:
+                <ul>
+                    <li>Considerando una capa de centroides de grupo de bloques, la entidad central ponderada por poblaci&oacute;n podr&iacute;a usarse para identificar qu&eacute; parte de la ciudad es la m&aacute;s accesible para un centro de artes esc&eacute;nicas.
+                    </li>
+                    <li>Considerando una capa de observaciones del alce dentro de un parque durante varios a&ntilde;os, el centro medio puede utilizarse para ver d&oacute;nde se congrega el alce en verano y en invierno.
+                    </li>
+                    <li>Considerando una capa de incidentes de incendios, el centro mediano puede utilizarse para medir la tendencia central de los incendios sin verse afectada por valores at&iacute;picos perif&eacute;ricos.
+                    </li>
+                    <li>Considerando una capa de muestras de pozos de aguas subterr&aacute;neas, la elipse se puede utilizar para determinar el modo de propagaci&oacute;n de un contaminante.
                     </li>
                 </ul>
                 
@@ -185,7 +213,7 @@
     <div id="FindLocationsCategory" class="largesize">
         <h2>Buscar ubicaciones</h2>
         <hr/>
-        <p>Estas herramientas se usan para identificar las &aacute;reas que cumplen diversos criterios especificados. Estos criterios se pueden basar en consultas de atributos (por ejemplo, parcelas que est&aacute;n vac&iacute;as) y consultas espaciales (por ejemplo, a 1 km de un r&iacute;o). Las &aacute;reas encontradas se pueden seleccionar en las entidades existentes (como las parcelas de tierra existentes) o se pueden crear nuevas entidades en las que se cumplen todos los requisitos.
+        <p>Estas herramientas se utilizan para identificar o crear las entidades que cumplen los criterios que usted especifica.  El tipo de criterio depender&aacute; de la herramienta que utilice. Por ejemplo, sus criterios pueden basarse en consultas espaciales o de atributos, &aacute;reas visibles desde una altura concreta, &aacute;reas aguas abajo para puntos de drenaje espec&iacute;ficos o tiempo de conducci&oacute;n en unas condiciones de tr&aacute;fico determinadas.
             <ul>
                 <li> <b>Elegir mejores instalaciones</b> selecciona las mejores ubicaciones para las instalaciones asignando ubicaciones que tienen demanda para esas instalaciones de forma que se satisfaga un determinado objetivo.
                 </li>
@@ -195,16 +223,18 @@
                 </li>
                 <li> <b>Derivar nuevas ubicaciones</b> crea nuevas &aacute;reas a partir de ubicaciones del &aacute;rea de estudio que cumplen una serie de criterios.
                 </li>
+                <li> <b>Buscar centroides</b> busca el centro representativo (centroide) de las entidades de entrada.
+                </li>
                 <li> <b>Buscar ubicaciones existentes</b> busca &aacute;reas de una capa que cumplen una serie de criterios.
                 </li>
                 <li> <b>Buscar ubicaciones similares</b> busca las ubicaciones m&aacute;s similares a una o varias ubicaciones de referencia en funci&oacute;n de los criterios especificados.
                 </li>
-                <li class="PortalOnly"> <b>Geocodificar ubicaciones de tabla</b> convierte direcciones de una tabla en coordenadas.
+                <li class="PortalOnly"> <b>Geocodificar ubicaciones de tabla</b> convierte direcciones de una tabla en coordenadas. 
                 </li>
                 <li> <b>Trazado aguas abajo</b> determina las rutas de flujo en direcci&oacute;n aguas abajo y desde las ubicaciones especificadas.
                 </li>
             </ul>
-             
+            
         </p>
         <p> 
         </p>
@@ -269,6 +299,21 @@
             </p>
             <br/>
         </div>
+        <div id="FindCentroidsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Buscar centroides</h2></td>
+                    <td>
+                    <img src="../images/GUID-75D9AF75-68C3-48BF-8062-D5499BD06978-web.png" class="titleImage" alt="Buscar centroides">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Busca el centro representativo (centroide) de cada entidad multipunto, de l&iacute;nea o de &aacute;rea que sea de entrada.
+            </p>
+            <br/>
+        </div>
         <div id="FindExistingLocationsTool" class="regularsize">
             <table class="toolSummaryTable">
                 <thead></thead>
@@ -318,9 +363,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Trazado aguas abajo</h2></td>
+                    <td><h2>Seguimiento aguas abajo</h2></td>
                     <td>
-                    <img src="../images/GUID-1700E318-5F2D-4D4D-BF21-B12663F5D3C4-web.png" class="titleImage" alt="Trazado aguas abajo">
+                    <img src="../images/GUID-1700E318-5F2D-4D4D-BF21-B12663F5D3C4-web.png" class="titleImage" alt="Seguimiento aguas abajo">
                     </td>
                 </tr></tbody>
             </table>
@@ -329,16 +374,18 @@
             </p>
             <br/>
         </div>
-    <div id="AnalyzePatternsCategory" class="regularsize">
+    <div id="AnalyzePatternsCategory" class="largesize">
         <h2>Analizar patrones</h2>
         <hr/>
-        <p>Estas herramientas te ayudan a identificar, cuantificar y visualizar los patrones espaciales de tus datos.  
+        <p>Estas herramientas le ayudan a identificar, cuantificar y visualizar los patrones espaciales de sus datos.  
             <ul>
                 <li> <b>Calcular densidad</b> toma cantidades conocidas de un fen&oacute;meno y las expande a trav&eacute;s del mapa.
                 </li>
                 <li> <b>Buscar puntos calientes</b> identifica clustering estad&iacute;sticamente significativo en el patr&oacute;n espacial de sus datos.
                 </li>
                 <li> <b>Buscar valores at&iacute;picos</b> determina si hay alg&uacute;n valor at&iacute;pico estad&iacute;sticamente significativo en el patr&oacute;n espacial de sus datos.
+                </li>
+                <li> <b>Buscar cl&uacute;steres de puntos</b> encuentra cl&uacute;steres de entidades de punto dentro del ruido colindante en funci&oacute;n de su distribuci&oacute;n espacial.
                 </li>
                 <li> <b>Interpolar puntos</b> predice los valores de las nuevas ubicaciones en funci&oacute;n de las mediciones encontradas en un conjunto de puntos.
                 </li>
@@ -387,7 +434,22 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Esta herramienta crea un mapa que muestra agrupaciones y valores at&iacute;picos espaciales estad&iacute;sticamente significativos presentes en sus datos. Utilice esta herramienta para identificar entidades que tenga valores considerablemente distintos a sus vecinos.  Por ejemplo, puede utilizar esta herramienta para buscar patrones de gasto an&oacute;malos, determinar d&oacute;nde est&aacute;n los l&iacute;mites m&aacute;s marcados entre riqueza y pobreza en un &aacute;rea de estudio o determinar si hay condados en Estados Unidos con una esperanza de vida excepcionalmente baja en comparaci&oacute;n con sus vecinos.
+            <p>Esta herramienta crea un mapa que muestra agrupaciones y valores at&iacute;picos espaciales estad&iacute;sticamente significativos presentes en sus datos. Utilice esta herramienta para identificar entidades que tengan valores considerablemente distintos a sus vecinos.  Por ejemplo, puede utilizar esta herramienta para buscar patrones de gasto an&oacute;malos, determinar d&oacute;nde est&aacute;n los l&iacute;mites m&aacute;s marcados entre riqueza y pobreza en un &aacute;rea de estudio o determinar si hay condados en Estados Unidos con una esperanza de vida excepcionalmente baja en comparaci&oacute;n con sus vecinos.
+            </p>
+            <br/>
+        </div>
+        <div id="FindPointClustersTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Buscar clústeres de puntos</h2></td>
+                    <td>
+                    <img src="../images/GUID-025ADB1C-E4BF-4C8D-A35F-1D0E222627F9-web.png" class="titleImage" alt="Buscar cl&uacute;steres de puntos">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Esta herramienta detecta en qu&eacute; &aacute;reas existen concentraciones de puntos y d&oacute;nde est&aacute;n separados por &aacute;reas vac&iacute;as o con escasos puntos. Los puntos que no forman parte de un cl&uacute;ster se etiquetan como ruido.
             </p>
             <br/>
         </div>
@@ -474,7 +536,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Crear áreas de tiempo de recorrido</h2></td>
+                    <td><h2>Crear áreas de tiempo de recorrido por vehículo</h2></td>
                     <td>
                     <img src="../images/GUID-6F629A09-768D-4C04-88A4-AB941811ADE9-web.png" class="titleImage" alt="Crear &aacute;reas de tiempo de recorrido">
                     </td>
@@ -531,18 +593,17 @@
     <div id="ManageDataCategory" class="regularsize">
         <h2>Administrar datos</h2>
         <hr/>
-        <p>Estas herramientas se usan para la administraci&oacute;n diaria de los datos geogr&aacute;ficos y para combinar datos antes del an&aacute;lisis.
-  
+        <p>Estas herramientas se usan para la administraci&oacute;n diaria de los datos geogr&aacute;ficos y para combinar datos antes del an&aacute;lisis.  
             <ul>
-                <li> <b>Disolver l&iacute;mites</b> combina &aacute;reas que comparten un l&iacute;mite com&uacute;n y un valor de atributo com&uacute;n.
+                <li> <b>Disolver l&iacute;mites</b> fusiona &aacute;reas que comparten un l&iacute;mite y un valor de atributo.
                 </li>
-                <li> <b>Extraer datos</b> crea nuevos datasets mediante la extracci&oacute;n de entidades de los datos existentes.
+                <li> <b>Extraer datos</b> crea datasets nuevos extrayendo entidades de los datos existentes.
                 </li>
-                <li> <b>Fusionar capas</b> copia todas las entidades de dos o m&aacute;s capas existentes en una nueva capa.
+                <li> <b>Generar teselaciones</b> crea teselaciones seg&uacute;n la extensi&oacute;n de los datos.
                 </li>
-                <li> <b>Superponer capas</b> combina dos o m&aacute;s capas en una sola capa.
- 
-La superposici&oacute;n equivale a examinar una pila de mapas y crear un &uacute;nico mapa que contenga toda la informaci&oacute;n encontrada en la pila.
+                <li> <b>Fusionar capas</b> copia todas las entidades de dos o m&aacute;s capas existentes en una capa nueva.
+                </li>
+                <li> <b>Superponer capas</b> combina dos o m&aacute;s capas en una sola capa.  La superposici&oacute;n equivale a examinar una pila de mapas y crear un &uacute;nico mapa que contenga toda la informaci&oacute;n encontrada en la pila.
                 </li>
             </ul>
             
@@ -559,20 +620,13 @@ La superposici&oacute;n equivale a examinar una pila de mapas y crear un &uacute
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Las &aacute;reas que se superponen o comparten un l&iacute;mite se fusionan para formar una sola &aacute;rea.
-    
+            <p>Las &aacute;reas que se superponen o comparten un l&iacute;mite se fusionan para formar una sola &aacute;rea.    
             </p>
-            <p>Puedes controlar qu&eacute; l&iacute;mites est&aacute;n fusionados especificando un campo.
- 
-Por ejemplo, si tienes una capa de condados y cada condado tiene un atributo  <i>State_Name</i>, puedes disolver los l&iacute;mites utilizando el atributo <i>State_Name</i>.
- 
-Los condados adyacentes se fusionar&aacute;n si tienen el mismo valor de <i>State_Name</i>.
- 
-El resultado final es una capa de l&iacute;mites de estado.
+            <p>Puede controlar qu&eacute; l&iacute;mites est&aacute;n fusionados especificando un campo. Por ejemplo, si tiene una capa de condados y cada condado tiene un atributo  <i>State_Name</i>, puede disolver los l&iacute;mites utilizando el atributo <i>State_Name</i>.  Los condados adyacentes se fusionar&aacute;n si tienen el mismo valor de <i>State_Name</i>.  El resultado final es una capa de l&iacute;mites de estado.
             </p>
             <br/>
         </div>
-        <div id="ExtractDataTool" class="smallsize">
+        <div id="ExtractDataTool" class="regularsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
@@ -584,9 +638,24 @@ El resultado final es una capa de l&iacute;mites de estado.
             </table>
 <hr/>
             <p>Crea un archivo zip, CSV o KMZ de datos a partir de las capas y de un &aacute;rea de inter&eacute;s especificada.
-
             </p>
+            <p>La herramienta Extraer datos requiere al menos una capa que se pueda exportar. Si no hay ninguna capa exportable en  Map Viewer Classic, la herramienta se deshabilitar&aacute;. </p>
             <p> 
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateTessellationsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Generar teselaciones</h2></td>
+                    <td>
+                    <img src="../images/GUID-7D6FF8CB-15F3-4051-9C57-46E6C3708788-web.png" class="titleImage" alt="Generar teselaciones">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Genera teselaciones en un &aacute;rea de estudio siguiendo una forma y un tama&ntilde;o espec&iacute;ficos.
             </p>
             <br/>
         </div>
@@ -602,15 +671,10 @@ El resultado final es una capa de l&iacute;mites de estado.
             </table>
 <hr/>
             <p>Copia las entidades de dos o m&aacute;s capas existentes en una nueva capa. Por ejemplo:
-
                 <ul>
-                    <li>Tengo tres capas correspondientes a Inglaterra, Gales y Escocia y quiero obtener una &uacute;nica capa de Gran Breta&ntilde;a.
- 
+                    <li>Tengo tres capas correspondientes a Inglaterra, Gales y Escocia y quiero obtener una &uacute;nica capa de Gran Breta&ntilde;a. 
                     </li>
-                    <li>Tengo doce capas y cada una de ellas contiene informaci&oacute;n de parcelas de municipios contiguos.
- 
-Deseo unirlas en una sola capa y conservar &uacute;nicamente los atributos que tienen el mismo nombre y el mismo tipo en las doce capas de entrada.
-
+                    <li>Tengo doce capas y cada una de ellas contiene informaci&oacute;n de parcelas de municipios contiguos. Deseo unirlas en una sola capa y conservar &uacute;nicamente los atributos que tienen el mismo nombre y el mismo tipo en las doce capas de entrada.
                     </li>
                 </ul>
                 
@@ -628,26 +692,17 @@ Deseo unirlas en una sola capa y conservar &uacute;nicamente los atributos que t
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Superposici&oacute;n combina dos o m&aacute;s capas en una sola capa.
- 
-La superposici&oacute;n equivale a examinar una pila de mapas y crear un &uacute;nico mapa que contenga toda la informaci&oacute;n encontrada en la pila. Por ejemplo:
-
+            <p>Superposici&oacute;n combina dos o m&aacute;s capas en una sola capa. La superposici&oacute;n equivale a examinar una pila de mapas y crear un &uacute;nico mapa que contenga toda la informaci&oacute;n encontrada en la pila. Por ejemplo:
                 <ul>
-                    <li>&iquest;Qu&eacute; parcelas se encuentran dentro de la zona con probabilidad de inundaci&oacute;n del 1% anual?
- 
-(Dentro de es solo otra forma de decir encima de.)
-
+                    <li>&iquest;Qu&eacute; parcelas est&aacute;n dentro de las llanuras aluviales de 100 a&ntilde;os? (&quot;Dentro de&quot; es solo otra forma de decir &quot;encima de&quot;.)
                           
                     </li>
-                    <li>&iquest;Qu&eacute; carreteras est&aacute;n en qu&eacute; condados?
-
+                    <li>&iquest;Qu&eacute; carreteras est&aacute;n dentro de qu&eacute; condados?
                     </li>
-                    <li>&iquest;Qu&eacute; uso del suelo se superpone a qu&eacute; tipo de suelo?
-
+                    <li>&iquest;Qu&eacute; uso del suelo est&aacute; encima de qu&eacute; tipo de suelo?
                          
                     </li>
-                    <li>&iquest;Qu&eacute; pozos se encuentran en bases militares abandonadas?
-
+                    <li>&iquest;Qu&eacute; pozos est&aacute;n dentro de bases militares abandonadas?
                     </li>
                 </ul>
                 

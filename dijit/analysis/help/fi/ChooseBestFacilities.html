@@ -132,10 +132,10 @@
         </div>
     </div>
     <div id="measure">
-        <div><h2>Mittaus</h2></div>
+        <div><h2>Mitta</h2></div>
         <hr/>
         <div>
-            <p>Kun muissakin ty&ouml;kaluissa, joiden analyysiin liittyy matkustusta, voit m&auml;&auml;ritt&auml;&auml;, mitataanko matka et&auml;isyyten&auml; vai aikana. Lis&auml;ksi voit valita eri matkustustavoista, kuten k&auml;velyajan, ajoajan, ajoet&auml;isyyden maaseudulla jne. Organisaatiosi p&auml;&auml;k&auml;ytt&auml;j&auml; m&auml;&auml;ritt&auml;&auml; k&auml;ytett&auml;viss&auml; olevat matkustustavat. Kun k&auml;yt&auml;t ajoaikaa tai ajoaikaa maaseudulla, voit vaihtoehtoisesti ottaa huomioon my&ouml;s tietyn viikonp&auml;iv&auml;n ja kellonajan liikenteen. 
+            <p>Kun muissakin ty&ouml;kaluissa, joiden analyysiin liittyy matkustusta, voit m&auml;&auml;ritt&auml;&auml;, mitataanko matka et&auml;isyyten&auml; vai aikana. Lis&auml;ksi voit valita eri matkustustavoista, kuten k&auml;velyajan, ajoajan, ajoet&auml;isyyden maaseudulla jne. Organisaatiosi p&auml;&auml;k&auml;ytt&auml;j&auml; m&auml;&auml;ritt&auml;&auml; k&auml;ytett&auml;viss&auml; olevat matkustustavat. Kun k&auml;yt&auml;t  <b>ajoaikaa</b>, <b>ajoaikaa maaseudulla</b> tai <b>rekkaliikenteen aikaa</b>, voit vaihtoehtoisesti ottaa huomioon my&ouml;s tietyn viikonp&auml;iv&auml;n ja kellonajan liikenteen.
             </p>
             <p> Jotta voit allokoida tarkkaan kysynt&auml;sijainnit palveluihin, m&auml;&auml;rit&auml;, matkustetaanko palveluista kysynt&auml;sijainteihin (esimerkiksi paloasemilta koteihin) vai kysynt&auml;sijainneista palveluihin (kuten asiakkaat kirjastoihin). Valitse parhaat palvelut -ty&ouml;kalu ottaa huomioon matkustussuunnan yksisuuntaisilla kaduilla, voitko k&auml;&auml;nty&auml; kadulta toiselle, onko risteyksiss&auml; vasemmalle k&auml;&auml;ntyminen kielletty jne. Lis&auml;ksi se ottaa huomioon sen, suuntautuuko matkustus palvelusta kysynt&auml;sijainteihin vai kysynt&auml;sijainneista palveluihin.
             </p>
@@ -153,7 +153,7 @@
             </p>
             <p>Jos tavoitteen tyyppi on  <b>Kata kysynn&auml;n prosenttiosuus</b>, sinun on m&auml;&auml;ritett&auml;v&auml; kysynn&auml;n v&auml;himm&auml;isprosenttiosuus, joka palvelujen on t&auml;ytett&auml;v&auml;.
             </p>
-            <p class="OnlineOnly">Kartasta valittavan karttatason lis&auml;ksi voit valita alareunan avattavasta luettelosta  <b>Valitse maailmankartaston analyysikarttataso</b>- tai <b>Valitse analyysikarttataso</b> -vaihtoehdon. T&auml;m&auml; vaihtoehto avaa gallerian, joka sis&auml;lt&auml;&auml; monissa analyyseissa hy&ouml;dyllisten karttatasojen kokoelman. 
+            <p>Kartasta valittavan karttatason lis&auml;ksi voit valita alareunan avattavasta luettelosta  <b>Valitse analyysikarttataso</b> -vaihtoehdon. T&auml;m&auml; vaihtoehto avaa gallerian, jossa voit selata ja valita aineistoryhmi&auml; erilaisista l&auml;hteist&auml; ja k&auml;ytt&auml;&auml; niit&auml; analyysissa. 
             </p>
             <p>Ty&ouml;kalu voi n&auml;ytt&auml;&auml; enint&auml;&auml;n 10&nbsp;000 kohdetta kussakin kysynt&auml;sijaintien karttatasossa.
             </p>  
@@ -185,11 +185,25 @@
             </p>  
         </div>
     </div>
+    <div id="barrier_layers">
+        <div><h2>Valitse esteiden karttatasot</h2></div>
+        <hr/>
+        <div>
+            <p> V&auml;hint&auml;&auml;n yksi kohde, joka toimii tilap&auml;isen&auml; rajoitteena (esteen&auml;) liikuttaessa taustalla olevilla kaduilla. Voit m&auml;&auml;ritt&auml;&auml; esteet k&auml;ytt&auml;m&auml;ll&auml; piste-, viiva- tai aluekohteita.
+            </p>
+            <p>Piste-este voi mallintaa kaatunutta puuta, onnettomuutta, katkennutta s&auml;hk&ouml;linjaa tai mit&auml; tahansa, joka katkaisee liikenteen tietyss&auml; kohdassa kadulla. Liikkuminen on sallittu kadulla, mutta ei esteen kohdalla. Voit m&auml;&auml;ritt&auml;&auml; enint&auml;&auml;n 250 piste-esteen&auml; toimivaa kohdetta.
+            </p>
+            <p>Viivaeste est&auml;&auml; liikkumisen miss&auml; tahansa kohdassa, jossa este riste&auml;&auml; katujen kanssa. Esimerkiksi paraatia tai mielenosoitusta, joka est&auml;&auml; liikenteen usealla katuosuudella, voidaan mallintaa viivaesteell&auml;. Jos kaikkien viivaesteiden leikkaamien katukohteiden m&auml;&auml;r&auml; on yli 500, ty&ouml;kalu palauttaa virheen.
+            </p>
+            <p>Alue-este est&auml;&auml; liikkumisen miss&auml; tahansa kohdassa, jossa alue riste&auml;&auml; katujen kanssa. T&auml;m&auml;ntyyppist&auml; estett&auml; voi k&auml;ytt&auml;&auml; esimerkiksi sellaisten katuverkoston kattavien tulvien mallintamiseen, jotka tekev&auml;t liikkumisen kaduilla mahdottomaksi. Jos kaikkien alue-esteiden leikkaamien katukohteiden m&auml;&auml;r&auml; on yli 2 000, ty&ouml;kalu palauttaa virheen.
+            </p>
+        </div>
+    </div>
     <div id="outputName">
         <div><h2>Tulostason nimi</h2></div>
         <hr/>
         <div>
-            <p>Sen tason nimi, joka luodaan kohtaan  <b>Oma sis&auml;lt&ouml;</b> ja joka lis&auml;t&auml;&auml;n karttaan. Oletusnimi perustuu ty&ouml;kalun nimeen ja l&auml;ht&ouml;karttatason nimeen. Jos taso on jo luotu, sinua pyydet&auml;&auml;n antamaan toinen nimi.
+            <p>Karttatason nimi, joka luodaan  <b>Oma sis&auml;lt&ouml;</b> -kohtaan ja lis&auml;t&auml;&auml;n karttaan.  Oletusnimi perustuu ty&ouml;kalun nimeen ja l&auml;ht&ouml;karttatason nimeen. Jos karttatason nimi on jo luotu, sinua pyydet&auml;&auml;n antamaan toinen nimi.
             </p>
             <p>Tuloskarttataso sis&auml;lt&auml;&auml; karttatason kullekin seuraavalle: palvelut, joille on m&auml;&auml;ritetty kysynt&auml;&auml;, kysynt&auml;sijainnit, jotka on allokoitu palveluihin, ja allokointiviivat, jotka yhdist&auml;v&auml;t kysynt&auml;sijainnit niihin m&auml;&auml;ritettyihin palveluihin. Allokointiviivat piirret&auml;&auml;n suorina viivoina. Palvelun ja kysynt&auml;sijainnin v&auml;linen matkustusaika tai matkaet&auml;isyys perustuu kuitenkin aina m&auml;&auml;ritettyyn matkustustapaan eik&auml; suoraan et&auml;isyyteen.
             </p>

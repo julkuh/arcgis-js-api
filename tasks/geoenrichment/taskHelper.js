@@ -1,4 +1,4 @@
-// COPYRIGHT © 2017 Esri
+// COPYRIGHT © 2021 Esri
 //
 // All rights reserved under the copyright laws of the United States
 // and applicable international laws, treaties, and conventions.
@@ -20,6 +20,6 @@
 //
 // email: contracts@esri.com
 //
-// See http://js.arcgis.com/3.21/esri/copyright.txt for details.
+// See http://js.arcgis.com/3.36/esri/copyright.txt for details.
 
-define(["dojo/_base/lang","dojo/Deferred","dojo/json","../../request","../../extend"],function(e,n,r,t,o){var s={invokeMethod:function(e,r,o,s,i,c){function u(){f&&(f.cancel(),f=null)}function a(n){var r;try{r=s(n)}catch(t){return void l(t)}d&&d.resolve(r),e[i](r)}function l(n){d&&d.reject(n),e[c](n)}var f=null,d=null;d=new n(u);try{var v=o?o():{};v.f="json",e.token&&(v.token=e.token),f=t({url:e.url+r,content:v,handleAs:"json"}),f.then(a,l)}catch(h){l(h)}return d.promise},jsonToRest:function(n){var t={};for(var o in n)e.isString(n[o])?t[o]=n[o]:t[o]=r.stringify(n[o]);return t},throwEmptyResponse:function(){throw new Error("Geoenrichment service returned empty response")}};return o("esri.tasks.geoenrichment.taskHelper",s),s});
+define(["dojo/_base/lang","dojo/Deferred","dojo/json","../../request","../../extend"],(function(n,e,r,t,o){var i={invokeMethod:function(n,r,o,i,s,c){var u=null,a=null;function l(e){a&&a.reject(e),n[c](e)}a=new e((function(){u&&(u.cancel(),u=null)}));try{var f=o?o():{};f.f="json",n.token&&(f.token=n.token),(u=t({url:n.url+r,content:f,handleAs:"json"})).then((function(e){var r;try{r=i(e)}catch(n){return void l(n)}a&&a.resolve(r),n[s](r)}),l)}catch(n){l(n)}return a.promise},jsonToRest:function(e,t){for(var o in t=n.mixin({},t),e)n.isString(e[o])?t[o]=e[o]:t[o]=r.stringify(e[o]);return t},throwEmptyResponse:function(){throw new Error("Geoenrichment service returned empty response")}};return o("esri.tasks.geoenrichment.taskHelper",i),i}));

@@ -44,16 +44,16 @@
         <h2>Unisci layer</h2><p/>
         <h2><img src="../images/GUID-BDDD6517-4EE7-4EEC-AE15-15DD9B709131-web.png" alt="Unisci layer"></h2>
         <hr/>
-    <p>Questo strumento consente di copiare feature da due layer in un nuovo layer. Tutti i layer da unire devono contenere gli stessi tipi di feature (punti, linee o aree). &Egrave; possibile controllare la modalit&agrave; in cui i campi vengono uniti e copiati dai layer di input. Ad esempio:
+    <p>Questo strumento consente di copiare feature da due layer in un nuovo layer. Tutti i layer da unire devono contenere gli stessi tipi di feature (punti, linee o aree). &Egrave; possibile controllare in che modo i campi dei layer di input vengono uniti e copiati, ad esempio:
         <ul>
-            <li>Si dispone di tre per Inghilterra, Galles e Scozia e si desidera ottenere un singolo layer della Gran Bretagna. 
+            <li>Si ha un layer di scuole pubbliche e un layer di scuole private e si desidera disporre di un unico layer che mostri tutte le scuole.
             </li>
-            <li>Si dispone di 12 layer, ciascuno dei quali contiene informazioni relative a lotti di municipalit&agrave; contigue. Si desidera unirli in un unico layer, mantenendo solo i campi con lo stesso nome e tipo nei 12 layer di input.
+            <li>Si dispone di due layer, ciascuno dei quali contiene informazioni relative municipalit&agrave; contigue. Si desidera unirli in un singolo layer, mantenendo solo i campi con lo stesso nome e tipo di dati per i due layer di input.
             </li>
         </ul>
         
     </p>
-    <p>Se si seleziona  <b>Usa estensione mappa corrente</b>, vengono unite solo le feature visibili all'interno dell'estensione mappa corrente.  Se questa opzione &egrave; deselezionata, vengono unite tutte le feature presenti in entrambi i layer, anche se esterne all'estensione mappa corrente.
+    <p>Se si seleziona  <b>Usa estensione mappa corrente</b>, vengono unite solo le feature visibili all'interno dell'estensione mappa corrente. Se questa opzione &egrave; deselezionata, vengono unite tutte le feature presenti in entrambi i layer, anche se esterne all'estensione mappa corrente.
     </p>
     </div>
     <!--Parameter divs for each param-->
@@ -62,7 +62,6 @@
         <hr/>
         <div>
             <p>Le feature puntuali, di linea o area da unire con il layer specificato di seguito.
-
             </p>
         </div>
     </div>
@@ -84,10 +83,12 @@
                     </li>
                     <li> <b>Rimuovi</b>: il campo viene rimosso dalla posizione di output.
                     </li>
-                    <li> <b>Abbina</b>: i nomi dei campi vengono resi equivalenti.  I valori del campo proveniente dal layer da unire vengono copiati nel campo di output corrispondente.
+                    <li> <b>Abbina</b>: i nomi dei campi vengono resi equivalenti. I valori del campo proveniente dal layer da unire vengono copiati nel campo di output corrispondente.
                     </li>
                 </ul>
                 
+            </p>
+            <p>Se entrambi i layer contengono un campo con un tipo di dati e di nome identici, il contenuto di entrambi i campi verr&agrave; unificato in un unico campo con lo stesso nome. Questo processo non viene utilizzato per i campi in cui viene utilizzato  <b>Corrispondi</b> viene utilizzato nel parametro <b>Modifica campi di unione</b>.
             </p>
         </div>
     </div>
@@ -95,9 +96,9 @@
         <div><h2>Nome layer risultati</h2></div>
         <hr/>
         <div>
-            <p>Questo &egrave; il nome del layer che verr&agrave; creato in  <b>I miei contenuti</b> e aggiunto alla mappa.  Il nome predefinito &egrave; basato sul nome dello strumento e sul nome del layer di input. Se il layer esiste gi&agrave;, verr&agrave; chiesto di fornire un altro nome.
+            <p>Il nome del layer che verr&agrave; creato in  <b>I miei contenuti</b> e aggiunto alla mappa. Il nome predefinito &egrave; basato sul nome dello strumento e sul nome del layer di input. Se il nome del layer esiste gi&agrave;, verr&agrave; richiesto di fornire un altro nome.
             </p>
-            <p>Utilizzare la casella a discesa  <b>Salva risultato in</b> per specificare il nome di una cartella di <b>I miei contenuti</b> in cui salvare il risultato.
+            <p>Utilizzare il men&ugrave; a discesa  <b>Salva risultato in</b> per specificare il nome di una cartella in <b>I miei contenuti</b> in cui salvare il risultato.
             </p>
         </div>
     </div>

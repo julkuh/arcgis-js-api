@@ -61,7 +61,7 @@
         </ul>
         
     </p>
-    <p>Det kan hende du f&aring;r svar p&aring; sp&oslash;rsm&aring;lene dine bare ved &aring; visualisere utdataomr&aring;dene. Alternativt kan du utf&oslash;re ytterligere geografiske analyser ved hjelp av utdataomr&aring;dene. Hvis du for eksempel kj&oslash;rer Summer punkter ved hjelp av kj&oslash;retidsomr&aring;der med demografiske data, kan du finne ut hvilken potensiell butikkplassering som vil gi st&oslash;rst kundegrunnlag for den type virksomhet du driver. 
+    <p>Det kan hende du f&aring;r svar p&aring; sp&oslash;rsm&aring;lene dine bare ved &aring; visualisere utdataomr&aring;dene. Alternativt kan du utf&oslash;re ytterligere geografiske analyser ved hjelp av utdataomr&aring;dene. Hvis du for eksempel kj&oslash;rer Aggreger punkter ved hjelp av kj&oslash;retidsomr&aring;der med demografiske data, kan du finne ut hvilken potensiell butikkplassering som vil gi st&oslash;rst kundegrunnlag for den type virksomhet du driver. 
     </p>
     <p>
         <table>
@@ -84,7 +84,7 @@
         <div>
             <p>Punktgeoobjektene som omr&aring;dene beregnes rundt. Du kan velge hvordan omr&aring;dene beregnes basert p&aring; reisem&aring;te (bil, lastebil, til fots) og m&aring;ling (tid eller avstand).
             </p>
-            <p class="OnlineOnly">I tillegg til &aring; velge et lag fra kartet kan du velge  <b>Velg analyselag i levende atlas</b> eller <b>Velg analyselag</b> som du finner nederst i rullegardinlisten. Dette &aring;pner et galleri som inneholder en samling lag som vil v&aelig;re nyttige i mange analyser. 
+            <p>I tillegg til &aring; velge et lag fra kartet kan du velge  <b>Velg analyselag</b> som du finner nederst i rullegardinlisten. Dette alternativet &aring;pner et galleri der du kan bla til og velge datasett fra ulike kilder som du vil bruke i analysen. 
             </p>
             <p>Verkt&oslash;yet st&oslash;tter opptil 1&nbsp;000 geoobjekter i inndatalaget.
 
@@ -95,24 +95,25 @@
         <div><h2>Mål</h2></div>
         <hr/>
         <div>
-            <p>Velg reisem&aring;te (kj&oslash;ring, lastebil eller gange) og m&aring;ling (tid eller avstand). Tilgjengelige reisem&aring;ter defineres av administratoren i organisasjonen. N&aring;r du har valgt m&aring;te og m&aring;ling, skriver du inn en varighet p&aring; opptil  5 timer(300 minutter) eller  300 miles (482,80 kilometer). 
+            <p>Velg reisem&aring;te (kj&oslash;ring, lastebil eller gange) og m&aring;ling (tid eller avstand). Tilgjengelige reisem&aring;ter defineres av administratoren i organisasjonen. N&aring;r du har valgt m&aring;te og m&aring;ling, skriver du inn en varighet p&aring; opptil  5 timer(300 minutter) eller  482,80 miles (300 kilometer). 
             </p>
-            <p>N&aring;r du velger  <b>Kj&oslash;retid</b>, vises ulike alternativer for m&aring;ling av kj&oslash;retid.
+            <p>Reiseretning ( <b>Fra fasilitet</b> eller <b>Mot fasilitet</b>) kan p&aring;virke hvordan omr&aring;dene genereres. Opprett kj&oslash;retidsomr&aring;der tar hensyn til enveiskj&oslash;rte gater, steder der det ikke er lov &aring; snu og andre regler basert p&aring; reiseretning. Du m&aring; velge reiseretning basert p&aring; typen inndatalokasjoner og analysekonteksten. Kj&oslash;retidsomr&aring;det for en pizzarestaurant med hjemlevering b&oslash;r opprettes med reiseretning fra fasiliteten, mens kj&oslash;retidsomr&aring;det for et sykehus b&oslash;r opprettes med reiseretning mot fasiliteten.
+            </p>
+            <p>N&aring;r du velger  <b>Kj&oslash;retid</b>, <b>Kj&oslash;retid i rurale omr&aring;der</b> eller <b>Lastebiltid</b>, har du ulike alternativer for m&aring;ling av kj&oslash;retid.
                 <ul>
                     <li>
                         <p>Fjern merket for  <b>Bruk trafikk</b> for &aring; opprette kj&oslash;retidsomr&aring;der basert p&aring; faste hastigheter. Velg dette alternativet hvis du vil opprette et generelt kj&oslash;retidsomr&aring;de og ikke et som er beregnet ved hjelp av trafikkforholdene for et bestemt avreisetidspunkt.
                         </p>
                     </li>
                     <li>
-                        <p>Merk av for  <b>Bruk trafikk</b> for &aring; opprette kj&oslash;retidsomr&aring;der basert p&aring; et gitt starttidspunkt og skiftende  trafikkforhold. Hvis du i tillegg velger alternativet <b>Live traffic</b>, settes avreisetidspunktet fra inndatapunktene til gjeldende klokkeslett og gjeldende og estimerte hastigheter innhentes fra sensorer og feeder for &aring; opprette kj&oslash;retidsomr&aring;dene. De estimerte trafikkhastighetene beregnes basert p&aring; faktiske trafikkhastigheter, historiske hastigheter og gjeldende hendelser, for eksempel v&aelig;rforhold. Trafikkhastighetene beregnes 12 timer frem i tid, slik at du kan dra glidebryteren for &aring; angi avreisetidspunktet opptil 12 timer frem i tid.
-                        </p>
+                        <p>Merk av for  <b>Bruk trafikk</b> for &aring; opprette kj&oslash;retidsomr&aring;der basert p&aring; et gitt starttidspunkt og skiftende  trafikkforhold. Hvis du i tillegg velger alternativet <b>Live traffic</b>, settes avreisetidspunktet fra inndatapunktene til gjeldende klokkeslett og gjeldende og estimerte hastigheter innhentes fra sensorer og feeder for &aring; opprette kj&oslash;retidsomr&aring;dene. De estimerte trafikkhastighetene beregnes basert p&aring; faktiske trafikkhastigheter, historiske hastigheter og gjeldende hendelser, for eksempel v&aelig;rforhold. Trafikkhastighetene beregnes 4 timer frem i tid, slik at du kan dra glidebryteren for &aring; angi avreisetidspunktet opptil  4 timer frem i tid. </p>
                         <p>Bruk disse live trafikkinnstillingene til &aring; finne ut hvilke omr&aring;der du kan n&aring; hvis du kj&oslash;rer n&aring;, kj&oslash;rer om &eacute;n time og s&aring; videre.
                         </p>
                     </li>
                     <li>
                         <p>Hvis du merker av for  <b>Bruk trafikk</b> og velger <b>Trafikk basert p&aring; typiske forhold for</b> en dag eller et klokkeslett, oppretter verkt&oslash;yet kj&oslash;retidsomr&aring;der basert p&aring; historiske gjennomsnittshastigheter for hvert femte minutt i l&oslash;pet av en vanlig uke. Resultatet omfatter trafikk, men tar ikke hensyn til gjeldende trafikale forhold og hendelser, som kan avvike mye fra normen.
                         </p>
-                        <p>Du kan bruke disse historiske trafikkinnstillingen til &aring; stille sp&oslash;rsm&aring;l som &quot;Hvilke omr&aring;der vil jeg som regel kunne n&aring; hvis jeg kj&oslash;rer klokken 11.30 p&aring; en onsdag?&quot;. 
+                        <p>Du kan bruke disse historiske trafikkinnstillingene til &aring; stille sp&oslash;rsm&aring;l som &quot;Hvilke omr&aring;der vil jeg som regel kunne n&aring; hvis jeg kj&oslash;rer klokken 11.30 p&aring; en onsdag?&quot;. 
                         </p>
                         <p>Klokkeslettet du angir, refererer til tidssonen som inndatapunktene befinner seg i. S&aring; hvis du for eksempel velger klokkeslettet 8.00 og du har to punkter, ett i New York og ett i Los Angeles, genereres kj&oslash;retidsomr&aring;dene for henholdsvis klokken 8.00 EST og kl. 8.00 PST.
                         </p>
@@ -122,9 +123,25 @@
             </p>
             <p>Legg merke til at idet et kj&oslash;ret&oslash;y kj&oslash;rer fra et punkt, s&aring; g&aring;r tiden og trafikkforholdene endres. Verkt&oslash;yet for kj&oslash;retidsomr&aring;der tar hensyn til disse variasjonene n&aring;r du velger  <b>Kj&oslash;retid</b> og merker av for <b>Bruk trafikk</b>. Sistnevnte funksjon st&oslash;ttes imidlertid ikke i alle omr&aring;der. Klikk p&aring; koblingen <b>Vis tilgjengelighet</b> i verkt&oslash;yet for &aring; finne ut om funksjonen st&oslash;ttes i ditt studieomr&aring;de.
             </p>
-            <p> <b>G&aring;tid</b> og <b>Gangavstand</b> bruker en fast hastighet p&aring; 5 kilometer i timen (3,1 miles per time) og f&oslash;lger fortau og gangveier i tillegg til g&aring;gater (regler som angir biler, f.eks. enveiskj&oslash;rte gater, ignoreres). </p>
-            <p> <b>Lastebiltid</b> og <b>Lastebilavstand</b> bruker faste hastigheter og f&oslash;lger regler som gjelder tungtransport.
+            <p> <b>Lastebiltid</b> kan bruke dynamiske kj&oslash;rehastigheter basert p&aring; trafikken, men kun opptil den lovlige fartsgrensen for lastebil. Hvis for eksempel den dynamiske hastigheten for en vei basert p&aring; trafikk i sanntid er 100 km/t, men hastighetsgrensen for lastebiler p&aring; denne veien er 90 km/t, bruker beregningen 90 km/t for denne veien.
+            </p>
+            <p> <b>G&aring;tid</b> og <b>Gangavstand</b> bruker en fast hastighet p&aring; 3,1 kilometer i timen (5 miles per time) og f&oslash;lger fortau og gangveier i tillegg til g&aring;gater (regler som angir biler, f.eks. enveiskj&oslash;rte gater, ignoreres). </p>
+            <p> <b>Lastebilavstand</b>  bruker faste hastigheter og f&oslash;lger regler som gjelder for tyngre kj&oslash;ret&oslash;yer, mens <b>Kj&oslash;reavstand</b> og <b>Kj&oslash;reavstand i rurale omr&aring;der</b> bruker faste hastigheter og f&oslash;lger reglene som gjelder for personbiler.
             </p> 
+        </div>
+    </div>
+    <div id="barrier_layers">
+        <div><h2>Velg hindringslag</h2></div>
+        <hr/>
+        <div>
+            <p> Ett eller flere geoobjekter som fungerer som midlertidige begrensninger (hindringer) under transport p&aring; de underliggende gatene. Du kan angi hindringer ved hjelp av punkt-, linje- eller polygongeoobjekter.
+            </p>
+            <p>En punkthindring kan v&aelig;re et veltet tre, en ulykke, en kraftledning som er falt ned, eller andre ting som blokkerer trafikken helt p&aring; et bestemt sted i gaten. Gaten er ikke stengt for trafikk, men det er ikke mulig &aring; passere hindringen. Du kan angi opptil 250 geoobjekter som fungerer som punkthindringer.
+            </p>
+            <p>En linjehindring hindrer trafikk der hindringen krysser gatene. En linjehindring kan for eksempel v&aelig;re en parade eller protestmarsj som blokkerer trafikken over flere gatesegmenter. Hvis antallet gategeoobjekter som krysses av alle linjehindringene overstiger 500, returnerer verkt&oslash;yet en feil.
+            </p>
+            <p>En polygonhindring hindrer trafikk der polygonet krysser gatene. Denne typen hindring kan for eksempel brukes til &aring; modellere oversv&oslash;mte omr&aring;der som dekker deler av gatenettet og gj&oslash;r det umulig &aring; ferdes p&aring; gatene. Hvis antallet gategeoobjekter som krysses av alle polygonhindringene overstiger 2000, returnerer verkt&oslash;yet en feil.
+            </p>
         </div>
     </div>
     <div id="DissolveType">
@@ -144,13 +161,35 @@
             </p>
         </div>
     </div>
+    <div id="showHoles">
+        <div><h2>Vis områder som ikke kan nås, som hull</h2></div>
+        <hr/>
+        <div>
+            <p>Velg om utdataomr&aring;dene skal omfatte hull hvis noen av gatene ikke kan n&aring;s p&aring; grunn av  <b>M&aring;le</b>-tiden eller -avstanden eller p&aring; grunn av begrensninger som skyldes reisem&aring;ten.
+            </p>
+            <p>Kj&oslash;retidsomr&aring;der som opprettes ved hjelp av denne parameteren, har en grense p&aring; 15 minutter eller 24 kilometer.
+            </p>
+        </div>
+    </div>
     <div id="OutputLayer">
         <div><h2>Navn på resultatlag</h2></div>
         <hr/>
         <div>
-            <p>Dette er navnet p&aring; laget som opprettes i  <b>Mitt innhold</b> og legges til kartet. Standardnavnet er basert p&aring; verkt&oslash;ynavnet og navnet p&aring; inndatalaget. Hvis laget allerede finnes, blir du bedt om &aring; oppgi et annet navn.
+            <p>Navnet p&aring; laget som opprettes i  <b>Mitt innhold</b> og legges til i kartet.  Standardnavnet er basert p&aring; verkt&oslash;ynavnet og navnet p&aring; inndatalaget. Hvis lagnavnet finnes allerede, blir du bedt om &aring; oppgi et annet navn.
             </p>
-            <p>Bruk rullegardinlisten  <b>Lagre resultat i</b> til &aring; angi navnet p&aring; en mappe i <b>Mitt innhold</b> som resultatene skal lagres i.
+            <p>Bruk rullegardinmenyen  <b>Lagre resultat i</b> til &aring; angi navnet p&aring; en mappe i <b>Mitt innhold</b> som resultatene skal lagres i.
+            </p>
+        </div>
+    </div>
+    <div id="includeReachableStreets">
+        <div><h2>Inkluder gater som kan nås</h2></div>
+        <hr/>
+        <div>
+            <p>Inkluder gatene som brukes til &aring; opprette kj&oslash;retidsomr&aring;dene, som et utdatalag. 
+            </p>
+            <p>Funksjonen Opprett kj&oslash;retidsomr&aring;der m&aring;ler rekkevidden for en fasilitet langs veinettet og oppretter deretter kj&oslash;retidsomr&aring;der for de gatene som ble benyttet. Omr&aring;dene er derfor et anslag basert p&aring; de gatene som ble benyttet. Hvis analysen skal fastlegge hvilke gater som dekkes av en bestemt reiselengde eller reisetid fra en fasilitet, kan du f&aring; mer n&oslash;yaktig resultat ved &aring; generere gater som kan n&aring;s, i stedet for &aring; bruke kj&oslash;retidsomr&aring;dene til &aring; vurdere om en bestemt gate kan n&aring;s.
+            </p>
+            <p>Kj&oslash;retidsomr&aring;der som opprettes ved hjelp av denne parameteren, har en grense p&aring; 15 minutter eller 24 kilometer.
             </p>
         </div>
     </div>

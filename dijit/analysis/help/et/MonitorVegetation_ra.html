@@ -76,7 +76,7 @@ MSAVI2 on vegetatsiooniindeks, millega &uuml;ritatakse v&auml;hendada palja pinn
 
                 </li>
                 <li>Normalized Difference Vegetation Index  &mdash; 
-NDVI on standardiseeritud indeks, millega saab luua pildi, mis n&auml;itab rohelust, suhtelist biomassi. See indeks kasutab mitmespektrilise rasterandmestiku kahe lainepikkuse karakteristikute kontrastsust: pigmendi klorof&uuml;ll imenduvus punases lainepikkuses ja taimse materjali k&otilde;rge peegelduvus infrapunal&auml;hedases lainepikkuses (NIR).
+NDVI on standardiseeritud indeks, millega saab luua pildi, mis n&auml;itab rohelust v&otilde;i suhtelist biomassi. See indeks kasutab mitmespektrilise rasterandmestiku kahe lainepikkuse karakteristikute kontrastsust: klorof&uuml;llipigmendi imenduvust punases lainepikkuses ja taimse materjali k&otilde;rget peegelduvust infrapunal&auml;hedases lainepikkuses (NIR).
 
                 </li>
                 <li>Perpendicular Vegetation Index &mdash; 
@@ -99,7 +99,7 @@ Teisendatud SAVI on vegetatsiooniindeks, milles proovitakse v&auml;hendada pinna
         </div>
     </div>
     <div id="bandIndexes">
-        <div><h2>Määrake NIR lainepikkuse ja punase lainepikkuse indeksid</h2></div>
+        <div><h2>Määrake lähisinfrapuna ja punase lainepikkuse indeksid</h2></div>
         <hr/>
         <div>
             <p>Sisestage infrapunal&auml;hedase (NIR) lainepikkuse ja punase lainepikkuse indeksid.
@@ -109,7 +109,7 @@ Teisendatud SAVI on vegetatsiooniindeks, milles proovitakse v&auml;hendada pinna
         </div>
     </div>
     <div id="slopeOfSoilLine">
-        <div><h2>Pinnasejoone kalle</h2></div>
+        <div><h2>Muldade sirge kalle</h2></div>
         <hr/>
         <div>
             <p>Pinnasejoone kalle. Kalle on NIR lainepikkuse ja punase lainepikkuse vaheline ligikaudne lineaarne seos hajuvusdiagrammil.
@@ -124,7 +124,7 @@ Teisendatud SAVI on vegetatsiooniindeks, milles proovitakse v&auml;hendada pinna
         <div>
             <p>See on infrapunal&auml;hedase lainepikkuse (NIR) v&auml;&auml;rtus, kui punase lainepikkuse (punane) peegeldumise v&auml;&auml;rtus on konkreetsete pinnasejoonte puhul 0.
             </p>
-            <p> <code>(a = NIR - sRed)</code> , kui punane on 0.
+            <p> <code>(a = NIR - sRed)</code>, kui punane on 0.
             </p> 
             <p>See parameeter kehtib ainult teisendatud, pinnast arvesse v&otilde;tva vegetatsiooniindeksi puhul.
             </p>
@@ -134,10 +134,9 @@ Teisendatud SAVI on vegetatsiooniindeks, milles proovitakse v&auml;hendada pinna
         <div><h2>Rohelise taimestikuga ala suurus</h2></div>
         <hr/>
         <div>
-            <p>SAVI-meetodi jaoks on vaja m&auml;&auml;ratleda rohelise taimestikuga ala suurus.
+            <p>M&auml;&auml;rab rohelise taimestiku hulga, mida n&otilde;uab SAVI-meetod.
             </p>
-            <p>Sisestage v&auml;&auml;rtus vahemikus 0,0&ndash;1,0, kus 
-
+            <p>Kehtivad v&auml;&auml;rtused on j&auml;rgmised:
                 <ul>
                     <li>1 = ilma rohelise taimestikuta alad
                         
@@ -160,7 +159,7 @@ Teisendatud SAVI on vegetatsiooniindeks, milles proovitakse v&auml;hendada pinna
         <div><h2>Korrektiivitegur</h2></div>
         <hr/>
         <div>
-            <p>Teisendatud, pinnast arvesse v&otilde;tva vegetatsiooniindeksi meetodi puhul tuleb pinnase m&otilde;ju v&auml;hendamiseks m&auml;&auml;rata korrektiivitegur. Vaikev&auml;&auml;rtus on 0,08.
+            <p>M&auml;&auml;rab korrektiiviteguri, mis aitab minimeerida pinnas em&otilde;ju, mis on vajalik teisendatud, pinnast arvesse v&otilde;tva vegetatsiooniindeksi meetodi puhul. Vaikev&auml;&auml;rtus on 0,08.
             </p>
             <p>Madalam v&auml;&auml;rtus t&auml;hendab, et pinnase m&otilde;ju j&auml;&auml;b arvesse v&otilde;tmata. K&otilde;rgem v&auml;&auml;rtus t&auml;hendab, et pinnas m&otilde;jutab tulemust.
             </p>
@@ -170,9 +169,10 @@ Teisendatud SAVI on vegetatsiooniindeks, milles proovitakse v&auml;hendada pinna
         <div><h2>Tulemkihi nimi</h2></div>
         <hr/>
         <div>
+            
             <p>Selle kihi nimi, mis luuakse jaotises  <b>Minu sisu</b> ja lisatakse kaardile. Vaikimisi nimi p&otilde;hineb t&ouml;&ouml;riista nimel ja sisendkihi nimel. Kui kiht on juba olemas, palutakse teil sisestada m&otilde;ni muu nimi.
             </p>
-            <p>Kasutades rippmen&uuml;&uuml;d  <b>Salvesta tulemused</b>, saate jaotises <b>Minu sisu</b> m&auml;&auml;rata kausta nime, kuhu tulemused salvestatakse.
+            <p>You can specify the name of a folder in  <b>My Content</b> where the result will be saved using the <b>Save result in</b> drop-down box.
             </p>
         </div>
     </div>

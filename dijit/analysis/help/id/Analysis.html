@@ -55,7 +55,9 @@
                 </li>
                 <li> <b>Ringkas Sekitar</b> menghitung statistik untuk fitur-fitur dan atributnya yang berada dalam jarak yang sudah ditentukan.
                 </li>
-                <li> <b>Ringkas di Dalam</b> menghitung statistik untuk fitur dan atribut area yang saling tumpang tindih.
+                <li> <b>Ringkas di Dalam</b> menghitung statistik untuk fitur dan atribut area yang saling bertumpang tindih.
+                </li>
+                <li> <b>Ringkas Pusat dan Penyebaran</b> menghitung fitur pusat dan distribusi arah.
                 </li>
             </ul>
             
@@ -74,9 +76,9 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Dengan menggunakan layer titik dan layer area, alat ini menentukan titik-titik mana yang masuk di dalam setiap area dan menghitung statistik seputar semua titik di masing-masing area tersebut. Contoh:
+            <p>Dengan menggunakan layer feature titik dan layer feature area, alat ini menentukan titik-titik mana yang masuk di dalam setiap area dan menghitung statistik seputar semua titik di masing-masing area tersebut. Contoh:
                 <ul>
-                    <li>Dengan mengetahui lokasi titik insiden kejahatan, hitung jumlah kejahatan per negara atau wilayah administratif lainnya.
+                    <li>Dengan mengetahui lokasi titik insiden kejahatan, hitung jumlah kejahatan per daerah atau wilayah administratif lainnya.
                     </li>
                     <li>Temukan pemasukan tertinggi dan terendah untuk lokasi waralaba menurut negara bagian.
                     </li>
@@ -85,13 +87,13 @@
             </p>
             <br/>
         </div>
-        <div id="JoinFeaturesTool" class="largesize">
+        <div id="JoinFeaturesTool" class="regularsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Gabungkan Fitur</h2></td>
+                    <td><h2>Gabung Fitur</h2></td>
                     <td>
-                    <img src="../images/GUID-2230E8B8-8956-475C-9C65-68A92359BB48-web.png" class="titleImage" alt="Gabungkan Fitur">
+                    <img src="../images/GUID-2230E8B8-8956-475C-9C65-68A92359BB48-web.png" class="titleImage" alt="Gabung Fitur">
                     </td>
                 </tr></tbody>
             </table>
@@ -133,7 +135,7 @@
             </p>
             <br/>
         </div>
-        <div id="SummarizeWithinTool" class="largesize">
+        <div id="SummarizeWithinTool" class="regularsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
@@ -146,9 +148,35 @@
 <hr/>
             <p>Menemukan area (dan bagian-bagian area) yang overlap antara dua layer dan menghitung statistik seputar tumpang tindih tersebut. Contoh:
                 <ul>
-                    <li>Dengan mengetahui layer batas daerah aliran sungai dan layer penggunaan lahan menurut jenis penggunaan lahan, hitunglah luas total dari jenis penggunaan lahan untuk setiap daerah aliran sungai. 
+                    <li>Dengan mengetahui layer daerah batas air dan layer penggunaan lahan menurut jenis penggunaan lahan, hitung luas total dari jenis penggunaan lahan untuk setiap batas air. 
                     </li>
-                    <li>Dengan mengetahui layer persil bangunan bagian wilayah di suatu kawasan dan layer batas kota, hitunglah nilai rata-rata dari persil bangunan yang ada di dalam setiap kota.
+                    <li>Dengan layer persil di suatu daerah dan layer batas kota, ringkas nilai rata-rata dari persil yang ada di dalam setiap kota.
+                    </li>
+                </ul>
+                
+            </p>
+            <br/>
+        </div>
+        <div id="SummarizeCenterAndDispersionTool" class="largesize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Ringkas Pusat dan Penyebaran</h2></td>
+                    <td>
+                    <img src="../images/GUID-D2D53CA4-8A35-4163-9765-77BF232E569D-web.png" class="titleImage" alt="Ringkas Pusat dan Penyebaran">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Alat ini menggunakan fitur titik untuk menghitung fitur pusat, rata-rata, pusat median, atau elips (distribusi). Contoh:
+                <ul>
+                    <li>Dengan adanya layer centroid kelompok blok, fitur pusat yang dihitung bobotnya menurut populasi dapat digunakan untuk mengidentifikasi seni kota mana yang paling mudah diakses untuk pusat seni pertunjukan.
+                    </li>
+                    <li>Dengan adanya layer pengamatan rusa dalam sebuah taman selama beberapa tahun, pusat rata-rata dapat digunakan untuk melihat lokasi berkumpulnya rusa di musim panas dan musim dingin.
+                    </li>
+                    <li>Dengan adanya layer insiden kebakaran, pusat median dapat digunakan untuk mengukur kecenderungan pusat dari kebakaran tanpa dipengaruhi oleh pencilan pinggiran.
+                    </li>
+                    <li>Dengan adanya layer sampel sumur air tanah, elips dapat digunakan untuk menentukan cara penyebaran kontaminan.
                     </li>
                 </ul>
                 
@@ -184,7 +212,7 @@
     <div id="FindLocationsCategory" class="largesize">
         <h2>Temukan Lokasi</h2>
         <hr/>
-        <p>Alat ini digunakan untuk mengidentifikasi area-area yang memenuhi sejumlah kriteria yang Anda tetapkan.  Kriteria ini bisa didasarkan pada kueri atribut (misalnya, bagian persil yang kosong) dan kueri spasial (misalnya, dalam jarak 1 mil dari sungai).  Area yang ditemukan dapat dipilih dari fitur-fitur yang ada (seperti lahan persil yang ada) atau fitur-fitur baru dapat dibuat bila semua persyaratan sudah terpenuhi.
+        <p>Alat ini digunakan untuk mengidentifikasi atau membuat fitur yang memenuhi kriteria yang Anda tetapkan.  Tipe kriteria akan bergantung pada alat mana yang Anda gunakan; misalnya, kriteria Anda mungkin didasarkan pada kueri spasial atau atribut, area yang terlihat dari ketinggian yang ditentukan, area hilir untuk titik drainase khusus, atau waktu berkendara dalam kondisi lalu lintas spesifik.
             <ul>
                 <li> <b>Pilih Fasilitas Terbaik</b> memilih lokasi terbaik untuk fasilitas dengan mengalokasikan lokasi yang memiliki permintaan atas fasilitas tersebut untuk memenuhi tujuan tertentu.
                 </li>
@@ -194,16 +222,18 @@
                 </li>
                 <li> <b>Ambil Lokasi Baru</b> membuat area baru dari lokasi di area kajian Anda yang memenuhi sejumlah kriteria.
                 </li>
+                <li> <b>Temukan Titik Berat</b> menemukan pusat representatif (titik berat) untuk fitur input.
+                </li>
                 <li> <b>Temukan Lokasi yang Ada</b> mencari area yang ada pada suatu layer yang memenuhi sejumlah kriteria.
                 </li>
-                <li> <b>Temukan Lokasi Serupa</b> mencari lokasi yang paling mirip dengan satu atau beberapa lokasi rujukan berdasarkan kriteria yang Anda tetapkan.
+                <li> <b>Temukan Lokasi Serupa</b> mencari lokasi yang paling mirip dengan satu atau beberapa lokasi referensi berdasarkan kriteria yang Anda tetapkan.
                 </li>
-                <li class="PortalOnly"> <b>Lokasi Geocode dari Tabel</b> mengubah alamat dari tabel menjadi koordinat.
+                <li class="PortalOnly"> <b>Geocode Lokasi dari Tabel</b> mengubah alamat dari tabel menjadi koordinat. 
                 </li>
                 <li> <b>Lacak Alur Hilir</b> menentukan jalur aliran ke arah hilir dari lokasi yang Anda tetapkan.
                 </li>
             </ul>
-             
+            
         </p>
         <p> 
         </p>
@@ -227,7 +257,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Buat Jarak Pandang</h2></td>
+                    <td><h2>Buat Area Pandang</h2></td>
                     <td>
                     <img src="../images/GUID-491E9A75-30CC-4526-9F71-E47FD25536DE-web.png" class="titleImage" alt="Buat Jarak Pandang">
                     </td>
@@ -242,7 +272,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Buat Batas Air</h2></td>
+                    <td><h2>Buat Daerah Aliran Air</h2></td>
                     <td>
                     <img src="../images/GUID-4DE64CF6-2A02-46F6-8AE4-4D9227AAB71C-web.png" class="titleImage" alt="Buat Batas Air">
                     </td>
@@ -264,7 +294,22 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Membuat fitur-fitur baru di area penelitian Anda yang memenuhi sejumlah kriteria yang Anda tetapkan. Kriteria ini bisa didasarkan pada kueri atribut (misalnya, bagian persil yang kosong) dan kueri spasial (misalnya, dalam jarak 1 kilometer dari sungai). 
+            <p>Membuat fitur-fitur baru di area penelitian Anda yang memenuhi sejumlah kriteria yang Anda tetapkan. Kriteria ini bisa didasarkan pada kueri atribut (misalnya, bagian persil yang kosong) dan kueri spasial (misalnya, dalam jarak 1 mil dari sungai). 
+            </p>
+            <br/>
+        </div>
+        <div id="FindCentroidsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Temukan Titik Berat</h2></td>
+                    <td>
+                    <img src="../images/GUID-75D9AF75-68C3-48BF-8062-D5499BD06978-web.png" class="titleImage" alt="Temukan Titik Berat">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Menemukan pusat representatif (titik berat) untuk setiap fitur multititik input, garis, atau fitur area.
             </p>
             <br/>
         </div>
@@ -272,7 +317,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Temukan Lokasi yang Ada</h2></td>
+                    <td><h2>Cari Lokasi yang Ada</h2></td>
                     <td>
                     <img src="../images/GUID-FEF355B4-CF3B-48F6-9EC1-A00A1D53C81F-web.png" class="titleImage" alt="Cari Lokasi yang Ada">
                     </td>
@@ -331,15 +376,17 @@
     <div id="AnalyzePatternsCategory" class="regularsize">
         <h2>Analisis Pola</h2>
         <hr/>
-        <p>Alat ini membantu Anda mengidentifikasi, kuantifikasi, dan visualisasi pola-pola spasial pada data Anda.  
+        <p>Alat ini membantu Anda mengidentifikasi, mengkuantifikasi, dan memvisualisasi pola-pola spasial pada data Anda.  
             <ul>
                 <li> <b>Hitung Kepadatan</b> mengambil kuantitas dari suatu fenomena dan menyebarkan kuantitas ini pada peta.
                 </li>
-                <li> <b>Temukan Hot Spot</b> secara statistik mengidentifikasi pengelompokan penting dalam pola ruang data Anda.
+                <li> <b>Temukan Hot Spot</b> mengidentifikasi pembuatan klaster yang signifikan secara statistik dalam pola spasial data Anda.
                 </li>
-                <li> <b>Temukan Pencilan</b> menentukan apakah ada kluster yang signifikan secara statistik pada pola spasial data Anda.
+                <li> <b>Temukan Pencilan</b> menentukan apakah ada klaster yang signifikan secara statistik pada pola spasial data Anda.
                 </li>
-                <li> <b>Interpolasi Titik</b> memprediksi nilai-nilai di lokasi baru berdasarkan pengukuran yang ditemukan pada sekumpulan titik.
+                <li> <b>Temukan Klaster Titik</b> menemukan klaster fitur titik dalam kebisingan di sekitar berdasarkan distribusi spasialnya.
+                </li>
+                <li> <b>Interpolasikan Titik</b> memprediksi nilai-nilai di lokasi baru berdasarkan pengukuran yang ditemukan pada sekumpulan titik.
                 </li>
             </ul>
             
@@ -387,6 +434,21 @@
             </table>
 <hr/>
             <p>Alat ini membuat peta yang memperlihatkan pengelompokan kluster yang signifikan secara statistik dan pencilan spasial yang ada pada data Anda. Gunakan alat ini untuk mengidentifikasi fitur yang memiliki nilai yang sangat berbeda dengan nilai di sekitar.  Anda dapat menggunakan alat ini, misalnya, untuk menemukan pola pengeluaran yang menyimpang, menentukan batas tertajam antara kemakmuran dan kemiskinan di area studi, atau menentukan apakah terdapat daerah di Amerika Serikat dengan harapan hidup sangat rendah dibandingkan dengan daerah di sekitar.
+            </p>
+            <br/>
+        </div>
+        <div id="FindPointClustersTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Temukan Klaster Titik</h2></td>
+                    <td>
+                    <img src="../images/GUID-025ADB1C-E4BF-4C8D-A35F-1D0E222627F9-web.png" class="titleImage" alt="Temukan Klaster Titik">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Alat ini mendeteksi lokasi titik dipusatkan dan lokasi titik dipisahkan menurut area yang kosong atau jarang-jarang. Titik yang bukan bagian dari klaster akan diberi label sebagai kebisingan.
             </p>
             <br/>
         </div>
@@ -473,9 +535,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Buat Area Waktu Berkendara</h2></td>
+                    <td><h2>Buat Area Waktu Mengemudi</h2></td>
                     <td>
-                    <img src="../images/GUID-6F629A09-768D-4C04-88A4-AB941811ADE9-web.png" class="titleImage" alt="Buat Area Waktu Berkendara">
+                    <img src="../images/GUID-6F629A09-768D-4C04-88A4-AB941811ADE9-web.png" class="titleImage" alt="Buat Area Waktu Mengemudi">
                     </td>
                 </tr></tbody>
             </table>
@@ -499,9 +561,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Temukan Terdekat</h2></td>
+                    <td><h2>Temukan yang Terdekat</h2></td>
                     <td>
-                    <img src="../images/GUID-150C2484-7459-405A-8835-B4E72CD49738-web.png" class="titleImage" alt="Temukan Terdekat">
+                    <img src="../images/GUID-150C2484-7459-405A-8835-B4E72CD49738-web.png" class="titleImage" alt="Temukan yang Terdekat">
                     </td>
                 </tr></tbody>
             </table>
@@ -530,13 +592,15 @@
     <div id="ManageDataCategory" class="regularsize">
         <h2>Kelola Data</h2>
         <hr/>
-        <p>Semua tool ini digunakan untuk pengelolaan data geografis sehari-hari dan untuk mengkombinasikan data sebelum analisis dilakukan.  
+        <p>Peralatan ini digunakan untuk mengelola data geografis sehari-hari dan menggabungkan data sebelum analisis dilakukan.  
             <ul>
                 <li> <b>Hilangkan Batas</b> menggabungkan area-area yang saling berbatasan dan memiliki nilai atribut yang sama.
                 </li>
                 <li> <b>Ekstrak Data</b> membuat set data baru dengan mengekstrak fitur-fitur dari data Anda yang sudah ada.
                 </li>
-                <li> <b>Gabungkan Layer</b> menyalin semua fitur dari dua atau lebih layer yang sudah menjadi satu layer baru.
+                <li> <b>Buat Tessellation</b> membuat tessellation berdasarkan jangkauan data Anda.
+                </li>
+                <li> <b>Gabungkan Layer</b> menyalin semua fitur dari dua layer atau lebih ke dalam layer baru.
                 </li>
                 <li> <b>Overlay Layer</b> menggabungkan dua layer atau lebih menjadi satu layer.  Anda dapat membayangkan overlay seperti melihat tumpukan peta sebagai peta tunggal yang berisi semua informasi yang ditemukan dalam tumpukan tersebut.
                 </li>
@@ -550,18 +614,18 @@
                 <tbody><tr>
                     <td><h2>Hilangkan Batas</h2></td>
                     <td>
-                    <img src="../images/GUID-7B5F69B0-3625-404F-8B52-2B562766C0BB-web.png" class="titleImage" alt="Gabungkan Batas">
+                    <img src="../images/GUID-7B5F69B0-3625-404F-8B52-2B562766C0BB-web.png" class="titleImage" alt="Hilangkan Batas">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
             <p>Area yang tumpang tindih atau saling berbatasan akan digabungkan untuk menghasilkan satu area.    
             </p>
-            <p>Anda dapat mengatur batas-batas mana yang digabungkan dengan menetapkan suatu kolom. Sebagai contoh, jika Anda mempunyai layer wilayah, dan setiap wilayah memiliki atribut <i>State_Name</i>, Anda dapat melebur batas wilayah tersebut dengan menggunakan atribut <i>State_Name</i> tersebut.  Daerah-daerah yang berdekatan akan digabungkan jika mereka mempunyai nilai yang sama untuk <i>State_Name</i>.  Hasil akhirnya adalah layer batas negara bagian.
+            <p>Anda dapat mengatur batas-batas mana yang digabungkan dengan menetapkan suatu kolom. Sebagai contoh, jika Anda mempunyai layer wilayah, dan setiap wilayah memiliki atribut  <i>State_Name</i>, Anda dapat menghilangkan batas wilayah tersebut dengan menggunakan atribut <i>State_Name</i> tersebut.  Daerah-daerah yang berdekatan akan digabungkan jika mereka mempunyai nilai yang sama untuk <i>State_Name</i>.  Hasil akhirnya adalah layer batas wilayah.
             </p>
             <br/>
         </div>
-        <div id="ExtractDataTool" class="smallsize">
+        <div id="ExtractDataTool" class="regularsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
@@ -572,9 +636,25 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Membuat file zip, CSV, atau KMZ data dari layer Anda dan aoi yang Anda tetapkan.
+            <p>Membuat file zip, CSV, atau KMZ data dari layer Anda dan area perhatian yang Anda tetapkan.
             </p>
+            <p>Alat Ekstrak Data memerlukan minimal satu layer yang dapat diekspor. Jika Anda tidak memiliki layer yang dapat diekspor dalam  Map Viewer Classic, alatnya akan dinonaktifkan. </p>
             <p> 
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateTessellationsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Buat Tessellation</h2></td>
+                    <td>
+                    <img src="../images/GUID-7D6FF8CB-15F3-4051-9C57-46E6C3708788-web.png" class="titleImage" alt="Buat Tessellation">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Membuat tessellation melalui area studi berdasarkan bentuk dan ukuran yang ditentukan.
             </p>
             <br/>
         </div>
@@ -593,7 +673,7 @@
                 <ul>
                     <li>Saya memiliki tiga layer untuk Inggris, Wales, dan Skotlandia dan saya menginginkan satu layer Britania Raya. 
                     </li>
-                    <li>Saya memiliki 12 layer dan setiap layer berisi informasi paket untuk daerah kota yang berdampingan.  Saya ingin menggabungkan mereka menjadi satu layer dengan hanya mempertahankan atribut yang nama dan jenisnya sama pada 12 layer input tadi.
+                    <li>Saya memiliki 12 layer dan setiap layer berisi informasi persil untuk daerah kota yang berdampingan. Saya ingin menggabungkan layer tersebut menjadi satu layer dengan hanya mempertahankan atribut yang nama dan jenisnya sama pada 12 layer input tadi.
                     </li>
                 </ul>
                 
@@ -604,16 +684,16 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Overlay Layer</h2></td>
+                    <td><h2>Layer Overlay</h2></td>
                     <td>
-                    <img src="../images/GUID-CE1E0E84-F3B5-446B-9FDE-4DA057F106CC-web.png" class="titleImage" alt="Overlay Layer">
+                    <img src="../images/GUID-CE1E0E84-F3B5-446B-9FDE-4DA057F106CC-web.png" class="titleImage" alt="Layer Overlay">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
             <p>Overlay menggabungkan dua layer atau lebih menjadi satu layer tunggal.  Overlay dapat diibaratkan menyusun setumpuk peta dan menghasilkan satu peta yang memuat seluruh informasi yang ada di tumpukan tersebut, misalnya:
                 <ul>
-                    <li>Persil bangunan (parcels) mana yang berada di dalam dataran banjir berusia 100 tahun? (&quot;yang berada di dalam&quot; merupakan kata pengganti untuk &quot;di atas.&quot;)
+                    <li>Persil mana yang berada di dalam dataran banjir berusia 100 tahun? (&quot;yang berada di dalam&quot; merupakan kata pengganti untuk &quot;di atas.&quot;)
                           
                     </li>
                     <li>Jalan apa berada di negara mana?

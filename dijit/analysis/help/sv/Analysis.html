@@ -44,7 +44,7 @@
         <p>Verktygsl&aring;dan Analys av geoobjekt inneh&aring;ller en rad verktyg som du kan f&aring; &aring;tkomst till och anv&auml;nda. &Aring;tg&auml;rderna finns ordnade nedan i kategorier. Kategorierna &auml;r logiska grupperingar och p&aring;verkar inte hur du f&aring;r &aring;tkomst till eller anv&auml;nder &aring;tg&auml;rderna p&aring; n&aring;got s&auml;tt.
         </p>
     </div>
-    <div id="SummarizeDataCategory" class="regularsize">
+    <div id="SummarizeDataCategory" class="largesize">
         <h2>Summera data</h2>
         <hr/>
         <p>Dessa verktyg ber&auml;knar totalt antal, l&auml;ngd, yta och enkel beskrivande statistik f&ouml;r geoobjekt och deras attribut inom omr&aring;den eller n&auml;ra andra geoobjekt.
@@ -56,6 +56,8 @@
                 <li> <b>Summera n&auml;ra</b> ber&auml;knar statistik f&ouml;r geoobjekt och deras attribut som finns inom ett angivet avst&aring;nd.
                 </li>
                 <li> <b>Summera inom</b> ber&auml;knar statistik f&ouml;r omr&aring;desgeoobjekt och attribut som &ouml;verlappar varandra.
+                </li>
+                <li> <b>Summera mitt och spridning</b> ber&auml;knar centrala geoobjekt och riktningsf&ouml;rdelningar.
                 </li>
             </ul>
             
@@ -155,6 +157,32 @@
             </p>
             <br/>
         </div>
+        <div id="SummarizeCenterAndDispersionTool" class="largesize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Summera mitt och spridning</h2></td>
+                    <td>
+                    <img src="../images/GUID-D2D53CA4-8A35-4163-9765-77BF232E569D-web.png" class="titleImage" alt="Summera mitt och spridning">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Detta verktyg anv&auml;nder punktgeoobjekt till att ber&auml;kna medelcentrum, mediancentrum eller ellips (distribution). Exempel:
+                <ul>
+                    <li>Givet ett lager med mittpunkter i en kvartersgrupp kan det centrala geoobjektet viktat med befolkning anv&auml;ndas f&ouml;r att identifiera vilken del av staden som &auml;r den mest l&auml;ttillg&auml;ngliga f&ouml;r ett centrum f&ouml;r scenkonst.
+                    </li>
+                    <li>Givet ett lager med &auml;lgobservationer &ouml;ver flera &aring;r i en park kan medelcentrum anv&auml;ndas f&ouml;r att se var &auml;lgarna samlas p&aring; sommaren och vintern.
+                    </li>
+                    <li>Givet ett lager &ouml;ver brandincidenter kan medelcentrum anv&auml;ndas f&ouml;r att m&auml;ta den centrala tendensen i br&auml;nderna utan att p&aring;verkas av perifera avvikelser.
+                    </li>
+                    <li>Givet ett lager med grundvattenprover kan en ellips anv&auml;ndas f&ouml;r att best&auml;mma hur ett smitt&auml;mne sprids.
+                    </li>
+                </ul>
+                
+            </p>
+            <br/>
+        </div>
     <div id="EnrichLocationsCategory" class="smallsize">
         <h2>Databerikning</h2>
         <hr/>
@@ -185,7 +213,7 @@
     <div id="FindLocationsCategory" class="largesize">
         <h2>Hitta platser</h2>
         <hr/>
-        <p>Dessa verktyg anv&auml;nds f&ouml;r att identifiera omr&aring;den som uppfyller ett antal olika kriterier du anger. Kriterierna kan bygga p&aring; attributfr&aring;gor (till exempel fastigheter som &auml;r tomma) och geografiska fr&aring;gor (till exempel inom 1 kilometer fr&aring;n en flod). Du kan v&auml;lja de omr&aring;den du hittar bland befintliga geoobjekt (till exempel befintliga landfastigheter), eller s&aring; kan du skapa nya geoobjekt som uppfyller alla krav.
+        <p>Dessa verktyg anv&auml;nds f&ouml;r att identifiera eller skapa geoobjekt som uppfyller villkor som du anger. Typen av villkor beror p&aring; vilket verktyg du anv&auml;nder. Ditt villkor kan till exempel vara baserat p&aring; geografiska fr&aring;gor eller attributfr&aring;gor, synliga omr&aring;den fr&aring;n en angiven h&ouml;jd, omr&aring;den nedstr&ouml;ms f&ouml;r vissa dr&auml;neringspunkter eller k&ouml;rtid under specifika trafikf&ouml;rh&aring;llanden.
             <ul>
                 <li> <b>V&auml;lj b&auml;sta inr&auml;ttningar</b> v&auml;ljer de b&auml;sta platserna f&ouml;r inr&auml;ttningar genom att tilldela platser som efterfr&aring;gar dessa inr&auml;ttningar p&aring; ett s&auml;tt som uppfyller ett visst m&aring;l.
                 </li>
@@ -195,16 +223,18 @@
                 </li>
                 <li> <b>H&auml;rled nya platser</b> skapar nya omr&aring;den fr&aring;n platser i unders&ouml;kningsomr&aring;det som uppfyller en rad kriterier.
                 </li>
+                <li> <b>Hitta centroider</b> hittar den representativa mittpunkten (centroiden) f&ouml;r indatageoobjekt.
+                </li>
                 <li> <b>Hitta befintliga platser</b> s&ouml;ker efter befintliga omr&aring;den i ett lager som uppfyller en rad kriterier.
                 </li>
                 <li> <b>Hitta liknande platser</b> hittar de platser som &auml;r mest lika en eller flera referensplatser baserat p&aring; kriterier som du anger.
                 </li>
-                <li class="PortalOnly"> <b>Geokoda platser fr&aring;n tabell</b> konverterar adresser fr&aring;n en tabell till koordinater.
+                <li class="PortalOnly"> <b>Geokoda platser fr&aring;n tabell</b> konverterar adresser fr&aring;n en tabell till koordinater. 
                 </li>
                 <li> <b>Sp&aring;ra nedstr&ouml;ms</b> avg&ouml;r fl&ouml;desm&ouml;nstren nedstr&ouml;ms fr&aring;n de platser du anger.
                 </li>
             </ul>
-             
+            
         </p>
         <p> 
         </p>
@@ -266,6 +296,21 @@
             </table>
 <hr/>
             <p>Skapar nya geoobjekt i unders&ouml;kningsomr&aring;det som uppfyller en rad kriterier du anger. Kriterierna kan bygga p&aring; attributfr&aring;gor (till exempel fastigheter som &auml;r tomma) och geografiska fr&aring;gor (till exempel inom 1 kilometer fr&aring;n en flod). 
+            </p>
+            <br/>
+        </div>
+        <div id="FindCentroidsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Hitta centroider</h2></td>
+                    <td>
+                    <img src="../images/GUID-75D9AF75-68C3-48BF-8062-D5499BD06978-web.png" class="titleImage" alt="Hitta centroider">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Hittar den representativa mittpunkten (centroiden) f&ouml;r varje indatageoobjekt av typen flera punkter, linje eller omr&aring;de.
             </p>
             <br/>
         </div>
@@ -340,6 +385,8 @@
                 </li>
                 <li> <b>Hitta avvikelser</b> fastst&auml;ller om det finns statistiskt signifikanta avvikelser i det geografiska m&ouml;nstret f&ouml;r dina data.
                 </li>
+                <li> <b>Hitta punktkluster</b> hittar kluster av punktgeoobjekt i bakgrundsbrus baserat p&aring; deras rumsliga f&ouml;rdelning.
+                </li>
                 <li> <b>Interpoleringspunkter</b> f&ouml;ruts&auml;ger v&auml;rden p&aring; nya platser baserat p&aring; m&auml;tningar fr&aring;n en samling punkter.
                 </li>
             </ul>
@@ -388,6 +435,21 @@
             </table>
 <hr/>
             <p>Det h&auml;r verktyget skapar en karta som visar statistiskt signifikant klustring och geografiska avvikelser i dina data. Anv&auml;nd verktyget f&ouml;r att identifiera geoobjekt som har v&auml;rden som skiljer sig signifikant fr&aring;n sina grannar. Du kan till exempel anv&auml;nda verktyget f&ouml;r att uppt&auml;cka onormala utgiftsm&ouml;nster, fastst&auml;lla var de skarpaste gr&auml;nserna g&aring;r mellan v&auml;lst&aring;nd och fattigdom i ett unders&ouml;kningsomr&aring;de, eller fastst&auml;lla om det finns l&auml;n i USA d&auml;r den f&ouml;rv&auml;ntade livsl&auml;ngden &auml;r ovanligt kort j&auml;mf&ouml;rt med de angr&auml;nsande.
+            </p>
+            <br/>
+        </div>
+        <div id="FindPointClustersTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Hitta punktkluster</h2></td>
+                    <td>
+                    <img src="../images/GUID-025ADB1C-E4BF-4C8D-A35F-1D0E222627F9-web.png" class="titleImage" alt="Hitta punktkluster">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Det h&auml;r verktyget uppt&auml;cker omr&aring;den d&auml;r punkter &auml;r koncentrerade och d&auml;r de &auml;r separerade av omr&aring;den som &auml;r tomma eller glesa. Punkter som inte ing&aring;r i ett kluster &auml;r m&auml;rkta som brus.
             </p>
             <br/>
         </div>
@@ -528,7 +590,7 @@
             </p>
             <br/>
         </div>
-    <div id="ManageDataCategory" class="regularsize">
+    <div id="ManageDataCategory" class="largesize">
         <h2>Hantera data</h2>
         <hr/>
         <p>Dessa verktyg anv&auml;nds f&ouml;r b&aring;de den dagliga hanteringen av geografiska data och f&ouml;r att kombinera data inf&ouml;r en analys.  
@@ -536,6 +598,8 @@
                 <li> <b>L&ouml;s upp gr&auml;nser</b> sammanfogar omr&aring;den som delar en gemensam gr&auml;ns och ett gemensamt attributv&auml;rde.
                 </li>
                 <li> <b>Extrahera data</b> skapar nya dataupps&auml;ttningar genom att extrahera geoobjekt fr&aring;n befintliga data.
+                </li>
+                <li> <b>Skapa tessellationer</b> skapar tessellationer baserat p&aring; dina datas utbredning.
                 </li>
                 <li> <b>Sammanfoga lager</b> kopierar alla geoobjekt fr&aring;n tv&aring; eller flera befintliga lager till ett nytt lager.
                 </li>
@@ -562,7 +626,7 @@
             </p>
             <br/>
         </div>
-        <div id="ExtractDataTool" class="smallsize">
+        <div id="ExtractDataTool" class="regularsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
@@ -575,7 +639,23 @@
 <hr/>
             <p>Skapar en zip-, CSV- eller KMZ-fil med data fr&aring;n dina lager och en aktuell yta som du anger.
             </p>
+            <p>Verktyget Extrahera data kr&auml;ver minst ett exporterbart lager. Om du inte har n&aring;gra exporterbara lager i  Map Viewer Classic inaktiveras verktyget. </p>
             <p> 
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateTessellationsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Skapa tessellationer</h2></td>
+                    <td>
+                    <img src="../images/GUID-7D6FF8CB-15F3-4051-9C57-46E6C3708788-web.png" class="titleImage" alt="Skapa tessellationer">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Skapar tessellationer &ouml;ver ett unders&ouml;kningsomr&aring;de baserat p&aring; specificerad form och storlek.
             </p>
             <br/>
         </div>
@@ -594,7 +674,7 @@
                 <ul>
                     <li>Jag har tre lager f&ouml;r England, Wales och Skottland, och vill ha ett enda lager f&ouml;r Storbritannien. 
                     </li>
-                    <li>Jag har 12 lager som vart och ett inneh&aring;ller paketinformation f&ouml;r sammanh&auml;ngande distrikt  Jag vill sammanfoga dem till ett enda lager och bara beh&aring;lla de attribut som har samma namn och typ i de 12 indatalagren.
+                    <li>Jag har 12 lager som vart och ett inneh&aring;ller paketinformation f&ouml;r sammanh&auml;ngande distrikt Jag vill sammanfoga dem till ett enda lager och bara beh&aring;lla de attribut som har samma namn och typ i de 12 indatalagren.
                     </li>
                 </ul>
                 
@@ -612,7 +692,7 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>&Ouml;verlagring kombinerar tv&aring; eller flera lager till ett enda lager.  Du kan t&auml;nka dig &ouml;verlagring som att titta igenom en h&ouml;g med kartor och skapa en enda karta med all information som finns i h&ouml;gen., till exempel:
+            <p>&Ouml;verlagring kombinerar tv&aring; eller flera lager till ett enda lager. Du kan t&auml;nka dig &ouml;verlagring som att titta igenom en h&ouml;g med kartor och skapa en enda karta med all information som finns i h&ouml;gen., till exempel:
                 <ul>
                     <li>Vilka fastigheter finns inom gr&auml;nserna f&ouml;r den 100-&aring;riga flodsl&auml;tten? (Vilket &auml;r ett annat s&auml;tt att s&auml;ga ovanp&aring;.)
                           

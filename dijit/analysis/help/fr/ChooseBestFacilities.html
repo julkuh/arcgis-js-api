@@ -135,7 +135,7 @@
         <div><h2>Mesurer</h2></div>
         <hr/>
         <div>
-            <p>Comme avec d'autres outils qui int&egrave;gre le d&eacute;placement dans l'analyse, vous pouvez pr&eacute;ciser si le d&eacute;placement se mesure avec la distance ou le temps et vous pouvez choisir parmi diff&eacute;rents modes de d&eacute;placement, tels que le temps de marche, le temps de trajet, la distance &agrave; parcourir en zone rurale, etc. Les modes de d&eacute;placement &agrave; votre disposition sont d&eacute;termin&eacute;s par l'administrateur de votre organisation. Lorsque vous utilisez Temps de trajet ou Distance &agrave; parcourir en zone rurale, vous pouvez inclure le trafic d'un jour de la semaine ou d'une heure de la journ&eacute;e en particulier. 
+            <p>Comme avec d'autres outils qui int&egrave;gre le d&eacute;placement dans l'analyse, vous pouvez pr&eacute;ciser si le d&eacute;placement se mesure avec la distance ou le temps et vous pouvez choisir parmi diff&eacute;rents modes de d&eacute;placement, tels que le temps de marche, le temps de trajet, la distance &agrave; parcourir en zone rurale, etc. Les modes de d&eacute;placement &agrave; votre disposition sont d&eacute;termin&eacute;s par l'administrateur de votre organisation. Lorsque vous utilisez l&rsquo;option  <b>Driving Time (Temps de trajet)</b>, <b>Rural Driving Time (Temps de trajet en zone rurale)</b> ou <b>Trucking Time (Temps de trajet pour camions)</b>, vous pouvez si vous le souhaitez inclure le trafic pour un jour et une heure sp&eacute;cifiques.
             </p>
             <p> Pour allouer pr&eacute;cis&eacute;ment des emplacements de demandes aux ressources, indiquez si le d&eacute;placement s'effectue des ressources aux emplacements de demandes (des casernes de pompiers aux maisons, par exemple) ou des emplacements de demandes aux ressources (comme dans le cas des usagers de biblioth&egrave;ques). L'outil Choisir les meilleures ressources tient compte de la direction de d&eacute;placement sur les routes &agrave; sens unique, si vous pouvez tourner entre une rue et une autre, si des intersections ne permettent pas de tourner &agrave; gauche, etc., selon que le trajet s'effectue de la ressource vers les emplacements de demandes ou des emplacements de demandes vers les ressources.
             </p>
@@ -153,7 +153,7 @@
             </p>
             <p>Si le type d'objectif est  <b>Couvrir un pourcentage de demande</b>, vous devez sp&eacute;cifier le pourcentage minimum de demande que les ressources doivent atteindre.
             </p>
-            <p class="OnlineOnly">En plus de choisir une couche de votre carte, vous pouvez s&eacute;lectionner  <b>Choisir une couche d'analyse d'atlas dynamique</b> ou <b>Choisir une couche d'analyse</b> au bas de la liste d&eacute;roulante. Cette op&eacute;ration ouvre une biblioth&egrave;que de couches utiles pour de nombreuses analyses. 
+            <p>Outre le choix d&rsquo;une couche dans votre carte, vous pouvez s&eacute;lectionner  <b>Choose Analysis Layer (Choisir une couche d&rsquo;analyse)</b> au bas de la liste d&eacute;roulante. Cette option ouvre une biblioth&egrave;que qui vous permet de s&eacute;lectionner des jeux de donn&eacute;es de diff&eacute;rentes sources pour les utiliser dans votre analyse. 
             </p>
             <p>L'outil prend en charge jusqu'&agrave; 10&nbsp;000&nbsp;entit&eacute;s dans la couche des emplacements de demandes.
             </p>  
@@ -185,15 +185,29 @@
             </p>  
         </div>
     </div>
-    <div id="outputName">
-        <div><h2>Nom de la couche résultat</h2></div>
+    <div id="barrier_layers">
+        <div><h2>Sélectionner les couches d’interruptions</h2></div>
         <hr/>
         <div>
-            <p>Il s'agit du nom de la couche qui sera cr&eacute;&eacute;e dans la page  <b>Mon contenu</b> et ajout&eacute;e &agrave; la carte.  Le nom par d&eacute;faut repose sur le nom de l'outil et sur le nom de la couche en entr&eacute;e. Si la couche existe d&eacute;j&agrave;, vous &ecirc;tes invit&eacute; &agrave; fournir un autre nom.
+            <p> Une ou plusieurs entit&eacute;s qui agissent comme restrictions temporaires (en d&rsquo;autres termes, les interruptions) lors du d&eacute;placement dans les rues sous-jacentes. Vous pouvez pr&eacute;ciser les interruptions &agrave; l&rsquo;aide d&rsquo;entit&eacute;s ponctuelles, lin&eacute;aires ou surfaciques.
+            </p>
+            <p>Une interruption ponctuelle peut mod&eacute;liser un arbre au sol, un accident, une ligne &eacute;lectrique &agrave; terre, ou tout &eacute;l&eacute;ment qui bloque le trafic &agrave; un emplacement donn&eacute; dans la rue. Le d&eacute;placement est autoris&eacute; sur la rue, hormis franchir l&rsquo;interruption. Vous pouvez pr&eacute;ciser jusqu&rsquo;&agrave; 250&nbsp;&eacute;l&eacute;ments comme interruptions ponctuelles.
+            </p>
+            <p>Une interruption lin&eacute;aire interdit le d&eacute;placement l&agrave; o&ugrave; l&rsquo;interruption intersecte les rues. Par exemple, un d&eacute;fil&eacute; ou une manifestation qui bloque la circulation sur plusieurs segments de rue peut &ecirc;tre mod&eacute;lis&eacute; avec une interruption lin&eacute;aire. Si le nombre d&rsquo;entit&eacute;s de rue intersect&eacute;es par toutes les interruptions lin&eacute;aires d&eacute;passe&nbsp;500, l&rsquo;outil renvoie une erreur.
+            </p>
+            <p>Une interruption polygonale interdit le d&eacute;placement l&agrave; o&ugrave; le polygone intersecte les rues. Une utilisation de ce type d&rsquo;interruption consiste &agrave; mod&eacute;liser les inondations couvrant les zones du r&eacute;seau routier et &agrave; identifier la circulation sur la route comme impossible &agrave; ces emplacements pr&eacute;cis. Si le nombre d&rsquo;entit&eacute;s de rue intersect&eacute;es par toutes les interruptions polygonales est sup&eacute;rieur &agrave; 2&nbsp;000, l&rsquo;outil renvoie une erreur.
+            </p>
+        </div>
+    </div>
+    <div id="outputName">
+        <div><h2>Nom de la couche de résultat</h2></div>
+        <hr/>
+        <div>
+            <p>Le nom de la couche qui sera cr&eacute;&eacute;e dans la page  <b>Mon contenu</b> et ajout&eacute;e &agrave; la carte. Le nom par d&eacute;faut repose sur le nom de l'outil et sur le nom de la couche en entr&eacute;e. Si le nom de la couche existe d&eacute;j&agrave;, vous &ecirc;tes invit&eacute; &agrave; fournir un autre nom.
             </p>
             <p>La couche r&eacute;sultat contient une couche pour chacun des &eacute;l&eacute;ments suivants&nbsp;: ressources auxquelles des demandes sont attribu&eacute;es, emplacements de demandes allou&eacute;s &agrave; des ressources et lignes d'allocation reliant les emplacements de demandes &agrave; leurs ressources attribu&eacute;es. Les lignes d'allocation sont trac&eacute;es en ligne droite. Toutefois, le temps de trajet ou la distance de trajet entre la ressource et l'emplacement de demande repose toujours sur le mode de d&eacute;placement que vous sp&eacute;cifiez et non sur les distances en ligne droite.
             </p>
-            <p>La zone de liste d&eacute;roulante  <b>Enregistrer le r&eacute;sultat dans</b> vous permet de sp&eacute;cifier le nom d'un dossier dans <b>Mon contenu</b> o&ugrave; le r&eacute;sultat sera enregistr&eacute;.
+            <p>Le menu d&eacute;roulant  <b>Save result in (Enregistrer le r&eacute;sultat dans)</b> permet de sp&eacute;cifier le nom d&rsquo;un dossier dans <b>My Content (Mon contenu)</b> dans lequel sera enregistr&eacute; le r&eacute;sultat.
             </p>
         </div>
     </div>

@@ -50,7 +50,8 @@
             "toolDescription": "create-watersheds.htm"
         },
         "DissolveBoundaries": {
-            "toolDescription": "dissolve-boundaries.htm"
+            "toolDescription": "dissolve-boundaries.htm",
+            "multiPartFeatures": "dissolve-boundaries.htm#GUID-84ECA8C6-2027-4C08-9B48-8F81D95A94AB"
         },
         "EnrichLayer": {
             "toolDescription": "enrich-layer.htm",
@@ -59,6 +60,9 @@
         "ExtractData": {
             "toolDescription": "extract-data.htm",
             "InputLayers": "extract-data.htm"
+        },
+        "FindCentroids": {
+          "toolDescription": "find-centroids.htm"
         },
         "FindExistingLocations": {
             "toolDescription": "find-existing-locations.htm",
@@ -75,6 +79,9 @@
             "toolDescription": "find-nearest.htm",
             "analysisLayer": "find-nearest.htm"
         },
+        "FindPointClusters": {
+          "toolDescription": "find-point-clusters.htm"
+        },
         "FindOutliers": {
             "toolDescription": "find-outliers.htm"
         },
@@ -84,7 +91,11 @@
             "searchLayer": "find-similar-locations.htm#ESRI_SECTION1_0B2B928A26BC4659B2143D06017F991E",
             "analysisFields": "find-similar-locations.htm#ESRI_SECTION1_B78395564C414EA79B3386D3AA8C740C"
         },
+        "GenerateTessellations": {
+            "toolDescription": "generate-tessellations.htm"
+        },
         "GeocodeLocationsfromTable": {
+            "toolDescription": "geocode-locations-from-table.htm",
             "geocodeServiceURL": "geocode-locations-from-table.htm"
         },
         "InterpolatePoints": {
@@ -110,6 +121,9 @@
         },
         "SummarizeAttributes_bd": {
             "toolDescription": "geoanalytics-summarize-attributes.htm"
+        },
+        "SummarizeCenterAndDispersion": {
+          "toolDescription": "summarize-center-and-dispersion.htm"
         },
         "SummarizeNearby": {
             "toolDescription": "summarize-nearby.htm"

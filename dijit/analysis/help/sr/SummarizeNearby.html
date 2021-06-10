@@ -41,10 +41,10 @@
 <body onload="init()">
 <div id="topics">
     <div id="toolDescription" class="largesize">
-        <h2>Sumiranje vrednosti za objekte koji se nalaze na definisanoj udaljenosti od ulaznih objekata</h2><p/>
+        <h2>Sumiraj u blizini</h2><p/>
         <h2><img src="../images/GUID-A5033D27-81B6-42E7-BA38-50D25C1CCCCA-web.png" alt="Sumiranje vrednosti za objekte koji se nalaze na definisanoj udaljenosti od ulaznih objekata"></h2>
         <hr/>
-    <p>  Ova alatka pronalazi i sumira geoobjekte koji su unutar navedene razdaljine od geoobjekata u prvom ulaznom sloju. Razdaljina može da se izmeri kao pravolinijska razdaljina ili kori&scaron;ćenjem izabranog režima putovanja. Opcije režima putovanja su dužina vožnje, vreme vožnje, dužina vožnje kamiona, vreme vožnje kamiona, dužina pe&scaron;ačenja ili vreme pe&scaron;ačenja. Statistika se zatim izračunava za obližnje geoobjekte. Na primer
+    <p>Ova alatka pronalazi i sumira geoobjekte koji su unutar navedenog rastojanja geoobjekata u prvom ulaznom sloju. Razdaljina može da se izmeri kao pravolinijska razdaljina ili kori&scaron;ćenjem izabranog režima putovanja. Opcije režima putovanja su dužina vožnje, vreme vožnje, dužina vožnje kamiona, vreme vožnje kamiona, dužina pe&scaron;ačenja ili vreme pe&scaron;ačenja. Statistika se zatim izračunava za obližnje geoobjekte. Na primer
         <ul>
             <li>Izračunajte ukupnu populaciju koja je obuhvaćena obla&scaron;ću od najvi&scaron;e pet minuta vožnje od predložene lokacije nove prodavnice.
             </li>
@@ -63,7 +63,7 @@
         <div>
             <p>Tačkasti ili linijski sloj ili sloj oblasti koji će se koristiti kao početne lokacije za sumiranje vrednosti za geoobjekte koji se nalaze na definisanoj udaljenosti od ulaznih objekata.
             </p>
-            <p class="OnlineOnly">Pored izbora sloja sa mape, možete da izaberete  <b>Odaberite Living Atlas sloj za analizu</b> ili <b>Odaberite sloj za analizu</b> u dnu padajuće liste. Ovim se otvara galerija koja sadrži kolekciju slojeva korisnih za veliki broj analiza. 
+            <p>Pored biranja sloja sa mape, možete da selektujete  <b>Izaberi sloj za analizu</b> koji se nalazi na dnu padajuće liste. Ova opcija otvara galeriju gde možete da pregledate i birate skupove podataka iz raznih izvora za kori&scaron;ćenje u va&scaron;oj analizi. 
             </p>
             <p>Alatka podržava do 1000 geoobjekata u ovom sloju. 
             </p>
@@ -75,7 +75,7 @@
         <div>
             <p>Biće sumirani geoobjekti u ovom sloju koji su unutar navedene razdaljine do geoobjekata u sloju navedenom iznad. 
             </p>
-            <p class="OnlineOnly">Pored izbora sloja sa mape, možete da izaberete  <b>Odaberite Living Atlas sloj za analizu</b> ili <b>Odaberite sloj za analizu</b> u dnu padajuće liste. Ovim se otvara galerija koja sadrži kolekciju slojeva korisnih za veliki broj analiza. 
+            <p>Pored biranja sloja sa mape, možete da selektujete  <b>Izaberi sloj za analizu</b> koji se nalazi na dnu padajuće liste. Ova opcija otvara galeriju gde možete da pregledate i birate skupove podataka iz raznih izvora za kori&scaron;ćenje u va&scaron;oj analizi. 
             </p> 
         </div>
     </div>
@@ -83,11 +83,11 @@
         <div><h2>Sumiraj najbliže geoobjekte koristeći</h2></div>
         <hr/>
         <div>
-            <p> Možete da defini&scaron;ete koju vrstu merenja razdaljine želite da koristite, pravolinijsku razdaljinu ili izabrani režim putovanja. Režimi putovanja su omogućeni samo kada prvi ulazni sloj (sloj iz kojeg se razdaljine mere) sadrži tačke. Dostupne režime putovanja određuje administrator organizacije. Kada koristite jedan od režima putovanja, merenja se obavljaju duž puteva ili trotoara, i po&scaron;tuju primenljiva pravila kao &scaron;to su jednosmerne ulice, nedozvoljena skretanja i tako dalje. Vreme vožnje po&scaron;tuje izbor brzina putovanja, bilo onih zasnovanih na saobraćaju uživo ili tipičnim uslovima saobraćaja. Brzine uživo se skupljaju putem aktuelnih očitavanja senzora, a tipične brzine se izračunavaju iz istorijskih proseka.
+            <p> Možete da defini&scaron;ete koju vrstu merenja razdaljine želite da koristite, pravolinijsku razdaljinu ili izabrani režim putovanja. Režimi putovanja su omogućeni samo kada prvi ulazni sloj (sloj iz kojeg se razdaljine mere) sadrži tačke. Dostupne režime putovanja određuje administrator organizacije. Kada koristite jedan od režima putovanja, merenja se obavljaju duž puteva ili trotoara, i po&scaron;tuju primenljiva pravila kao &scaron;to su jednosmerne ulice, nedozvoljena skretanja i tako dalje. <b>Vreme vožnje</b>, <b>Vreme vožnje ruralni predelima</b> i <b>Vreme vožnje kamionom</b> po&scaron;tuju va&scaron; izbor brzina kretanja, bilo one zasnovane na saobraćaju uživo ili tipičnim uslovima saobraćaja. Brzine uživo se skupljaju putem aktuelnih očitavanja senzora, a tipične brzine se izračunavaju iz istorijskih proseka.
             </p>
             <p>Možete da unesete vi&scaron;e razdaljina. Biće rezimirani geoobjekti koji su unutar (ili jednaki) razdaljinama koje uneste.  
             </p>
-            <p>Ako je polje za potvrdu  <b>Vrati granične oblasti</b> potvrđeno, dobićete sloj sa rezultatima sa oblastima definisanim navedenim merenjem razdaljine. Sloj sa rezultatima će sadržati sve zahtevane sumirane informacije. Na primer, prilikom sumiranja obližnjih tačaka, ako koristite <b>linijsku razdaljinu</b> od 5 milja, rezultat će sadržati oblasti sa prečnikom od 5 milja oko ulaznih geoobjekata i sve sumirane informacije kao &scaron;to je broj tačaka i svaku dodatu statistiku. Ako nije potvrđeno, rezultujući sloj će dati iste geoobjekte prvog ulaznog sloja sa svih zahtevanim sumiranim informacijama.
+            <p>Ako je polje za potvrdu  <b>Vrati granične oblasti</b> potvrđeno, dobićete sloj sa rezultatima sa oblastima definisanim navedenim merenjem razdaljine. Sloj sa rezultatima će sadržati sve zahtevane sumirane informacije. Na primer, prilikom sumiranja obližnjih tačaka, ako koristite <b>Pravolinijsko rastojanje</b> od 5 milja, va&scaron; rezultat će sadržati oblasti sa poluprečnikom od 5 milja oko ulaznih geoobjekata i sve sumirane informacije, poput broja tačaka i bilo koje dodate statistike. Ako nije potvrđeno, rezultujući sloj će dati iste geoobjekte prvog ulaznog sloja sa svih zahtevanim sumiranim informacijama.
             </p>
         </div>
     </div>
@@ -112,6 +112,8 @@
                 </li>
             </ul>
             
+            <p>Ako sloj za sumiranje nema nijedno numeričko polje, dodatna statistika neće biti dostupna.
+            </p>
         </div>
     </div>
     <div id="StatisticsLine">
@@ -135,6 +137,8 @@
                 </li>
             </ul>
             
+            <p>Ako sloj za sumiranje nema nijedno numeričko polje, dodatna statistika neće biti dostupna.
+            </p>
         </div>
     </div>
     <div id="StatisticsPolygon">
@@ -158,13 +162,15 @@
                 </li>
             </ul>
             
+            <p>Ako sloj za sumiranje nema nijedno numeričko polje, dodatna statistika neće biti dostupna.
+            </p>
         </div>
     </div>
     <div id="StatisticsNoLayer">
         <div><h2>Dodaj statistiku iz sloja za sumiranje</h2></div>
         <hr/>
         <div>
-            <p>Kada odaberete sloj za sumiranje,opcionalno možete da izračunate statistiku bilo kojeg numeričkog atributa obližnjih tačaka, linija ili oblasti. 
+            <p>Kada odaberete sloj za sumiranje, opcionalno možete da izračunate statistiku bilo kojeg numeričkog atributa obližnjih tačaka, linija ili oblasti. 
             </p>
             <ul>
                 <li> <b>Zbir</b> &ndash; ukupna vrednost za navedeno polje
@@ -181,13 +187,15 @@
             
             <p>U zavisnosti od tipova geoobjekata koje sumirate, možete da izračunate ukupan broj obližnjih tačaka, ukupnu dužinu obližnjih linija ili ukupnu povr&scaron;inu geoobjekata obližnje oblasti.
             </p>
+            <p>Ako sloj za sumiranje nema nijedno numeričko polje, dodatna statistika neće biti dostupna.
+            </p>
         </div>
     </div>
     <div id="GroupBy">
         <div><h2>Odaberite polje po kojem ćete da grupišete</h2></div>
         <hr/>
         <div>
-            <p> Ovo je atribut obližnjih geoobjekata koje možete da koristite za izračunavanje statistike zasebno za svaku jedinstvenu vrednost atributa. Na primer, pretpostavimo da prvi ulazni sloj (sloj iz kojeg se izračunavaju razdaljine) sadrži prazne parcele zemlji&scaron;ta za prodaju, a obližnji geoobjekti su planovi zgrada. Jedan od atributa planova zgrada je <i>UseType</i>, koji sadrži vrednosti kao &scaron;to su RETAIL, RESIDENTIAL, MANUFACTURING, PUBLIC i tako dalje. Da bi se okarakterisala me&scaron;ovite upotreba zgrada blizu svake prazne parcele, mogli biste da izračunate ukupnu oblast svakog jedinstvenog tipa upotrebe zgrade unutar dva kilometra od praznih parcela koristeći <i>UseType</i> kao atribut za grupisanje. Statistika za svaku grupu, kao i broj obližnjih geoobjekata, biće prikazani u iskačućem prozoru sloja sa rezultatima.
+            <p> Ovo je atribut obližnjih geoobjekata koje možete da koristite za izračunavanje statistike zasebno za svaku jedinstvenu vrednost atributa. Na primer, pretpostavimo da prvi ulazni sloj (sloj iz kojeg se izračunavaju razdaljine) sadrži prazne parcele zemlji&scaron;ta za prodaju, a obližnji geoobjekti su planovi zgrada. Jedan od atributa planova zgrada je <i>UseType</i>, koji sadrži vrednosti kao &scaron;to su RETAIL, RESIDENTIAL, MANUFACTURING, PUBLIC i tako dalje.  Da bi se okarakterisala me&scaron;ovite upotreba zgrada blizu svake prazne parcele, mogli biste da izračunate ukupnu oblast svakog jedinstvenog tipa upotrebe zgrade unutar dva kilometra od praznih parcela koristeći <i>UseType</i> kao atribut za grupisanje.   Statistika za svaku grupu, kao i broj obližnjih geoobjekata, biće prikazani u iskačućem prozoru sloja sa rezultatima.
             </p>    
         </div>
     </div>
@@ -220,9 +228,9 @@
         <div><h2>Naziv sloja sa rezultatima</h2></div>
         <hr/>
         <div>
-            <p>Ovo je naziv sloja koji će biti kreiran u  <b>Mom sadržaju</b> i dodat na mapu. Podrazumevani naziv je zasnovan na nazivu alatke i nazivu ulaznog sloja. Ako sloj već postoji, bićete upitani da unesete drugi naziv.
+            <p>Naziv sloja koji će biti kreiran u opciji  <b>Moj sadržaj</b> i dodat mapi. Podrazumevani naziv je zasnovan na nazivu alatke i nazivu ulaznog sloja. Ako naziv sloja već postoji, bićete upitani da unesete drugi naziv.
             </p>
-            <p>Koristeći padajuće polje  <b>Sačuvaj rezultat u</b> možete da navedete ime fascikle u <b>Mom sadržaju</b> u kojoj će rezultat biti sačuvan.
+            <p>Koristeći padajući meni  <b>Sačuvaj rezultat u</b>, možete da navedete ime fascikle u <b>Mom sadržaju</b> u kojoj će rezultat biti sačuvan.
             </p>
         </div>
     </div>

@@ -51,7 +51,6 @@
     <p>En el caso de la entrada de l&iacute;nea, la superficie de densidad de l&iacute;nea representa la cantidad total de la l&iacute;nea que est&aacute; cerca de cada ubicaci&oacute;n. Las unidades de los valores de la densidad calculada corresponden a la longitud del &aacute;rea de l&iacute;nea por unidad. Por ejemplo, si las l&iacute;neas representan r&iacute;os, la capa de resultados representar&aacute; la longitud total de los r&iacute;os que est&aacute;n dentro del radio de b&uacute;squeda. Este resultado se puede usar para identificar las &aacute;reas que son adecuadas como pastos para animales.
     </p>
     <p>Se describen a continuaci&oacute;n otros ejemplos de uso de esta herramienta:
-
         <ul>
             <li>Crear mapas de densidad de delitos para ayudar a los departamentos de polic&iacute;a a asignar los recursos adecuados a las zonas con un alto nivel de delitos.
                 
@@ -86,7 +85,7 @@
         <div><h2>Usar un campo de recuento</h2></div>
         <hr/>
         <div>
-            <p>Proporciona un campo que especifique el n&uacute;mero de incidentes de cada ubicaci&oacute;n. Por ejemplo, si tienes puntos que representan ciudades, puedes usar un campo que represente la poblaci&oacute;n de la ciudad como campo de recuento, y la capa de densidad de poblaci&oacute;n resultante calcular&aacute; las densidades de poblaci&oacute;n m&aacute;s altas cerca de las ciudades con las mayores poblaciones.
+            <p>Proporciona un campo que especifique el n&uacute;mero de incidentes de cada ubicaci&oacute;n. Por ejemplo, si tiene puntos que representan ciudades, puede usar un campo que represente la poblaci&oacute;n de la ciudad como campo de recuento, y la capa de densidad de poblaci&oacute;n resultante calcular&aacute; las densidades de poblaci&oacute;n m&aacute;s altas cerca de las ciudades con las mayores poblaciones.
             </p>
             <p>Si se usa la opci&oacute;n predeterminada  <b>Ninguno</b>, se entender&aacute; que cada ubicaci&oacute;n representa un solo recuento.
             </p>
@@ -108,7 +107,7 @@
         <div>
             <p>Especifica la unidad de &aacute;rea de salida. La densidad es el n&uacute;mero de entidades dividido por el &aacute;rea, y este par&aacute;metro especifica la unidad de &aacute;rea en el c&aacute;lculo de densidad.
             </p>
-            <p>Las unidades de &aacute;rea disponibles son millas cuadradas y kil&oacute;metros cuadrados.
+            <p>Las unidades de &aacute;rea disponibles son: millas cuadradas, pies cuadrados, metros cuadrados y kil&oacute;metros cuadrados.
             </p>
         </div>
     </div>
@@ -116,7 +115,17 @@
         <div><h2>Tamaño de celda de salida</h2></div>
         <hr/>
         <div>
-            <p>Introduzca el tama&ntilde;o de celda y la unidad para los r&aacute;steres de salida.
+            <p>El tama&ntilde;o de celda y las unidades para los r&aacute;steres de salida.
+            </p>
+        </div>
+    </div>
+    <div id="inBarriers">
+        <div><h2>Seleccionar las entidades de barrera (opcional)</h2></div>
+        <hr/>
+        <div>
+            <p>El dataset que define las barreras.
+            </p>
+            <p>Las barreras pueden ser una capa de entidades poligonales o de polil&iacute;nea.
             </p>
         </div>
     </div>
@@ -124,9 +133,10 @@
         <div><h2>Nombre de capa de resultados</h2></div>
         <hr/>
         <div>
-            <p>El nombre de la capa que se crear&aacute; en  <b>Mi contenido</b> y que se agregar&aacute; al mapa. El nombre predeterminado se basa en el nombre de la herramienta y en el nombre de la capa de entrada. Si la capa ya existe, se te pedir&aacute; que indiques otro nombre.
+            
+            <p>El nombre de la capa que se crear&aacute; en  <b>Mi contenido</b> y que se agregar&aacute; al mapa. El nombre predeterminado se basa en el nombre de la herramienta y en el nombre de la capa de entrada. Si la capa ya existe, se le pedir&aacute; que indique otro nombre.
             </p>
-            <p>En el cuadro desplegable  <b>Guardar el resultado en</b>, puedes especificar el nombre de una carpeta de <b>Mi contenido</b> en la que se guardar&aacute; el resultado.
+            <p>Puede especificar el nombre de una carpeta de  <b>Mi contenido</b> en la que se guardar&aacute; el resultado con el cuadro desplegable <b>Guardar el resultado en</b>.
             </p>
         </div>
     </div>

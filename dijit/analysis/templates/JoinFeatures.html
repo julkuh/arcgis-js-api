@@ -7,7 +7,7 @@
             <td class="esriAlignLeading esriAnalysisTitle" data-dojo-attach-point="_toolTitle">
 							<label data-dojo-attach-point="_titleLbl">${i18n.joinFeaturesTitle}</label>
 							<nav class="breadcrumbs"  data-dojo-attach-point="_analysisModeLblNode" style="display:none;">
-								<a href="#" class="crumb" style="font-size:12px;" data-dojo-attach-event="onclick:_handleModeCrumbClick" data-dojo-attach-point="_analysisModeCrumb"></a>
+								<a href="#" class="crumb breadcrumbs__modelabel" data-dojo-attach-event="onclick:_handleModeCrumbClick" data-dojo-attach-point="_analysisModeCrumb"></a>
 								<a href="#" class="crumb is-active" data-dojo-attach-point="_analysisTitleCrumb" style="font-size:16px;">${i18n.joinFeaturesTitle}</a>
 							</nav> 							
 						</td>
@@ -168,7 +168,7 @@
 	          	</tr>
 	    	</tbody>
 	    </table>
-	    <table class="esriFormTable esriLeadingMargin1" style="border-collapse:collapse;border-spacing:5px;margin-top:10px;" cellpadding="5px" cellspacing="5px"> 
+	    <table class="esriFormTable esriLeadingMargin1 attributeJoin" style="border-collapse:collapse;border-spacing:5px;margin-top:10px;" cellpadding="5px" cellspacing="5px"> 
 	        <tbody>
 		      	<tr data-dojo-attach-point="_attributeRelationshipRow" class="hide longInput">
 		          	
@@ -187,11 +187,47 @@
 		            </td>
 	          	</tr>
 	          	<tr data-dojo-attach-point="_joinOperationRow" style="display: table-row;">
-		            <td style="padding-top: 0px; padding-bottom: 1em;">
+		            <td colspan="3" style="padding-top: 0px; padding-bottom: 1em;">
 		              	<select class="esriLeadingMargin1 esriTrailingMargin025 longInput esriLongLabel" style="overflow:hidden!important;" data-dojo-attach-point="_joinOperation" data-dojo-type="dijit/form/Select" data-dojo-attach-event="onChange:_handleJoinOperationChange">
 		              	</select>
 		            </td>
-	          	</tr>
+              </tr>
+              <tr data-dojo-attach-point="_joinOneOneOptionRow" style="display: table-row;">
+                <td colspan="3">
+                  <select data-dojo-attach-point="_joinOptionSelect" data-dojo-type="dijit/form/Select" data-dojo-attach-event="onChange:_handleJoinOneToOneOptionChange" class="esriLeadingMargin1 esriTrailingMargin025 longInput esriLongLabel">
+                    <option value="RECORD">${i18n.recordKept}</option>
+                    <option value="STATS">${i18n.addStats}</option>
+                  </select>
+                </td>
+		            <td data-dojo-attach-point="_joinOneOneOptionsHelpTd" class="shortTextInput" style="padding-bottom:0;">
+		              <a href="#" class="esriFloatTrailing helpIcon" esrihelptopic="summaryFields"></a>
+		            </td>
+              </tr>
+              <!--<tr>
+                <td colspan="4">
+                    <label class="esriLeadingMargin1" data-dojo-attach-point="_joinRecordRowLabel">${i18n.recordKept}</label>
+                </td>
+              </tr>-->
+              <tr data-dojo-attach-point="_joinRecordRow" style="display: table-row;">
+                <td colspan="4">
+                  <div class="esriLeadingMargin2" style="width:100%;">
+                    <label class="esriSelectLabel">
+                      <input type="radio" data-dojo-type="dijit/form/RadioButton" data-dojo-attach-point="_firstRecRadioBtn" data-dojo-props="'class':'esriSelectLabel',checked:true" name="chooserecord"/>
+                      ${i18n.chooseFirstRecord}
+                    </label>
+                    <br/>
+                    <label class="esriSelectLabel">
+                      <input type="radio" data-dojo-type="dijit/form/RadioButton" data-dojo-attach-point="_exprRadioBtn" data-dojo-attach-event="onChange:_handleExprRadioChange" data-dojo-props="'class':'esriSelectLabel'" name="chooserecord"/> 
+                      ${i18n.orderByField}
+                    </label>
+                    <br/>
+                    <select class="padTop05 esriTableFixedLayout mediumDivInput"  data-dojo-type="dijit/form/Select"  data-dojo-attach-event="onChange:_handleExpFieldChange" data-dojo-attach-point="_expFieldsSelect">
+                    </select>
+                    <select class="padTop05 esriTableFixedLayout mediumDivInput"  data-dojo-type="dijit/form/Select"  data-dojo-attach-point="_expFilterSelect">
+                    </select>
+                  </div>
+                </td>
+              </tr>
 							<tr data-dojo-attach-point="_joinOperationLabelRow" style="display: table-row;">
 		            <td colspan="3" style="padding-bottom:1em;">
 		              <label class="esriLeadingMargin1">${i18n.statisticsLabel}</label>
@@ -199,9 +235,21 @@
 		            <td class="shortTextInput" style="padding-bottom:0;">
 		              <a href="#" class="esriFloatTrailing helpIcon" esrihelptopic="summaryFields"></a>
 		            </td>
-	          	</tr>
-	          	<tr data-dojo-attach-point="_summaryStatisticRow" >
-	          	</tr>
+              </tr>
+	          	<tr data-dojo-type="esri/dijit/analysis/components/AddSummaryFields" data-dojo-attach-point="_summaryWidget" 
+								data-dojo-props="layer:'', showGeoAnalyticsParams:${showGeoAnalyticsParams}, addAsRow:true, allowDateType:true, isGPStringObjType: true">
+							</tr>
+              <tr data-dojo-attach-point="_keepTargetFeaturesRow" style="display: table-row;">
+                <td colspan="3">
+				   <label class="esriLeadingMargin1 esriSelectLabel esriExtentLabel">
+					 <input type="radio" data-dojo-attach-point="_keepTargetFeaturesCheck" data-dojo-type="dijit/form/CheckBox" name="keepAllTargetFeatures"/>
+						${i18n.keepAllTargetFeatures}
+				   </label>
+                </td>
+		        <td class="shortTextInput" style="padding-bottom:0;">
+		          <a href="#" class="esriFloatTrailing helpIcon" esrihelptopic="keepTargetFeatures"></a>
+		        </td>
+              </tr>
 	        </tbody>
 	    </table>
 			<table data-dojo-attach-point="_joinConditionNode" class="esriFormTable" style="border-collapse:collapse;border-spacing:5px; margin-top:10px;margin-bottom:5px;" cellpadding="5px" cellspacing="5px" data-dojo-attach-point="_joinOperationTable"> 
@@ -262,11 +310,26 @@
 	</div>
   	<div style="padding:5px;margin-top:5px;border-top:solid 1px #BBB;">
       	<div class="esriExtentCreditsCtr">
-        <a class="esriFloatTrailing esriSmallFont"  href="#" data-dojo-attach-point="_showCreditsLink" data-dojo-attach-event="onclick:_handleShowCreditsClick">${i18n.showCredits}</a>
-       	<label data-dojo-attach-point="_chooseExtentDiv" class="esriSelectLabel esriExtentLabel">
-         	<input type="radio" data-dojo-attach-point="_useExtentCheck" data-dojo-type="dijit/form/CheckBox" data-dojo-props="checked:true" name="extent" value="true"/>
+        <a class="esriFloatTrailing esriSmallFont"  href="#" data-dojo-attach-point="_showCreditsLink">${i18n.showCredits}</a>
+       	<label data-dojo-attach-point="_chooseExtentDiv" class="esriSelectLabel esriExtentLabel esriLeadingMargin025">
+         	<input type="radio" data-dojo-attach-point="_useExtentCheck" data-dojo-type="dijit/form/CheckBox" data-dojo-attach-event="onChange:_handleExtentChange" data-dojo-props="checked:true" name="extent" value="true"/>
            	${i18n.useMapExtent}
        	</label>
+      </div>
+      <div data-dojo-attach-point="_outputTypeRow" class="padBottom1">
+        <table style="width:100%;">
+          <tr>
+            <td colspan="3" style="padding:0;">
+              <label data-dojo-attach-point="" class="esriSelectLabel esriExtentLabel">
+                <input type="radio" data-dojo-attach-point="_checkCreateView" data-dojo-attach-event="onChange:_handleCreateViewChange" data-dojo-type="dijit/form/CheckBox" name="storeResultAsView"/>
+                ${i18n.saveResultAsView}
+              </label>
+            </td>
+            <td class="shortTextInput">
+              <a href="#" class="esriFloatTrailing helpIcon" esrihelptopic="isView"></a>
+            </td>
+          </tr>
+        </table>
       </div>
       <div class="esriFormWarning esriRoundedBox" data-dojo-attach-point="_errorMessagePane" style="display:none;">
         <a href="#" title="${i18n.close}" class="esriFloatTrailing esriAnalysisCloseIcon" title='${i18n.close}' data-dojo-attach-event="onclick:_handleCloseMsg"></a>

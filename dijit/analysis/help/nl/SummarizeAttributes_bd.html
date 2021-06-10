@@ -42,12 +42,11 @@
 <div id="topics">
     <div id="toolDescription" class="regularsize">
         <h2>Attributen samenvatten</h2><p/>
-        <h2><img src="../images/GUID-F64B533F-B0BB-4519-9F31-BCF814084999-web.png" alt="Attributen samenvatten"></h2>
+        <h2><img src="../images/GUID-F64B533F-B0BB-4519-9F31-BCF814084999-web.png" alt="Attributen samenvatten workflow diagram"></h2>
         <hr/>
-    <p>Deze tool vat alle overeenkomende waarden samen in een of meer velden en berekent de statistieken daarop. De meest eenvoudige statistiek is het aantal objecten die samen zijn gevat, maar u kunt ook geavanceerdere statistieken berekenen. 
-
+    <p> Deze tool vat alle overeenkomende waarden samen in een of meer velden en berekent de statistieken daarop. De meest eenvoudige statistiek is het aantal objecten die samen zijn gevat, maar u kunt ook geavanceerdere statistieken berekenen.
     </p>
-    <p>Stel bijvoorbeeld dat u puntobjecten van winkellocaties hebt met een veld dat de  <i>DISTRICT_MANAGER_NAME</i> vertegenwoordigt en u wilt de koffieverkoop per manager samenvatten. U kunt het veld <i>DISTRICT_MANAGER_NAME</i> opgeven als het veld om op op te lossen en alle rijen met gegevens die individuele managers weergeven zullen worden samengevat. Dit betekent dat alle winkellocaties die worden beheerd door Manager1 zullen worden samengevat in een rij met beknopte statistieken berekend. In dit geval worden de statistieken zoals de telling van het aantal winkels en de som van <i>TOTAL_SALES</i> voor alle winkels die Manager1 beheert ook worden berekend alsmede voor alle andere managers in het veld <i>DISTRICT_MANAGER_NAME</i>.
+    <p>Stel bijvoorbeeld dat u puntobjecten van winkellocaties hebt met een veld dat de  <i>DISTRICT_MANAGER_NAME</i>, vertegenwoordigt en u wilt de koffieverkoop per manager samenvatten. U kunt het veld <i>DISTRICT_MANAGER_NAME</i> opgeven als het veld om in op te lossen en alle rijen met gegevens die individuele managers weergeven zullen worden samengevat. Dit betekent dat alle winkellocaties die worden beheerd door <pre>Manager1</pre> zullen worden samengevat in een rij, met beknopte statistieken berekend. In dit geval worden de statistieken zoals de telling van het aantal winkels en de som van <i>TOTAL_SALES</i> voor alle winkels die <pre>Manager1</pre> beheert ook berekend, , alsook voor alle andere managers in het veld <i>DISTRICT_MANAGER_NAME</i> .
     </p>
     </div>
     <!--Parameter divs for each param-->
@@ -57,15 +56,24 @@
         <div>
             <p>De laag die de velden bevat die worden samengevat.  
             </p>
-            <p>Naast het kiezen van een laag van uw kaart, kunt u kiezen voor  <b>Blader door lagen</b> aan de onderkant van de drop-downlijst om in uw content te zoeken naar een groot gedeeld databestand of objectlaag.
+            <p>Naast het kiezen van een laag van uw kaart, kunt u kiezen voor  <b>Analyselaag kiezen</b> onderaan de keuzelijst om in uw inhoud te zoeken naar een big data file share-dataset of objectlaag. U kunt optioneel een filter toepassen op uw invoerlaag of een selectie toepassen op gehoste lagen die aan uw kaart zijn toegevoegd. Filters en selecties worden alleen toegepast voor analyse. 
             </p>
         </div>
     </div>
     <div id="fields">
-        <div><h2>Kies de velden om samen te vatten</h2></div>
+        <div><h2>Kies hoe u uw gegevens wilt samenvatten</h2></div>
         <hr/>
         <div>
-            <p>Lijst met velden van de invoerlaag. Geselecteerde velden worden samengevat en gebruikt voor statistische berekening. Bijvoorbeeld, als u een veld kiest met de naam  <i>Type eigendom</i> met de waarden van commercieel en residentieel, dan worden alle residenti&euml;le velden samengevat, met samenvattende statistieken berekend en alle commerci&euml;le worden samengevat.
+            <p>Er zijn twee manieren om uw gegevens samen te vatten:
+                <ul>
+                    <li> <b>Alle objecten in een enkel object</b>&mdash;Berekent statistieken op alle objecten.
+                    </li>
+                    <li> <b>Op velden</b>-Groepeert objecten op like-waarden in gespecificeerde velden.
+                    </li>
+                </ul>
+                
+            </p>
+            <p>Stel dat u een gegevensset met bomen had met velden met  <i>boomsoort</i> met de waarden <code>Esdoorn</code>, <code>Spar</code> en <code>Den</code>, en een veld <i>boomhoogte</i>, en u wilt de gemiddelde <i>boomhoogte</i>weten. Als u alle kenmerken samenvat in een enkel kenmerk, vindt u de gemiddelde hoogte van de boom van alle bomen, dat resulteert on een enkele gemiddelde waarde. Als u samenvat op het veld <i>boomhoogte</i>, dan zou u een gemiddelde krijgen voor  esdoorns, een gemiddelde voor sar ren, en een gemiddelde voor dennenbomen.
             </p>
         </div>
     </div>
@@ -73,7 +81,7 @@
         <div><h2>Statistieken toevoegen (optioneel)</h2></div>
         <hr/>
         <div>
-            <p> U kunt statistieken berekenen over objecten die zijn samengevat. Op numerieke velden kunt u het volgende berekenen:
+            <p>U kunt statistieken berekenen over objecten die zijn samengevat. U kunt het volgende berekenen in numerieke velden: 
                 <ul>
                     <li>Count&mdash;Berekent het aantal non-nulwaarden. Kan gebruikt worden op numerieke velden of strings. De telling van [nul, 0, 2] is 2.
                     </li>
@@ -87,21 +95,21 @@
                     </li>
                     <li>Bereik&mdash;Het bereik van een numeriek veld. Dit wordt berekend als de minimumwaarden afgetrokken van de maximumwaarde. Het bereik van [0, nul, 1] is 1. Het bereik van [nul, 4] is 0.
                     </li>
-                    <li>Variantie&mdash;De variantie van een numeriek veld in een track. De variantie van [1] is nul. De variantie van [null, 1,1,1] is 1.
+                    <li>Variantie&mdash;De variantie van een numeriek veld in een track. De variantie van [1] is nul. De variantie van [null, 1,0,1,1] is 0,25.
                     </li>
-                    <li>Standaarddeviatie&mdash;De standaarddeviatie van een numeriek veld. De standaarddeviatie van [1] is nul. De standaarddeviatie van [null, 1,1,1] is 1. 
+                    <li>Standaarddeviatie&mdash;De standaarddeviatie van een numeriek veld. De standaarddeviatie van [1] is nul. De standaarddeviatie van [null, 1,0,1,1] is 0,5. 
                     </li>
                 </ul>
                 
             </p>
-            <p>Op stringvelden kunt u het volgende berekenen:
+            <p>U kunt het volgende berekenen in stringvelden:
                 <ul>
                     <li>Telling&mdash;Het aantal non-nul strings.
                     </li>
                     <li>Elke&mdash;Deze statistiek is een willekeurig voorbeeld van een stringwaarde in het gespecificeerde veld.
                     </li>
                 </ul>
-                Alle statistieken worden berekend op nonnull waarden. De resultaatlaag zal een nieuw veld bevatten voor elke statistiek die wordt berekend. Andere statistieken kunnen worden toegevoegd door een attribuut en statistiek te kiezen. 
+                Alle statistieken worden berekend op nonnull waarden. De resultaatlaag zal een nieuw veld bevatten voor elke statistiek die wordt berekend. Andere statistieken kunnen worden toegevoegd door een attribuut en statistiek te kiezen.
             </p>
         </div>
     </div>
@@ -109,9 +117,9 @@
         <div><h2>Datastore kiezen</h2></div>
         <hr/>
         <div>
-            <p>GeoAnalytische resultaten worden opgeslagen in een ArcGIS Data Store en weergegeven als een objectlaag in  Portal for ArcGIS. In de meeste gevallen moeten de resultaten worden opgeslagen in de spatiotemporele data-opslag en dit is de standaardinstelling. In sommige gevallen is het opslaan van de resultaten in de relationele data-opslag een goede optie. Hier volgen redenen waarom u resultaten zou willen opslaan in een relationele data-opslag: 
+            <p>GeoAnalytic-resultaten worden opgeslagen in een datastore en weergegeven als een objectlaag in  Portal for ArcGIS. In de meeste gevallen moeten de resultaten worden opgeslagen in de spatiotemporele data store en dit is de standaardinstelling. In sommige gevallen is het opslaan van de resultaten in de relationele data-opslag een goede optie. Hier volgen redenen waarom u resultaten zou willen opslaan in een relationele data-opslag: 
                 <ul>
-                    <li>Om uw resultaten te gebruiken voor portaalsamenwerking.
+                    <li>U kunt resultaten gebruiken in portaal-tot-portaal samenwerking.
                     </li>
                     <li>Om synchronisatiemogelijkheden met uw resultaten mogelijk te maken.
                     </li>
@@ -124,9 +132,9 @@
         <div><h2>Resultaat laagnaam</h2></div>
         <hr/>
         <div>
-            <p> Dit is de naam van de kaartlaag die in <b>Mijn Content</b> wordt gemaakt en aan de kaart wordt toegevoegd.  De standaardnaam is gebaseerd op de toolnaam en de naam van de invoerlaag. Als de laag al bestaat, zal de tool falen.
+            <p> De naam van de laag die wordt gemaakt. Als u naar een ArcGIS Data Store schrijft, worden uw resultaten opgeslagen in  <b>Mijn Content</b> en toegevoegd aan de kaart. Als u naar een big data file share schrijft, worden uw resultaten opgeslagen in de big data file share en toegevoegd aan het bijhorende manifest. Ze zullen niet worden toegevoegd aan de kaart. De standaardnaam is gebaseerd op de toolnaam en de naam van de invoerlaag. Als de laag al bestaat, zal de tool falen.
             </p>
-            <p>Als u in de vervolgkeuzelijst  <b>Resultaat opslaan</b> gebruikt, kunt u de naam opgeven van een map in <b>Mijn Content</b> waarin het resultaat wordt opgeslagen.
+            <p>Wanneer u schrijft naar  ArcGIS Data Store (relationele of spatiotemporele big datastore) met behulp van de vervolgkeuzelijst  <b>Resultaat opslaan in</b>, kunt u de naam van een map opgeven in <b>Mijn Content</b>, waar het resultaat wordt opgeslagen.
             </p>
         </div>
     </div>

@@ -51,7 +51,6 @@
     <p>Za linijski unos, povr&scaron;ina gustine linija predstavlja ukupnu količinu linija koja je blizu svake lokacije. Jedinice izračunatih vrednosti gustine su dužina oblasti linije-po-jedinici. Na primer, ako linije predstavljaju reke, sloj sa rezultatima predstavljaće ukupnu dužinu reka koje su unutar radijusa pretrage. Ovaj rezultat može da se koristi za identifikovanje oblasti koje su gostoljubive prema životinjama na ispa&scaron;i.
     </p>
     <p>Drugi slučajevi upotrebe ove alatke uključuju sledeće:
-
         <ul>
             <li>Kreiranje mapa gustine kriminalnih dela &scaron;to pomaže policijskim odeljenjima da dodele resurse u oblastima visoke stope kriminala.
                 
@@ -108,7 +107,7 @@
         <div>
             <p>Navedite jedinicu izlazne povr&scaron;ine. Gustina je broj podeljen sa povr&scaron;inom, i ovaj parametar određuje jedinice povr&scaron;ine u izračunavanju gustine.
             </p>
-            <p>Jedinice povr&scaron;ine koje su na raspolaganju su kvadratne milje i kvadratni kilometri.
+            <p>Jedinice povr&scaron;ine koje su na raspolaganju su kvadratne milje , kvadratne stop, kvadratni metri i kvadratni kilometri.
             </p>
         </div>
     </div>
@@ -116,7 +115,17 @@
         <div><h2>Veličina izlazne ćelije</h2></div>
         <hr/>
         <div>
-            <p>Unesite veličinu ćelije i jedinicu za izlazne rastere.
+            <p>Veličina ćelije i jedinica za izlazne rastere.
+            </p>
+        </div>
+    </div>
+    <div id="inBarriers">
+        <div><h2>Izaberite komponente barijere (opcionalno)</h2></div>
+        <hr/>
+        <div>
+            <p>Skup podataka koji defini&scaron;e barijere.
+            </p>
+            <p>Barijere mogu da budu sloj komponente polilinije ili komponente poligona.
             </p>
         </div>
     </div>
@@ -124,9 +133,10 @@
         <div><h2>Naziv sloja sa rezultatima</h2></div>
         <hr/>
         <div>
+            
             <p>Naziv sloja koji će biti kreiran u  <b>Mom sadržaju</b> i dodat mapi. Podrazumevani naziv je zasnovan na nazivu alatke i nazivu ulaznog sloja. Ako sloj već postoji, bićete upitani da unesete drugi naziv.
             </p>
-            <p>Koristeći  <b>Sačuvaj rezultat u</b> padajućem polju, možete da navedete ime fascikle u <b>Mom sadržaju</b> u kojoj će rezultat biti sačuvan.
+            <p>Možete da navedete ime fascikle u  <b>Mom sadržaju</b> gde će rezultat biti sačuvan kori&scaron;ćenjem padajućeg polja <b>Sačuvaj rezultat u</b>.
             </p>
         </div>
     </div>

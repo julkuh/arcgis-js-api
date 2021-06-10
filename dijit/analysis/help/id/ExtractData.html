@@ -49,7 +49,7 @@
     </div>
     <!--Parameter divs for each param-->
     <div id="InputLayers">
-        <div><h2>Layer untuk Mengekstrak</h2></div>
+        <div><h2>Layer yang akan Diekstrak</h2></div>
         <hr/>
         <div>
             <p>Ada beberapa layer dalam daftar isi Anda yang dapat digunakan untuk mengekstrak fitur.  Layer-layer yang dicentang adalah layer yang diekstrak dan termasuk pada file hasil yang berupa ZIP atau CSV.
@@ -60,14 +60,14 @@
                     </li>
                     <li>Klik tab  <b>Pengaturan</b>.
                     </li>
-                    <li>Gulir ke bawah ke bagian  <b>Export Data</b> (Ekspor Data)
+                    <li>Gulir ke bawah ke bagian  <b>Ekspor Data</b>
                     </li>
                     <li>Centang  <b>Izinkan orang lain mengekspor ke format berbeda</b>.  Klik <b>Simpan</b> saat selesai.
                     </li>
                 </ul>
                 
             </p>
-            <p>Jika layer analisis Anda mengandung lampiran, perhatikan bahwa lampiran tersebut hanya akan diekstrak jika format data output adalah file geodatabase dan  <b>Clip fitur</b> tidak dicentang.
+            <p>Jika layer analisis Anda mengandung lampiran, perhatikan bahwa lampiran tersebut hanya akan diekstrak jika format data output adalah file geodatabase dan  <b>Potong fitur</b> tidak dicentang.
             </p>
         </div>
     </div>
@@ -77,18 +77,18 @@
         <div>
             <p>Area yang menentukan fitur mana yang akan dimasukkan sebagai file output ZIP atau CSV.   Anda dapat memilih dari yang berikut ini:
                 <ul>
-                    <li>Jangkauan visibel peta Anda saat ini ( <b>Sama seperti Tampilan</b>).
+                    <li>Jangkauan yang terlihat pada peta Anda saat ini ( <b>Sama seperti Tampilan</b>).
                     </li>
-                    <li>Satu opsi membatasi jumlah maksimum lokasi terdekat untuk ditemukan per lokasi mulai.
+                    <li>Salah satu layer di daftar isi Anda. Jika layer pilihan adalah titik atau garis, jangkauan layer akan digunakan sebagai area studi.
                     </li>
-                    <li>Waktu berkendara mengikuti pilihan Anda terkait kecepatan perjalanan, baik yang berdasarkan lalu lintas sesungguhnya saat itu atau situasi lalu lintas pada umumnya.
+                    <li>Gambar area untuk menentukan area studi.
                     </li>
                 </ul>
                  Semua fitur yang berada dalam jangkauan peta akan diekstrak.  Untuk fitur-fitur yang bersilangan atau memotong batas jangkauan peta, namun tidak sepenuhnya berada dalam jangkauan peta, Anda memiliki dua opsi:
                 <ul>
                     <li> <b>Pilih fitur</b>&mdash;Seluruh fitur yang melewati batas area studi akan diekstrak.
                     </li>
-                    <li> <b>Clip fitur</b>&mdash;Hanya bagian fitur yang berada dalam area studi yang akan diekstrak.
+                    <li> <b>Potong fitur</b>&mdash;Hanya bagian fitur yang berada dalam area studi yang akan diekstrak.
                     </li>
                 </ul>
                 
@@ -101,15 +101,30 @@
         <div>
             <p>Format data yang akan diekstrak. Saat mengekspor fitur garis atau area ke file CSV, hanya atribut nonspasial yang akan diekstrak.  Saat mengekspor fitur titik, baik atribut spasial maupun nonspasial akan diekstrak.  
             </p>
+            <p>Data yang diekstrak akan menggunakan proyeksi Web Mercator 1984.  Untuk file CSV, kolom  <i>Lat</i> dan <i>Long</i> akan ditambahkan ke data dengan koordinat dalam Web Mercator 1984.
+            </p> 
+            <p>Format keluaran berikut didukung:
+                <ul>
+                    <li>Nilai yang dipisahkan koma (CSV)&mdash; <code>.csv</code> atau <code>.zip</code>
+                    </li>
+                    <li>File geodatabase&mdash; <code>.zip</code>
+                    </li>
+                    <li>Bahasa Markup Lubang Kunci (KML)&mdash; <code>.kmz</code> atau <code>.zip</code>
+                    </li>
+                    <li>Shapefile&mdash; <code>.zip</code>
+                    </li>
+                </ul>
+                
+            </p>
         </div>
     </div>
     <div id="OutputName">
         <div><h2>Nama file output</h2></div>
         <hr/>
         <div>
-            <p>Ini adalah nama item yang akan ditambahkan ke  <b>Konten Saya</b> Anda.  Nama item akan dipilih berdasarkan dengan <b>Format data output</b> yang dipilih.     Jika item sudah ada, Anda akan diminta untuk memberikan nama lain.
+            <p>Ini adalah nama item yang akan ditambahkan ke  <b>Konten Saya</b>.  Nama item akan dipilih berdasarkan dengan <b>Format data output</b> yang dipilih.     Jika item sudah ada, Anda akan diminta untuk memberikan nama lain.
             </p>
-            <p>Menggunakan kotak tarik turun (drop-down box)  <b>Simpan hasil di</b>, Anda dapat menentukan nama folder di <b>Konten Saya</b> tempat hasilnya akan disimpan.
+            <p>Dengan menggunakan kotak drop-down  <b>Simpan hasil</b>, Anda dapat menentukan nama folder di <b>Konten Saya</b> sebagai tempat penyimpanan hasil.
             </p>
         </div>
     </div>

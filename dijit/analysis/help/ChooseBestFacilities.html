@@ -135,8 +135,7 @@
         <div><h2>Measure</h2></div>
         <hr/>
         <div>
-            <p>As with other tools that involve travel in the analysis, you can specify whether travel is measured using distance or time, and can select from various travel modes such as walking time, driving time, rural driving distance, and so on. The available travel modes are determined by the administrator of your organization. When using Driving Time or Rural Driving Time, you can optionally include traffic for a specific day of week and time of day.
-
+            <p>As with other tools that involve travel in the analysis, you can specify whether travel is measured using distance or time, and can select from various travel modes such as walking time, driving time, rural driving distance, and so on. The available travel modes are determined by the administrator of your organization. When using  <b>Driving Time</b>, <b>Rural Driving Time</b>, or <b>Trucking Time</b> you can optionally include traffic for a specific day of week and time of day.
             </p>
             <p> In order to accurately allocate demand locations to facilities, you specify whether travel is from the facilities to the demand locations (from fire stations to houses, for example) or from demand locations to facilities (as with patrons to libraries). Choose Best Facilities will account for direction of travel on one-way streets, whether you can turn from one street onto another, whether intersections are no left turn, and so on, depending on whether travel is outward from the facility to the demand locations, or inward from the demand locations to the facilities.
             </p>
@@ -154,7 +153,7 @@
             </p>
             <p>If the goal type is  <b>Cover a percentage of demand</b>, you need to specify the minimum percentage of demand that you want the facilities to capture.
             </p>
-            <p class="OnlineOnly">In addition to choosing a layer from your map, you can select  <b>Choose Living Atlas Analysis Layer</b> or <b>Choose  Analysis Layer</b> found at the bottom of the drop-down list. This opens a gallery containing a collection of layers useful for many analyses. 
+            <p>In addition to choosing a layer from your map, you can select  <b>Choose Analysis Layer</b> found at the bottom of the drop-down list. This option opens a gallery where you can browse to and select datasets from various sources to use in your analysis. 
             </p>
             <p>The tool supports up to 10,000 features in the Demand Locations Layer.
             </p>  
@@ -186,15 +185,29 @@
             </p>  
         </div>
     </div>
+    <div id="barrier_layers">
+        <div><h2>Select barrier layers</h2></div>
+        <hr/>
+        <div>
+            <p> One or more features that act as temporary restrictions (barriers) when traveling on the underlying streets. You can specify the barriers using point, line, or polygon features.
+            </p>
+            <p>A point barrier can model a fallen tree, an accident, a downed electrical line, or anything that completely blocks traffic at a specific position along the street. Travel is permitted on the street but not through the barrier. You can specify up to 250 features to act as point barriers.
+            </p>
+            <p>A line barrier prohibits travel anywhere the barrier intersects the streets. For example, a parade or protest that blocks traffic across several street segments can be modeled with a line barrier. If the number of street features intersected by all the line barriers exceeds 500, the tool returns an error.
+            </p>
+            <p>A polygon barrier prohibits travel anywhere the polygon intersects the streets. One use of this type of barrier is to model floods covering areas of the street network and making road travel there impossible. If the number of street features intersected by all the polygon barriers exceeds 2000, the tool returns an error.
+            </p>
+        </div>
+    </div>
     <div id="outputName">
         <div><h2>Result layer name</h2></div>
         <hr/>
         <div>
-            <p>This is the name of the layer that will be created in  <b>My Content</b>  and added to the map.  The default  name is based on the tool name and the input layer name. If the layer already exists, you will be asked to provide another name.
+            <p>The name of the layer that will be created in  <b>My Content</b>  and added to the map.  The default  name is based on the tool name and the input layer name. If the layer name already exists, you will be prompted to provide another name.
             </p>
             <p>The result layer will contain a layer for each of the following: facilities that have demands assigned to them, demand locations that are allocated to facilities, and allocation lines connecting the demand locations to their assigned facilities. The allocation lines are drawn as straight lines; however, the travel time or the travel distance between the facility and the demand location is always based on the travel mode you specify and not using straight-line distances.
             </p>
-            <p>Using the  <b>Save result in</b> drop-down box, you can  specify the name of a folder in <b>My Content</b> where the result will be saved.
+            <p>Using the  <b>Save result in</b> drop-down menu, you can  specify the name of a folder in <b>My Content</b> where the result will be saved.
             </p>
         </div>
     </div>

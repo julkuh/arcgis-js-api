@@ -94,18 +94,18 @@
 }
 
 .esriCalcField .esriFunctionLabelDiv {
-  padding-bottom: 2em;
+  padding-bottom: 1em;
 }
 
 .esriCalcField .esriCalcFieldsList {
   width: 70%;
-  height: 85%;
+  height: 80%;
   overflow-y: auto;
 }
 
 .esriCalcField .esriCalcFunctionList {
   width: 90%;
-  height: 85%;
+  height: 100%;
   overflow-y: auto;
 }
 
@@ -145,7 +145,7 @@
 
 .esriCalcField .esriFormWarning {
   padding:0.5em;
-  margin: 0.7em 0;
+  margin: 2.5em 0 0 0;
   border: 1px solid #a67032;
   background-color: #F4DA6E;
   height: 3em;
@@ -154,7 +154,7 @@
 
 .esriCalcField .esriFormSuccess {
   padding: 1.2em;
-  margin: 0.7em 0;
+  margin: 2.5em 0 0 0;
   border: 1px solid #257824;
   background-color: #D2E959;
 }
@@ -176,4 +176,20 @@
 
 .esriCalcHelp a, .esriCalcHelp a:hover, .esriCalcHelp a:active, .esriCalcHelp a:visited {
     color: #21759B;
+}
+
+.esriCalcField .esriTitleDivideLine {
+  clear:both;
+  border-bottom: #CCC thin solid;
+  height:4%;
+  max-height:4em;
+  width:100%;
+}
+
+.esriCalcField label{
+  display: block;
+}
+
+.esriCalcFieldActionCtr {
+  padding: 3em 0 2em 0;
 }

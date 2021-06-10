@@ -56,7 +56,7 @@
         <div>
             <p>Punkt-, joon- v&otilde;i pindobjektid, mida puhvri loomiseks kasutatakse. Sisendkihid peavad olema tasapinnalises ristkoordinaatide s&uuml;steemis v&otilde;i peab tasapinnaliseks ristkoordinaatide s&uuml;steemiks olema funktsiooni  <b>Anal&uuml;&uuml;sikeskkonnad</b> abil m&auml;&auml;ratud t&ouml;&ouml;tlev koordinaats&uuml;steem.
             </p>
-            <p>Lisaks kihi valimisele kaardil saate valida ripploendi alumises servas  <b>Sirvi kihte</b>, et otsida oma sisust suurandmete failiketta andmestikku v&otilde;i objektikihti.
+            <p>Lisaks kihi valimisele kaardil saate valida ripploendi alumises servas  <b>Vali anal&uuml;&uuml;sikihte</b>, et otsida oma sisust suurandmete failiketta andmestikku v&otilde;i objektikihti. Valikuliselt v&otilde;ite rakendada filtrit oma sisendkihile v&otilde;i valikut kaardile lisatud majutatud kihtidele. Filtreid ja valikuid rakendatakse ainult anal&uuml;&uuml;siks. 
             </p>
         </div>
     </div>
@@ -70,7 +70,7 @@
                     </li>
                     <li>M&auml;&auml;rake sisendkihi v&auml;li, mis sisaldab kauguse v&auml;&auml;rtust. V&otilde;ite kasutada tekstiv&auml;lja v&otilde;i numbriv&auml;lja. Kui lineaarset &uuml;hikut pole m&auml;&auml;ratud, kasutatakse kihi koordinaats&uuml;steemi pikkus&uuml;hikuid (nt meeter). Kui kasutate geograafilist koordinaats&uuml;steemi, siis eeldatakse, et &uuml;hikuteta v&auml;ljal on meetrid. 
                     </li>
-                    <li>Looge avaldis mitme v&auml;ljaga ja matemaatiliste operaatoritega.
+                    <li>Looge avaldis mitme v&auml;ljaga ja matemaatiliste operaatoritega. N&auml;iteks selleks, et puhverdada k&uuml;mme korda v&auml;lja  <i>kaugus_rannajoonest</i> v&auml;&auml;rtust, lisage avaldis <i>$feature[&quot;kaugus_rannajoonest&quot;] x 10</i>.
                     </li>
                 </ul>
                 
@@ -78,7 +78,7 @@
         </div>
     </div>
     <div id="method">
-        <div><h2>Valige puhverdamismeetod</h2></div>
+        <div><h2>Valige puhverdamise meetod</h2></div>
         <hr/>
         <div>
             <p>V&otilde;ite kasutada meetodit  <b>Planaarne</b> v&otilde;i <b>Geodeetiline</b>. Meetod <b>Planaarne</b> v&otilde;ib olla kiirem ja sobib tasapinnaliste ristkoordinaatide alusel kirjeldatud andmete anal&uuml;&uuml;simiseks. Meetod <b>Geodeetiline</b> sobib geograafiliste koordinaatide alusel kirjeldatud andmete puhul ja suuremal alal paiknevate n&auml;htuste juures.
@@ -95,7 +95,7 @@
                     </li>
                     <li> <b>V&auml;ljad</b>&ndash; Sulandatakse objektid, millel on sama m&auml;&auml;ratletud v&auml;li v&otilde;i m&auml;&auml;ratletud v&auml;lja kombinatsioon. Kui mitmeosalised objektid on lubatud, sulandatakse k&otilde;ik sama v&auml;ljaga objektid &uuml;heks objektiks. Kui mitmeosalised objektid ei ole lubatud, sulandatakse k&otilde;rvuti olevad v&otilde;i kattuvad sama v&auml;ljav&auml;&auml;rtusega objektid.
                     </li>
-                    <li> <b>Mitte &uuml;kski</b>&ndash; Mitte &uuml;htegi objekti ei sulandata. See on vaikimisi valitud.
+                    <li> <b>Mitte &uuml;kski</b>&ndash; Mitte &uuml;htegi objekti ei sulandata. See on vaikimisi valik.
                     </li>
                 </ul>
                 
@@ -124,9 +124,9 @@
         <div><h2>Lisa statistika (valikuline)</h2></div>
         <hr/>
         <div>
-            <p> Saate arvutada summeeritud objektide statistika. Numbriv&auml;ljadel saab arvutada j&auml;rgmised statistikud.
+            <p>Saate arvutada summeeritud objektide statistika. Saate arvutada allj&auml;rgnevad v&auml;&auml;rtused numbriv&auml;ljadel: 
                 <ul>
-                    <li>Koguarv &ndash; arvutatakse v&auml;&auml;rtuste, mis pole nullv&auml;&auml;rtused, hulk. See funktsioon on kasutatav numbriv&auml;ljade v&otilde;i stringide korral. V&auml;&auml;rtuste [null, 0 ja 2] koguarv on 2.
+                    <li>Koguarv &ndash; arvutatakse v&auml;&auml;rtuste, mis pole nullv&auml;&auml;rtused, hulk. See funktsioon on kasutatav numbriv&auml;ljade v&otilde;i tekstiv&auml;ljade korral. V&auml;&auml;rtuste [null, 0 ja 2] koguarv on 2.
                     </li>
                     <li>Summa &ndash; v&auml;ljal olevate arvv&auml;&auml;rtuste summa. V&auml;&auml;rtuste [null, null ja 3] summa on 3.
                     </li>
@@ -138,21 +138,21 @@
                     </li>
                     <li>Vahemik &ndash; numbriv&auml;lja vahemik. Selle arvutamiseks lahutatakse maksimumv&auml;&auml;rtusest miinimumv&auml;&auml;rtus. V&auml;&auml;rtuste [0, null ja 1] vahemik on 1. V&auml;&auml;rtuste [null ja 4] vahemik on 0.
                     </li>
-                    <li>Dispersioon &ndash; raja numbriv&auml;lja dispersioon. V&auml;&auml;rtuse [1] dispersiooni on null. V&auml;&auml;rtuste [null, 1;1 ja 1] dispersioon on 1.
+                    <li>Dispersioon &ndash; raja numbriv&auml;lja dispersioon. V&auml;&auml;rtuse [1] dispersiooni on null. V&auml;&auml;rtuste [null, 1,0,1,1] dispersioon on 0,25.
                     </li>
-                    <li>Standardh&auml;lve &ndash; numbriv&auml;lja standardh&auml;lve. V&auml;&auml;rtuse [1] standardh&auml;lve on null. V&auml;&auml;rtuste [null, 1;1 ja 1] standardh&auml;lve on 1. 
+                    <li>Standardh&auml;lve &ndash; numbriv&auml;lja standardh&auml;lve. V&auml;&auml;rtuse [1] standardh&auml;lve on null. V&auml;&auml;rtuste [null, 1,0,1,1] standardh&auml;lve on 0,5. 
                     </li>
                 </ul>
                 
             </p>
-            <p>Tekstiv&auml;ljadel saab arvutada j&auml;rgmised statistikud:
+            <p>Saate arvutada allj&auml;rgnevad v&auml;&auml;rtused tekstiv&auml;ljadel:
                 <ul>
                     <li>Koguarv &ndash; stringide, mis pole nullv&auml;&auml;rtused, hulk.
                     </li>
                     <li>M&otilde;ni &ndash; see statistik on juhuslik valim tekstistringi v&auml;&auml;rtusest vastaval v&auml;ljal.
                     </li>
                 </ul>
-                K&otilde;ik statistikud arvutatakse v&auml;&auml;rtustega, mis ei ole nullv&auml;&auml;rtus. Tulemkiht sisaldab uut v&auml;lja iga arvutatud statistiku kohta. Soovitud statistika lisamiseks valige uus atribuut ja statistik. 
+                K&otilde;ik statistikud arvutatakse v&auml;&auml;rtustega, mis ei ole nullv&auml;&auml;rtus. Tulemkiht sisaldab uut v&auml;lja iga arvutatud statistiku kohta. Soovitud statistika lisamiseks valige uus atribuut ja statistik.
             </p>
         </div>
     </div>
@@ -160,16 +160,16 @@
         <div><h2>Valige tulemite salvestamiseks mõni ArcGIS-i andmeladu</h2></div>
         <hr/>
         <div>
-            <p>GeoAnalyticsi tulemeid k&auml;sitletakse ArcGIS-i andmelaos salvedena ning need kuvatakse portaalis  Portal for ArcGIS objektikihtidena. &Uuml;ldjuhul salvestatakse tulemid ajalisruumilisse andmelattu &ndash; see on vaikimisi valitud. M&otilde;nel juhul on tulemid m&otilde;istlik salvestada relatsioonilisse andmelattu. Allpool on toodud m&otilde;ned p&otilde;hjused, miks oleks soovitatav tulemid salvestada relatsioonilisse andmelattu. 
+            <p>GeoAnalyticsi tulemid salvestatakse  andmelaos ning need kuvatakse portaalis   Portal for ArcGIS objektikihina. &Uuml;ldjuhul salvestatakse tulemid ajalisruumilisse andmelattu &ndash; see on vaikimisi valitud. M&otilde;nel juhul on tulemid m&otilde;istlik salvestada relatsioonilisse andmelattu. Allpool on toodud m&otilde;ned p&otilde;hjused, miks oleks soovitatav tulemid salvestada relatsioonilisse andmelattu: 
                 <ul>
-                    <li>Saate tulemeid kasutada portaalidevahelises koost&ouml;&ouml;s.
+                    <li>Tulemeid saate portaalis kasutada portaalidevaheliseks koost&ouml;&ouml;ks.
                     </li>
-                    <li>Saate tulemustega s&uuml;nkroniseerida.
+                    <li>Saate lubada tulemitega s&uuml;nkroonimise funktsiooni.
                     </li>
                 </ul>
                 
             </p>
-            <p>Relatsioonilist andmeladu pole otstarbekas kasutada, kui GeoAnalyticsi tulemite arv suureneb. Sel juhul peaksite kasutama suurt ajalisruumilist andmeladu, mis v&otilde;imaldab hallata suurt andmemahtu. 
+            <p>Relatsioonilist andmeladu pole otstarbekas kasutada, kui GeoAnalyticsi tulemite arv suureneb. Sel juhul peaksite kasutama suurt ajalisruumilist andmeladu, mis v&otilde;imaldab hallata suurt andmemahtu.
             </p>
         </div>
     </div>
@@ -177,9 +177,9 @@
         <div><h2>Tulemkihi nimi</h2></div>
         <hr/>
         <div>
-            <p> See on selle kihi nimi, mis luuakse jaotises <b>Minu sisu</b> ja lisatakse kaardile.  Vaikimisi nimi p&otilde;hineb t&ouml;&ouml;riista nimel ja sisendkihi nimel. Kui see kiht on juba olemas, siis t&ouml;&ouml;tlemine nurjub.
+            <p> Loodava kihi nimi.  Kui kirjutate andmelattu ArcGIS Data Store, salvestatakse teie tulemused  <b>Minu sisus</b> ja lisatakse kaardile. Kui kirjutate suurandmete failikettale, salvestatakse teie andmed suurandmete failikettale ja lisatakse selle manifestifailile. Seda ei lisata kaardile. Vaikimisi nimi p&otilde;hineb t&ouml;&ouml;riista nimel ja sisendkihi nimel. Kui see kiht on juba olemas, siis t&ouml;&ouml;tlemine nurjub.
             </p>
-            <p>Kasutades rippmen&uuml;&uuml;d  <b>Salvesta tulemused</b>, saate jaotises <b>Minu sisu</b> m&auml;&auml;rata selle kausta nime, kuhu tulemused salvestatakse.
+            <p>Kui salvestate admelattu   ArcGIS Data Store (relatsioonilisse v&otilde;i ajalisruumilisse andmelattu), kasutades rippmen&uuml;&uuml;d  <b>Salvesta tulemused</b>, saate jaotises <b>Minu sisu</b> m&auml;&auml;rata selle kausta nime, kuhu tulemused salvestatakse.
             </p>
         </div>
     </div>

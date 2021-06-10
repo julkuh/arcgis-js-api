@@ -41,21 +41,23 @@
 <body onload="init()">
 <div id="topics">
     <div id="raToolbox">
-        <p>Raster analizi  ArcGIS Image Server uygulamasını kullanarak b&uuml;y&uuml;k raster veri k&uuml;melerinin analizini yapmanıza olanak tanır. Bu, sunucu g&uuml;c&uuml;n&uuml; kullanarak daha fazla veriyi daha hızlı analiz etmenize olanak tanır.  Portal for ArcGIS web kullanıcı deneyimi &ccedil;er&ccedil;evesinde şu anda sunulmakta olan ara&ccedil; setleri şunlardır:  <b>Veriyi &Ouml;zetle</b>, <b>Modelleri Analiz Et</b>, <b>G&ouml;r&uuml;nt&uuml;y&uuml; Analiz Et</b>, <b>Araziyi Analiz Et</b> ve <b>Veriyi Y&ouml;net</b>.
+        <p>Raster analizi,  ArcGIS Image Server uygulamasını kullanarak b&uuml;y&uuml;k raster veri k&uuml;melerinin analizini yapmanıza olanak tanır. Bu, sunucu g&uuml;c&uuml;n&uuml; kullanarak daha fazla veriyi daha hızlı analiz etmenize olanak tanır. Portal for ArcGIS web kullanıcı deneyiminde kullanılabilen ara&ccedil; setleri şunlardır:  <b>Verileri &Ouml;zetle</b>, <b>Modelleri Analiz Et</b>, <b>Yakınlık Kullan</b>, <b>G&ouml;r&uuml;nt&uuml;y&uuml; Analiz Et</b>, <b>Araziyi Analiz Et</b>, <b>Verileri Y&ouml;net</b>, <b>Derin &Ouml;ğrenme</b> ve <b>&Ccedil;ok Boyutlu Analiz</b>.
         </p>
     </div>
-    <div id="SummarizeDataCategory" class="smallsize">
+    <div id="SummarizeDataCategory" class="regularsize">
         <h2>Veriyi Özetle</h2>
         <hr/>
-        <p>Bu ara&ccedil; setinde, tanımladığınız alan sınırları i&ccedil;indeki bir raster katmanı i&ccedil;in bazı istatistikleri hesaplamada kullanılan bir ara&ccedil; bulunur. 
+        <p>Bu ara&ccedil;lar, sizin tarafınızdan tanımlanan alan sınırları (b&ouml;lgeler) i&ccedil;erisinde yer alan bir raster katmanının istatistiklerini hesaplamak i&ccedil;in kullanılır.
             <ul>
                 <li> <b>Raster &Ouml;zetleme Aralığı</b>, tanımlı alan sınırları i&ccedil;ine d&uuml;şen raster h&uuml;creleri i&ccedil;in istatistikleri hesaplar.
+                </li>
+                <li> <b>Tablo Olarak B&ouml;lgesel İstatistikler</b> başka bir veri k&uuml;mesinin b&ouml;lgeleri i&ccedil;erisindeki bir rasterın değerlerini &ouml;zetler ve sonu&ccedil;ları bir tablo halinde rapor eder.
                 </li>
             </ul>
             
         </p>
     </div>
-        <div id="SummarizeRasterWithinTool" class="largesize">
+        <div id="SummarizeRasterWithinTool" class="smallsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
@@ -66,21 +68,22 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Tanımlı alanların i&ccedil;inde kalan raster h&uuml;creleri i&ccedil;in bazı &ouml;zet istatistikleri hesaplar.
+            <p>Bu ara&ccedil;, başka bir veri k&uuml;mesinin b&ouml;lgeleri i&ccedil;indeki bir rasterın değerlerini &ouml;zetler.
             </p>
-            <p>Bazı &ouml;rnek uygulamalar aşağıda verilmiştir: 
-
-                <ul>
-                    <li>Bir su havzası alanları katmanı ve y&uuml;kselti raster katmanı verildiğinde, her su havzası i&ccedil;indeki y&uuml;kselti aralığını hesaplayarak hangilerinde en y&uuml;ksek enerjiye sahip akış olacağını belirleyebilirsiniz.
-                        
-
-                    </li>
-                    <li>Bir resmi y&ouml;netim birimleri katmanı ve arazi kullanımı kategorileri raster katmanı verildiğinde, her y&ouml;netim alanı i&ccedil;indeki arazi kullanım &ccedil;eşitliliği değerlerini hesaplayarak en fazla &ccedil;alışmaya ihtiya&ccedil; duyanları tanımlayarak bir y&ouml;netim planı belirleyebilirsiniz.
-                        
-
-                    </li>
-                </ul>
-                
+            <br/>
+        </div>
+        <div id="ZonalStatisticsAsTableTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Tablo Olarak Bölgesel İstatistikler</h2></td>
+                    <td>
+                    <img src="../images/GUID-2847466F-BF22-4545-BDCE-7EB7B1D15F2D-web.png" class="titleImage" alt="Tablo Olarak B&ouml;lgesel İstatistikler diyagramı">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil;, bir rasterın başka bir veri k&uuml;mesinin b&ouml;lgeleri dahilindeki değerlerini &ouml;zetler ve sonu&ccedil;ları bir tablo halinde bildirir.
             </p>
             <br/>
         </div>
@@ -132,12 +135,171 @@
             </p>
             <br/>
         </div>
-    <div id="AnalyzeImageCategory" class="smallsize">
+    <div id="UseProximityCategory" class="largesize">
+        <h2>Yakınlık Kullan</h2>
+        <hr/>
+        <p>Bu ara&ccedil;lar mekansal analizde en yaygın sorulan sorulardan bazılarını yanıtlar: Ne, neyin yakınında? ve En uygun yol nedir?
+            <ul>
+                <li> <b>Mesafeyi Hesapla</b> tek bir veya bir dizi kaynaktan &Ouml;klid uzaklığını, y&ouml;n&uuml; ve yerleşimi hesaplar.
+                    
+
+                </li>
+                <li> <b>Optimum Seyahat Maliyeti Ağını Belirle</b> aracı, bir dizi girdi b&ouml;lgesinden optimum maliyet ağını hesaplar.
+                    
+
+                </li>
+                <li> <b>Seyahat Masraf Yolunu &Ccedil;oklu &Ccedil;izgi Olarak Belirle</b> bilinen hedefler ve kaynaklar arasındaki en az maliyetli yol &ccedil;oklu &ccedil;izgilerini hesaplar.
+                    
+
+                </li>
+                <li> <b>Mesafe Birikimi</b> doğrusal mesafe, maliyet mesafesi, ger&ccedil;ek y&uuml;zey mesafesi ve dikey ve yatay fakt&ouml;rlere izin vererek her h&uuml;creden kaynaklara biriken mesafeyi hesaplar.
+                    
+
+                </li>
+                <li> <b>Mesafe Dağıtımı</b> doğrusal mesafe, maliyet mesafesi, ger&ccedil;ek y&uuml;zey mesafesi ve dikey ve yatay fakt&ouml;rleri temel alarak her h&uuml;creden verilen kaynaklara mesafe dağıtımını hesaplar.
+                    
+
+                </li>
+                <li> <b>&Ccedil;izgi Olarak En Uygun Yol</b> hedeflerden kaynaklara en uygun yolu bir &ccedil;izgi olarak hesaplar.
+                    
+
+                </li>
+                <li> <b>Raster Olarak En Uygun Yol</b> hedeflerden kaynaklara en uygun yolu bir raster olarak hesaplar.
+                    
+
+                </li>
+                <li> <b>En Uygun B&ouml;lge Bağlantıları</b> iki veya daha fazla girdi b&ouml;lgesi arasındaki en uygun bağlantı ağını hesaplar.
+                </li>
+            </ul>
+            
+        </p>
+    </div>
+        <div id="CalculateDistanceTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Mesafeyi Hesapla</h2></td>
+                    <td>
+                    <img src="../images/GUID-34E2E6F3-2F60-43F5-B499-D5735DE08602-web.png" class="titleImage" alt="Mesafeyi Hesapla">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil;, tek bir veya bir dizi kaynaktan &Ouml;klid uzaklığını, y&ouml;n&uuml; ve yerleşimi hesaplar.
+            </p>
+            <br/>
+        </div>
+        <div id="DetermineOptimumTravelCostNetworkTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Optimum Seyahat Maliyeti Ağını Belirle</h2></td>
+                    <td>
+                    <img src="../images/GUID-097BDD6E-0AD8-44F2-BB70-C5395F4B1AF4-web.png" class="titleImage" alt="Optimum Seyahat Maliyeti Ağını Belirleme aracının &ccedil;izimi">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil;, bir dizi girdi b&ouml;lgesinden optimum maliyet ağını hesaplar.
+            </p>
+            <br/>
+        </div>
+        <div id="DetermineTravelCostPathAsPolylineTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Seyahat Masraf Yolunu Çoklu Çizgi Olarak Belirle</h2></td>
+                    <td>
+                    <img src="../images/GUID-9A27DEB7-0276-483C-A12F-3E70D636550D-web.png" class="titleImage" alt="Seyahat Masraf Yolunu &Ccedil;oklu &Ccedil;izgi Olarak Belirleme aracının &ccedil;izimi">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil;, hedefler ve kaynaklar arasındaki en az maliyetli yol &ccedil;oklu &ccedil;izgilerini hesaplar.
+            </p>
+            <br/>
+        </div>
+        <div id="DistanceAccumulationTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Mesafe Birikimi</h2></td>
+                    <td>
+                    <img src="../images/GUID-758B6DFA-6820-45B8-8089-5A2B7AB20A0D-web.png" class="titleImage" alt="Mesafe Birikimi aracı ill&uuml;strasyonu">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil;, doğrusal mesafe, maliyet mesafesi, ger&ccedil;ek y&uuml;zey mesafesi ve dikey ve yatay fakt&ouml;rlere izin vererek her h&uuml;creden kaynaklara biriken mesafeyi hesaplar.
+            </p>
+            <br/>
+        </div>
+        <div id="DistanceAllocationTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Mesafe Dağıtımı</h2></td>
+                    <td>
+                    <img src="../images/GUID-2843B88C-B69A-43FB-A93B-B8D7ABCF95EA-web.png" class="titleImage" alt="Mesafe Dağıtımı aracı ill&uuml;strasyonu">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil;, doğrusal mesafe, maliyet mesafesi, ger&ccedil;ek y&uuml;zey mesafesi ve dikey ve yatay fakt&ouml;rleri temel alarak her h&uuml;creden verilen kaynaklara mesafe dağıtımını hesaplar.
+            </p>
+            <br/>
+        </div>
+        <div id="OptimalPathAsLineTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Çizgi Olarak En Uygun Yol</h2></td>
+                    <td>
+                    <img src="../images/GUID-754B49AB-28D7-4758-A24C-5C67339666BA-web.png" class="titleImage" alt="&Ccedil;izgi Olarak En Uygun Yol aracı ill&uuml;strasyonu">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil;, hedeflerden kaynaklara en uygun yolu bir &ccedil;izgi olarak hesaplar.
+            </p>
+            <br/>
+        </div>
+        <div id="OptimalPathAsRasterTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Raster Olarak En Uygun Yol</h2></td>
+                    <td>
+                    <img src="../images/GUID-75C94369-AAAA-4556-8F89-9B6AA39012C9-web.png" class="titleImage" alt="Raster Olarak En Uygun Yol aracı ill&uuml;strasyonu">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil;, hedeflerden kaynaklara en uygun yolu bir raster olarak hesaplar.
+            </p>
+            <br/>
+        </div>
+        <div id="OptimalRegionConnectionsTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>En Uygun Bölge Bağlantıları</h2></td>
+                    <td>
+                    <img src="../images/GUID-85027C62-D35A-428B-B050-4F52D2B4ADE4-web.png" class="titleImage" alt="En Uygun B&ouml;lge Bağlantıları aracı ill&uuml;strasyonu">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil;, iki veya daha fazla girdi b&ouml;lgesi arasındaki en uygun bağlantı ağını hesaplar.
+            </p>
+            <br/>
+        </div>
+    <div id="AnalyzeImageCategory" class="regularsize">
         <h2>Görüntüyü Analiz Et</h2>
         <hr/>
-        <p>Aşağıdaki ara&ccedil;, bitki &ouml;rt&uuml;s&uuml;ne sahip alanları belirlemek i&ccedil;in g&ouml;r&uuml;nt&uuml;leri analiz etmenize yardım eder. 
+        <p>Aşağıdaki  <b>G&ouml;r&uuml;nt&uuml; Analizi</b> ara&ccedil; kategorisindeki ara&ccedil;, g&ouml;r&uuml;nt&uuml;leri analiz etmenize yardımcı olur:
             <ul>
-                <li> <b>Bitki &Ouml;rt&uuml;s&uuml; İzleme</b>, bantlarda yapılan aritmetik işlemlere dayanarak g&ouml;r&uuml;nt&uuml; i&ccedil;indeki bitki &ouml;rt&uuml;s&uuml;n&uuml; algılar.
+                <li> <b>Bitki &Ouml;rt&uuml;s&uuml; İzleme</b> bantlarda yapılan aritmetik işlemlere dayanarak g&ouml;r&uuml;nt&uuml; i&ccedil;indeki ilgili bitki &ouml;rt&uuml;s&uuml; kapsamını algılar. &Ccedil;ok sayıda bitki &ouml;rt&uuml;s&uuml; indeksi g&ouml;r&uuml;nt&uuml; analizi i&ccedil;in kullanılabilir.
                     
 
                 </li>
@@ -156,7 +318,7 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>&Ccedil;ok bantlı bir raster katmanının bantları &uuml;zerinde bir aritmetik işlem ger&ccedil;ekleştirerek &ccedil;alışma alanındaki bitki &ouml;rt&uuml;s&uuml; bilgilerini g&ouml;sterir.
+            <p>&Ccedil;ok bantlı bir raster katmanının bantları &uuml;zerinde bir aritmetik işlem ger&ccedil;ekleştirerek bitki &ouml;rt&uuml;s&uuml; kapsamı bilgilerini g&ouml;sterir.
             </p>
             <br/>
         </div>
@@ -174,6 +336,10 @@
 
                 </li>
                 <li> <b>G&ouml;r&uuml;ş Alanı Oluştur</b>, arazideki herhangi bir nokta &uuml;zerinden g&ouml;r&uuml;lebilecek yerleri tanımlar.
+                    
+
+                </li>
+                <li> <b>Su Toplama</b>, bir y&uuml;zeydeki belirlenen yer(ler) &uuml;zerindeki katılım alanını hesaplar.
                     
 
                 </li>
@@ -226,6 +392,21 @@
             </p>
             <br/>
         </div>
+        <div id="WatershedTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Su Toplama</h2></td>
+                    <td>
+                    <img src="../images/GUID-AF749369-8C2D-46FF-9D74-2CF7CAB7C7B0-web.png" class="titleImage" alt="Su Toplama g&ouml;revi">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Rasterdaki h&uuml;crelerin k&uuml;mesi &uuml;zerinde eklenen alanları belirler.
+            </p>
+            <br/>
+        </div>
     <div id="ManageDataCategory" class="regularsize">
         <h2>Verileri Yönet</h2>
         <hr/>
@@ -246,6 +427,8 @@
                 <li> <b>Rasterı Detaya D&ouml;n&uuml;şt&uuml;r</b>, raster verilerini vekt&ouml;re d&ouml;n&uuml;şt&uuml;r&uuml;r.
                     
 
+                </li>
+                <li> <b>&Ouml;rnekle</b>, bir raster veya raster k&uuml;mesinde tanımlanmış konumlardan veriler &ccedil;ıkarır.
                 </li>
             </ul>
             
@@ -300,14 +483,187 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Raster'ı Detaya Dönüştür</h2></td>
+                    <td><h2>Rasterı Detaya Dönüştür</h2></td>
                     <td>
-                    <img src="../images/GUID-7BBBCE28-2FDA-46B8-99D7-65F560AB2F2B-web.png" class="titleImage" alt="Rasterı Detaya D&ouml;n&uuml;şt&uuml;rme aracı">
+                    <img src="../images/GUID-7BBBCE28-2FDA-46B8-99D7-65F560AB2F2B-web.png" class="titleImage" alt="Rasterı Detaya D&ouml;n&uuml;şt&uuml;r aracı">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
             <p>Mevcut bir raster veri k&uuml;mesinden yeni bir detay veri k&uuml;mesi oluşturun.
+            </p>
+            <br/>
+        </div>
+        <div id="SampleTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Örnek</h2></td>
+                    <td>
+                    <img src="../images/GUID-3950CCA3-C1D0-493F-A33D-93673443ADD2-web.png" class="titleImage" alt="&Ouml;rnek">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Rasterdan veya rasterlardan &ccedil;ıkarılan tanımlanmış konumlarda veri değerleriyle bir tablo veya nokta detay sınıfı oluşturur.
+            </p>
+            <br/>
+        </div>
+    <div id="DeepLearningCategory" class="largesize">
+        <h2>Derin Öğrenme</h2>
+        <hr/>
+        <p>Bu ara&ccedil;lar 	bir g&ouml;r&uuml;nt&uuml;deki belirli detayları algılamak veya sınıflandırmak ya da bir raster veri k&uuml;mesindeki pikselleri sınıflandırmak i&ccedil;in kullanılır. Derin &ouml;ğrenme, g&ouml;r&uuml;nt&uuml;deki detayları, her bir katmanın g&ouml;r&uuml;nt&uuml;de bir veya daha fazla benzersiz detay &ccedil;ıkarabildiği sinir ağlarındaki &ccedil;oklu katmanları kullanarak algılayan bir t&uuml;r yapay zeka makinesi &ouml;ğrenme y&ouml;ntemidir. Bu ara&ccedil;lar, TensorFlow, CNTK ve Keras gibi &uuml;&ccedil;&uuml;nc&uuml; taraf derin &ouml;ğrenme &ccedil;er&ccedil;evelerindeki belirli detayları ve &ccedil;ıktı detaylarını veya sınıf haritalarını belirlemek i&ccedil;in eğitilmiş modelleri kullanır.
+            <ul>
+                <li> <b>Derin &Ouml;ğrenme Kullanarak Pikselleri Sınıflandır</b>, eğitilmiş bir derin &ouml;ğrenme modeli kullanarak sınıflandırılmış bir raster &uuml;retir.
+                </li>
+                <li> <b>Derin &Ouml;ğrenme Kullanarak Nesneleri Algıla</b>, eğitilmiş bir derin &ouml;ğrenme modeli kullanarak bir girdi rasterında bulduğu nesneleri i&ccedil;eren bir detay sınıfı &uuml;retir.
+                </li>
+                <li> <b>Derin &Ouml;ğrenme Kullanarak Nesneleri Sınıflandır</b>, eğitilmiş bir derin &ouml;ğrenme modeli kullanılarak girdi rasterındaki her girdi nesnesine bir sınıf etiketi atanan bir detay sınıfı veya tablosu &uuml;retir.
+                </li>
+            </ul>
+            
+        </p>
+    </div>
+        <div id="ClassifyPixelsUsingDeepLearningTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Derin Öğrenme Kullanarak Pikselleri Sınıflandır</h2></td>
+                    <td>
+                    <img src="../images/GUID-88BE63A6-B06C-4C61-9AB1-8DA5A08C6783-web.png" class="titleImage" alt="Derin &Ouml;ğrenme Kullanarak Pikselleri Sınıflandır">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil;, atanan bir sınıf etiketi bulunan her ge&ccedil;erli pikselle sınıflandırılmış bir raster oluşturmak i&ccedil;in girdi rasterı &uuml;zerinde eğitilmiş derin &ouml;ğrenme modeli &ccedil;alıştırır.
+            </p>
+            <br/>
+        </div>
+        <div id="DetectObjectsUsingDeepLearningTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Derin Öğrenme Kullanarak Nesneleri Algıla</h2></td>
+                    <td>
+                    <img src="../images/GUID-EE76A33E-0B8F-48EE-94F8-782FAD241D72-web.png" class="titleImage" alt="Derin &Ouml;ğrenme Kullanarak Nesneleri Algıla">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil;, bulunan nesneleri i&ccedil;eren bir detay sınıfı oluşturmak i&ccedil;in girdi rasterı &uuml;zerinde eğitilmiş derin &ouml;ğrenme modeli &ccedil;alıştırır. Detaylar bulunan nesnelerin etrafındaki sınırlayıcı kutular veya &ccedil;okgenler veya nesnelerin merkezindeki noktalar olabilir.
+            </p>
+            <br/>
+        </div>
+        <div id="ClassifyObjectsUsingDeepLearningTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Derin Öğrenme Kullanarak Nesneleri Sınıflandır</h2></td>
+                    <td>
+                    <img src="../images/GUID-F31B4A21-3E5C-4667-B66B-155CC35CD62B-web.png" class="titleImage" alt="Derin &Ouml;ğrenme Kullanarak Nesneleri Sınıflandır">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil;, her bir girdi nesnesinin atanmış bir sınıf etiketine sahip olduğu bir detay sınıfı veya tablosu oluşturmak i&ccedil;in girdi rasterında ve isteğe bağlı bir detay sınıfında eğitilmiş bir derin &ouml;ğrenme modeli &ccedil;alıştırır.
+            </p>
+            <br/>
+        </div>
+    <div id="MultidimensionalAnalysisCategory" class="largesize">
+        <h2>Çok Boyutlu Analiz</h2>
+        <hr/>
+        <p>&Ccedil;ok Boyutlu Analiz ara&ccedil; setindeki ara&ccedil;lar, bilimsel veriler &uuml;zerinde birden fazla değişken ve boyutta analiz yapmanızı sağlar.
+        </p>
+        <p>&Ccedil;ok boyutlu veriler, birden &ccedil;ok zamanda, derinlikte ve y&uuml;kseklikte toplanan verileri temsil eder. Bu t&uuml;r veriler genellikle atmosferik, oşinografik ve yer bilimlerinde kullanılır. Bu ara&ccedil; takımı ile &ccedil;ok boyutlu raster verilerini, netCDF, HDF, GRIB, &ccedil;ok boyutlu mozaik veri k&uuml;mesi ve Esri'nin Bulut Raster Bi&ccedil;imi (CRF) dahil olmak &uuml;zere birden fazla bi&ccedil;imde analiz edebilirsiniz.
+        </p>
+        <p>Aşağıdaki tabloda, &ccedil;ok boyutlu analiz ara&ccedil;ları listelenmiş ve her birinin kısa bir a&ccedil;ıklaması verilmiştir.
+            <ul>
+                <li> <b>&Ccedil;ok Boyutlu Rasterı Topla</b>, bir boyuttaki mevcut &ccedil;ok boyutlu raster değişkenlerini toplayarak &ccedil;ok boyutlu bir raster veri k&uuml;mesi oluşturur.
+                </li>
+                <li> <b>&Ccedil;ok Boyutlu Anormallik Oluştur</b>, &ccedil;ok boyutlu bir raster oluşturmak i&ccedil;in her dilime ait anormalliği &ccedil;ok boyutlu bir rasterda hesaplar.
+                </li>
+                <li> <b>Trend Rasterı Oluştur</b>, &ccedil;ok boyutlu bir rasterda bir veya daha fazla değişken i&ccedil;in bir boyut boyunca her pikselin trendini tahmin eder.
+                </li>
+                <li> <b>Trend Rasterı Kullanarak Tahmin Et</b>, <b>Trend Rasterı Oluştur</b> aracından &ccedil;ıktı trendi rasterını kullanarak tahmini bir &ccedil;ok boyutlu raster hesaplar.
+                </li>
+                <li> <b>Bağımsız Değişken İstatistikleri Bul</b> &ccedil;ok boyutlu veya &ccedil;ok bantlı bir rasterdaki her piksel i&ccedil;in belirli bir istatistiğin elde edildiği boyut değerini veya bant indeksini &ccedil;ıkarır.
+                </li>
+            </ul>
+            
+        </p>
+    </div>
+        <div id="AggregateMultidimensionalRasterTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Çok Boyutlu Rasterı Topla</h2></td>
+                    <td>
+                    <img src="../images/GUID-2C2320A3-EC6E-4FFC-B59B-9551BB02C545-web.png" class="titleImage" alt="&Ccedil;ok Boyutlu Rasterı Topla">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil; bir boyuttaki mevcut &ccedil;ok boyutlu raster değişkenlerini toplayarak &ccedil;ok boyutlu bir raster veri k&uuml;mesi oluşturur.
+            </p>
+            <br/>
+        </div>
+        <div id="FindArgumentStatisticsTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Bağımsız Değişken İstatistikleri Bul</h2></td>
+                    <td>
+                    <img src="../images/GUID-6DE9D49F-C9CA-48B8-B14F-C8EF05FBFA42-web.png" class="titleImage" alt="Bağımsız Değişken İstatistikleri Bul">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil;, &ccedil;ok boyutlu veya &ccedil;ok bantlı bir rasterdaki her piksel i&ccedil;in belirli bir istatistiğin elde edildiği boyut değerini veya bant indeksini &ccedil;ıkarır.
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateMultidimensionalAnomalyTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Çok Boyutlu Anormallik Oluştur</h2></td>
+                    <td>
+                    <img src="../images/GUID-8D54C66F-5C16-4EE5-93E9-80722D10AF12-web.png" class="titleImage" alt="&Ccedil;ok Boyutlu Anormallik Oluştur">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil;, &ccedil;ok boyutlu bir raster oluşturmak i&ccedil;in her dilime ait anormalliği &ccedil;ok boyutlu bir rasterda hesaplar.
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateTrendRasterTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Trend Rasterı Oluştur</h2></td>
+                    <td>
+                    <img src="../images/GUID-A95F821A-8CAF-45F3-93E5-14BDF5DA0BCD-web.png" class="titleImage" alt="Trend Rasterı Oluştur">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil;, &ccedil;ok boyutlu bir rasterda bir veya daha fazla değişken i&ccedil;in bir boyut boyunca her pikselin trendini tahmin eder.
+            </p>
+            <br/>
+        </div>
+        <div id="PredictUsingTrendRasterTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Trend Rasterı Kullanarak Tahmin Et</h2></td>
+                    <td>
+                    <img src="../images/GUID-E3758820-51A9-46DE-AAF6-E27B68DE4012-web.png" class="titleImage" alt="Trend Rasterı Kullanarak Tahmin Et">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil;,  <b>Trend Rasterı Oluştur</b> aracından &ccedil;ıktı trendi rasterını kullanarak tahmini bir &ccedil;ok boyutlu raster hesaplar.
             </p>
             <br/>
         </div>

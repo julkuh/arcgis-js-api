@@ -41,21 +41,23 @@
 <body onload="init()">
 <div id="topics">
     <div id="raToolbox">
-        <p>Rasterska analiza vam omogućava da izvr&scaron;ite analizu velikih rasterskih skupova podataka kori&scaron;ćenjem  ArcGIS Image Server. Ovo vam omogućava da analizirate podatke brže koristeći snagu servera. Skupovi alatki koji su trenutno dostupni preko  Portal for ArcGIS korisničkog veb iskustva su  <b>Sumiraj podatke</b>, <b>Analiza obrazaca</b>, <b>Analiziraj snimak</b>, <b>Analiziraj teren</b> i <b>Upravljaj podacima</b>.
+        <p>Rasterska analiza vam omogućava da izvr&scaron;ite analizu velikih rasterskih skupova podataka kori&scaron;ćenjem  ArcGIS Image Server. Ovo vam omogućava da analizirate podatke brže koristeći snagu servera.Set alata trenutno dostupan preko Portal for ArcGIS veb korisničkog iskustva su  <b>Rezimiranje podataka</b>, <b>Analiza &scaron;ablona</b>, <b>Blizina upotrebe</b>, <b>Analiza slika</b>, <b>Analiza terena</b>, <b>Upravljanje podataka</b>, <b>Dubinsko učenje</b> i <b>Vi&scaron;edimenzionalna analiza</b>.
         </p>
     </div>
     <div id="SummarizeDataCategory" class="smallsize">
         <h2>Sumiraj podatke</h2>
         <hr/>
-        <p>Ovaj skup alatki sadrži alatku za izračunavanje neke statistike za sloj rastera u okviru granica oblasti koje vi defini&scaron;ete. 
+        <p>Ove alatke se koriste za izračunavanje statistike za sloj rastera u okviru granica oblasti (zona) koje vi defini&scaron;ete.
             <ul>
                 <li> <b>Sumiraj raster u okviru</b> izračunava statistiku za ćelije rastera koje spadaju u definisane granice oblasti.
+                </li>
+                <li> <b>Zonska statistika kao tabela</b> sumira vrednosti rastera unutar zona drugog skupa podataka i &scaron;alje izve&scaron;taj o rezultatima tabeli.
                 </li>
             </ul>
             
         </p>
     </div>
-        <div id="SummarizeRasterWithinTool" class="largesize">
+        <div id="SummarizeRasterWithinTool" class="smallsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
@@ -66,21 +68,22 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Izračunava neku statistiku sumiranja za ćelije rastera u okviru definisanih oblasti.
+            <p>Ova alatka sumira vrednosti rastera unutar zona drugog skupa podataka.
             </p>
-            <p>Neki primeri primene su sledeći: 
-
-                <ul>
-                    <li>S obzirom na sloj oblasti vododelnica i rasterski sloj elevacije, izračunajte opseg elevacija u okviru svake vododelnice kako biste odredili koje će imati najveću energiju toka.
-                        
-
-                    </li>
-                    <li>S obzirom na sloj jedinica za administrativno upravljanje i rasterski sloj kategorija za kori&scaron;ćenje zemlji&scaron;ta, izračunajte raznovrsnost vrednosti kori&scaron;ćenja zemlji&scaron;ta u okviru svake oblasti upravljanja, kako biste utvrdili koje zahtevaju najvi&scaron;e rada za određivanje plana upravljanja.
-                        
-
-                    </li>
-                </ul>
-                
+            <br/>
+        </div>
+        <div id="ZonalStatisticsAsTableTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Zonska statistika kao tabela</h2></td>
+                    <td>
+                    <img src="../images/GUID-2847466F-BF22-4545-BDCE-7EB7B1D15F2D-web.png" class="titleImage" alt="Dijagram za &acute;Zonska statistika kao tabela&acute;">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ovaj alat sumira vrednosti rastera unutar zona drugog skupa podataka i &scaron;alje izve&scaron;taj o rezultatima tabeli.
             </p>
             <br/>
         </div>
@@ -132,12 +135,171 @@
             </p>
             <br/>
         </div>
+    <div id="UseProximityCategory" class="largesize">
+        <h2>Koristi bliskost</h2>
+        <hr/>
+        <p>Ove alatke vam pomažu da odgovorite na neka od najče&scaron;ćih pitanja postavljenih u prostornoj analizi: &bdquo;&Scaron;ta je blizu čega?&ldquo; i &bdquo;Koja je najoptimalnija putanja?&ldquo;
+            <ul>
+                <li> <b>Izračunaj rastojanje</b> izračunava Euklidsko rastojanje, smer i dodeljivanje iz jednog izvora ili skupa izvora.
+                    
+
+                </li>
+                <li> <b>Odredite mrežu optimalnih tro&scaron;kova putovanja</b> izračunava optimalnu mrežu iz skupa ulaznih regiona.
+                    
+
+                </li>
+                <li> <b>Odredite putanju tro&scaron;kova putovanja kao poliliniju</b> izračunava najmanji tro&scaron;ak staze polilinije između poznatih odredi&scaron;ta i izvora.
+                    
+
+                </li>
+                <li> <b>Akumulacija rastojanja</b> izračunava akumulirano rastojanje za svaku ćeliju do izvora, omogućavajući pravolinijsko rastojanje, rastojanje tro&scaron;kova i stvarno povr&scaron;insko rastojanje, kao i vertikalne i horizontalne faktore.
+                    
+
+                </li>
+                <li> <b>Alokacija rastojanja</b> izračunava alokaciju rastojanja za svaku ćeliju do navedenih izvora na osnovu pravolinijskog rastojanja, rastojanja tro&scaron;kova i stvarnog povr&scaron;inskog rastojanja, kao i vertikalne i horizontalne faktore.
+                    
+
+                </li>
+                <li> <b>Optimalna putanja kao linija</b> izračunava optimalnu putanju od odredi&scaron;ta do izvora kao liniju.
+                    
+
+                </li>
+                <li> <b>Optimalna putanja kao raster</b> izračunava optimalnu putanju od odredi&scaron;ta do izvora kao raster.
+                    
+
+                </li>
+                <li> <b>Optimalne veze regiona</b> izračunava optimalnu mrežu povezanosti između dva ili vi&scaron;e regiona.
+                </li>
+            </ul>
+            
+        </p>
+    </div>
+        <div id="CalculateDistanceTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Izračunaj rastojanje</h2></td>
+                    <td>
+                    <img src="../images/GUID-34E2E6F3-2F60-43F5-B499-D5735DE08602-web.png" class="titleImage" alt="Izračunaj rastojanje">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ova alatka izračunava Euklidsko rastojanje, smer i dodeljivanje iz jednog izvora ili skupa izvora.
+            </p>
+            <br/>
+        </div>
+        <div id="DetermineOptimumTravelCostNetworkTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Odredite mrežu optimalnih troškova putovanja</h2></td>
+                    <td>
+                    <img src="../images/GUID-097BDD6E-0AD8-44F2-BB70-C5395F4B1AF4-web.png" class="titleImage" alt="Alatka za određivanje mreže optimalnih tro&scaron;kova putovanja">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ova alatka izračunava optimalnu mrežu iz skupa ulaznih regiona.
+            </p>
+            <br/>
+        </div>
+        <div id="DetermineTravelCostPathAsPolylineTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Odredite stazu troškova putovanja kao polilinije</h2></td>
+                    <td>
+                    <img src="../images/GUID-9A27DEB7-0276-483C-A12F-3E70D636550D-web.png" class="titleImage" alt="Ilustracija Alatke za određivanje staze tro&scaron;kova putovanja kao polilinije">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ovaj alat proračunava putanju za destinacije za poliliniju sa najmanjim tro&scaron;kom i izvorima.
+            </p>
+            <br/>
+        </div>
+        <div id="DistanceAccumulationTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Akumulacija rastojanja</h2></td>
+                    <td>
+                    <img src="../images/GUID-758B6DFA-6820-45B8-8089-5A2B7AB20A0D-web.png" class="titleImage" alt="Ilustracija alatke za akumulaciju rastojanja">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ovaj alat izračunava akumulirano rastojanje za svaku ćeliju do izvora, omogućavajući pravolinijsko rastojanje, rastojanje tro&scaron;kova i stvarno povr&scaron;insko rastojanje, i vertikalne i horizontalne faktore.
+            </p>
+            <br/>
+        </div>
+        <div id="DistanceAllocationTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Alokacija rastojanja</h2></td>
+                    <td>
+                    <img src="../images/GUID-2843B88C-B69A-43FB-A93B-B8D7ABCF95EA-web.png" class="titleImage" alt="Ilustracija alatke za alokaciju rastojanja">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ovaj alat izračunava alokaciju rastojanja za svaku ćeliju do navedenih izvora na osnovu pravolinijskog rastojanja, rastojanja tro&scaron;kova, stvarnog povr&scaron;inskog rastojanja i vertikalne i horizontalne faktore.
+            </p>
+            <br/>
+        </div>
+        <div id="OptimalPathAsLineTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Optimalna putanja kao linija</h2></td>
+                    <td>
+                    <img src="../images/GUID-754B49AB-28D7-4758-A24C-5C67339666BA-web.png" class="titleImage" alt="Ilustracija alatke za optimalnu putnju kao liniju">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ovaj alat izračunava optimalnu putanju od odredi&scaron;ta do izvora kao liniju.
+            </p>
+            <br/>
+        </div>
+        <div id="OptimalPathAsRasterTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Optimalna putanja kao raster</h2></td>
+                    <td>
+                    <img src="../images/GUID-75C94369-AAAA-4556-8F89-9B6AA39012C9-web.png" class="titleImage" alt="Ilustracija alatke za optimalnu putanju kao raster">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ovaj alat izračunava optimalnu putanju od odredi&scaron;ta do izvora kao rastera.
+            </p>
+            <br/>
+        </div>
+        <div id="OptimalRegionConnectionsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Optimalne veze regiona</h2></td>
+                    <td>
+                    <img src="../images/GUID-85027C62-D35A-428B-B050-4F52D2B4ADE4-web.png" class="titleImage" alt="Alatka za optimalne veze regiona">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ovaj alat izračunava optimalnu mrežu povezanosti između dva ili vi&scaron;e regiona.
+            </p>
+            <br/>
+        </div>
     <div id="AnalyzeImageCategory" class="smallsize">
         <h2>Analiziraj snimak</h2>
         <hr/>
-        <p>Sledeće alatke vam pomažu da analizirate snimke kako biste odredili oblasti sa vegetacijom. 
+        <p>Sledeći alat u kategoriji alata  <b>Analiza slike</b> pomaže vam da analizirate slike:
             <ul>
-                <li> <b>Nadgledaj vegetaciju</b> otkriva vegetaciju u okviru snimka, na osnovu aritmetičkih operacija na opsezima.
+                <li> <b>Vegetacija monitora</b> detektuje relativnu pokrivenost vegetacije na snimku zasnovanom na aritmetičkim operacijama na opsegu. Nekoliko indeksa vegetacije dostupno je za analizu slika.
                     
 
                 </li>
@@ -156,7 +318,7 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Vr&scaron;i aritmetičke operacije na opsezima rasterskog sloja sa vi&scaron;e opsega kako bi otkrila informacije o pokrivenosti vegetacijom oblasti ispitivanja.
+            <p>Vr&scaron;i aritmetičke operacije na opsezima rasterskog sloja sa vi&scaron;e opsega kako bi otkrila informacije o pokrivenosti vegetacijom.
             </p>
             <br/>
         </div>
@@ -174,6 +336,10 @@
 
                 </li>
                 <li> <b>Kreiraj vidno polje</b> identifikuje &scaron;ta može da se vidi sa bilo koje tačke na predelu.
+                    
+
+                </li>
+                <li> <b>Vododelnice</b> izračunava drenažno područje iznad navedene lokacije/lokacija na povr&scaron;ini.
                     
 
                 </li>
@@ -215,7 +381,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Kreiraj vidno polje</h2></td>
+                    <td><h2>Kreiraj linije dogledanja</h2></td>
                     <td>
                     <img src="../images/GUID-BB8B8CAF-330E-4C41-9D94-AF4728D0D0F3-web.png" class="titleImage" alt="Alatka Kreiraj vidno polje">
                     </td>
@@ -223,6 +389,21 @@
             </table>
 <hr/>
             <p>Određuje lokacije na povr&scaron;ini rastera koje su vidljive skupu posmatrača.
+            </p>
+            <br/>
+        </div>
+        <div id="WatershedTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Vododelnica</h2></td>
+                    <td>
+                    <img src="../images/GUID-AF749369-8C2D-46FF-9D74-2CF7CAB7C7B0-web.png" class="titleImage" alt="Zadatak vododelnica">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Određuje drenažno područje iznad skupa ćelija u rasteru.
             </p>
             <br/>
         </div>
@@ -246,6 +427,8 @@
                 <li> <b>Konvertuj raster u geoobjekat</b> vektorizuje rasterske podatke.
                     
 
+                </li>
+                <li> <b>Uzorak</b> izdvaja podatke na definisanim lokacijama iz rastera ili skupa rastera.
                 </li>
             </ul>
             
@@ -308,6 +491,179 @@
             </table>
 <hr/>
             <p>Kreirajte novi skup podataka geoobjekta od postojećeg rasterskog skupa podataka.
+            </p>
+            <br/>
+        </div>
+        <div id="SampleTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Uzorak</h2></td>
+                    <td>
+                    <img src="../images/GUID-3950CCA3-C1D0-493F-A33D-93673443ADD2-web.png" class="titleImage" alt="Uzorak">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Stvara tabelu ili tačkastu klasu geoobjekatasa sa vrednostima podataka na definisanim lokacijama izvučenim iz rastera ili skupa rastera.
+            </p>
+            <br/>
+        </div>
+    <div id="DeepLearningCategory" class="largesize">
+        <h2>Detaljno učenje</h2>
+        <hr/>
+        <p>Ove alatke 	se koriste za otkrivanje ili klasifikovanje određenih geoobjekata na snimku ili za klasifikaciju piksela u rasterskom skupu podataka. Detaljno učenje je vrsta metoda ma&scaron;inskog učenja ve&scaron;tačke inteligencije koji otkriva geoobjekte na snimcima koristeći vi&scaron;estruke slojeve u neuronskim mrežama gde je svaki sloj u stanju da ekstrahuje jedan ili vi&scaron;e jedinstvenih geoobjekata na snimku. Ove alatke tro&scaron;e modele koji su obučeni za otkrivanje određenih geoobjekata u radnim okvirima za detaljno učenje nezavisnih proizvođača &ndash; kao &scaron;to je TensorFlow, CNTK i Keras &ndash; i izlaznih geoobjekata ili mapa klasa.
+            <ul>
+                <li> <b>Klasifikuj piksele pomoću detaljnog učenja</b> proizvodi klasifikovani raster koristeći obučeni model detaljnog učenja.
+                </li>
+                <li> <b>Otkrij objekte pomoću detaljnog učenja</b> proizvodi klasu geoobjekata koja sadrži objekte koje pronađe u ulaznom rasteru pomoću obučenog modela detaljnog učenja.
+                </li>
+                <li> <b>Klasifikuj objekte pomoću detaljnog učenja</b> proizvodi klasu geoobjekata ili tabelu u kojoj je svaki ulazni objekat u ulazno mrasteru dodeljen uz oznaku klase upotrebom uvežbanog modela detaljnog učenja.
+                </li>
+            </ul>
+            
+        </p>
+    </div>
+        <div id="ClassifyPixelsUsingDeepLearningTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Klasifikuj piksele pomoću detaljnog učenja</h2></td>
+                    <td>
+                    <img src="../images/GUID-88BE63A6-B06C-4C61-9AB1-8DA5A08C6783-web.png" class="titleImage" alt="Klasifikuj piksele pomoću detaljnog učenja">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ova alatka pokreće obučeni model detaljnog učenja na ulaznom rasteru kako bi proizvela klasifikovani raster, a svaki važeći piksel ima dodeljenu oznaku klase.
+            </p>
+            <br/>
+        </div>
+        <div id="DetectObjectsUsingDeepLearningTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Otkrij objekte pomoću detaljnog učenja</h2></td>
+                    <td>
+                    <img src="../images/GUID-EE76A33E-0B8F-48EE-94F8-782FAD241D72-web.png" class="titleImage" alt="Otkrij objekte pomoću detaljnog učenja">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ova alatka pokreće obučeni model detaljnog učenja na ulaznom rasteru kako bi proizvela klasu geoobjekata koja sadrži objekte koje pronađe. Geoobjekti mogu biti granična polja ili poligoni oko pronađenih objekata, ili tačke u centrima objekata.
+            </p>
+            <br/>
+        </div>
+        <div id="ClassifyObjectsUsingDeepLearningTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Klasifikuj objekte pomoću detaljnog učenja</h2></td>
+                    <td>
+                    <img src="../images/GUID-F31B4A21-3E5C-4667-B66B-155CC35CD62B-web.png" class="titleImage" alt="Klasifikuj objekte pomoću detaljnog učenja">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ovaj alat pokreće obučeni model detaljnog učenja na ulaznom rasteru i opcionoj klasi geoobjekata kako bi se kreirala klasa geoobjekata ili tabela u kojoj svaki ulazni objekat ima dodeljenu oznaku klase.
+            </p>
+            <br/>
+        </div>
+    <div id="MultidimensionalAnalysisCategory" class="largesize">
+        <h2>Multidimensional Analysis (Višedimenzionalna analiza)</h2>
+        <hr/>
+        <p>Alati u setu alata Multidimensional Analysis (Vi&scaron;edimenzionalna analiza) daju vam mogućnost da obavite analize za naučne podatke za vi&scaron;estruke promenljive i dimenzije.
+        </p>
+        <p>Vi&scaron;edimenzionalni podaci predstavljaju podatke zebeležene vi&scaron;e puta, na vi&scaron;e dubina i visina. Ova vrsta podataka obično se koristi u atmosferskoj, okeanografskoj i zemljanoj nauci. Uz ovaj set alata, možete da analizirate podatke u vi&scaron;edimenzionalnom rasteru u vi&scaron;e formata, uključujući netCDF, HDF, GRIB, vi&scaron;edimenzionalni mozaički set podataka, i Esri Cloud Raster Format (CRF).
+        </p>
+        <p>Sledeća tabela navodi vi&scaron;edimenzionalne alate za analizu i njihov kratak opis.
+            <ul>
+                <li> <b>Aggregate Multidimensional Raster</b>  generi&scaron;e vi&scaron;edimenzionalni skup podataka dodavanjem postojećih vi&scaron;edimenzionalnih varijabli rastera duž dimenzije.
+                </li>
+                <li> <b>Generate Multidimensional Anomaly</b> izračunava anomalije za svaki odsečak u vi&scaron;edimenzionalnom rasteru radi generisanja vi&scaron;edimenzionalnog rastera.
+                </li>
+                <li> <b>Generate Trend Raster</b>  procenjuje trend svakog piksela duž dimenzije za jednu ili vi&scaron;e promenljivih u vi&scaron;edimenzionalnom rasteru.
+                </li>
+                <li> <b>Predict Using Trend Raster</b>  izračunava predviđeni vi&scaron;edimenzionalni raster koristeći izlazni raster trenda iz alatke <b>Generate Trend Raster</b>.
+                </li>
+                <li> <b>Find Argument Statistics</b>   izvlači vrednost dimenzije ili indeks opsega pri kojem se postiže određena statistika za svaki piksel u vi&scaron;edimenzionalnom ili vi&scaron;epojasnom rasteru.
+                </li>
+            </ul>
+            
+        </p>
+    </div>
+        <div id="AggregateMultidimensionalRasterTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Agregatni multidimenzionalni raster</h2></td>
+                    <td>
+                    <img src="../images/GUID-2C2320A3-EC6E-4FFC-B59B-9551BB02C545-web.png" class="titleImage" alt="Agregatni multidimenzionalni raster">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ovaj alat generi&scaron;e vi&scaron;edimenzionalni skup podataka dodavanjem postojećih vi&scaron;edimenzionalnih varijabli rastera duž dimenzije.
+            </p>
+            <br/>
+        </div>
+        <div id="FindArgumentStatisticsTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Find Argument Statistics</h2></td>
+                    <td>
+                    <img src="../images/GUID-6DE9D49F-C9CA-48B8-B14F-C8EF05FBFA42-web.png" class="titleImage" alt="Find Argument Statistics">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ovaj alat izvlači vrednost dimenzije ili indeks opsega pri kojem se postiže određena statistika za svaki piksel u vi&scaron;edimenzionalnom ili vi&scaron;epojasnom rasteru.
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateMultidimensionalAnomalyTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Kreiranje multidimenzionalne anomalije</h2></td>
+                    <td>
+                    <img src="../images/GUID-8D54C66F-5C16-4EE5-93E9-80722D10AF12-web.png" class="titleImage" alt="Kreiranje multidimenzionalne anomalije">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ovaj alat izračunava anomalije za svaki odsečak u vi&scaron;edimenzionalnom rasteru radi generisanja vi&scaron;edimenzionalnog rastera.
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateTrendRasterTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Generate Trend Raster</h2></td>
+                    <td>
+                    <img src="../images/GUID-A95F821A-8CAF-45F3-93E5-14BDF5DA0BCD-web.png" class="titleImage" alt="Generate Trend Raster">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ovaj alat procenjuje trend svakog piksela duž dimenzije za jednu ili vi&scaron;e promenljivih u vi&scaron;edimenzionalnom rasteru.
+            </p>
+            <br/>
+        </div>
+        <div id="PredictUsingTrendRasterTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Predict Using Trend Raster</h2></td>
+                    <td>
+                    <img src="../images/GUID-E3758820-51A9-46DE-AAF6-E27B68DE4012-web.png" class="titleImage" alt="Predict Using Trend Raster">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ovaj alat izračunava prognozirani vi&scaron;edimenzionalni raster koristeći izlazni raster trenda iz alatke  <b>Generate Trend Raster</b>.
             </p>
             <br/>
         </div>

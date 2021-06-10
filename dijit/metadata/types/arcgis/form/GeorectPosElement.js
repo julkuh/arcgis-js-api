@@ -1,4 +1,4 @@
-// COPYRIGHT © 2017 Esri
+// COPYRIGHT © 2021 Esri
 //
 // All rights reserved under the copyright laws of the United States
 // and applicable international laws, treaties, and conventions.
@@ -20,6 +20,6 @@
 //
 // email: contracts@esri.com
 //
-// See http://js.arcgis.com/3.21/esri/copyright.txt for details.
+// See http://js.arcgis.com/3.36/esri/copyright.txt for details.
 
-define(["dojo/_base/declare","dojo/_base/lang","dojo/_base/array","dojo/has","../../../../../kernel","../../../form/OpenElement","dojo/i18n!../../../nls/i18nArcGIS","dojo/i18n!../../../nls/i18nBase"],function(e,a,n,t,i,r,o,s){var l=e([r],{postCreate:function(){this.inherited(arguments)},beforeValidateValue:function(e,t,i){var r=null===i||0===a.trim(i).length;if(!r){var l=!0,d=i.split(" ");if(n.some(d,function(e){try{var n=!1,t=Number(a.trim(e));"undefined"!=typeof t&&null!==t&&!isNaN(t)&&isFinite(t)&&(n=!0),n||(l=!1)}catch(i){console.error(i),l=!1}return l?void 0:!0}),!l){var c=s.validation.pattern,f=o.hints.listOfDoubles;t.isValid=!1,t.message=c.replace("{label}",t.label).replace("{message}",f)}}}});return t("extend-esri")&&a.setObject("dijit.metadata.types.arcgis.form.GeorectPosElement",l,i),l});
+define(["dojo/_base/declare","dojo/_base/lang","dojo/_base/array","dojo/has","../../../../../kernel","../../../form/OpenElement","dojo/i18n!../../../nls/i18nArcGIS","dojo/i18n!../../../nls/i18nBase"],(function(e,a,i,t,n,r,o,s){var l=e([r],{postCreate:function(){this.inherited(arguments)},beforeValidateValue:function(e,t,n){if(!(null===n||0===a.trim(n).length)){var r=!0,l=n.split(" ");if(i.some(l,(function(e){try{var i=!1,t=Number(a.trim(e));null!=t&&!isNaN(t)&&isFinite(t)&&(i=!0),i||(r=!1)}catch(e){console.error(e),r=!1}if(!r)return!0})),!r){var d=s.validation.pattern,c=o.hints.listOfDoubles;t.isValid=!1,t.message=d.replace("{label}",t.label).replace("{message}",c)}}}});return t("extend-esri")&&a.setObject("dijit.metadata.types.arcgis.form.GeorectPosElement",l,n),l}));

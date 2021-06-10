@@ -1,4 +1,4 @@
-// COPYRIGHT © 2017 Esri
+// COPYRIGHT © 2021 Esri
 //
 // All rights reserved under the copyright laws of the United States
 // and applicable international laws, treaties, and conventions.
@@ -20,6 +20,6 @@
 //
 // email: contracts@esri.com
 //
-// See http://js.arcgis.com/3.21/esri/copyright.txt for details.
+// See http://js.arcgis.com/3.36/esri/copyright.txt for details.
 
-define(["require","exports"],function(e,t){function r(e){var t=e.extensions.disjointTimerQuery;if(!t)return null;var r=new i;return r.start(e),r}Object.defineProperty(t,"__esModule",{value:!0}),t.startMeasurement=r;var i=function(){function e(){}return e.prototype.start=function(e){this._rctx=e;var t=e.extensions.disjointTimerQuery;this._query=t.createQueryEXT(),t.beginQueryEXT(t.TIME_ELAPSED_EXT,this._query)},e.prototype.stop=function(e,t){void 0===t&&(t=50),this._cb=e,this._checkInterval=t;var r=this._rctx.extensions.disjointTimerQuery;r.endQueryEXT(r.TIME_ELAPSED_EXT),this._checkQueryResult()},e.prototype._checkQueryResult=function(){var e=this._rctx.extensions.disjointTimerQuery,t=e.getQueryObjectEXT(this._query,e.QUERY_RESULT_AVAILABLE_EXT),r=this._rctx.gl.getParameter(e.GPU_DISJOINT_EXT);if(t&&!r){var i=e.getQueryObjectEXT(this._query,e.QUERY_RESULT_EXT);return void this._cb(i/1e6)}return r?void this._cb(null):void setTimeout(this._checkQueryResult.bind(this),this._checkInterval)},e}()});
+define(["require","exports"],(function(e,t){Object.defineProperty(t,"__esModule",{value:!0}),t.startMeasurement=function(e){var t=e.capabilities.disjointTimerQuery;return t?new i(t):null},t.getTimestamp=function(e,t,i){void 0===i&&(i=50);var r=e.capabilities.disjointTimerQuery;if(!r)return null;if(r.timestampBits()<=0)return null;var s=r.createQuery();r.createTimestamp(s);var u=function(){var e=r.resultAvailable(s),n=r.disjoint();if(!e||n)n?t():setTimeout(u,i);else{var a=r.getResult(s);t(a/1e6)}};u()},t.supportsTimestamps=function(e){var t=e.capabilities.disjointTimerQuery;if(!t)return!1;var i=t.timestampBits();return console.log({bits:i}),i>0};var i=function(){function e(e){this.timer=e,this.query=e.createQuery(),this.timer.beginTimeElapsed(this.query)}return e.prototype.stop=function(e,t){void 0===t&&(t=50),this.cb=e,this.checkInterval=t,this.timer.endTimeElapsed(),this.checkQueryResult()},e.prototype.checkQueryResult=function(){var e=this.timer.resultAvailable(this.query),t=this.timer.disjoint();if(!e||t)t?this.cb():setTimeout(this.checkQueryResult.bind(this),this.checkInterval);else{var i=this.timer.getResult(this.query);this.cb(i/1e6)}},e}()}));

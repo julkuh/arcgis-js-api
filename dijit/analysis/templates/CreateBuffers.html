@@ -7,7 +7,7 @@
               <td class="esriAlignLeading esriAnalysisTitle" data-dojo-attach-point="_toolTitle">
                 <label data-dojo-attach-point="_titleLbl">${i18n.createBuffers}</label>
                 <nav class="breadcrumbs"  data-dojo-attach-point="_analysisModeLblNode" style="display:none;">
-                  <a href="#" class="crumb" style="font-size:12px;" data-dojo-attach-event="onclick:_handleModeCrumbClick" data-dojo-attach-point="_analysisModeCrumb"></a>
+                  <a href="#" class="crumb breadcrumbs__modelabel" data-dojo-attach-event="onclick:_handleModeCrumbClick" data-dojo-attach-point="_analysisModeCrumb"></a>
                   <a href="#" class="crumb is-active" data-dojo-attach-point="_analysisTitleCrumb" style="font-size:16px;">${i18n.createBuffers}</a>
                 </nav>
               </td>
@@ -157,7 +157,7 @@
                           </div>
                         </td>
                         <td>
-                          <div class="bufferSelector" data-dojo-attach-point="_Dissolve">
+                          <div class="esriLeadingMargin1 bufferSelector" data-dojo-attach-point="_Dissolve">
                             <div class="bufferIcon bufferDissolveIcon"></div>
                             <div><label class="esriSelectLabel">${i18n.dissolve}</label></div>
                           </div>
@@ -186,7 +186,7 @@
                                 </div>
                               </td>
                               <td>
-                                <div class="bufferSelector" data-dojo-attach-point="_Exclude">
+                                <div class="esriLeadingMargin1 bufferSelector" data-dojo-attach-point="_Exclude">
                                   <div class="bufferIcon bufferExcludeIcon"></div>
                                   <div><label class="esriSelectLabel">${i18n.exclude}</label></div>
                                 </div>
@@ -218,13 +218,13 @@
                             </div>
                           </td>
                           <td>
-                            <div class="bufferSelector" data-dojo-attach-point="_Left" >
+                            <div class="esriLeadingMargin1 bufferSelector" data-dojo-attach-point="_Left" >
                               <div class="bufferIcon bufferLeftIcon"></div>
                               <div><label class="esriSelectLabel">${i18n.left}</label></div>
                             </div>
                           </td>
                           <td>
-                            <div class="bufferSelector" data-dojo-attach-point="_Right">
+                            <div class="esriLeadingMargin1 bufferSelector" data-dojo-attach-point="_Right">
                               <div class="bufferIcon bufferRightIcon"></div>
                               <div><label class="esriSelectLabel">${i18n.right}</label></div>
                             </div>
@@ -247,7 +247,7 @@
                             </div>
                           </td>
                           <td>
-                            <div class="bufferSelector" data-dojo-attach-point="_Flat">
+                            <div class="esriLeadingMargin1 bufferSelector" data-dojo-attach-point="_Flat">
                               <div class="bufferIcon bufferFlatIcon"></div>
                               <div><label class="esriSelectLabel">${i18n.flat}</label></div>
                             </div>
@@ -278,7 +278,7 @@
                               </div>
                             </td>
                             <td>
-                              <div class="bufferSelector" data-dojo-attach-point="_Disks">
+                              <div class="esriLeadingMargin1 bufferSelector" data-dojo-attach-point="_Disks">
                                 <div class="bufferIcon bufferDisksIcon"></div>
                                 <div><label class="esriSelectLabel">${i18n.disks}</label></div>
                               </div>
@@ -309,11 +309,23 @@
           </td>
         </tr>
         <tr data-dojo-attach-point="_methodValueRow">
-          <td  colspan="3">
-            <select class="esriLeadingMargin1 longInput esriLongLabel"  data-dojo-type="dijit/form/Select" data-dojo-attach-point="_methodSelect">
-              <option value="Geodesic">${i18n.geodesicLabel}</option>
-              <option value="Planar">${i18n.planarLabel}</option>
-            </select>
+          <td colspan="3">
+            <table class="one-width">
+              <tr>
+                <td class="width-50">
+                  <div class="bufferSelector" data-dojo-attach-point="_geodesicType">
+                    <div class="bufferIcon geodesicIcon"></div>
+                    <div><label class="esriSelectLabel">${i18n.geodesicLabel}</label></div>
+                  </div>
+                </td>
+                <td class="width-50">
+                  <div class="bufferSelector" data-dojo-attach-point="_planarType">
+                    <div class="bufferIcon planarIcon"></div>
+                    <div><label class="esriSelectLabel">${i18n.planarLabel}</label></div>
+                  </div>
+                </td>               
+              </tr>
+            </table>
           </td>
         </tr>
         <tr data-dojo-attach-point="_dissolveLabelRow">
@@ -365,7 +377,7 @@
             <a href="#" class='esriFloatTrailing helpIcon' esriHelpTopic="summaryFields"></a> 
           </td>             
         </tr>
-        <tr data-dojo-attach-point="_statsTableRow">
+        <!-- <tr data-dojo-attach-point="_statsTableRow">
           <td colspan="3">
             <table style="width:100%" class="esriFormTable">
               <tbody>
@@ -375,7 +387,9 @@
               </tbody>
             </table>
           </td>
-        </tr>
+        </tr> -->
+        <tr data-dojo-type="esri/dijit/analysis/components/AddSummaryFields" data-dojo-attach-point="_summaryWidget" 
+        data-dojo-props="layer:'', showGeoAnalyticsParams:${showGeoAnalyticsParams}, addAsRow:true">
         <tr data-dojo-attach-point="_datastoreLabelRow">
           <td colspan="2">
             <label class="esriFloatLeading esriTrailingMargin025 esriAnalysisNumberLabel" data-dojo-attach-point="_datastoreLabel">${i18n.fiveLabel}</label>
@@ -421,7 +435,7 @@
     </div>
     <div data-dojo-attach-point="_bufferToolContentButtons" style="padding:5px;margin-top:5px;border-top:solid 1px #BBB;">
       <div class="esriExtentCreditsCtr">
-        <a class="esriFloatTrailing esriSmallFont"  href="#" data-dojo-attach-point="_showCreditsLink" data-dojo-attach-event="onclick:_handleShowCreditsClick">${i18n.showCredits}</a>
+        <a class="esriFloatTrailing esriSmallFont"  href="#" data-dojo-attach-point="_showCreditsLink">${i18n.showCredits}</a>
        <label data-dojo-attach-point="_chooseExtentDiv" class="esriSelectLabel esriExtentLabel">
          <input type="radio" data-dojo-attach-point="_useExtentCheck" data-dojo-type="dijit/form/CheckBox" data-dojo-props="checked:true" name="extent" value="true"/>
            ${i18n.useMapExtent}

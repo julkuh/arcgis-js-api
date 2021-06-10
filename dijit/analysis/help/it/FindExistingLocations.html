@@ -42,10 +42,9 @@
 <div id="topics">
     <div id="toolDescription" class="regularsize">
         <h2>Trova località esistenti</h2><p/>
-        <h2><img src="../images/GUID-FEF355B4-CF3B-48F6-9EC1-A00A1D53C81F-web.png" alt="Trova localit&agrave; esistenti"></h2>
+        <h2><img src="../images/GUID-FEF355B4-CF3B-48F6-9EC1-A00A1D53C81F-web.png" alt="Trova posizioni esistenti"></h2>
         <hr/>
-    <p>Questo strumento consente di selezionare feature esistenti nell'area di studio conformi ad una serie di criteri specificati. Tali criteri possono essere basati su interrogazioni sugli attributi (ad esempio, particelle ancora disponibili) e su interrogazioni su dati spaziali (ad esempio, a una distanza di 1 km da un fiume).
-
+    <p>Questo strumento consente di selezionare feature esistenti nell'area di studio conformi ad una serie di criteri specificati. Tali criteri possono essere basati su interrogazioni sugli attributi (ad esempio, particelle ancora disponibili) e su interrogazioni su dati spaziali (ad esempio, a una distanza di 1 km da un fiume). 
     </p>
     <p>Se l'opzione  <b>Usa estensione mappa corrente</b> &egrave; selezionata, verranno analizzate solo le feature nel layer di input visibili nell'estensione mappa corrente.  Se questa opzione &egrave; deselezionata, verranno analizzate tutte le feature, anche se esterne all'estensione mappa corrente.
     </p>
@@ -57,7 +56,7 @@
         <div>
             <p>Il layer di punti, linea o area per il quale si desidera trovare feature in base a una combinazione di interrogazioni sugli attributi e sui dati spaziali specificate di seguito.
             </p>
-            <p class="OnlineOnly">Oltre a scegliere un layer dalla mappa, &egrave; possibile selezionare  <b>Scegli layer di analisi dell'atlante attivo</b> o <b>Scegli layer di analisi</b> in fondo all'elenco a discesa. Verr&agrave; aperta una galleria contenente una raccolta di layer utili per numerose analisi. 
+            <p>Oltre a scegliere un layer dalla mappa, &egrave; possibile selezionare  <b>Scegli layer di analisi</b> in fondo all'elenco a discesa. Con questa opzione si apre una galleria in cui &egrave; possibile individuare e selezionare dataset di varie fonti da utilizzare nell'analisi. 
             </p>
         </div>
     </div>
@@ -77,20 +76,22 @@
                     </li>
                     <li> <b>interseca</b>: la feature contiene una parte di una feature in un altro layer.  Ad esempio, consente di individuare le particelle che intersecano fiumi. Qualsiasi parte del fiume che attraversa la particella o ne tocca i confini, interseca la particella.
                     </li>
+                    <li> <b>Pi&ugrave; vicina a</b>: la feature deve essere pi&ugrave; vicina ad una feature in un altro layer. Per esempio, trova il ristorante pi&ugrave; vicino ad ogni hotel.
+                    </li>
                 </ul>
                 
             </p>
-            <p>Per ogni espressione spaziale &egrave; disponibile la versione al negativo, ovvero  <b>non entro una distanza di</b>, <b>non contiene completamente</b>, <b>non completamente all'interno di</b> e <b>non interseca</b>.
+            <p>Per ogni espressione spaziale &egrave; disponibile la versione al negativo, fatta eccezione per  <b>pi&ugrave; vicina a</b>; <b>non entro una distanza di</b>, <b>non contiene completamente</b>, <b>non completamente all&rsquo;interno di</b>, e <b>non interseca</b>.
             </p> 
         </div>
     </div>
     <div id="OuputName">
-        <div><h2>Nome layer risultati</h2></div>
+        <div><h2>Nome del layer dei risultati</h2></div>
         <hr/>
         <div>
-            <p>Questo &egrave; il nome del layer che verr&agrave; creato in  <b>I miei contenuti</b> e aggiunto alla mappa.  Il nome predefinito &egrave; basato sul nome dello strumento e sul nome del layer di input. Se il layer esiste gi&agrave;, verr&agrave; chiesto di fornire un altro nome.
+            <p>Il nome del layer che verr&agrave; creato in  <b>I miei contenuti</b> e aggiunto alla mappa. Il nome predefinito &egrave; basato sul nome dello strumento e sul nome del layer di input. Se il nome del layer esiste gi&agrave;, verr&agrave; richiesto di fornire un altro nome.
             </p>
-            <p>Utilizzare la casella a discesa  <b>Salva risultato in</b> per specificare il nome di una cartella di <b>I miei contenuti</b> in cui salvare il risultato.
+            <p>Utilizzare il men&ugrave; a discesa  <b>Salva risultato in</b> per specificare il nome di una cartella in <b>I miei contenuti</b> in cui salvare il risultato.
             </p>
         </div>
     </div>

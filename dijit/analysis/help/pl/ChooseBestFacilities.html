@@ -83,7 +83,7 @@
         <div>
             <p>Użyj tego celu, jeśli nie chcesz lokalizować nowych plac&oacute;wek, tylko przypisać zapotrzebowanie do istniejących plac&oacute;wek, kt&oacute;re mogą mieć ograniczone lub nieograniczone możliwości.    
             </p>
-            <p>Ten cel przypisuje zapotrzebowanie do plac&oacute;wek na podstawie możliwości plac&oacute;wki i wartości zapotrzebowania z otaczającego obszaru. Zapotrzebowanie jest przydzielane do najbliższej plac&oacute;wki, aż do wyczerpania dostępnych możliwości. Jeśli podasz maksymalny zasięg dojazdu, żadne lokalizacje zapotrzebowania spoza tego zasięgu nie zostaną przypisane do plac&oacute;wki, nawet jeśli całe zapotrzebowanie nie zostało całkowicie przydzielone.
+            <p>Ten cel przypisuje zapotrzebowanie do plac&oacute;wek na podstawie możliwości plac&oacute;wki i wartości zapotrzebowania z otaczającego obszaru. Zapotrzebowanie jest przydzielane do najbliższej plac&oacute;wki, aż do wyczerpania dostępnych możliwości. Jeśli podasz maksymalny zakres podr&oacute;ży, żadne lokalizacje zapotrzebowania spoza tego zasięgu nie zostaną przypisane do plac&oacute;wki, nawet jeśli całe zapotrzebowanie nie zostało całkowicie przydzielone.
             </p> 
         </div>
     </div>
@@ -110,7 +110,7 @@
         </div>
     </div>
     <div id="maximizeCoverageWithCapacity">
-        <div><h2>Maksymalizuj pokrycie z możliwościami</h2></div>
+        <div><h2>Maksymalizuj pokrycie według możliwości</h2></div>
         <hr/>
         <div>
             <p>Użyj tego celu, aby zmaksymalizować wartość zapotrzebowania pokrywaną przez plac&oacute;wki o ograniczonych możliwościach.    
@@ -125,7 +125,7 @@
         <div>
             <p>Użyj tego celu, jeśli chcesz znaleźć minimalną liczbę plac&oacute;wek potrzebnych do pokrycia określonego procentu zapotrzebowania.
             </p>
-            <p>Ten cel wybiera minimalną liczbę plac&oacute;wek potrzebnych do pokrycia określonego procentu zapotrzebowania. W przypadku lokalizacji zapotrzebowania znajdujących się w maksymalnym zasięgu dojazdu od dw&oacute;ch lub większej liczby plac&oacute;wek, zapotrzebowanie z tej lokalizacji zostanie podzielone na plac&oacute;wki proporcjonalnie do odległości od każdej z nich. Ten cel jest często używany, gdy mieszkańcy mają wyb&oacute;r, z kt&oacute;rej plac&oacute;wki skorzystać, i zakłada się, że w og&oacute;lności odwiedzą oni najbliższą plac&oacute;wkę (traktując wszystkie inne atrybuty jako r&oacute;wne).
+            <p>Ten cel wybiera minimalną liczbę plac&oacute;wek potrzebnych do pokrycia określonego procentu zapotrzebowania. W przypadku lokalizacji zapotrzebowania znajdujących się w maksymalnym zakresie dojazdu od dw&oacute;ch lub większej liczby plac&oacute;wek, zapotrzebowanie z tej lokalizacji zostanie podzielone na plac&oacute;wki proporcjonalnie do odległości od każdej z nich. Ten cel jest często używany, gdy mieszkańcy mają wyb&oacute;r, z kt&oacute;rej plac&oacute;wki skorzystać i zakłada się, że w og&oacute;lności odwiedzą oni najbliższą plac&oacute;wkę (traktując wszystkie inne atrybuty jako r&oacute;wne).
             </p>
             <p>W przeciwieństwie do innych cel&oacute;w, w kt&oacute;rych użytkownik podaje liczbę plac&oacute;wek do wyboru, ten cel sam wybiera liczbę plac&oacute;wek na podstawie procentu zapotrzebowania, kt&oacute;ry ma zostać pokryty. W tym celu zakłada się, że plac&oacute;wki mają nieograniczone możliwości.
             </p> 
@@ -135,7 +135,7 @@
         <div><h2>Zmierz</h2></div>
         <hr/>
         <div>
-            <p>Podobnie jak w przypadku innych narzędzi, kt&oacute;re uwzględniają dojazdy w analizach, można podać, czy dojazd jest mierzony w jednostkach odległości czy czasu oraz wybrać jeden z tryb&oacute;w dojazdu, takich jak spacer pieszo, czas jazdy samochodem, czas jazdy w obszarach wiejskich itd. Dostępne tryby podr&oacute;żowania są określane przez administratora instytucji. W przypadku korzystania z kryterium czasu jazdy lub czasu jazdy w obszarach wiejskich, można opcjonalnie uwzględnić natężenie ruchu w konkretnym dniu tygodnia oraz dla konkretnej pory dnia. 
+            <p>Podobnie jak w przypadku innych narzędzi, kt&oacute;re uwzględniają dojazdy w analizach, można podać, czy dojazd jest mierzony w jednostkach odległości czy czasu oraz wybrać jeden z tryb&oacute;w dojazdu, takich jak spacer pieszo, czas jazdy samochodem, czas jazdy w obszarach wiejskich itd. Dostępne tryby podr&oacute;żowania są określane przez administratora instytucji. Podczas korzystania z narzędzi  <b>Czas jazdy</b>, <b>Czas jazdy w obszarach wiejskich</b> lub <b>Czas przejazdu samochodem ciężarowym</b> można opcjonalnie uwzględnić natężenie ruchu w konkretnym dniu tygodnia oraz dla konkretnej pory dnia.
             </p>
             <p> Aby dokładnie przydzielić lokalizacje zapotrzebowania do plac&oacute;wek, należy podać, czy dojazd odbywa się z plac&oacute;wki do lokalizacji zapotrzebowania (na przykład z posterunku straży pożarnej do domu) albo z lokalizacji zapotrzebowania do plac&oacute;wki (jak w przypadku stałych klient&oacute;w bibliotek). Narzędzie Wybierz najlepszą plac&oacute;wkę uwzględni kierunek dojazdu na ulicach jednokierunkowych, możliwość skrętu z jednej ulicy w inną, zakazy skręt&oacute;w w lewo na skrzyżowaniach i tym podobne, zależnie od tego, czy dojazd odbywa się od plac&oacute;wki do lokalizacji zapotrzebowania, czy z lokalizacji zapotrzebowania do plac&oacute;wek.
             </p>
@@ -153,7 +153,7 @@
             </p>
             <p>Jeśli typ celu to  <b>Pokryj procent zapotrzebowania</b>, należy podać minimalny procent zapotrzebowania, kt&oacute;ry ma przechwytywać plac&oacute;wka.
             </p>
-            <p class="OnlineOnly">Poza wybraniem warstwy na mapie można wybrać opcję  <b>Wybierz warstwę analizy Living Atlas</b> lub <b>Wybierz warstwę analizy</b> dostępną w dolnej części menu rozwijanego. Zostanie wtedy otwarta galeria zawierająca kolekcje warstw przydatnych podczas wielu analiz. 
+            <p>Poza wybraniem warstwy na mapie można wybrać opcję  <b>Wybierz warstwę analizy</b> dostępną w dolnej części menu rozwijanego. Wybranie tej opcji spowoduje otwarcie galerii, w kt&oacute;rej można wyszukać i wybrać zestawy danych pochodzące z r&oacute;żnych źr&oacute;deł w celu użycia ich podczas przeprowadzania analiz. 
             </p>
             <p>Narzędzie jest w&nbsp;stanie obsłużyć do 10&nbsp;000 obiekt&oacute;w w warstwie lokalizacji zapotrzebowania.
             </p>  
@@ -185,15 +185,29 @@
             </p>  
         </div>
     </div>
+    <div id="barrier_layers">
+        <div><h2>Wybierz warstwy barier</h2></div>
+        <hr/>
+        <div>
+            <p> Jeden lub większa liczba obiekt&oacute;w, kt&oacute;re pełnią rolę ograniczeń tymczasowych (innymi słowy barier) utrudniających podr&oacute;żowanie po ulicach, na kt&oacute;rych się znajdują. Bariery można definiować przy użyciu obiekt&oacute;w punktowych, liniowych lub poligonowych.
+            </p>
+            <p>Bariera punktowa może modelować powalone drzewo, wypadek, zerwaną linię energetyczną lub inny obiekt, kt&oacute;ry całkowicie blokuje ruch drogowy w określonej pozycji wzdłuż ulicy. Na tej ulicy ruch drogowy jest dozwolony, ale jest blokowany przez barierę. Można zdefiniować do 250 obiekt&oacute;w pełniących rolę barier punktowych.
+            </p>
+            <p>Bariery liniowe uniemożliwiają podr&oacute;żowanie wszędzie tam, gdzie przecinają się z ulicą. Przy użyciu bariery liniowej można na przykład modelować paradę lub marsz protestacyjny, kt&oacute;ry blokuje ruch drogowy na kilku odcinkach ulic. Jeśli liczba obiekt&oacute;w ulic przecinanych przez wszystkie bariery liniowe przekracza 500, narzędzie zwraca błąd.
+            </p>
+            <p>Bariery poligonowe uniemożliwiają podr&oacute;żowanie wszędzie tam, gdzie poligon przecina się z ulicą. Przy użyciu barier tego typu można na przykład modelować powodzie występujące na obszarach sieci ulicznej, kt&oacute;re uniemożliwią ruch drogowy w danym rejonie. Jeśli liczba obiekt&oacute;w ulic przecinanych przez wszystkie bariery poligonowe przekracza 2000, narzędzie zwraca błąd.
+            </p>
+        </div>
+    </div>
     <div id="outputName">
         <div><h2>Nazwa warstwy wynikowej</h2></div>
         <hr/>
         <div>
-            <p>Jest to nazwa warstwy, kt&oacute;ra zostanie utworzona w zakładce  <b>Moje zasoby</b> i zostanie dodana do mapy. Nazwa domyślna jest tworzona w oparciu o nazwę narzędzia i&nbsp;nazwę warstwy wejściowej. Jeśli warstwa już istnieje, wyświetlony zostanie komunikat z&nbsp;prośbą o&nbsp;podanie innej nazwy.
+            <p>Nazwa warstwy, kt&oacute;ra zostanie utworzona w obszarze  <b>Moje zasoby</b> i dodana do mapy. Nazwa domyślna jest tworzona w oparciu o nazwę narzędzia i&nbsp;nazwę warstwy wejściowej. Jeśli ta nazwa warstwy już istnieje, wyświetlona zostanie prośba o podanie innej nazwy.
             </p>
             <p>Warstwa wynik&oacute;w będzie zawierać następujące warstwy: plac&oacute;wki z przypisanym zapotrzebowaniem, lokalizacje zapotrzebowania przydzielone do plac&oacute;wek i linie przydziału łączące lokalizacje zapotrzebowania z przypisanymi plac&oacute;wkami. Linie przydziału są rysowane jako linie proste; jednak czas dojazdu lub odległość dojazdu między plac&oacute;wką i lokalizacjami zapotrzebowania jest zawsze oparta na podanym trybie dojazdu i w obliczeniach nie używa się odległości w linii prostej.
             </p>
-            <p>Używając listy rozwijanej  <b>Zapisz wynik w</b>, można określić nazwę folderu w zakładce <b>Moje zasoby</b>, gdzie zostanie zapisany wynik.
+            <p>Używając menu rozwijanego  <b>Zapisz wynik w</b>, można wskazać nazwę folderu na stronie <b>Moje zasoby</b>, w kt&oacute;rym zostanie zapisany wynik.
             </p>
         </div>
     </div>

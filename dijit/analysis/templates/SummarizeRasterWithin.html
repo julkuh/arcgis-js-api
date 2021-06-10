@@ -7,7 +7,7 @@
           <td class="esriAlignLeading esriAnalysisTitle" data-dojo-attach-point="_toolTitle">
             <label data-dojo-attach-point="_titleLbl">${i18n.summarizeRasterWithin}</label>
             <nav class="breadcrumbs" data-dojo-attach-point="_analysisModeLblNode" style="display:none;">
-              <a href="#" class="crumb" style="font-size:12px;" data-dojo-attach-event="onclick:_handleModeCrumbClick" data-dojo-attach-point="_analysisModeCrumb"></a>
+              <a href="#" class="crumb breadcrumbs__modelabel" data-dojo-attach-event="onclick:_handleModeCrumbClick" data-dojo-attach-point="_analysisModeCrumb"></a>
               <a href="#" class="crumb is-active" data-dojo-attach-point="_analysisTitleCrumb" style="font-size:16px;">${i18n.summarizeRasterWithin}</a>
             </nav> 
           </td>
@@ -91,7 +91,23 @@
         </tr>
         <tr>
           <td colspan="3">
-            <select class="longInput esriLeadingMargin1" data-dojo-type="dijit.form.Select" data-dojo-attach-point="_statsTypeSelect"></select>
+            <select class="longInput esriLeadingMargin1" data-dojo-type="dijit.form.Select" data-dojo-attach-point="_statsTypeSelect" data-dojo-attach-event="onChange:_handleStatsChange"></select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" class="clear"></td>
+        </tr>
+        <tr data-dojo-attach-point="_percentileRow1" class="hide">
+          <td colspan="2">
+            <label class="esriLeadingMargin1" data-dojo-attach-point="_percentileLabel">${i18n.percentileValue}</label>
+          </td>
+          <td>
+            <a href="#" class='esriFloatTrailing helpIcon' esriHelpTopic="percentileValue"></a>
+          </td>
+        </tr>
+        <tr data-dojo-attach-point="_percentileRow2" class="hide">
+          <td colspan="1" style="width:35%">
+            <input class="longInput esriLeadingMargin1" type="text" data-dojo-type="dijit/form/NumberTextBox" data-dojo-props="intermediateChanges:true,placeHolder:'${i18n.percentileValue}',value:90" data-dojo-attach-point="_percentileValueInput" style="width:100%;">
           </td>
         </tr>
         <tr>
@@ -117,6 +133,26 @@
         <tr>
           <td colspan="3" class="clear"></td>
         </tr>
+        <tr>
+          <td colspan="2">
+            <label class="esriFloatLeading esriTrailingMargin025 esriAnalysisNumberLabel">${i18n.fiveLabel}</label>
+            <label class="esriAnalysisStepsLabel">${i18n.multiDimensional}</label>
+          </td>
+          <td>
+            <a href="#" class='esriFloatTrailing helpIcon' esriHelpTopic="processAsMultidimensional"></a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <label class="esriLeadingMargin2 esriSelectLabel" data-dojo-attach-point="_multidimensionalLabel">
+              <div data-dojo-type="dijit/form/CheckBox" data-dojo-attach-point="_multidimensionalCheck" data-dojo-props="checked:false"></div>
+              ${i18n.allSlices}
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" class="clear"></td>
+        </tr>     
         <tr>
           <td colspan="2">
             <label class="esriFloatLeading esriTrailingMargin025 esriAnalysisNumberLabel">${i18n.fiveLabel}</label>
@@ -152,7 +188,7 @@
   </div>
   <div style="padding:5px;margin-top:5px;border-top:solid 1px #BBB;">
     <div class="esriExtentCreditsCtr">
-      <a class="esriFloatTrailing esriSmallFont" href="#" data-dojo-attach-point="_showCreditsLink" data-dojo-attach-event="onclick:_handleShowCreditsClick">${i18n.showCredits}</a>
+      <a class="esriFloatTrailing esriSmallFont" href="#" data-dojo-attach-point="_showCreditsLink">${i18n.showCredits}</a>
       <label data-dojo-attach-point="_chooseExtentDiv" class="esriSelectLabel esriExtentLabel">
         <input type="radio" data-dojo-attach-point="_useExtentCheck" data-dojo-type="dijit/form/CheckBox" data-dojo-props="checked:true" name="extent" value="true" />
         ${i18n.useMapExtent}

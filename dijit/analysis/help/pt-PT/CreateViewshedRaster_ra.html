@@ -44,7 +44,7 @@
         <h2>Criar Viewshed</h2><p/>
         <h2><img src="../images/GUID-BB8B8CAF-330E-4C41-9D94-AF4728D0D0F3-web.png" alt="Ferramenta Criar Viewshed"></h2>
         <hr/>
-    <p>Esta ferramenta identifica as &aacute;reas que um observador consegue ver, tendo em conta a topografia da superf&iacute;cie. Os pontos de an&aacute;lise de entrada podem representar tanto observadores (como pessoas no terreno ou vigias numa torre de controlo de inc&ecirc;ndios) ou objectos observados (tais como turbinas e&oacute;licas, dep&oacute;sitos de &aacute;gua, ve&iacute;culos, ou outras pessoas). Os resultados definem as &aacute;reas que podem ser visualizadas a partir das localiza&ccedil;&otilde;es dos observadores.
+    <p>Esta ferramenta identifica as &aacute;reas que as localiza&ccedil;&otilde;es do observador de entrada consegue ver, tendo em conta a topografia da superf&iacute;cie. Os pontos de an&aacute;lise de entrada podem representar tanto observadores (como pessoas no terreno ou vigias numa torre de controlo de inc&ecirc;ndios) ou objectos observados (tais como turbinas e&oacute;licas, dep&oacute;sitos de &aacute;gua, ve&iacute;culos, ou outras pessoas). Os resultados definem as &aacute;reas que podem ser visualizadas a partir das localiza&ccedil;&otilde;es dos observadores.
     </p>
     <p>Tanto os observadores como os objetos observados podem encontrar-se a uma altura acima do solo, e estas alturas s&atilde;o utilizadas para determinar a visibilidade. Por exemplo, uma viewshed calculada para turbinas e&oacute;licas de 300 p&eacute;s e uma pessoa com 6 p&eacute;s de altura, de p&eacute;, no solo, ser&aacute; tipicamente de maior dimens&atilde;o do que uma viewshed calculada para turbinas de 200 p&eacute;s e uma pessoa com 5 p&eacute;s de alftura.
     </p>
@@ -97,8 +97,8 @@ Este m&eacute;todo &eacute; otimizado para a precis&atilde;o dos resultados, &ag
         <hr/>
         <div>
             <p>Introduza uma dist&acirc;ncia limite no local onde o c&aacute;lculo de &aacute;reas vis&iacute;veis ir&aacute; parar. Para al&eacute;m desta dist&acirc;ncia, n&atilde;o &eacute; poss&iacute;vel determinar se os pontos de observa&ccedil;&atilde;o e os outros objetos se veem mutuamente.
-            </p> 
-            <p>Pode especificar um valor num&eacute;rico que represente uma dist&acirc;ncia linear ou selecionar um campo num&eacute;rico de entre os elementos de observa&ccedil;&atilde;o de entrada. Caso seja fornecido um campo, o valor contido no campo tem de estar na mesma unidade que a unidade XY da superf&iacute;cie de eleva&ccedil;&atilde;o de entrada.
+            </p>
+            <p>&Eacute; poss&iacute;vel especificar um valor num&eacute;rico representando uma dist&acirc;ncia linear ou selecionar um campo num&eacute;rico a partir dos elementos do observador da entrada. Se for fornecido um campo, os valores contidos no campo t&ecirc;m que estar na mesma unidade que a unidade xy da superf&iacute;cie de eleva&ccedil;&atilde;o da entrada.
             </p>
             <p>Note que os valores elevados aumentam o tempo de c&aacute;lculo. A n&atilde;o ser que seja especificado, ser&aacute; calculada uma dist&acirc;ncia m&aacute;xima predefinida com base na resolu&ccedil;&atilde;o e na extens&atilde;o da superf&iacute;cie de eleva&ccedil;&atilde;o de entrada.
             </p>
@@ -118,8 +118,8 @@ Este m&eacute;todo &eacute; otimizado para a precis&atilde;o dos resultados, &ag
         <hr/>
         <div>
             <p>Introduza uma dist&acirc;ncia onde para o in&iacute;cio do c&aacute;lculo de &aacute;reas vis&iacute;veis. As c&eacute;lulas &agrave; superf&iacute;cie que se encontrem mais perto do que esta dist&acirc;ncia n&atilde;o s&atilde;o vis&iacute;veis na sa&iacute;da, mas podem ainda bloquear a visibilidade das c&eacute;lulas entre a dist&acirc;ncia de visualiza&ccedil;&atilde;o m&iacute;nima e a m&aacute;xima.
-            </p> 
-            <p>Pode especificar um valor num&eacute;rico que represente uma dist&acirc;ncia linear ou selecionar um campo num&eacute;rico de entre os elementos de observa&ccedil;&atilde;o de entrada. Caso seja fornecido um campo, o valor contido no campo tem de estar na mesma unidade que a unidade XY da superf&iacute;cie de eleva&ccedil;&atilde;o de entrada.
+            </p>
+            <p>&Eacute; poss&iacute;vel especificar um valor num&eacute;rico representando uma dist&acirc;ncia linear ou selecionar um campo num&eacute;rico a partir dos elementos do observador da entrada. Se for fornecido um campo, os valores contidos no campo t&ecirc;m que estar na mesma unidade que a unidade xy da superf&iacute;cie de eleva&ccedil;&atilde;o da entrada.
             </p>
             <p>Este par&acirc;metro &eacute; &uacute;til para controlar a &aacute;rea de an&aacute;lise da viewshed a uma dist&acirc;ncia espec&iacute;fica do observador. Por exemplo, se estiver a avaliar a visibilidade a partir do topo de um edif&iacute;cio at&eacute; um parque distante, pode definir uma dist&acirc;ncia de visualiza&ccedil;&atilde;o m&iacute;nima para excluir as &aacute;reas pr&oacute;ximas que n&atilde;o forem de interesse e, desse modo, obter uma melhor velocidade de processamento.
             </p>
@@ -165,7 +165,7 @@ Este m&eacute;todo &eacute; otimizado para a precis&atilde;o dos resultados, &ag
         <div>
             <p>Introduza a altura, acima do solo, das suas localiza&ccedil;&otilde;es de observa&ccedil;&atilde;o.
             </p> 
-            <p>Pode especificar um valor num&eacute;rico para a altura ou um campo dos elementos de observa&ccedil;&atilde;o de entrada. Caso seja fornecido um campo, o valor contido no campo tem de estar na mesma unidade que a unidade Z da superf&iacute;cie de eleva&ccedil;&atilde;o de entrada.
+            <p>Pode especificar um valor num&eacute;rico para a altura ou um campo dos elementos de observa&ccedil;&atilde;o de entrada. Se for fornecido um campo, os valores contidos no campo t&ecirc;m que estar na mesma unidade que a unidade z da superf&iacute;cie de eleva&ccedil;&atilde;o da entrada.
             </p>
             <p>O valor padr&atilde;o &eacute; 6 p&eacute;s. Caso esteja &agrave; procura de uma localiza&ccedil;&atilde;o elevada, como uma torre de observa&ccedil;&atilde;o ou um edif&iacute;cio alto, utilize, ao inv&eacute;s. essa altura. No decurso do c&aacute;lculo da viewshed, este valor &eacute; adicionado &agrave; eleva&ccedil;&atilde;o do observador, caso seja especificada; caso contr&aacute;rio, &eacute; adicionada ao valor z da superf&iacute;cie interpolada.
             </p>
@@ -183,8 +183,8 @@ Este m&eacute;todo &eacute; otimizado para a precis&atilde;o dos resultados, &ag
         <hr/>
         <div>
             <p>Introduza a altura de estruturas ou pessoas no solo utilizadas para estabelecer a visibilidade.
-            </p> 
-            <p>Pode especificar um valor num&eacute;rico para a altura ou um campo dos elementos de observa&ccedil;&atilde;o de entrada. Caso seja fornecido um campo, o valor contido no campo tem de estar na mesma unidade que a unidade Z da superf&iacute;cie de eleva&ccedil;&atilde;o de entrada.
+            </p>
+            <p>Pode especificar um valor num&eacute;rico para a altura ou um campo dos elementos de observa&ccedil;&atilde;o de entrada. Se for fornecido um campo, os valores contidos no campo t&ecirc;m que estar na mesma unidade que a unidade z da superf&iacute;cie de eleva&ccedil;&atilde;o da entrada.
             </p>
             <p>A viewshed resultante identifica as &aacute;reas onde um ponto de observa&ccedil;&atilde;o pode ver estes objetos no solo. O inverso tamb&eacute;m &eacute; verdade; os objetos no solo podem ver o ponto de observa&ccedil;&atilde;o. 
             </p>
@@ -230,9 +230,10 @@ Este m&eacute;todo &eacute; otimizado para a precis&atilde;o dos resultados, &ag
         <div><h2>Nome da camada resultante</h2></div>
         <hr/>
         <div>
-            <p>O nome da camada que ser&aacute; criada em  <b>O Meu Conte&uacute;do</b> e adicionada ao mapa. O nome padr&atilde;o &eacute; baseado no nome da ferramenta e do nome da camada de entrada. Se a camada j&aacute; existir, ser-lhe-&aacute; pedido que forne&ccedil;a outro nome.
+            
+            <p>O nome da camada que ser&aacute; criada em  <b>O Meu Conte&uacute;do</b> e adicionada ao mapa. O nome padr&atilde;o &eacute; baseado no nome da ferramenta e do nome da camada de entrada. Se a camada j&aacute; existir, ser-lhe-&aacute; pedido que introduza outro nome.
             </p>
-            <p>Ao utilizar a caixa suspensa  <b>Guardar resultado em</b> pode definir o nome da pasta em <b>O Meu Conte&uacute;do</b> onde o resultado ser&aacute; guardado.
+            <p>&Eacute; poss&iacute;vel especificar o nome de uma pasta em  <b>O Meu Conte&uacute;do</b>, onde o resultado ser&aacute; guardado utilizando a op&ccedil;&atilde;o <b>Guardar Resultado em</b> da caixa suspensa.
             </p>
         </div>
     </div>

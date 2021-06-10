@@ -41,46 +41,49 @@
 <body onload="init()">
 <div id="topics">
     <div id="raToolbox">
-        <p>Rasteranal&uuml;&uuml;s v&otilde;imaldab  ArcGIS Image Serveriga anal&uuml;&uuml;sida suuri rasterandmestikke. Nii saate serveri j&otilde;udlust &auml;ra kasutades anal&uuml;&uuml;sida kiiremini rohkem andmeid. Hetkel  Portal for ArcGISis kasutamiseks saadaval olevad t&ouml;&ouml;riistakomplektid on  <b>Summeeri andmeid</b>, <b>Anal&uuml;&uuml;si mustreid</b>, <b>Anal&uuml;&uuml;si pilti</b>, <b>Anal&uuml;&uuml;si maastikku</b> ja <b>Halda andmeid</b>.
+        <p>Rasteranal&uuml;&uuml;s v&otilde;imaldab anal&uuml;&uuml;sida suuri rasterandmestikke, kasutades kihte  ArcGIS Image Server. Nii saate serveri j&otilde;udlust &auml;ra kasutades anal&uuml;&uuml;sida kiiremini rohkem andmeid.Hetkel portaalis Portal for ArcGIS saadaval olevad t&ouml;&ouml;riistakomplektid on  <b>Summeeri andmed</b>, <b>Anal&uuml;&uuml;si mustreid</b>, <b>Kasuta l&auml;hedust</b>, <b>Anal&uuml;&uuml;si pilti</b>, <b>Anal&uuml;&uuml;si maastikku</b>, <b>Halda andmeid</b>, <b>S&uuml;va&otilde;pe</b> ja <b>Mitmem&otilde;&otilde;tmeline anal&uuml;&uuml;s</b>.
         </p>
     </div>
-    <div id="SummarizeDataCategory" class="smallsize">
+    <div id="SummarizeDataCategory" class="regularsize">
         <h2>Summeeri andmeid</h2>
         <hr/>
-        <p>See t&ouml;&ouml;riistakomplekt sisaldab t&ouml;&ouml;riista rasterkihi statistikute arvutamiseks teie m&auml;&auml;ratletud ala piirides. 
+        <p>Neid t&ouml;&ouml;riistu kasutatakse rasterkihi statistikute arvutamiseks teie m&auml;&auml;ratletud ala piirides (tsoonides).
             <ul>
                 <li> <b>Summeeri rastri piirides</b> arvutab m&auml;&auml;ratletud ala piiridesse j&auml;&auml;vate rasterkihi pikslite statistikud.
+                </li>
+                <li> <b>Tsoonip&otilde;hine statistika tabelina</b> v&otilde;tab kokku rastri v&auml;&auml;rtused teise andmestiku tsoonides ja esitab tulemused tabelisse.
                 </li>
             </ul>
             
         </p>
     </div>
-        <div id="SummarizeRasterWithinTool" class="largesize">
+        <div id="SummarizeRasterWithinTool" class="smallsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Summeeri raster piirides</h2></td>
+                    <td><h2>Summeeri piirides olev raster</h2></td>
                     <td>
-                    <img src="../images/GUID-D61C156C-2B2C-488C-BF28-B6CB9277BF4B-web.png" class="titleImage" alt="T&ouml;&ouml;riist &quot;Summeeri raster piirides&quot;">
+                    <img src="../images/GUID-D61C156C-2B2C-488C-BF28-B6CB9277BF4B-web.png" class="titleImage" alt="Summeeri rastri piirides t&ouml;&ouml;riist">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Arvutab m&auml;&auml;ratletud ala piiridesse j&auml;&auml;vate rasterkihi pikslite summaarsed statistikud.
+            <p>See t&ouml;&ouml;riist v&otilde;tab kokku rastri v&auml;&auml;rtused teise andmestiku tsoonides.
             </p>
-            <p>V&otilde;imalikud kasutusalad on muuhulgas j&auml;rgnevad: 
-
-                <ul>
-                    <li>V&otilde;ttes arvesse valgalade kihti ja k&otilde;rgusandmete rasterkihti, saame arvutada iga valgala osas k&otilde;rguste vahemiku, et m&auml;&auml;rata, millistel neist on k&otilde;ige suurema energiaga vool.
-                        
-
-                    </li>
-                    <li>V&otilde;ttes arvesse haldus&uuml;ksuste kihti ja maakasutuse kategooriaid kirjeldavat rasterkihti, saame arvutada maakasutuse v&auml;&auml;rtuste mitmekesisuse igas haldus&uuml;ksuses m&auml;&auml;ramaks, milliste puhul on halduskava koostamiseks k&otilde;ige rohkem t&ouml;&ouml;d vaja teha.
-                        
-
-                    </li>
-                </ul>
-                
+            <br/>
+        </div>
+        <div id="ZonalStatisticsAsTableTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Tsoonipõhine statistika tabelina</h2></td>
+                    <td>
+                    <img src="../images/GUID-2847466F-BF22-4545-BDCE-7EB7B1D15F2D-web.png" class="titleImage" alt="Diagramm Tsoonip&otilde;hine statistika tabelina">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>See t&ouml;&ouml;riist v&otilde;tab kokku rastri v&auml;&auml;rtused teise andmestiku tsoonides ja esitab tulemused tabelisse.
             </p>
             <br/>
         </div>
@@ -132,12 +135,171 @@
             </p>
             <br/>
         </div>
+    <div id="UseProximityCategory" class="largesize">
+        <h2>Kasuta lähedust</h2>
+        <hr/>
+        <p>Need t&ouml;&ouml;riistad aitavad vastata ruumianal&uuml;&uuml;si k&auml;igus sageli tekkivale k&uuml;simusele: &quot;Mis on mille l&auml;hedal?&quot; ja &quot;Milline on k&otilde;ige optimaalsem tee?&quot;
+            <ul>
+                <li> <b>Arvuta vahemaa.</b> See t&ouml;&ouml;riist arvutab Eukleidese kauguse, suuna ja paigutuse &uuml;hestainsast l&auml;htepunktist v&otilde;i l&auml;htepunktide komplektist.
+                    
+
+                </li>
+                <li> <b>M&auml;&auml;ra optimaalsete s&otilde;idukulude v&otilde;rk</b>. See t&ouml;&ouml;riist arvutab optimaalse kuluv&otilde;rgu sisendpiirkondade komplekti p&otilde;hjal.
+                    
+
+                </li>
+                <li> <b>M&auml;&auml;ra s&otilde;idukulude tee murdjoonena</b> See t&ouml;&ouml;riist arvutab odavaima murdjoone tee teadaolevate sihtkohtade ja l&auml;htekohtade vahel.
+                    
+
+                </li>
+                <li> <b>Akumuleerunud kaugus</b> See t&ouml;&ouml;riist arvutab iga lahtri akumuleerunud kauguse allikateni, v&otilde;imaldades kasutada sirgjoonelist kaugust, kulukaugust, tegelikku pinna kaugust, samuti vertikaalseid ja horisontaalseid kulutegureid.
+                    
+
+                </li>
+                <li> <b>Kauguse paigutus</b> See t&ouml;&ouml;riist arvutab iga lahtri kauguse paigutuse antud allikateni, v&otilde;imaldades kasutada sirgjoonelist kaugust, kulukaugust, tegelikku pinna kaugust, samuti vertikaalseid ja horisontaalseid kulutegureid.
+                    
+
+                </li>
+                <li> <b>Optimaalne tee joonena</b> See t&ouml;&ouml;riist arvutab optimaalse tee sihtkohtadest l&auml;htekohani joonena.
+                    
+
+                </li>
+                <li> <b>Optimaalne tee rastrina</b> See t&ouml;&ouml;riist arvutab optimaalse tee sihtkohtadest l&auml;htekohtadeni rastrina.
+                    
+
+                </li>
+                <li> <b>Piirkonna optimaalsed &uuml;hendused</b> see t&ouml;&ouml;riist arvutab optimaalne &uuml;hendusv&otilde;rgu kahe v&otilde;i enama sisendpiirkonna vahel..
+                </li>
+            </ul>
+            
+        </p>
+    </div>
+        <div id="CalculateDistanceTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Arvuta vahemaa</h2></td>
+                    <td>
+                    <img src="../images/GUID-34E2E6F3-2F60-43F5-B499-D5735DE08602-web.png" class="titleImage" alt="Arvuta vahemaa">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>See t&ouml;&ouml;riist arvutab Eukleidese kauguse, suuna ja paigutuse &uuml;hestainsast l&auml;htepunktist v&otilde;i l&auml;htepunktide komplektist.
+            </p>
+            <br/>
+        </div>
+        <div id="DetermineOptimumTravelCostNetworkTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Määra optimaalne sõidukulude võrk</h2></td>
+                    <td>
+                    <img src="../images/GUID-097BDD6E-0AD8-44F2-BB70-C5395F4B1AF4-web.png" class="titleImage" alt="T&ouml;&ouml;vahendi M&auml;&auml;ra optimaalne s&otilde;idukulude v&otilde;rk illustratsioon">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>See t&ouml;&ouml;riist arvutab optimaalse kuluv&otilde;rgu sisendpiirkondade komplekti p&otilde;hjal.
+            </p>
+            <br/>
+        </div>
+        <div id="DetermineTravelCostPathAsPolylineTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Määra sõidukulude tee murdjoonena</h2></td>
+                    <td>
+                    <img src="../images/GUID-9A27DEB7-0276-483C-A12F-3E70D636550D-web.png" class="titleImage" alt="T&ouml;&ouml;vahendi M&auml;&auml;ra s&otilde;idukulude tee murdjoonena illustratsioon">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>See t&ouml;&ouml;riist arvutab odavaima murdjoone tee sihtkohtade ja l&auml;htekohtade vahel.
+            </p>
+            <br/>
+        </div>
+        <div id="DistanceAccumulationTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Kauguse akumulatsioon</h2></td>
+                    <td>
+                    <img src="../images/GUID-758B6DFA-6820-45B8-8089-5A2B7AB20A0D-web.png" class="titleImage" alt="T&ouml;&ouml;riista Kauguse akumulatsioon illustratsioon">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>See t&ouml;&ouml;riist arvutab iga lahtri akumuleerunud kauguse allikateni, v&otilde;imaldades kasutada sirgjoonelist kaugust, kulukaugust, tegelikku pinna kaugust, samuti vertikaalseid ja horisontaalseid kulutegureid.
+            </p>
+            <br/>
+        </div>
+        <div id="DistanceAllocationTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Kauguse paigutus</h2></td>
+                    <td>
+                    <img src="../images/GUID-2843B88C-B69A-43FB-A93B-B8D7ABCF95EA-web.png" class="titleImage" alt="T&ouml;&ouml;riista Kauguse eraldamine illustratsioon">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>T&ouml;&ouml;riist arvutab iga lahtri kauguse paigutuse antud allikateni, v&otilde;imaldades kasutada sirgjoonelist kaugust, kulukaugust, tegelikku pinna kaugust, samuti vertikaalseid ja horisontaalseid kulutegureid.
+            </p>
+            <br/>
+        </div>
+        <div id="OptimalPathAsLineTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Optimaalne tee joonena</h2></td>
+                    <td>
+                    <img src="../images/GUID-754B49AB-28D7-4758-A24C-5C67339666BA-web.png" class="titleImage" alt="T&ouml;&ouml;riista Optimaalne tee joonena illustratsioon">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>See t&ouml;&ouml;riist arvutab optimaalse tee sihtkohtadest l&auml;htekohani joonena.
+            </p>
+            <br/>
+        </div>
+        <div id="OptimalPathAsRasterTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Optimaalne tee rastrina</h2></td>
+                    <td>
+                    <img src="../images/GUID-75C94369-AAAA-4556-8F89-9B6AA39012C9-web.png" class="titleImage" alt="T&ouml;&ouml;riista Optimaalne tee rastrina illustratsioon">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>See t&ouml;&ouml;riist arvutab optimaalse tee sihtkohtadest l&auml;htekohani rastrina.
+            </p>
+            <br/>
+        </div>
+        <div id="OptimalRegionConnectionsTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Piirkonna optimaalsed ühendused</h2></td>
+                    <td>
+                    <img src="../images/GUID-85027C62-D35A-428B-B050-4F52D2B4ADE4-web.png" class="titleImage" alt="T&ouml;&ouml;riista Piirkonna optimaalsed &uuml;hendused illustratsioon">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>See t&ouml;&ouml;riist arvutab optimaalse &uuml;hendusv&otilde;rgu kahe v&otilde;i enama sisendpiirkonna vahel.
+            </p>
+            <br/>
+        </div>
     <div id="AnalyzeImageCategory" class="smallsize">
         <h2>Analüüsi pilti</h2>
         <hr/>
-        <p>Selle t&ouml;&ouml;riista abil saab anal&uuml;&uuml;sida pilte, et m&auml;&auml;rata taimestikuga alad. 
+        <p>J&auml;rgmine t&ouml;&ouml;riist kategoorias  <b>Anal&uuml;&uuml;si pilti</b> aitab anal&uuml;&uuml;sida pilte:
             <ul>
-                <li>Funktsiooni  <b>Taimestiku seire</b> puhul kasutatakse pildil taimestiku tuvastamiseks lainepikkustel aritmeetilisi toiminguid.
+                <li>Funktsioon  <b>Taimestiku seire</b> kasutab pildil taimestiku tuvastamiseks lainepikkustel aritmeetilisi toiminguid. Pildi anal&uuml;&uuml;sil kasutatakse mitut taimestikuindeksit.
                     
 
                 </li>
@@ -156,7 +318,7 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Uuringualal oleva taimestiku kohta teabe hankimiseks saab teostada mitme lainepikkusega rasterkihil aritmeetilise toimingu.
+            <p>Taimestiku kohta teabe hankimiseks saab teostada mitme lainepikkusega rasterkihil aritmeetilise toimingu.
             </p>
             <br/>
         </div>
@@ -174,6 +336,10 @@
 
                 </li>
                 <li>T&ouml;&ouml;riista  <b>Loo vaatev&auml;li</b> abil saate kindlaks teha, mida maastiku mingist punktist n&auml;ha v&otilde;ib.
+                    
+
+                </li>
+                <li> <b>Valgala</b> arvutab m&otilde;jupiirkonna &uuml;le m&auml;&auml;ratletud asukoha (asukohtade) pinnal.
                     
 
                 </li>
@@ -226,6 +392,21 @@
             </p>
             <br/>
         </div>
+        <div id="WatershedTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Valgala</h2></td>
+                    <td>
+                    <img src="../images/GUID-AF749369-8C2D-46FF-9D74-2CF7CAB7C7B0-web.png" class="titleImage" alt="Valgala &uuml;lesanne">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>See t&ouml;&ouml;vahend m&auml;&auml;rab m&otilde;jupiirkonna, mis paikneb rastris pikslikomplekti kohal.
+            </p>
+            <br/>
+        </div>
     <div id="ManageDataCategory" class="regularsize">
         <h2>Halda andmeid</h2>
         <hr/>
@@ -247,6 +428,8 @@
                     
 
                 </li>
+                <li> <b>Valim</b> ekstraktib andmeid m&auml;&auml;ratud asukohtadest rastrist v&otilde;i rastrikogumist.
+                </li>
             </ul>
             
         </p>
@@ -255,7 +438,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Ekstrakti raster</h2></td>
+                    <td><h2>Tee rastrist väljavõte</h2></td>
                     <td>
                     <img src="../images/GUID-DC9CBCB9-A07C-42D3-A0CB-2FB1483CBF4C-web.png" class="titleImage" alt="Rastri ekstraktimise t&ouml;&ouml;riist (Portal)">
                     </td>
@@ -270,7 +453,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Vastenda väärtused uuesti</h2></td>
+                    <td><h2>Leia uued väärtused</h2></td>
                     <td>
                     <img src="../images/GUID-4006E442-A60B-469A-891D-5ED442F64CB8-web.png" class="titleImage" alt="V&auml;&auml;rtuste uuesti vastendamise t&ouml;&ouml;riist (Portal)">
                     </td>
@@ -308,6 +491,179 @@
             </table>
 <hr/>
             <p>Loob olemasoleva rasterkihi sisuandmetest uue vektorkihi.
+            </p>
+            <br/>
+        </div>
+        <div id="SampleTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Valim</h2></td>
+                    <td>
+                    <img src="../images/GUID-3950CCA3-C1D0-493F-A33D-93673443ADD2-web.png" class="titleImage" alt="Valim">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Loob tabeli v&otilde;i punktobjektiklassi rastrist v&otilde;i rastrikogumist ekstraktitud m&auml;&auml;ratud asukohtade andmev&auml;&auml;rtustega.
+            </p>
+            <br/>
+        </div>
+    <div id="DeepLearningCategory" class="largesize">
+        <h2>Süvaõpe</h2>
+        <hr/>
+        <p>Neid t&ouml;&ouml;riistu kasutatakse pildi spetsiaalsete objektide tuvastamiseks v&otilde;i klassifitseerimiseks v&otilde;i pikslite klassifitseerimiseks rastri andmestikus. S&uuml;va&otilde;pe on tehisintellektiga masina &otilde;petusmeetodi t&uuml;&uuml;p, mis tuvastab pildiandmete objekte, kasutades neurov&otilde;rkude mitut kihti, kus iga kiht on v&otilde;imeline v&auml;ljendama pildi &uuml;ht v&otilde;i mitut unikaalset objekti. Need t&ouml;&ouml;riistad kasutavad mudeleid, mida on &otilde;petatud tuvastama spetsiifilisi objekte muude v&auml;ljat&ouml;&ouml;tajate s&uuml;va&otilde;ppe raamistikes &mdash; n&auml;iteks TensorFlow&rsquo;s, CNTK-s ja Keras&rsquo;is &mdash; ning v&auml;ljundobjektidel v&otilde;i klassikaartidel.
+            <ul>
+                <li> <b>Pikslite klassifitseerimine s&uuml;va&otilde;ppe teel</b> valmistab klassifitseeritud rastri, kasutades &otilde;petatud s&uuml;va&otilde;ppemudelit.
+                </li>
+                <li> <b>Objektide tuvastamine s&uuml;va&otilde;ppe teel</b> valmistab objektiklassi, mis sisaldab objekte, mida ta leiab sisendrastris, kasutades &otilde;petatud s&uuml;va&otilde;ppemudelit.
+                </li>
+                <li> <b>Objektide klassifitseerimine s&uuml;va&otilde;ppe teel</b> moodustab objektiklassi v&otilde;i -tabeli, mille igal sisendobjektil on m&auml;&auml;ratud klassim&auml;rk, kasutades treenitud s&uuml;va&otilde;ppe mudelit.
+                </li>
+            </ul>
+            
+        </p>
+    </div>
+        <div id="ClassifyPixelsUsingDeepLearningTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Pikslite klassifitseerimine süvaõppe teel</h2></td>
+                    <td>
+                    <img src="../images/GUID-88BE63A6-B06C-4C61-9AB1-8DA5A08C6783-web.png" class="titleImage" alt="Pikslite klassifitseerimine s&uuml;va&otilde;ppe teel">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>This tool runs a trained deep learning model on an input raster to produce a classified raster, and each valid pixel has an assigned class label.
+            </p>
+            <br/>
+        </div>
+        <div id="DetectObjectsUsingDeepLearningTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Objektide tuvastamine süvaõppe teel</h2></td>
+                    <td>
+                    <img src="../images/GUID-EE76A33E-0B8F-48EE-94F8-782FAD241D72-web.png" class="titleImage" alt="Objektide tuvastamine s&uuml;va&otilde;ppe teel">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>This tool runs a trained deep learning model on an input raster to produce a feature class containing the objects it finds. Objektid v&otilde;ivad olla leitud objektide &uuml;mber paiknevad piiratud alad v&otilde;i hulknurgad v&otilde;i objektide keskkohas paiknevad punktid.
+            </p>
+            <br/>
+        </div>
+        <div id="ClassifyObjectsUsingDeepLearningTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Objektide klassifitseerimine süvaõppe teel</h2></td>
+                    <td>
+                    <img src="../images/GUID-F31B4A21-3E5C-4667-B66B-155CC35CD62B-web.png" class="titleImage" alt="Objektide klassifitseerimine s&uuml;va&otilde;ppe teel">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>See t&ouml;&ouml;riist rakendab sisendrastril treenitud s&uuml;va&otilde;ppe mudelit ja valikulist objektiklassi, et moodustada objektiklass v&otilde;i -tabel, mille igal sisendobjektil on m&auml;&auml;ratud klassim&auml;rk.
+            </p>
+            <br/>
+        </div>
+    <div id="MultidimensionalAnalysisCategory" class="largesize">
+        <h2>Mitmemõõtmeline analüüs</h2>
+        <hr/>
+        <p>Mitmem&otilde;&otilde;tmelise anal&uuml;&uuml;si t&ouml;&ouml;riistakomplekti kuuluvate t&ouml;&ouml;riistadega saate teostada teaduslike andmete anal&uuml;&uuml;si l&auml;bi mitme muutuja ja dimensiooni.
+        </p>
+        <p>Mitmem&otilde;&otilde;tmelised andmed kujutavad mitmel korral, s&uuml;gavusel ja k&otilde;rgusel kogutud andmeid. Sellist t&uuml;&uuml;pi andmeid kasutatakse tavaliselt teaduses atmosf&auml;&auml;rist, ookeanist ja maast. Selle t&ouml;&ouml;riistakomplektiga saate mitmem&otilde;&otilde;tmelisi andmeid anal&uuml;&uuml;sida mitmes erinevas vormingus, nt  netCDF-, HDF-, GRIB-andmestik, mitmem&otilde;&otilde;tmeline mosaiikandmestik ja Esri pilvrastri vorming (CRF).
+        </p>
+        <p>Mitmem&otilde;&otilde;tmelise anal&uuml;&uuml;si t&ouml;&ouml;riistad ja nende l&uuml;hikirjeldused on toodud allolevas tabelis.
+            <ul>
+                <li> <b>Agregeeri mitmem&otilde;&otilde;tmeline raster</b>  loob mitmem&otilde;&otilde;tmelise rasterandmestiku olemasolevaid mitmem&otilde;&otilde;tmelisi rastri muutujaid agregeerides m&ouml;&ouml;da dimensiooni.
+                </li>
+                <li> <b>Genereeri mitmem&otilde;&otilde;tmeline anomaalia</b> arvutab mitmem&otilde;&otilde;tmelise rastri iga l&otilde;igu anomaalia, et luua mitmem&otilde;&otilde;tmelist rastrit.
+                </li>
+                <li> <b>Trendi rastri loomine</b>  hindab iga piksli trendi piki &uuml;he v&otilde;i mitme muutuja m&otilde;&otilde;det mitmem&otilde;&otilde;tmelises rastris.
+                </li>
+                <li> <b>Trendi rastriga prognoosimine</b>  arvutab prognoositava mitmem&otilde;&otilde;tmelise rastri t&ouml;&ouml;riista <b>Trendi rastri loomine</b> v&auml;ljundi trendi rastri alusel.
+                </li>
+                <li> <b>Argumendi statistika otsimine</b>  ekstraktib m&otilde;&otilde;tme v&auml;&auml;rtuse v&otilde;i riba indeksi, mille juures antud statistika on iga piksli jaoks mitmem&otilde;&otilde;tmelises v&otilde;i mitmeribalises rastris saadud.
+                </li>
+            </ul>
+            
+        </p>
+    </div>
+        <div id="AggregateMultidimensionalRasterTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Agregeeri mitmemõõtmeline raster</h2></td>
+                    <td>
+                    <img src="../images/GUID-2C2320A3-EC6E-4FFC-B59B-9551BB02C545-web.png" class="titleImage" alt="Agregeeri mitmem&otilde;&otilde;tmeline raster">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>See t&ouml;&ouml;riist loob mitmem&otilde;&otilde;tmelise rasterandmestiku, agregeerides olemasolevaid mitmem&otilde;&otilde;tmelisi rastri muutujaid m&ouml;&ouml;da dimensiooni.
+            </p>
+            <br/>
+        </div>
+        <div id="FindArgumentStatisticsTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Argumendi statistika otsimine</h2></td>
+                    <td>
+                    <img src="../images/GUID-6DE9D49F-C9CA-48B8-B14F-C8EF05FBFA42-web.png" class="titleImage" alt="Argumendi statistika otsimine">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>See t&ouml;&ouml;riist ekstraktib m&otilde;&otilde;tme v&auml;&auml;rtuse v&otilde;i riba indeksi, mille juures antud statistika on iga piksli jaoks mitmem&otilde;&otilde;tmelises v&otilde;i mitmeribalises rastris saadud.
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateMultidimensionalAnomalyTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Genereeri mitmemõõtmeline anomaalia</h2></td>
+                    <td>
+                    <img src="../images/GUID-8D54C66F-5C16-4EE5-93E9-80722D10AF12-web.png" class="titleImage" alt="Genereeri mitmem&otilde;&otilde;tmeline anomaalia">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>See t&ouml;&ouml;riist arvutab mitmem&otilde;&otilde;tmelise rastri iga l&otilde;igu anomaalia, et luua mitmem&otilde;&otilde;tmelist rastrit.
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateTrendRasterTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Trendirastri loomine</h2></td>
+                    <td>
+                    <img src="../images/GUID-A95F821A-8CAF-45F3-93E5-14BDF5DA0BCD-web.png" class="titleImage" alt="Trendirastri loomine">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>See t&ouml;&ouml;riist hindab iga piksli trendi piki &uuml;he v&otilde;i mitme muutuja m&otilde;&otilde;det mitmem&otilde;&otilde;tmelises rastris.
+            </p>
+            <br/>
+        </div>
+        <div id="PredictUsingTrendRasterTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Trendi rastriga prognoosimine</h2></td>
+                    <td>
+                    <img src="../images/GUID-E3758820-51A9-46DE-AAF6-E27B68DE4012-web.png" class="titleImage" alt="Trendi rastriga prognoosimine">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>See t&ouml;&ouml;riist arvutab prognoositava mitmem&otilde;&otilde;tmelise rastri t&ouml;&ouml;riista  <b>Trendi rastri loomine</b> v&auml;ljundi trendi rastri alusel.
             </p>
             <br/>
         </div>

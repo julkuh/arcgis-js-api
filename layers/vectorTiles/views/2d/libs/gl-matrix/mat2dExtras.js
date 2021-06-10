@@ -1,4 +1,4 @@
-// COPYRIGHT © 2017 Esri
+// COPYRIGHT © 2021 Esri
 //
 // All rights reserved under the copyright laws of the United States
 // and applicable international laws, treaties, and conventions.
@@ -20,6 +20,6 @@
 //
 // email: contracts@esri.com
 //
-// See http://js.arcgis.com/3.21/esri/copyright.txt for details.
+// See http://js.arcgis.com/3.36/esri/copyright.txt for details.
 
-define(["require","exports","./mat2d","./vec2","./common"],function(t,e,r,n,a){Object.defineProperty(e,"__esModule",{value:!0});var o=function(){var t=r.create(),e=n.create();return function(a,o,u){return r.fromTranslation(t,u),r.multiply(a,t,o),n.negate(e,u),r.translate(a,a,e),a}}();e.rotategAt=function(){var t=r.create();return function(e,n,u,i){return r.fromRotation(t,a.toRadian(u)),o(t,t,i),r.multiply(e,t,n),e}}(),e.scaleAt=function(){var t=r.create();return function(e,n,a,u){return r.fromScaling(t,a),o(t,t,u),r.multiply(e,t,n),e}}()});
+define(["require","exports","./common","./mat2d","./vec2"],(function(t,e,r,n,a){Object.defineProperty(e,"__esModule",{value:!0});var o,i,u,c=(o=n.create(),i=a.create(),function(t,e,r){return n.fromTranslation(o,r),n.multiply(t,o,e),a.negate(i,r),n.translate(t,t,i),t});e.rotategAt=(u=n.create(),function(t,e,a,o){return n.fromRotation(u,r.toRadian(a)),c(u,u,o),n.multiply(t,u,e),t}),e.scaleAt=function(){var t=n.create();return function(e,r,a,o){return n.fromScaling(t,a),c(t,t,o),n.multiply(e,t,r),e}}()}));

@@ -44,7 +44,7 @@
         <h2>Summarize Raster Within</h2><p/>
         <h2><img src="./images/GUID-D61C156C-2B2C-488C-BF28-B6CB9277BF4B-web.png" alt="Summarize Raster Within tool"></h2>
         <hr/>
-    <p>This tool summarizes a raster based on areas (zones) defined by the first input layer.
+    <p>This tool summarizes the values of a raster within the zones of another dataset.
     </p>
     <p>Some example applications include the following:
     </p>
@@ -99,9 +99,21 @@
         <div>
             <p>Once you choose a layer to summarize, you can optionally calculate statistics of any numerical attribute of the points, lines, or areas within the input area layer.
             </p>
-            <p>The available statistics types when the selected field is integer are Average, Maximum, Median, Minimum, Minority, Range, Standard deviation, Sum, and Variety.
+            <p>The available statistics types when the selected field is integer are Average, Majority, Maximum, Median, Minimum, Minority, Percentile, Range, Standard deviation, Sum, and Variety.
             </p>
             <p>If the field is floating point, the options are Average, Maximum, Minimum, Range, Standard deviation, and Sum.
+            </p>
+        </div>
+    </div>
+    <div id="percentileValue">
+        <div><h2>Percentile value</h2></div>
+        <hr/>
+        <div>
+            <p>The percentile to calculate. The default is 90, indicating the 90th percentile.
+            </p>
+            <p>The values can range from 0 to 100. The 0th percentile is essentially equivalent to the minimum statistic, and the 100th percentile is equivalent to maximum. A value of 50 will produce essentially the same result as the median statistic.
+            </p>
+            <p>This option is only supported if the  <b>Choose statistic to calculate</b> parameter is set to <b>Percentile</b>.
             </p>
         </div>
     </div>
@@ -113,13 +125,22 @@
             </p>
         </div>
     </div>
+    <div id="processAsMultidimensional">
+        <div><h2>Process as multidimensional</h2></div>
+        <hr/>
+        <div>
+            <p>Specifies how the input rasters will be processed if they are multidimensional. If you choose to process as multidimensional, statistics will be calculated from all dimensions of the input multidimensional dataset. Otherwise, statistics will be calculated from the current slice of the input multidimensional dataset, this is the default.
+            </p>
+        </div>
+    </div>
     <div id="resultLayer">
         <div><h2>Result layer name</h2></div>
         <hr/>
         <div>
-            <p>The name of the layer that will be created in  <b>My Content</b> and added to the map. The default name is based on the tool name and the input layer name. If the layer already exists, you will be asked to provide another name.
+            
+            <p>The name of the layer that will be created in  <b>My Content</b> and added to the map. The default name is based on the tool name and the input layer name. If the layer already exists, you will be prompted to provide another name.
             </p>
-            <p>Using the  <b>Save result in</b> drop-down box, you can specify the name of a folder in <b>My Content</b> where the result will be saved.
+            <p>You can specify the name of a folder in  <b>My Content</b> where the result will be saved using the <b>Save result in</b> drop-down box.
             </p>
         </div>
     </div>

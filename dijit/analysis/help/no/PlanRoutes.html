@@ -77,7 +77,7 @@
         <div>
             <p>Velg laget med punkt som rutene (eller kj&oslash;ret&oslash;yene) skal bes&oslash;ke. Disse punktene blir tilordnede eller utilordnede stopp i utdataene. 
             </p>
-            <p class="OnlineOnly">I tillegg til &aring; velge et lag fra kartet kan du velge  <b>Velg analyselag i levende atlas</b> eller <b>Velg analyselag</b> som du finner nederst i rullegardinlisten. Dette &aring;pner et galleri som inneholder en samling lag som vil v&aelig;re nyttige i mange analyser. 
+            <p>I tillegg til &aring; velge et lag fra kartet kan du velge  <b>Velg analyselag</b> som du finner nederst i rullegardinlisten. Dette alternativet &aring;pner et galleri der du kan bla til og velge datasett fra ulike kilder som du vil bruke i analysen. 
             </p>
             <p>Verkt&oslash;yet st&oslash;tter opptil 2&nbsp;000 geoobjekter som inndata .
             </p>
@@ -92,7 +92,7 @@
         </div>
     </div>
     <div id="startLayer">
-        <div><h2>Ruter starter</h2></div>
+        <div><h2>Ruter begynner ved stopp</h2></div>
         <hr/>
         <div>
             <p>Angi hvor og n&aring;r bilene starter p&aring; sine ruter.
@@ -111,7 +111,7 @@ klokken for &oslash;yeblikket er 9.30 PST (10.30 MST), og kj&oslash;ret&oslash;y
         </div>
     </div>
     <div id="endLayer">
-        <div><h2>Ruter stopper</h2></div>
+        <div><h2>Ruter avsluttes ved stopp</h2></div>
         <hr/>
         <div>
             <p>Angi hvor bilene avslutter sine ruter.
@@ -132,6 +132,20 @@ klokken for &oslash;yeblikket er 9.30 PST (10.30 MST), og kj&oslash;ret&oslash;y
             <p>Hvis du vil rute alle biler til et felles sluttpunkt annet som er noe annet enn startpunktet, fjerner du krysset ved  <b>G&aring; tilbake til start</b> og legger til et punkt p&aring; kartet eller velger et lag som inneholder n&oslash;yaktig ett punkt.
             </p>
             <p>Hvis du vil at rutene skal avsluttes p&aring; unike lokasjoner, fjerner du krysset ved  <b>G&aring; tilbake til start</b> og velg et lag som inneholder flere enn ett punkt. Antallet biler m&aring; samsvare med antall punkter i det valgte laget. Velg et felt som unikt identifiserer de enkelte rutene, bilene eller sj&aring;f&oslash;rer i <b>Rute-ID-feltet</b> i rullegardinlisten. Dersom bilene starter p&aring; flere lokasjoner og avslutter p&aring; flere lokasjoner, m&aring; rute-IDene for start- og sluttidslagene samsvare.
+            </p>
+        </div>
+    </div>
+    <div id="barrier_layers">
+        <div><h2>Velg hindringslag</h2></div>
+        <hr/>
+        <div>
+            <p> Ett eller flere geoobjekter som fungerer som midlertidige begrensninger (hindringer) under transport p&aring; de underliggende gatene. Du kan angi hindringer ved hjelp av punkt-, linje- eller polygongeoobjekter.
+            </p>
+            <p>En punkthindring kan v&aelig;re et veltet tre, en ulykke, en kraftledning som er falt ned, eller andre ting som blokkerer trafikken helt p&aring; et bestemt sted i gaten. Gaten er ikke stengt for trafikk, men det er ikke mulig &aring; passere hindringen. Du kan angi opptil 250 geoobjekter som fungerer som punkthindringer.
+            </p>
+            <p>En linjehindring hindrer trafikk der hindringen krysser gatene. En linjehindring kan for eksempel v&aelig;re en parade eller protestmarsj som blokkerer trafikken over flere gatesegmenter. Hvis antallet gategeoobjekter som krysses av alle linjehindringene overstiger 500, returnerer verkt&oslash;yet en feil.
+            </p>
+            <p>En polygonhindring hindrer trafikk der polygonet krysser gatene. Denne typen hindring kan for eksempel brukes til &aring; modellere oversv&oslash;mte omr&aring;der som dekker deler av gatenettet og gj&oslash;r det umulig &aring; ferdes p&aring; gatene. Hvis antallet gategeoobjekter som krysses av alle polygonhindringene overstiger 2000, returnerer verkt&oslash;yet en feil.
             </p>
         </div>
     </div>
@@ -215,11 +229,11 @@ klokken for &oslash;yeblikket er 9.30 PST (10.30 MST), og kj&oslash;ret&oslash;y
         <div><h2>Navn på resultatlag</h2></div>
         <hr/>
         <div>
-            <p>Navnet p&aring; geoobjektslaget som opprettes i  <b>Mitt innhold</b> og legges til kartet. Hvis geoobjektslaget allerede finnes, blir du bedt om &aring; oppgi et annet navn. Geoobjektslaget inneholder et lag for hvert av de f&oslash;lgende: ruter, tildelte stoppesteder og stoppesteder som ikke er tilordnet n&aring;r enkelte startsteder ikke kan kobles til noen ruter.
+            <p>Navnet p&aring; geoobjektlaget som opprettes i  <b>Mitt innhold</b> og legges til kartet. Hvis geoobjektlaget allerede finnes, blir du bedt om &aring; oppgi et annet navn. Geoobjektlaget inneholder et lag for hvert av de f&oslash;lgende: ruter, tildelte stoppesteder og stoppesteder som ikke er tilordnet n&aring;r enkelte startsteder ikke kan kobles til noen ruter.
             </p>
-            <p>Hvis du velger  <b>Inkluder rutelag</b>, lagres hver rute fra resultatet ogs&aring; som et rutelag. Et rutelag inneholder all informasjon for en bestemt rute, f.eks. stoppestedene som er tildelt langs ruten og reiseretningene. Det er nyttig &aring; opprette rutelag hvis du &oslash;nsker &aring; dele de enkelte rutene med andre medlemmer i organisasjonen eller hvis du &oslash;nsker &aring; modifisere rutene ytterligere med <b>Beskrivelser</b>-knappen i kartvisningen. Rutelagene bruker navnet som er oppgitt for geoobjektslaget som et prefiks, og rutenavnet som genereres som en del av analysen, blir lagt for &aring; skape et unikt navn for hvert rutelag.
+            <p>Hvis du velger  <b>Inkluder rutelag</b>, lagres hver rute fra resultatet ogs&aring; som et rutelag. Et rutelag inneholder all informasjon for en bestemt rute, for eksempel tildelte stoppesteder langs ruten og reiseretningene. Det er praktisk &aring; opprette rutelag hvis du &oslash;nsker &aring; dele de enkelte rutene med andre medlemmer i organisasjonen, eller hvis du vil endre rutene ytterligere ved hjelp av knappen <b>Veibeskrivelser</b> i kartvisningen. Rutelagene bruker navnet som er oppgitt for geoobjektlaget som et prefiks, og rutenavnet som genereres som en del av analysen, blir lagt til for &aring; skape et unikt navn for hvert rutelag.
             </p>
-            <p>Bruk rullegardinlisten  <b>Lagre resultatet i</b> til &aring; angi navnet p&aring; en mappe i <b>Mitt innhold</b> som geoobjektslaget og rutelagene, hvis de er opprettet, skal lagres i.
+            <p>Bruk rullegardinmenyen  <b>Lagre resultatet i</b> til &aring; angi navnet p&aring; en mappe i <b>Mitt innhold</b> som geoobjektlaget og rutelagene &ndash; hvis de er opprettet &ndash; vil bli lagret.
             </p>
         </div>
     </div>

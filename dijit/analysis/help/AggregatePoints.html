@@ -65,7 +65,7 @@ the area, but you can get other statistics as well.
         <div>
             <p>The point layer that will be aggregated into the areas.
             </p>
-            <p class="OnlineOnly">In addition to choosing a layer from your map, you can select  <b>Choose Living Atlas Analysis Layer</b> or <b>Choose  Analysis Layer</b> found at the bottom of the drop-down list. This opens a gallery containing a collection of layers useful for many analyses. 
+            <p>In addition to choosing a layer from your map, you can select  <b>Choose Analysis Layer</b> found at the bottom of the drop-down list. This option opens a gallery where you can browse to and select datasets from various sources to use in your analysis. 
             </p>
         </div>
     </div>
@@ -76,9 +76,15 @@ the area, but you can get other statistics as well.
             <p>The area layer to which the points
 will be aggregated. Any points that fall within the boundaries of
 areas in this layer will be counted and optionally summarized using your choices of
-statistics.
+statistics.  
             </p>
-            <p class="OnlineOnly">In addition to choosing a layer from your map, you can select  <b>Choose Living Atlas Analysis Layer</b> or <b>Choose  Analysis Layer</b> found at the bottom of the drop-down list. This opens a gallery containing a collection of layers useful for many analyses. 
+            <p>You can choose between an area layer that you
+provide or bins that are generated when the tool runs. When
+generating bins, for  <b>Square</b>, the number and units specified determine the
+height and length of the square. For <b>Hexagon</b>, the number and units specified determine the
+distance between parallel sides.
+            </p>
+            <p>In addition to choosing a layer from your map, you can select  <b>Choose Analysis Layer</b> found at the bottom of the drop-down list. This option opens a gallery where you can browse to and select datasets from various sources to use in your analysis. 
             </p>
         </div>
     </div>
@@ -98,6 +104,8 @@ statistics.
 contain a new attribute for each statistic calculated. Any number of statistics can be added by choosing an attribute and statistic (a new drop-down box will appear).
 
  
+            </p>
+            <p>If the layer to summarize does not have any number fields, the additional statistics will not be available.
             </p>
         </div>
     </div>
@@ -132,9 +140,9 @@ contain a new attribute for each statistic calculated. Any number of statistics 
 name</h2></div>
         <hr/>
         <div>
-            <p>This is the name of the layer that will be created in  <b>My Content</b>  and added to the map.  The default  name is based on the tool name and the input layer name. If the layer already exists, you will be asked to provide another name.
+            <p>The name of the layer that will be created in  <b>My Content</b>  and added to the map.  The default  name is based on the tool name and the input layer name. If the layer name already exists, you will be prompted to provide another name.
             </p>
-            <p>Using the  <b>Save result in</b> drop-down box, you can  specify the name of a folder in <b>My Content</b> where the result will be saved.
+            <p>Using the  <b>Save result in</b> drop-down menu, you can  specify the name of a folder in <b>My Content</b> where the result will be saved.
             </p>
         </div>
     </div>

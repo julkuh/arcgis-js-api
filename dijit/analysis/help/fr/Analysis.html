@@ -57,6 +57,8 @@
                 </li>
                 <li> <b>Synth&eacute;tiser - A l'int&eacute;rieur</b> permet de calculer des statistiques des entit&eacute;s surfaciques et de leurs attributs qui se superposent.
                 </li>
+                <li> <b>Summarize Center and Dispersion (Synth&eacute;tiser le centre et la dispersion)</b> permet de calculer les entit&eacute;s centrales et les distributions directionnelles.
+                </li>
             </ul>
             
         </p>
@@ -89,9 +91,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Entités jointes</h2></td>
+                    <td><h2>Joindre les entités</h2></td>
                     <td>
-                    <img src="../images/GUID-2230E8B8-8956-475C-9C65-68A92359BB48-web.png" class="titleImage" alt="Entit&eacute;s jointes">
+                    <img src="../images/GUID-2230E8B8-8956-475C-9C65-68A92359BB48-web.png" class="titleImage" alt="Joindre les entit&eacute;s">
                     </td>
                 </tr></tbody>
             </table>
@@ -137,9 +139,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Synthétiser - A l'intérieur</h2></td>
+                    <td><h2>Synthétiser - À l’intérieur</h2></td>
                     <td>
-                    <img src="../images/GUID-9B12DB3F-AA7B-41EB-87C6-D2DEC3D52DA9-web.png" class="titleImage" alt="Synth&eacute;tiser - A l'int&eacute;rieur">
+                    <img src="../images/GUID-9B12DB3F-AA7B-41EB-87C6-D2DEC3D52DA9-web.png" class="titleImage" alt="Synth&eacute;tiser - &Agrave; l&rsquo;int&eacute;rieur">
                     </td>
                 </tr></tbody>
             </table>
@@ -149,6 +151,32 @@
                     <li>En prenant une couche de zones de bassin versant et une couche de zones d'utilisation du sol par type d'utilisation du sol, calculez la superficie totale du type d'utilisation du sol pour chaque bassin versant. 
                     </li>
                     <li>En prenant une couche de parcelles dans un comt&eacute; et une couche de limites de ville, r&eacute;sumez la valeur moyenne des parcelles vacantes au sein de chaque ville.
+                    </li>
+                </ul>
+                
+            </p>
+            <br/>
+        </div>
+        <div id="SummarizeCenterAndDispersionTool" class="largesize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Synthétiser le centre et la dispersion</h2></td>
+                    <td>
+                    <img src="../images/GUID-D2D53CA4-8A35-4163-9765-77BF232E569D-web.png" class="titleImage" alt="Synth&eacute;tiser le centre et la dispersion">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Cet outil utilise les entit&eacute;s ponctuelles pour calculer l&rsquo;entit&eacute; centrale, le centre moyen, le centre m&eacute;dian ou l&rsquo;ellipse (distribution). Par exemple&nbsp;:
+                <ul>
+                    <li>Dans le cadre d&rsquo;une couche de centro&iuml;des de groupes d&rsquo;&icirc;lots, l&rsquo;entit&eacute; centrale pond&eacute;r&eacute;e par la population permet d&rsquo;identifier quelle partie de la ville est la plus accessible pour un centre d&eacute;di&eacute; aux arts de la sc&egrave;ne.
+                    </li>
+                    <li>Dans le cadre d&rsquo;observations de wapitis au sein d&rsquo;un parc sur plusieurs ann&eacute;es, le centre moyen permet d&rsquo;identifier les lieux de rassemblement des wapitis en &eacute;t&eacute; comme en hiver.
+                    </li>
+                    <li>En consid&eacute;rant une couche d&rsquo;incendies, le centre m&eacute;dian permet de mesure la tendance centrale des incidents non affect&eacute;e par les points aberrants en p&eacute;riph&eacute;rie.
+                    </li>
+                    <li>Pour une couche de captages d&rsquo;eaux souterraines, une ellipse permet de d&eacute;terminer le mode de propagation d&rsquo;un contaminant.
                     </li>
                 </ul>
                 
@@ -185,7 +213,7 @@
     <div id="FindLocationsCategory" class="largesize">
         <h2>Rechercher des emplacements</h2>
         <hr/>
-        <p>Ces outils permettent d'identifier les surfaces qui r&eacute;pondent &agrave; un certain nombre de crit&egrave;res que vous d&eacute;finissez. Ces crit&egrave;res peuvent reposer sur des requ&ecirc;tes attributaires (par exemple, des parcelles vacantes) et des requ&ecirc;tes spatiales (par exemple, &agrave; moins d'un kilom&egrave;tre d'une rivi&egrave;re). Les surfaces qui sont trouv&eacute;es peuvent &ecirc;tre s&eacute;lectionn&eacute;es &agrave; partir d'entit&eacute;s existantes (telles que des parcelles de terrain existantes) ou de nouvelles entit&eacute;s r&eacute;pondant &agrave; toutes les conditions requises peuvent &ecirc;tre cr&eacute;&eacute;es.
+        <p>Ces outils sont utilis&eacute;s pour identifier ou cr&eacute;er les entit&eacute;s qui r&eacute;pondent aux crit&egrave;res que vous sp&eacute;cifiez.  Le type de crit&egrave;re d&eacute;pendra de l&rsquo;outil que vous utilisez. Par exemple, vos crit&egrave;res peuvent reposer sur des requ&ecirc;tes spatiales ou attributaires, des zones visibles &agrave; partir d&rsquo;une hauteur sp&eacute;cifi&eacute;e, des zones en aval pour des points de drainage sp&eacute;cifiques ou des dur&eacute;es de trajet dans des conditions de circulation sp&eacute;cifiques.
             <ul>
                 <li> <b>Choisir les meilleures ressources</b> choisit les emplacements les mieux adapt&eacute;s aux ressources en allouant des emplacements qui pr&eacute;sentent une demande pour ces ressources de mani&egrave;re &agrave; remplir un objectif donn&eacute;.
                 </li>
@@ -195,16 +223,18 @@
                 </li>
                 <li> <b>D&eacute;river de nouveaux emplacements</b> permet de cr&eacute;er de nouvelles surfaces &agrave; partir d'emplacements de votre zone d'&eacute;tude r&eacute;pondant &agrave; une s&eacute;rie de crit&egrave;res.
                 </li>
+                <li> <b>Find Centroids (Rechercher les centro&iuml;des)</b> recherche le centre repr&eacute;sentatif (centro&iuml;de) pour les entit&eacute;s en entr&eacute;e.
+                </li>
                 <li> <b>Identifier des emplacements existants</b> permet de rechercher des surfaces existantes r&eacute;pondant &agrave; une s&eacute;rie de crit&egrave;res dans une couche.
                 </li>
                 <li>L'outil  <b>Rechercher des emplacements similaires</b> recherche les emplacements les plus similaires &agrave; un ou plusieurs emplacements de r&eacute;f&eacute;rence, sur la base des crit&egrave;res que vous d&eacute;finissez.
                 </li>
-                <li class="PortalOnly"> <b>G&eacute;ocoder des emplacements &agrave; partir d'une table</b> convertit les adresses d'une table en coordonn&eacute;es.
+                <li class="PortalOnly"> <b>Geocode Locations from Table (G&eacute;ocoder des emplacements &agrave; partir d&rsquo;une table)</b> convertit les adresses d&rsquo;une table en coordonn&eacute;es. 
                 </li>
                 <li> <b>Parcours aval</b> d&eacute;termine les chemins des flux vers l'aval &agrave; partir des emplacements que vous sp&eacute;cifiez.
                 </li>
             </ul>
-             
+            
         </p>
         <p> 
         </p>
@@ -269,6 +299,21 @@
             </p>
             <br/>
         </div>
+        <div id="FindCentroidsTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Find Centroids (Rechercher des centroïdes)</h2></td>
+                    <td>
+                    <img src="../images/GUID-75D9AF75-68C3-48BF-8062-D5499BD06978-web.png" class="titleImage" alt="Find Centroids (Rechercher des centro&iuml;des)">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Recherche le centre repr&eacute;sentatif (centro&iuml;de) pour chaque entit&eacute; multi-points, lin&eacute;aire ou surfacique en entr&eacute;e.
+            </p>
+            <br/>
+        </div>
         <div id="FindExistingLocationsTool" class="regularsize">
             <table class="toolSummaryTable">
                 <thead></thead>
@@ -329,7 +374,7 @@
             </p>
             <br/>
         </div>
-    <div id="AnalyzePatternsCategory" class="regularsize">
+    <div id="AnalyzePatternsCategory" class="largesize">
         <h2>Analyser la répartition spatiale</h2>
         <hr/>
         <p>Ces outils vous permettent d'identifier, de quantifier et de visualiser les mod&egrave;les spatiaux dans vos donn&eacute;es.  
@@ -339,6 +384,8 @@
                 <li> <b>Trouver des points chauds</b> identifie les agr&eacute;gations statistiquement significatives dans le mod&egrave;le spatial de vos donn&eacute;es.
                 </li>
                 <li>L'outil  <b>Trouver des points aberrants</b> d&eacute;termine si le mod&egrave;le spatial de vos donn&eacute;es pr&eacute;sente des points aberrants statistiquement significatifs.
+                </li>
+                <li>L&rsquo;outil  <b>Find Point Clusters (Rechercher des agr&eacute;gats)</b> de points d&eacute;tecte les agr&eacute;gats d&rsquo;entit&eacute;s ponctuelles dans le bruit environnant en se basant sur leur distribution spatiale.
                 </li>
                 <li>L'outil  <b>Interpoler les points</b> permet de pr&eacute;voir des valeurs dans de nouveaux sites en fonction de mesures trouv&eacute;es dans une collection de points.
                 </li>
@@ -357,7 +404,7 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>L'analyse de densit&eacute; s&eacute;lectionne des quantit&eacute;s connues de certains ph&eacute;nom&egrave;nes et les r&eacute;partit sur la carte. Vous pouvez utiliser cet outil, par exemple, pour afficher les concentrations d'&eacute;clairs ou de tornades, l'acc&egrave;s aux centres de soins m&eacute;dicaux et les densit&eacute;s de population.
+            <p>L'analyse de densit&eacute; s&eacute;lectionne des quantit&eacute;s connues de certains ph&eacute;nom&egrave;nes et les r&eacute;partit sur la carte. Vous pouvez utiliser cet outil, par exemple, pour afficher les concentrations d&rsquo;&eacute;clairs ou de tornades, l&rsquo;acc&egrave;s aux centres de soins m&eacute;dicaux et les densit&eacute;s de population.
             </p>
             <br/>
         </div>
@@ -365,7 +412,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Trouver des points chauds</h2></td>
+                    <td><h2>Rechercher les points chauds</h2></td>
                     <td>
                     <img src="../images/GUID-D4A59131-AC88-4C7A-85BA-67861D5C1CF8-web.png" class="titleImage" alt="Rechercher les points chauds">
                     </td>
@@ -391,6 +438,21 @@
             </p>
             <br/>
         </div>
+        <div id="FindPointClustersTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Rechercher des agrégats de points</h2></td>
+                    <td>
+                    <img src="../images/GUID-025ADB1C-E4BF-4C8D-A35F-1D0E222627F9-web.png" class="titleImage" alt="Rechercher des agr&eacute;gats de points">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Cet outil d&eacute;tecte les zones o&ugrave; les points sont concentr&eacute;s et celles o&ugrave; ils sont s&eacute;par&eacute;s par des zones vides ou clairsem&eacute;es. Les points ne faisant pas partie d&rsquo;un agr&eacute;gat sont class&eacute;s comme bruit.
+            </p>
+            <br/>
+        </div>
         <div id="InterpolatePointsTool" class="regularsize">
             <table class="toolSummaryTable">
                 <thead></thead>
@@ -402,7 +464,7 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Cet outil vous permet de pr&eacute;voir des valeurs dans de nouveaux sites en fonction de mesures trouv&eacute;es dans une collection de points. L'outil s&eacute;lectionne des donn&eacute;es ponctuelles avec des valeurs &agrave; chaque point et renvoie des zones class&eacute;es par valeurs pr&eacute;vues. Vous pouvez utiliser cet outil, par exemple, pour pr&eacute;voir les niveaux de pr&eacute;cipitations sur un bassin versant en fonction de mesures prises dans des pluviom&egrave;tres individuels.
+            <p>Cet outil permet de pr&eacute;voir des valeurs dans de nouveaux sites en fonction de mesures trouv&eacute;es dans une collection de points. L'outil s&eacute;lectionne des donn&eacute;es ponctuelles avec des valeurs &agrave; chaque point et renvoie des zones class&eacute;es par valeurs pr&eacute;vues. Vous pouvez utiliser cet outil, par exemple, pour pr&eacute;voir les niveaux de pr&eacute;cipitations sur un bassin versant en fonction de mesures prises dans des pluviom&egrave;tres individuels.
             </p>
             <br/>
         </div>
@@ -533,9 +595,11 @@
         <hr/>
         <p>Ces outils permettent de g&eacute;rer au quotidien les donn&eacute;es g&eacute;ographiques et de fusionner les donn&eacute;es avant leur analyse.  
             <ul>
-                <li> <b>Dissoudre les limites</b> permet de fusionner les surfaces qui partagent une limite commune et une valeur attributaire commune.
+                <li> <b>Fusionner les limites</b> permet de fusionner les surfaces qui partagent une limite commune et une valeur attributaire commune.
                 </li>
                 <li> <b>Extraire les donn&eacute;es</b> permet de cr&eacute;er de nouveaux jeux de donn&eacute;es en extrayant des entit&eacute;s de vos donn&eacute;es existantes.
+                </li>
+                <li> <b>Generate Tessellations</b> permet de cr&eacute;er des tessellations bas&eacute;es sur l&rsquo;&eacute;tendue de vos donn&eacute;es.
                 </li>
                 <li> <b>Combiner les couches</b> permet de copier toutes les entit&eacute;s de deux couches existantes ou plus dans une nouvelle couche.
                 </li>
@@ -575,7 +639,23 @@
 <hr/>
             <p>Cr&eacute;e un fichier zip, CSV ou KMZ de donn&eacute;es &agrave; partir de vos couches et d'une zone d'int&eacute;r&ecirc;t que vous sp&eacute;cifiez.
             </p>
+            <p>L'outil Extraire les donn&eacute;es n&eacute;cessite au moins une couche exportable. Si vous ne poss&eacute;dez pas de couches exportables dans  Map Viewer Classic, l&rsquo;outil est d&eacute;sactiv&eacute;. </p>
             <p> 
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateTessellationsTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Générer des tessellations</h2></td>
+                    <td>
+                    <img src="../images/GUID-7D6FF8CB-15F3-4051-9C57-46E6C3708788-web.png" class="titleImage" alt="G&eacute;n&eacute;rer des tessellations">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>G&eacute;n&egrave;re des tessellations sur une zone d&rsquo;&eacute;tude bas&eacute;e sur la taille et la forme sp&eacute;cifi&eacute;es.
             </p>
             <br/>
         </div>
@@ -614,15 +694,15 @@
 <hr/>
             <p>La superposition permet de regrouper deux ou plusieurs couches en une seule couche. Vous pouvez comparer la superposition au fait de scruter une pile de cartes et de cr&eacute;er une seule carte contenant toutes les informations trouv&eacute;es dans la pile, par exemple&nbsp;:
                 <ul>
-                    <li>Quelles parcelles se trouvent dans la plaine inondable vieille de 100 ans ? (Le terme &quot;dans&quot; est une autre mani&egrave;re de dire &quot;sur&quot;.)
+                    <li>Quelles parcelles se trouvent dans la zone de crue centennale&nbsp;? (Le terme &quot;dans&quot; est une autre mani&egrave;re de dire &quot;sur&quot;.)
                           
                     </li>
-                    <li>Quelles routes se trouvent dans quels d&eacute;partements ?
+                    <li>Quelles routes se trouvent dans quels d&eacute;partements&nbsp;?
                     </li>
-                    <li>Quelle utilisation du sol se trouve sur quel type de sol ?
+                    <li>Quelle utilisation du sol se trouve sur quel type de sol&nbsp;?
                          
                     </li>
-                    <li>Quels puits se trouvent dans des bases militaires abandonn&eacute;es ?
+                    <li>Quels puits se trouvent dans des bases militaires abandonn&eacute;es&nbsp;?
                     </li>
                 </ul>
                 

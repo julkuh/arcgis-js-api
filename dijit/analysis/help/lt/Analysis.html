@@ -45,7 +45,7 @@
         </p>
     </div>
     <div id="SummarizeDataCategory" class="regularsize">
-        <h2>Duomenų sumavimas</h2>
+        <h2>Sumuoti duomenis</h2>
         <hr/>
         <p>&Scaron;ie įrankiai apskaičiuoja bendrą elementų, esančių tam tikroje teritorijoje ar &scaron;alia kitų objektų, kiekį, ilgius, plotus ir pagrindinius atributinių laukų statistinius rodiklius.
             <ul>
@@ -56,6 +56,8 @@
                 <li> <b>Sumuoti &scaron;alia</b> apskaičiuoja tam tikru atstumu esančių elementų ir jų atributų statistiką.
                 </li>
                 <li> <b>Sumuoti viduje</b> apskaičiuoja persidengiančių elementų ir jų atributų statistiką.
+                </li>
+                <li> <b>Sumuoti centrą ir i&scaron;sisklaidymą</b> apskaičiuoja centrinius elementus ir kryptinį i&scaron;sisklaidymą.
                 </li>
             </ul>
             
@@ -144,11 +146,37 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Randa plotus (arba plotų dalis)  kurios tarpusavyje persidengia ir apskaičiuoja statistiką apie persidengimą. Pavyzdžiui:
+            <p>Randa plotus (arba plotų dalis), kurios tarpusavyje persidengia ir apskaičiuoja statistiką apie persidengimą. Pavyzdžiui:
                 <ul>
-                    <li>Turint baseinų plotų sluoksnį ir žemėnaudos plotų sluoksnį galima pagal žemėnaudos tipą apskaičiuoti bendrą kiekvieno baseino žemėnaudos plotą. 
+                    <li>Turint baseinų plotų sluoksnį ir žemėnaudos plotų sluoksnį, galima pagal žemėnaudos tipą apskaičiuoti bendrą kiekvieno baseino žemėnaudos plotą. 
                     </li>
-                    <li>Turint sklypų ir savivaldybių sluoksnius apskaičiuoti neužstatytų sklypų kiekvienoje savivaldybėje skaičių.
+                    <li>Turint sklypų ir savivaldybių sluoksnius, galima apskaičiuoti neužstatytų sklypų kiekvienoje savivaldybėje skaičių.
+                    </li>
+                </ul>
+                
+            </p>
+            <br/>
+        </div>
+        <div id="SummarizeCenterAndDispersionTool" class="largesize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Sumuoti centrą ir išsisklaidymą</h2></td>
+                    <td>
+                    <img src="../images/GUID-D2D53CA4-8A35-4163-9765-77BF232E569D-web.png" class="titleImage" alt="Sumuoti centrą ir i&scaron;sisklaidymą">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>&Scaron;is įrankis naudoja ta&scaron;kinius elementus, kad apskaičiuotų centrinį elementą, vidutinį centrą, medianos centrą ir elipsę (i&scaron;sisklaidymą). Pavyzdžiui:
+                <ul>
+                    <li>Turint blokų grupės centroidų rinkinį, galima panaudoti pagal populiaciją pasvertą centrinį elementą norint rasti, kuri miesto dalis yra pasiekiamiausia menų centrui.
+                    </li>
+                    <li>Turint briedžių stebėjimo parke per keletą metų sluoksnį, galima panaudoti vidutinį centrą norint rasti, kur vasarą ir žiemą renkasi briedžiai.
+                    </li>
+                    <li>Turint gaisrų sluoksnį, galima naudoti medianos&nbsp;centrą norint i&scaron;matuoti centrinę gaisrų tendenciją, i&scaron;vengiant periferijos i&scaron;skirčių.
+                    </li>
+                    <li>Turint požeminio vandens &scaron;ulinių pavyzdžių sluoksnį, galima naudoti elipsę norint nustatyti, kaip plinta užkratas.
                     </li>
                 </ul>
                 
@@ -184,26 +212,28 @@
     <div id="FindLocationsCategory" class="largesize">
         <h2>Surasti vietas</h2>
         <hr/>
-        <p>&Scaron;ie įrankiai naudojami identifikuoti plotus, atitinkančius nurodytus kriterijus. &Scaron;ie kriterijai gali būti apibrėžti remiantis atributų užklausomis (pavyzdžiui, neužstatyti sklypai) ir erdvinėmis užklausomis (pavyzdžiui, 1 km atstumu nuo upės). Ie&scaron;komi plotai gali būti i&scaron;renkami i&scaron; egzistuojančių elementų (pavyzdžiui, sklypų) arba nauji elementai gali būti sukuriami tose vietose, kur tenkinami visi reikalavimai.
+        <p>&Scaron;ie įrankiai naudojami norint nustatyti arba sukurti elementus, kurie atitinka jūsų nurodytus kriterijus.  Kriterijų tipas priklausys nuo to, kurį įrankį naudojate. Pavyzdžiui, jūsų kriterijai gali būti pagrįsti erdvinėmis arba atributų užklausomis, matomomis vietomis pagal nurodytą auk&scaron;tį, konkrečių tėkmės ta&scaron;kų pasroviui esančiomis vietomis arba kelionės laiku tam tikromis eismo sąlygomis.
             <ul>
                 <li>Naudojant įrankį  <b>Pasirinkti geriausią infrastruktūrą</b>, parenkamos geriausios vietos infrastruktūrai, priskiriant vietas, kuriose yra paklausa tokiai infrastruktūrai ir kurios tinka nurodytam tikslui.
                 </li>
-                <li>Įrankis  <b>Kurti matymo lauką</b> sukuria plotus, kurie matomi i&scaron; Jūsų nurodytų vietų.
+                <li> <b>Kurti matymo lauką</b> sukuria plotus, kurie matomi i&scaron; jūsų nurodytų vietų.
                 </li>
-                <li>Įrankis  <b>Kurti upių baseinus</b> sukuria upių baseinų plotus remiantis Jūsų nurodytomis vietomis.
+                <li> <b>Kurti upių baseinus</b> sukuria upių baseinų plotus remiantis jūsų nurodytomis vietomis.
                 </li>
-                <li>Įrankis  <b>Sukurti naujus elementus</b> i&scaron; vietų Jūsų analizuojamame plote sukuria naujus plotus, kurie atitinka tam tikrus kriterijus.
+                <li> <b>Sukurti naujus elementus</b> i&scaron; vietų jūsų analizuojamame plote sukuria naujus plotus, kurie atitinka tam tikrus kriterijus.
                 </li>
-                <li>Įrankis  <b>Rasti esamas vietas</b> suranda esamus sluoksnio plotus, kurie atitinka tam tikrus kriterijus.
+                <li> <b>Rasti centroidus</b> suranda įvesties elementų geometrinį centrą (centroidą).
                 </li>
-                <li> <b>Rasti pana&scaron;ias vietas</b> suranda vietas, pana&scaron;iausias į vieną ar daugiau lyginamų vietų, atitinkančių nurodytus kriterijus.
+                <li> <b>Rasti esamas vietas</b> suranda esamus sluoksnio plotus, kurie atitinka tam tikrus kriterijus.
                 </li>
-                <li class="PortalOnly">Įrankis  <b>Geokoduoti vietas i&scaron; lentelės</b> konvertuoja adresus i&scaron; lentelės į koordinates.
+                <li> <b>Rasti pana&scaron;ias vietas</b> suranda vietas, pana&scaron;iausias į vieną ar daugiau lyginamų vietų, atitinkančių nurodytus kriterijus..
+                </li>
+                <li class="PortalOnly">Įrankis  <b>Geokoduoti vietas i&scaron; lentelės</b> konvertuoja adresus i&scaron; lentelės į koordinates. 
                 </li>
                 <li>Įrankis  <b>Trasuoti pasroviui</b> nustato tėkmes, esančias pasroviui nuo jūsų nurodytų vietų.
                 </li>
             </ul>
-             
+            
         </p>
         <p> 
         </p>
@@ -212,9 +242,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Pasirinkite Geriausias Paslaugas</h2></td>
+                    <td><h2>Pasirinkti geriausias paslaugas</h2></td>
                     <td>
-                    <img src="../images/GUID-E57BEC1A-C404-436B-B389-65711FF83088-web.png" class="titleImage" alt="Pasirinkite Geriausias Paslaugas">
+                    <img src="../images/GUID-E57BEC1A-C404-436B-B389-65711FF83088-web.png" class="titleImage" alt="Pasirinkti geriausias paslaugas">
                     </td>
                 </tr></tbody>
             </table>
@@ -227,9 +257,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Matymo lauko kūrimas</h2></td>
+                    <td><h2>Kurti matymo lauką</h2></td>
                     <td>
-                    <img src="../images/GUID-491E9A75-30CC-4526-9F71-E47FD25536DE-web.png" class="titleImage" alt="Matymo lauko kūrimas">
+                    <img src="../images/GUID-491E9A75-30CC-4526-9F71-E47FD25536DE-web.png" class="titleImage" alt="Kurti matymo lauką">
                     </td>
                 </tr></tbody>
             </table>
@@ -265,6 +295,21 @@
             </table>
 <hr/>
             <p>Sukuria naujus elementus tiriamajame plote, atitinkančius eilę jūsų nurodytų kriterijų. &Scaron;ie kriterijai gali būti paremti atributinėmis užklausomis (pavyzdžiui, sklypai, kurie yra laisvi) arba erdvinėmis užklausomis (pavyzdžiui, 1 mylios atstumu nuo upės). 
+            </p>
+            <br/>
+        </div>
+        <div id="FindCentroidsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Rasti centroidus</h2></td>
+                    <td>
+                    <img src="../images/GUID-75D9AF75-68C3-48BF-8062-D5499BD06978-web.png" class="titleImage" alt="Rasti centroidus">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Randa kiekvienos įvesties kelių ta&scaron;kų, linijos ar plotinio elemento geometrinį centrą (centroidą).
             </p>
             <br/>
         </div>
@@ -339,6 +384,8 @@
                 </li>
                 <li> <b>Rasti i&scaron;skirtis</b> nustato, ar jūsų duomenyse yra statisti&scaron;kai reik&scaron;mingų i&scaron;skirčių pagal erdvinį požymį.
                 </li>
+                <li>Įrankis  <b>Rasti ta&scaron;kų sankaupas</b> randa ta&scaron;kų elementų sankaupas juos supančioje aplinkoje (triuk&scaron;me) pagal jų pasiskirstymą erdvėje.
+                </li>
                 <li> <b>Interpoliuoti ta&scaron;kus</b> leidžia prognozuoti reik&scaron;mes, atsižvelgiant į ta&scaron;kų rinkinio duomenis.
                 </li>
             </ul>
@@ -364,9 +411,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Rasti karštuosius taškus</h2></td>
+                    <td><h2>Rasti aktyvius židinius</h2></td>
                     <td>
-                    <img src="../images/GUID-D4A59131-AC88-4C7A-85BA-67861D5C1CF8-web.png" class="titleImage" alt="Rasti kar&scaron;tuosius ta&scaron;kus">
+                    <img src="../images/GUID-D4A59131-AC88-4C7A-85BA-67861D5C1CF8-web.png" class="titleImage" alt="Rasti aktyvius židinius">
                     </td>
                 </tr></tbody>
             </table>
@@ -387,6 +434,21 @@
             </table>
 <hr/>
             <p>&Scaron;is įrankis sukuria žemėlapį, parodantį statisti&scaron;kai svarbias elementų sankaupas ir erdvines i&scaron;skirtis jūsų duomenyse. Naudokite &scaron;į įrankį norėdami identifikuoti elementus, kurių reik&scaron;mės smarkiai skiriasi nuo kaimyninių elementų.  &Scaron;į įrankį galite naudoti, pavyzdžiui, norėdami rasti neįprastas i&scaron;laidų tendencijas, nustatyti, kur yra didžiausias atotrūkis tarp turtingųjų ir nepasiturinčiųjų tam tikroje teritorijoje, arba nustatyti, ar JAV yra apygardų, kurių gyventojų tikėtina gyvenimo trukmė yra neįprastai trumpa, palyginti su kaimyninėmis apygardomis.
+            </p>
+            <br/>
+        </div>
+        <div id="FindPointClustersTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Rasti taškų sankaupas</h2></td>
+                    <td>
+                    <img src="../images/GUID-025ADB1C-E4BF-4C8D-A35F-1D0E222627F9-web.png" class="titleImage" alt="Rasti ta&scaron;kų sankaupas">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>&Scaron;is įrankis aptinka sritis, kuriose ta&scaron;kai koncentruoti ir kuriose juos skiria tu&scaron;čios arba mažo tankio sritys. Sankaupai nepriklausantys ta&scaron;kai pažymimi kaip triuk&scaron;mas.
             </p>
             <br/>
         </div>
@@ -528,13 +590,15 @@
             <br/>
         </div>
     <div id="ManageDataCategory" class="regularsize">
-        <h2>Valdyti duomenis</h2>
+        <h2>Duomenų valdymas</h2>
         <hr/>
         <p>&Scaron;ie bendro pobūdžio įrankiai skirti geografinių duomenų valdymui ir jų paruo&scaron;imui analizei.  
             <ul>
                 <li> <b>Tirpdyti ribas</b> sujungia besiribojančius ir turinčius tas pačias atributų reik&scaron;mes plotinius objektus.
                 </li>
                 <li> <b>Atsisiųsti duomenis</b> leidžia eksportuoti ir atsisiųsti norimos teritorijos duomenis.
+                </li>
+                <li> <b>Generuoti teseliacijas</b> sukuria teseliacijas pagal jūsų duomenų aprėptį.
                 </li>
                 <li> <b>Sujungti sluoksnius</b> kopijuoja visus dviejų ar daugiau sluoksnių elementus į naują sluoksnį.
                 </li>
@@ -548,20 +612,20 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Tirpdyti ribas</h2></td>
+                    <td><h2>Sulieti ribas</h2></td>
                     <td>
                     <img src="../images/GUID-7B5F69B0-3625-404F-8B52-2B562766C0BB-web.png" class="titleImage" alt="Sulieti ribas">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Persidengiantys ar bendrą ribą turintys objektai bus apjungti į vieną plotą.    
+            <p>Persidengiantys ar bendrą ribą turintys objektai yra apjungti į vieną plotą.    
             </p>
-            <p>Galite pasirinkti, kurie elementai bus apjungiami, nurodydami lauką. Pavyzdžiui, jei turite seniūnijų sluoksnį, kuriame kiekviena seniūnija turi  <i>State_Name</i> atributą, galite sulieti ribas, naudodami <i>State_Name</i> atributą.  Besiribojančios savivaldybės bus apjungtos, jei turės tą pačią <i>State_Name</i> reik&scaron;mę.  Rezultatas bus savivaldybių teritorijos.
+            <p>Galite pasirinkti, kurie elementai bus apjungiami, nurodydami lauką. Pavyzdžiui, jei turite seniūnijų sluoksnį, kuriame kiekvienas administracinis vienetas turi pavadinimą  <i>State_Name</i> atributiniame lauke, galite apjungti naudodami <i>State_Name</i> atributą. Besiribojančios seniūnijos bus apjungtos, jei turės tą pačią <i>State_Name</i> reik&scaron;mę. Rezultatas bus savivaldybių teritorijos.
             </p>
             <br/>
         </div>
-        <div id="ExtractDataTool" class="smallsize">
+        <div id="ExtractDataTool" class="regularsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
@@ -574,7 +638,23 @@
 <hr/>
             <p>Sukuria zip failą, CSV arba KMZ su duomenimis i&scaron; jūsų sluoksnių ir jūsų nurodytos teritorijos.
             </p>
+            <p>Įrankiui Atsisiųsti duomenis būtinas bent vienas eksportuojamas sluoksnis. Jei  Map Viewer Classic nėra eksportuojamų sluoksnių, įrankis bus i&scaron;jungtas. </p>
             <p> 
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateTessellationsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Generuoti teseliacijas</h2></td>
+                    <td>
+                    <img src="../images/GUID-7D6FF8CB-15F3-4051-9C57-46E6C3708788-web.png" class="titleImage" alt="Generuoti teseliacijas">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Generuoja teseliacijas jūsų tiriamoje teritorijoje pagal nurodytą formą ir dydį.
             </p>
             <br/>
         </div>

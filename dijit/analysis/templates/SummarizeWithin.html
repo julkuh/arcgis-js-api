@@ -7,7 +7,7 @@
             <td class="esriAlignLeading esriAnalysisTitle" data-dojo-attach-point="_toolTitle">
               <label data-dojo-attach-point="_titleLbl">${i18n.summarizeWithin}</label>
               <nav class="breadcrumbs"  data-dojo-attach-point="_analysisModeLblNode" style="display:none;">
-                <a href="#" class="crumb" style="font-size:12px;" data-dojo-attach-event="onclick:_handleModeCrumbClick" data-dojo-attach-point="_analysisModeCrumb"></a>
+                <a href="#" class="crumb breadcrumbs__modelabel" data-dojo-attach-event="onclick:_handleModeCrumbClick" data-dojo-attach-point="_analysisModeCrumb"></a>
                 <a href="#" class="crumb is-active" data-dojo-attach-point="_analysisTitleCrumb" style="font-size:16px;">${i18n.summarizeWithin}</a>
               </nav>               
             </td>
@@ -73,7 +73,7 @@
             </td>
           </tr> 
           <tr data-dojo-attach-point="_binsTypeRow">
-           <td style="padding-right:0;margin-top:1.0em;idth:50%;">
+           <td style="padding-right:0;margin-top:1.0em;width:50%;">
               <input type="text" data-dojo-type="dijit/form/NumberTextBox" data-dojo-props="intermediateChanges:true,value:'5',required:false,missingMessage:'${i18n.distanceMsg}'" data-dojo-attach-point="_binsInput" class="esriLeadingMargin1"  style="width:75%;">
             </td>
             <td colspan="2" style="padding-left:0.25em;margin-top:1.0em;width:50%;">
@@ -94,10 +94,10 @@
             </td>
           </tr>            
           <tr data-dojo-attach-point="_selectAnalysisRow" style="display:none;">
-            <td  colspan="3" style="padding-top:0;">
+            <td  colspan="3" style="padding-top:0;" >
               <select class="esriLeadingMargin1 longInput esriLongLabel"  style="margin-top:0.5em;" data-dojo-type="dijit/form/Select" data-dojo-attach-point="_analysisSelect" data-dojo-attach-event="onChange:_handleAnalysisLayerChange"></select>
             </td>
-          </tr>            
+          </tr>         
           <tr>
             <td colspan="2" style="padding-bottom:0;">
               <label class="esriFloatLeading esriTrailingMargin025 esriAnalysisNumberLabel">${i18n.oneLabel}</label>
@@ -218,8 +218,8 @@
               <a href="#" class='esriFloatTrailing helpIcon' esriHelpTopic="timeReference"></a> 
             </td>             
           </tr>          
-          <tr data-dojo-attach-point="_afterStatsRow">
-            <td colspan="3" class="clear"></td>
+          <tr data-dojo-type="esri/dijit/analysis/components/AddSummaryFields" data-dojo-attach-point="_summaryWidget" 
+            data-dojo-props="layer:'', showGeoAnalyticsParams:${showGeoAnalyticsParams}, addAsRow:true">
           </tr>
           <tr data-dojo-attach-point="_addWgtRow" style="display:none;">
             <td colspan="2" class="padBottom0">
@@ -327,7 +327,7 @@
         <span data-dojo-attach-point="_bodyNode"></span>
       </div>
       <div class="esriExtentCreditsCtr">
-        <a class="esriFloatTrailing esriSmallFont"  href="#" data-dojo-attach-point="_showCreditsLink" data-dojo-attach-event="onclick:_handleShowCreditsClick">${i18n.showCredits}</a>
+        <a class="esriFloatTrailing esriSmallFont"  href="#" data-dojo-attach-point="_showCreditsLink">${i18n.showCredits}</a>
        <label data-dojo-attach-point="_chooseExtentDiv" class="esriSelectLabel esriExtentLabel">
          <input type="radio" data-dojo-attach-point="_useExtentCheck" data-dojo-type="dijit/form/CheckBox" data-dojo-props="checked:true" name="extent" value="true"/>
            ${i18n.useMapExtent}

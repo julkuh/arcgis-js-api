@@ -66,8 +66,10 @@
               </tr>
               <tr data-dojo-attach-point="_useTrafficLabelRow">
                 <td style="padding:0" colspan="3">
-                  <div style="width;100%" data-dojo-type="esri/dijit/analysis/TrafficTime" data-dojo-attach-point="_trafficTimeWidget" data-dojo-props="showLiveTraffic:false"></div>
+                  <div style="width:100%" data-dojo-type="esri/dijit/analysis/TrafficTime" data-dojo-attach-point="_trafficTimeWidget" data-dojo-props="showLiveTraffic:false"></div>
                 </td>
+              </tr>
+              <tr data-dojo-type="esri/dijit/analysis/components/AddBarrierLayers/AddBarrierLayers" data-dojo-attach-point="_addBarrierLayersComponent" data-dojo-props="showGeoAnalyticsParams: ${showGeoAnalyticsParams}">
               </tr>
               <tr>
                 <td colspan="2">
@@ -433,7 +435,7 @@
       </div>
       <div data-dojo-attach-point="_aggregateToolContentButtons" style="padding:5px;margin-top:5px;border-top:solid 1px #BBB;">
         <div class="esriExtentCreditsCtr">
-          <a class="esriFloatTrailing esriSmallFont"  href="#" data-dojo-attach-point="_showCreditsLink" data-dojo-attach-event="onclick:_handleShowCreditsClick">${i18n.showCredits}</a>
+          <a class="esriFloatTrailing esriSmallFont"  href="#" data-dojo-attach-point="_showCreditsLink">${i18n.showCredits}</a>
          <label data-dojo-attach-point="_chooseExtentDiv" class="esriSelectLabel esriExtentLabel">
            <input type="radio" data-dojo-attach-point="_useExtentCheck" data-dojo-type="dijit/form/CheckBox" data-dojo-attach-event="onChange:_handleExtentCheckChange" data-dojo-props="checked:true" name="extent" value="true"/>
              ${i18n.useMapExtent}

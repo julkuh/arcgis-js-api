@@ -41,12 +41,12 @@
 <body onload="init()">
 <div id="topics">
     <div id="toolDescription" class="smallsize">
-        <h2>Tirpdyti ribas</h2><p/>
+        <h2>Sulieti ribas</h2><p/>
         <h2><img src="../images/GUID-7B5F69B0-3625-404F-8B52-2B562766C0BB-web.png" alt="Sulieti ribas"></h2>
         <hr/>
-    <p>Persidengiantys ar bendrą ribą turintys objektai bus apjungti į vieną plotą.    
+    <p>Persidengiantys ar bendrą ribą turintys objektai yra apjungti į vieną plotą.    
     </p>
-    <p>Galite pasirinkti, kurie elementai bus apjungiami, nurodydami lauką. Pavyzdžiui, jei turite seniūnijų sluoksnį, kuriame kiekviena seniūnija turi  <i>State_Name</i> atributą, galite sulieti ribas, naudodami <i>State_Name</i> atributą.  Besiribojančios savivaldybės bus apjungtos, jei turės tą pačią <i>State_Name</i> reik&scaron;mę.  Rezultatas bus savivaldybių teritorijos.
+    <p>Galite pasirinkti, kurie elementai bus apjungiami, nurodydami lauką. Pavyzdžiui, jei turite seniūnijų sluoksnį, kuriame kiekvienas administracinis vienetas turi pavadinimą  <i>State_Name</i> atributiniame lauke, galite apjungti naudodami <i>State_Name</i> atributą. Besiribojančios seniūnijos bus apjungtos, jei turės tą pačią <i>State_Name</i> reik&scaron;mę. Rezultatas bus savivaldybių teritorijos.
     </p>
     </div>
     <!--Parameter divs for each param-->
@@ -54,28 +54,43 @@
         <div><h2>Pasirinkite plotų sluoksnį, kurio ribos bus sulietos</h2></div>
         <hr/>
         <div>
-            <p>Nurodykite sluoksnį su ploto elementais, kurie bus sulieti. 
+            <p>Sluoksnis su ploto elementais, kurie bus sulieti. 
             </p>
-            <p class="OnlineOnly">Pasirinkę sluoksnį žemėlapyje, galite pasirinkti  <b>Pasirinkite Gyvojo pasaulio atlaso analizės sluoksnį</b> arba <b>Pasirinkite analizės sluoksnį</b>, kurį rasite i&scaron;krentančio sąra&scaron;o apačioje. &Scaron;i parinktis atidarys galeriją, kurioje yra kolekcija sluoksnių, naudingų daugeliui analizių. 
+            <p>Pasirinkę sluoksnį žemėlapyje, galite pasirinkti  <b>Pasirinkite analizės sluoksnį</b>, kurį rasite i&scaron;plečiamo sąra&scaron;o apačioje. &Scaron;i parinktis atidaro galeriją, kurioje galite ie&scaron;koti duomenų rinkinių i&scaron; įvairių &scaron;altinių ir juos pasirinkti naudoti savo analizėje. 
             </p>
         </div>
     </div>
     <div id="DissolveFields">
-        <div><h2>Pasirinkti tirpdymo būdą</h2></div>
+        <div><h2>Pasirinkite suliejimo būdą</h2></div>
         <hr/>
         <div>
             <p>Galite pasirinkti vieną i&scaron; dviejų apjungimo metodų:
                 <ul>
-                    <li> <b>Besikertantys ar besiribojantys plotai</b> &ndash; du ar daugiau plotų, kurių ribos kertasi, bus apjungti į vieną plotą.  Dvi ar daugiau teritorijų, kurių geometrijos turi bendrą ribą, bus apjungtos į vieną elementą.
+                    <li> <b>Besikertantys ar besiribojantys plotai</b> &ndash; du ar daugiau plotų, kurių ribos kertasi, bus apjungti į vieną plotą.  Papildomai teritorijos, kurių geometrijos turi bendrą ribą, bus apjungtos į vieną elementą.
                     </li>
                     <li> <b>Plotai su ta pačia atributo reik&scaron;me</b> &ndash; du ar daugiau plotų, kurie kertasi ar turi bendrą ribą, bus apjungti į vieną objektą, jei turi tą pačią atributo reik&scaron;mę.
-                        <p>Pavyzdžiui, jei turite seniūnijų sluoksnį, kuriame kiekviena seniūnija turi  <i>State_Name</i> lauką, galite sulieti ribas, naudodami <i>State_Name</i> lauką.  Besiribojančios savivaldybės bus apjungtos, jei turės tą pačią <i>State_Name</i> reik&scaron;mę.  Rezultatas bus savivaldybių teritorijos.
+                        <p>Pavyzdžiui, jei turite seniūnijų sluoksnį, kuriame kiekvienas administracinis vienetas turi lauką  <i>State_Name</i>, galite apjungti jas naudodami lauką <i>State_Name</i>. Besiribojančios seniūnijos bus apjungtos, jei turės tą pačią <i>State_Name</i> reik&scaron;mę. Rezultatas bus savivaldybių teritorijos.
                         </p>
                     </li>
                 </ul>
                 
             </p>
-            <p>Jei  <b>naudoti esamą žemėlapio aprėptį</b> pažymėta, bus apjungiami tik tie įvesties sluoksnio elementai, kurie patenka į esamo žemėlapio aprėptį.  Jei nepažymėta, bus apjungti visi įvesties sluoksnio elementai, net jei jie nepatenka į esamo žemėlapio aprėpties ribas.
+            <p>Jei  <b>Naudoti esamą žemėlapio aprėptį</b> pažymėta, bus sulieti tik tie įvesties sluoksnio elementai, kurie patenka į esamo žemėlapio aprėptį Jei nepažymėta, bus sulieti visi įvesties sluoksnio elementai, net jei jie nepatenka į esamo žemėlapio aprėpties ribas.
+            </p>
+        </div>
+    </div>
+    <div id="multiPartFeatures">
+        <div><h2>Kurti kelių dalių elementus</h2></div>
+        <hr/>
+        <div>
+            <p>ArcGIS platformoje tai yra vietos ar objekto, sudaryto i&scaron; daugiau nei vienos dalies, bet apibrėžiamo kaip vienas elementas, nes nurodo vieną atributų rinkinį, skaitmeninis vaizdavimas. Pavyzdžiui, valstijų sluoksnyje Havajų valstija gali būti laikoma kelių dalių elementu, nes jos atskiros geometrinės dalys klasifikuojamos kaip viena valstija. &Scaron;is loginis parametras pateikia dvi parinktis:
+                <ul>
+                    <li>True (pažymėta): i&scaron;vesties paslaugoje gali būti kelių dalių elementų.
+                    </li>
+                    <li>False (nepažymėta): i&scaron;vesties paslaugoje bus tik vienos dalies elementai, o kiekvienai daliai bus sukurti atskiri elementai.
+                    </li>
+                </ul>
+                
             </p>
         </div>
     </div>
@@ -83,7 +98,7 @@
         <div><h2>Pridėti statistiką</h2></div>
         <hr/>
         <div>
-            <p>Apjungę teritorijas galite perskaičiuoti atributus. Pavyzdžiui, jei norite sulieti ribas tarp seniūnijų remdamiesi atributu  <i>State_Name</i>, o seniūnijos turi <i>Population</i> lauką, galite apskaičiuoti kiekvienos seniūnijos gyventojų skaičių ( <i>Population</i>).
+            <p>Apjungę teritorijas galite perskaičiuoti atributus. Pavyzdžiui, jei norite sulieti seniūnijas pagal  <i>State_Name</i>, ir kiekviena seniūnija turi lauką <i>Population</i>, galite skaičiuoti seniūnijos <i>Population</i> sumą.
             </p>
             <p>Galimi tokie statistiniai skaičiavimai:
             </p>
@@ -116,9 +131,9 @@
         <div><h2>Rezultatų sluoksnio pavadinimas</h2></div>
         <hr/>
         <div>
-            <p>Tai sluoksnio, kuris bus sukurtas ir patalpintas  <b>Turinyje</b> ir pridėtas į žemėlapį, pavadinimas. Numatytasis pavadinimas sukuriamas pagal įrankio ir įvesties sluoksnio pavadinimus. Jei toks sluoksnis jau egzistuoja, jūsų papra&scaron;ys pateikti kitą pavadinimą.
+            <p>Sluoksnio, kuris bus sukurtas puslapyje  <b>Turinys</b> ir pridėtas į žemėlapį, pavadinimas. Numatytasis pavadinimas sukuriamas pagal įrankio ir įvesties sluoksnio pavadinimus. Jei toks sluoksnio pavadinimas jau egzistuoja, jūsų papra&scaron;ys pateikti kitą pavadinimą.
             </p>
-            <p>Naudodami i&scaron;plečiamo meniu parinktį  <b>Rezultatą įra&scaron;yti į</b>, galite nurodyti puslapyje <b>Turinys</b> esančio aplanko, kur bus įra&scaron;yti rezultatai, pavadinimą.
+            <p>I&scaron;plečiamajame meniu pasirinkę  <b>Įra&scaron;yti rezultatą į</b>, galite nurodyti <b>Turinyje</b> esančio aplanko, kur bus įra&scaron;yti rezultatai, pavadinimą.
             </p>
         </div>
     </div>

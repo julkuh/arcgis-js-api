@@ -41,10 +41,10 @@
 <body onload="init()">
 <div id="topics">
     <div id="toolDescription" class="largesize">
-        <h2>Crea campo di vista</h2><p/>
+        <h2>Crea Campo di Vista</h2><p/>
         <h2><img src="../images/GUID-BB8B8CAF-330E-4C41-9D94-AF4728D0D0F3-web.png" alt="Strumento Crea campo di vista"></h2>
         <hr/>
-    <p>Questo strumento identifica le aree visibili per un osservatore, tenendo conto della topografia della superficie. Le posizioni dei punti di input possono rappresentare osservatori (ad esempio, persone sul suolo o i punti di osservazione in una torretta di avvistamento degli incendi) oppure oggetti sotto osservazione (come turbine eoliche, serbatoi d'acqua, veicoli o altre persone). I risultati definiscono le aree visibili dalle posizioni dell'osservatore.
+    <p>Questo strumento identifica le aree che le posizioni dell'osservatore di input possono vedere, tenendo conto della topografia della superficie. Le posizioni dei punti di input possono rappresentare osservatori (ad esempio, persone sul suolo o i punti di osservazione in una torretta di avvistamento degli incendi) oppure oggetti sotto osservazione (come turbine eoliche, serbatoi d'acqua, veicoli o altre persone). I risultati definiscono le aree visibili dalle posizioni dell'osservatore.
     </p>
     <p>Sia gli osservatori che gli oggetti osservati possono essere pi&ugrave; in alto rispetto al suolo e tali altezze sono usate per stabilire la visibilit&agrave;. Ad esempio, un campo di vista calcolato per turbine eoliche di 300 piedi (91 metri) e per persone alte 6 piedi (182 cm) posizionate sul suolo sar&agrave; pi&ugrave; grande rispetto a un campo di vista calcolato per turbine di 200 piedi (61 metri) e per persone alte 5 piedi (152 cm).
     </p>
@@ -82,7 +82,7 @@
             </p>
             <ul>
                 <li>Speed &mdash; 
-Questo metodo ottimizza la velocit&agrave; di elaborazione e le prestazioni a scapito della precisione dei risultati. Si tratta dell'impostazione predefinita.
+Questo metodo ottimizza la velocit&agrave; di elaborazione e le prestazioni a scapito della precisione dei risultati. Questa &egrave; l'impostazione predefinita.
 
                 </li>
                 <li>Accuracy &mdash; 
@@ -97,8 +97,8 @@ Questo metodo &egrave; ottimizzato per la precisione dei risultati, a scapito di
         <hr/>
         <div>
             <p>Immettere una distanza in cui terminer&agrave; il calcolo delle aree visibili. Oltre questa distanza, non sar&agrave; possibile determinare se i punti di osservazione e gli altri oggetti possono vedersi reciprocamente.
-            </p> 
-            <p>&Egrave; possibile specificare un valore numerico che rappresenta una distanza lineare o selezionare un campo numerico dalle feature osservatori di input. Se viene fornito un campo, i valori contenuti in quel campo devono essere delle stesse unit&agrave; XY della superficie di elevazione di input.
+            </p>
+            <p>&Egrave; possibile specificare un valore numerico che rappresenta una distanza lineare o selezionare un campo numerico dalle feature osservatori di input. Se viene fornito un campo, i valori contenuti in quel campo devono essere delle stesse unit&agrave; xy della superficie di elevazione di input.
             </p>
             <p>Si tenga presente che valori alti aumenteranno i tempi di calcolo. A meno che non sia diversamente specificato, verr&agrave; calcolata una distanza massima predefinita in base alla risoluzione e all'estensione della superficie di elevazione di input.
             </p>
@@ -118,8 +118,8 @@ Questo metodo &egrave; ottimizzato per la precisione dei risultati, a scapito di
         <hr/>
         <div>
             <p>Immettere una distanza in cui il calcolo delle aree visibili ha inizio. Le celle sulla superficie pi&ugrave; vicine di questa distanza non sono visibili nell'output ma possono comunque bloccare la visibilit&agrave; delle celle tra la distanza di visualizzazione minima e quella massima.
-            </p> 
-            <p>&Egrave; possibile specificare un valore numerico che rappresenta una distanza lineare o selezionare un campo numerico dalle feature osservatori di input. Se viene fornito un campo, i valori contenuti in quel campo devono essere delle stesse unit&agrave; XY della superficie di elevazione di input.
+            </p>
+            <p>&Egrave; possibile specificare un valore numerico che rappresenta una distanza lineare o selezionare un campo numerico dalle feature osservatori di input. Se viene fornito un campo, i valori contenuti in quel campo devono essere delle stesse unit&agrave; xy della superficie di elevazione di input.
             </p>
             <p>Questo parametro &egrave; utile per controllare l'area dell'analisi del campo visivo a una distanza specifica dall'osservatore. Ad esempio, se si sta valutando la visibilit&agrave; dalla cima di un edificio a un parco distante, &egrave; possibile impostare una distanza di visualizzazione minima per escludere le aree vicine a quelle che non sono di alcun interesse e ottenere una migliore velocit&agrave; di elaborazione.
             </p>
@@ -165,7 +165,7 @@ Questo metodo &egrave; ottimizzato per la precisione dei risultati, a scapito di
         <div>
             <p>Immettere l'altezza dal suolo per le posizioni dell'osservatore.
             </p> 
-            <p>&Egrave; possibile specificare un valore numerico per l'altezza o un campo dalle feature osservatori di input. Se viene fornito un campo, il valore contenuto in quel campo deve essere della stessa unit&agrave; Z della superficie di elevazione di input.
+            <p>&Egrave; possibile specificare un valore numerico per l'altezza o un campo dalle feature osservatori di input. Se viene fornito un campo, il valore contenuto in quel campo deve essere della stessa unit&agrave; z della superficie di elevazione di input.
             </p>
             <p>Il valore predefinito &egrave; 6 piedi (182 cm). Se si osserva da una posizione elevata, ad esempio una torre di osservazione o un edificio alto, utilizzare invece tale altezza. Durante il calcolo del punto di vista, questo valore viene aggiunto all'elevazione dell'osservatore, se &egrave; specificato, altrimenti viene aggiunto al valore z della superficie interpolata.
             </p>
@@ -183,8 +183,8 @@ Questo metodo &egrave; ottimizzato per la precisione dei risultati, a scapito di
         <hr/>
         <div>
             <p>Immettere l'altezza di strutture o persone rispetto al suolo usata per stabilire la visibilit&agrave;.
-            </p> 
-            <p>&Egrave; possibile specificare un valore numerico per l'altezza o un campo dalle feature osservatori di input. Se viene fornito un campo, il valore contenuto in quel campo deve essere della stessa unit&agrave; Z della superficie di elevazione di input.
+            </p>
+            <p>&Egrave; possibile specificare un valore numerico per l'altezza o un campo dalle feature osservatori di input. Se viene fornito un campo, il valore contenuto in quel campo deve essere della stessa unit&agrave; z della superficie di elevazione di input.
             </p>
             <p>Il campo di vista risultante identifica le aree in cui un punto di osservazione pu&ograve; vedere tali oggetti sul suolo. &Egrave; vero anche il contrario: gli oggetti sul suolo possono vedere un punto di osservazione. 
             </p>
@@ -227,12 +227,13 @@ Questo metodo &egrave; ottimizzato per la precisione dei risultati, a scapito di
         </div>
     </div>
     <div id="resultLayer">
-        <div><h2>Nome layer di risultati</h2></div>
+        <div><h2>Nome del layer dei risultati</h2></div>
         <hr/>
         <div>
+            
             <p>Il nome del layer che verr&agrave; creato in  <b>I miei contenuti</b> e aggiunto alla mappa. Il nome predefinito &egrave; basato sul nome dello strumento e sul nome del layer di input. Se il layer esiste gi&agrave;, verr&agrave; chiesto di fornire un altro nome.
             </p>
-            <p>Utilizzare la casella a discesa  <b>Salva risultato in</b> per specificare il nome di una cartella di <b>I miei contenuti</b> in cui salvare il risultato.
+            <p>&Egrave; possibile specificare il nome di una cartella in  <b>I miei contenuti</b> in cui salvare il risultato usando la casella a discesa <b>Salva risultato in</b>.
             </p>
         </div>
     </div>

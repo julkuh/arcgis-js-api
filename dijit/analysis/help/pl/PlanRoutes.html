@@ -77,7 +77,7 @@
         <div>
             <p>Wybierz warstwę punktową, przez kt&oacute;rą powinna przebiec trasa (lub do kt&oacute;rej powinny dotrzeć pojazdy). W danych wyjściowych te punkty będą przypisanymi lub nieprzypisanymi przystankami. 
             </p>
-            <p class="OnlineOnly">Poza wybraniem warstwy na mapie można wybrać opcję  <b>Wybierz warstwę analizy Living Atlas</b> lub <b>Wybierz warstwę analizy</b> dostępną w dolnej części menu rozwijanego. Zostanie wtedy otwarta galeria zawierająca kolekcje warstw przydatnych podczas wielu analiz. 
+            <p>Poza wybraniem warstwy na mapie można wybrać opcję  <b>Wybierz warstwę analizy</b> dostępną w dolnej części menu rozwijanego. Wybranie tej opcji spowoduje otwarcie galerii, w kt&oacute;rej można wyszukać i wybrać zestawy danych pochodzące z r&oacute;żnych źr&oacute;deł w celu użycia ich podczas przeprowadzania analiz. 
             </p>
             <p>Narzędzie jest w&nbsp;stanie obsłużyć do 2000 obiekt&oacute;w wejściowych. 
             </p>
@@ -87,12 +87,12 @@
         <div><h2>Tryb podróżowania dla tras</h2></div>
         <hr/>
         <div>
-            <p>Wybierz sw&oacute;j tryb podr&oacute;żowania. Trasy wynikowe będą obejmować drogi lub pasaże i&nbsp;respektować obowiązujące zasady, takie jak drogi jednokierunkowe i&nbsp;skręty w&nbsp;niedozwolonych miejscach dla samochod&oacute;w osobowych i&nbsp;samochod&oacute;w ciężarowych. Dostępne typy podr&oacute;żowania są określane przez administratora instytucji.  
+            <p>Wybierz sw&oacute;j tryb podr&oacute;żowania. Trasy wynikowe będą obejmować drogi lub pasaże i&nbsp;respektować obowiązujące zasady, takie jak drogi jednokierunkowe i&nbsp;skręty w&nbsp;niedozwolonych miejscach dla samochod&oacute;w osobowych i&nbsp;samochod&oacute;w ciężarowych. Dostępne tryby podr&oacute;żowania są określane przez administratora instytucji.  
             </p>
         </div>
     </div>
     <div id="startLayer">
-        <div><h2>Początek tras w</h2></div>
+        <div><h2>Początek tras na przystankach</h2></div>
         <hr/>
         <div>
             <p>Określ, gdzie i kiedy pojazdy wyjeżdżają na swoje trasy.
@@ -118,7 +118,7 @@ za 30&nbsp;minut, należy skonfigurować czas początkowy na godzinę 11:00.
         </div>
     </div>
     <div id="endLayer">
-        <div><h2>Koniec tras w</h2></div>
+        <div><h2>Koniec tras na przystankach</h2></div>
         <hr/>
         <div>
             <p>Podaj, gdzie pojazdy kończą swoje trasy.
@@ -140,6 +140,20 @@ za 30&nbsp;minut, należy skonfigurować czas początkowy na godzinę 11:00.
             </p>
             <p>Aby trasy kończyły się w r&oacute;żnych lokalizacjach, usuń zaznaczenie  <b>Wr&oacute;ć do początku</b> i wybierz warstwę zawierającą więcej niż jeden punkt. Liczba pojazd&oacute;w musi być r&oacute;wna 
 liczbie punkt&oacute;w w&nbsp;wybranej warstwie. Na liście rozwijanej <b>Pole identyfikatora trasy</b> wskaż pole, kt&oacute;re jednoznacznie identyfikuje poszczeg&oacute;lne trasy, pojazdy lub kierowc&oacute;w. Jeśli pojazdy rozpoczynają i kończą trasy w wielu lokalizacjach, muszą zgadzać się identyfikatory tras wybrane w warstwie początkowej i końcowej.
+            </p>
+        </div>
+    </div>
+    <div id="barrier_layers">
+        <div><h2>Wybierz warstwy barier</h2></div>
+        <hr/>
+        <div>
+            <p> Jeden lub większa liczba obiekt&oacute;w, kt&oacute;re pełnią rolę ograniczeń tymczasowych (innymi słowy barier) utrudniających podr&oacute;żowanie po ulicach, na kt&oacute;rych się znajdują. Bariery można definiować przy użyciu obiekt&oacute;w punktowych, liniowych lub poligonowych.
+            </p>
+            <p>Bariera punktowa może modelować powalone drzewo, wypadek, zerwaną linię energetyczną lub inny obiekt, kt&oacute;ry całkowicie blokuje ruch drogowy w określonej pozycji wzdłuż ulicy. Na tej ulicy ruch drogowy jest dozwolony, ale jest blokowany przez barierę. Można zdefiniować do 250 obiekt&oacute;w pełniących rolę barier punktowych.
+            </p>
+            <p>Bariery liniowe uniemożliwiają podr&oacute;żowanie wszędzie tam, gdzie przecinają się z ulicą. Przy użyciu bariery liniowej można na przykład modelować paradę lub marsz protestacyjny, kt&oacute;ry blokuje ruch drogowy na kilku odcinkach ulic. Jeśli liczba obiekt&oacute;w ulic przecinanych przez wszystkie bariery liniowe przekracza 500, narzędzie zwraca błąd.
+            </p>
+            <p>Bariery poligonowe uniemożliwiają podr&oacute;żowanie wszędzie tam, gdzie poligon przecina się z ulicą. Przy użyciu barier tego typu można na przykład modelować powodzie występujące na obszarach sieci ulicznej, kt&oacute;re uniemożliwią ruch drogowy w danym rejonie. Jeśli liczba obiekt&oacute;w ulic przecinanych przez wszystkie bariery poligonowe przekracza 2000, narzędzie zwraca błąd.
             </p>
         </div>
     </div>
@@ -223,11 +237,11 @@ liczbie punkt&oacute;w w&nbsp;wybranej warstwie. Na liście rozwijanej <b>Pole i
         <div><h2>Nazwa warstwy wynikowej</h2></div>
         <hr/>
         <div>
-            <p>Nazwa warstwy obiekt&oacute;w, kt&oacute;ra zostanie utworzona w obszarze  <b>Moje zasoby</b> i dodana do mapy. Jeśli warstwa obiekt&oacute;w już istnieje, wyświetlony zostanie komunikat z&nbsp;prośbą o&nbsp;podanie innej nazwy. Ta warstwa obiekt&oacute;w będzie zawierała warstwę dla każdego z następujących element&oacute;w: tras, przypisanych przystank&oacute;w i nieprzypisanych przystank&oacute;w, jeśli niekt&oacute;rych przystank&oacute;w wejściowych nie będzie można przypisać do żadnej z tras.
+            <p>Nazwa warstwy obiektowej, kt&oacute;ra zostanie utworzona w obszarze  <b>Moje zasoby</b> i dodana do mapy. Jeśli warstwa obiektowa już istnieje, wyświetlony zostanie komunikat z&nbsp;prośbą o&nbsp;podanie innej nazwy. Ta warstwa obiekt&oacute;w będzie zawierała warstwę dla każdego z następujących element&oacute;w: tras, przypisanych przystank&oacute;w i nieprzypisanych przystank&oacute;w, jeśli niekt&oacute;rych przystank&oacute;w wejściowych nie będzie można przypisać do żadnej z tras.
             </p>
-            <p>Jeśli zostanie wybrana opcja  <b>Dołącz warstwy trasy</b>, każda trasa z wynik&oacute;w zostanie także zapisana jako warstwa trasy. Warstwa trasy zawiera wszystkie informacje dotyczące określonej trasy, takie jak przystanki przypisane do trasy i wskaz&oacute;wki dojazdu. Tworzenie warstw tras jest przydatne, jeśli chcesz udostępnić poszczeg&oacute;lne trasy innym członkom w instytucji lub jeśli chcesz dodatkowo zmodyfikować trasy przy użyciu przycisku <b>Wskaz&oacute;wki dojazdu</b> w przeglądarce map. Unikalna nazwa każdej warstwy trasy jest tworzona poprzez dodanie nazwy trasy wygenerowanej podczas wykonywania analizy do prefiksu będącego nazwą warstwy obiekt&oacute;w.
+            <p>Jeśli zostanie wybrana opcja  <b>Dołącz warstwy trasy</b>, każda trasa z wynik&oacute;w zostanie także zapisana jako warstwa trasy. Warstwa trasy zawiera wszystkie informacje dotyczące określonej trasy, takie jak przystanki przypisane do trasy i wskaz&oacute;wki dojazdu. Tworzenie warstw tras jest przydatne, jeśli chcesz udostępnić poszczeg&oacute;lne trasy innym członkom instytucji lub dodatkowo zmodyfikować trasy przy użyciu przycisku <b>Wskaz&oacute;wki dojazdu</b> w przeglądarce map. Unikalna nazwa każdej warstwy tras jest tworzona poprzez dodanie nazwy trasy wygenerowanej podczas wykonywania analizy do prefiksu będącego nazwą warstwy obiektowej.
             </p>
-            <p>Za pomocą listy rozwijanej  <b>Zapisz wynik w</b> można podać nazwę folderu na stronie <b>Moje zasoby</b>, w kt&oacute;rym będą zapisywane tworzone warstwa obiekt&oacute;w i warstwy tras.
+            <p>Za pomocą menu rozwijanego  <b>Zapisz wynik w</b> można wskazać nazwę folderu na stronie <b>Moje zasoby</b>, w kt&oacute;rym zostanie zapisana warstwa obiektowa i warstwy tras (jeśli są tworzone).
             </p>
         </div>
     </div>

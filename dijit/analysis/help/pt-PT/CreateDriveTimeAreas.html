@@ -84,7 +84,7 @@
         <div>
             <p>Os elementos de ponto ao redor do qual as &aacute;reas ser&atilde;o calculadas- Pode escolher como as &aacute;reas s&atilde;o calculadas com base no modo de viagem (condu&ccedil;&atilde;o, cami&atilde;o ou caminhar) e medida (tempo e distancia).
             </p>
-            <p class="OnlineOnly">Al&eacute;m de escolher uma camada para o seu mapa, pode selecionar  <b>Escolher Camada de An&aacute;lise do Living Atlas</b> ou <b>Escolher Camada de An&aacute;lise</b> que se encontra no final da lista. Esta abre uma galeria contendo um conjunto de camadas &uacute;teis para v&aacute;rias an&aacute;lises. 
+            <p>Al&eacute;m de escolher uma camada do seu mapa, pode selecionar  <b>Escolher Camada de An&aacute;lise</b> que se encontra na parte inferior da lista pendente. Esta op&ccedil;&atilde;o abre uma galeria, na qual pode navegar e selecionar conjuntos de dados de v&aacute;rias fontes para utilizar na sua an&aacute;lise. 
             </p>
             <p>A ferramenta suporta at&eacute; 1000 elementos na camada de entrada.
 
@@ -92,20 +92,21 @@
         </div>
     </div>
     <div id="MeasurementMethod">
-        <div><h2>Medida</h2></div>
+        <div><h2>Medir</h2></div>
         <hr/>
         <div>
             <p>Escolha o seu modo de viagem (condu&ccedil;&atilde;o, camionagem, ou a p&eacute;) e medida (tempo ou dist&acirc;ncia). Os modos de viagem dispon&iacute;veis s&atilde;o definidos pelo administrador da sua organiza&ccedil;&atilde;o.   Depois de escolher o modo e a medida, introduza a dura&ccedil;&atilde;o ou distancia at&eacute;  5 horas (300 minutos) ou  300 milhas (482,80 quil&oacute;metros). 
             </p>
-            <p>Quando escolher  <b>Tempo de condu&ccedil;&atilde;o</b>, tem dispon&iacute;veis op&ccedil;&otilde;es para medir o tempo de condu&ccedil;&atilde;o.
+            <p>A dire&ccedil;&atilde;o de desloca&ccedil;&atilde;o ( <b>Para Longe da Instala&ccedil;&atilde;o</b> ou <b>Em Dire&ccedil;&atilde;o &agrave; Instala&ccedil;&atilde;o</b>) pode influenciar a forma como as &aacute;reas s&atilde;o geradas. Criar &Aacute;reas de Tempo do Percurso vai respeitar ruas de sentido &uacute;nico, evitar invers&otilde;es de marcha proibidas e outras regras com base na dire&ccedil;&atilde;o de desloca&ccedil;&atilde;o. Deve selecionar a dire&ccedil;&atilde;o de desloca&ccedil;&atilde;o com base no tipo de localiza&ccedil;&otilde;es de entrada e no contexto da sua an&aacute;lise. Por exemplo, a &aacute;rea de tempo de percurso para uma loja de entrega de pizzas deve ser criada para longe da instala&ccedil;&atilde;o, ao passo que a &aacute;rea de tempo de condu&ccedil;&atilde;o para um hospital deve ser criada em dire&ccedil;&atilde;o &agrave; instala&ccedil;&atilde;o.
+            </p>
+            <p>Quando seleciona  <b>Tempo de Condu&ccedil;&atilde;o</b>, <b>Tempo de Condu&ccedil;&atilde;o Rural</b>, ou <b>Tempo de Condu&ccedil;&atilde;o em Cami&atilde;o</b> tem acesso a op&ccedil;&otilde;es sobre como medir o tempo de condu&ccedil;&atilde;o.
                 <ul>
                     <li>
                         <p>Desative  <b>Utilizar Tr&aacute;fego</b> para criar &aacute;reas de quantidades de tempo com base em velocidades fixas. Esta &eacute; a op&ccedil;&atilde;o a escolher se pretender calcular &aacute;reas gerais de quantidades de tempo, e n&atilde;o aquelas que s&atilde;o calculadas utilizando as condi&ccedil;&otilde;es de tr&aacute;fego que se alteram para uma partida a uma determinada hora.
                         </p>
                     </li>
                     <li>
-                        <p>Ative  <b>Utilizar Tr&aacute;fego</b> para criar &aacute;reas de quantidades de tempo com base num determinado momento de partida e evolu&ccedil;&atilde;o das condi&ccedil;&otilde;es de tr&aacute;fego. Tamb&eacute;m ao escolher a op&ccedil;&atilde;o <b>Tr&aacute;fego em Tempo Real</b> , a hora de partida dos pontos de entrada &eacute; definida para o tempo actual, e as velocidades de tr&aacute;fego atuais e esperadas s&atilde;o referenciadas a partir de sensores para criar as &aacute;reas de quantidades de tempo. As velocidades de tr&aacute;fego previstas s&atilde;o calculadas em refer&ecirc;ncia a velocidades de tr&aacute;fego em tempo real, velocidades hist&oacute;ricas e eventos atuais como o clima. As velocidades de tr&aacute;fego conseguem fazer uma previs&atilde;o at&eacute; 12 horas, de modo a que possa mover o slider para definir a hora de partida at&eacute; 12 horas.
-                        </p>
+                        <p>Ative  <b>Utilizar Tr&aacute;fego</b> para criar &aacute;reas de quantidades de tempo com base num determinado momento de partida e evolu&ccedil;&atilde;o das condi&ccedil;&otilde;es de tr&aacute;fego. Tamb&eacute;m ao escolher a op&ccedil;&atilde;o <b>Tr&aacute;fego em Tempo Real</b> , a hora de partida dos pontos de entrada &eacute; definida para o tempo actual, e as velocidades de tr&aacute;fego atuais e esperadas s&atilde;o referenciadas a partir de sensores para criar as &aacute;reas de quantidades de tempo. As velocidades de tr&aacute;fego previstas s&atilde;o calculadas em refer&ecirc;ncia a velocidades de tr&aacute;fego em tempo real, velocidades hist&oacute;ricas e eventos atuais como o clima. As velocidades de tr&aacute;fego conseguem fazer uma previs&atilde;o at&eacute; 4horas, de modo a que possa mover o controlo de deslize para definir a hora de partida at&eacute;  4horas. </p>
                         <p>Utilize estas defini&ccedil;&otilde;es de tr&acirc;nsito em tempo real para descobrir que &aacute;reas podem ser alcan&ccedil;adas partindo agora, partindo daqui a uma hora a contar a partir de agora, e assim por diante.
                         </p>
                     </li>
@@ -122,9 +123,25 @@
             </p>
             <p>Note que &agrave; medida que um ve&iacute;culo se dirige para longe de um ponto, o tempo aumenta e as condi&ccedil;&otilde;es de tr&aacute;fego mudam. A ferramenta &Aacute;reas de Tempo do Percurso &eacute; respons&aacute;vel por estas varia&ccedil;&otilde;es quando escolhe  <b>Tempo de Percurso</b> e marque <b>Usar trafego</b>; no entanto, nem todas as regi&otilde;es suportam trafego. Clique na liga&ccedil;&atilde;o <b>Verificar disponibilidade</b> na ferramenta para verificar se est&aacute; dispon&iacute;vel na sua regi&atilde;o.
             </p>
+            <p> <b>Tempo de Condu&ccedil;&atilde;o em Cami&atilde;o</b> pode utilizar velocidades de viagem din&acirc;micas com base no tr&acirc;nsito, mas apenas at&eacute; ao limite de velocidade legal para cami&otilde;es. Por exemplo, caso a velocidade din&acirc;mica para uma rua, com base no tr&acirc;nsito em tempo real, for de 65 milhas por hora, mas o limite de velocidade para cami&otilde;es nessa rua seja 55 milhas por hora, o c&aacute;lculo utilizar&aacute; 55 milhas por hora para essa rua.
+            </p>
             <p> <b>Tempo a P&eacute;</b> e <b>Distancia a P&eacute;</b> utiliza uma velocidade fixa de 5 quil&oacute;metros por hora (3,1 milhas por hora) e segue passagens pedonais bem como ruas designadas (ignorando regras que afectam autom&oacute;veis, tais como ruas de sentido &uacute;nico). </p>
-            <p> <b>Tempo de Condu&ccedil;&atilde;o em Cami&atilde;o</b> e <b>Dist&acirc;ncia Percorrida em Cami&atilde;o</b> usa velocidades fixas e segue regras que s&atilde;o aplic&aacute;veis ​​a caminh&otilde;es pesados​​.
+            <p> <b>Dist&acirc;ncia de Condu&ccedil;&atilde;o em Cami&atilde;o</b>  utiliza velocidades fixas e segue regrasaplic&aacute;veis a cami&otilde;es pesados, enquanto <b>Dist&acirc;ncia de Condu&ccedil;&atilde;o</b> e <b>Dist&acirc;ncia de Condu&ccedil;&atilde;o Rural</b> utilizam velocidades fixas e seguem regras aplic&aacute;veis a ve&iacute;culos autom&oacute;veis, como carros.
             </p> 
+        </div>
+    </div>
+    <div id="barrier_layers">
+        <div><h2>Selecionar camadas de barreiras</h2></div>
+        <hr/>
+        <div>
+            <p> Um ou mais elementos que atuem como restri&ccedil;&otilde;es tempor&aacute;rias (barreiras) ao transitar pelas ruas subjacentes. Pode especificar as barreiras utilizando elementos de pontos, linhas ou pol&iacute;gonos.
+            </p>
+            <p>Uma barreira de pontos pode delinear uma &aacute;rvore ca&iacute;da, um acidente, uma linha el&eacute;trica derrubada ou algo que bloqueie completamente o tr&acirc;nsito numa posi&ccedil;&atilde;o espec&iacute;fica ao longo da rua. &Eacute; poss&iacute;vel transitar na rua, mas n&atilde;o pela barreira. Pode especificar at&eacute; 250 elementos para atuarem como barreiras de pontos.
+            </p>
+            <p>Uma barreira de linhas pro&iacute;be que se transite por qualquer ponto de intersec&ccedil;&atilde;o entre a barreira e as ruas. Por exemplo, um desfile ou protesto que bloqueie o tr&aacute;fego por v&aacute;rios segmentos de ruas pode ser delineado com uma barreira de linhas. Se o n&uacute;mero de elementos da rua intersetado por todas as barreiras de linhas for superior a 500 elementos, a ferramenta devolve um erro.
+            </p>
+            <p>Uma barreira de pol&iacute;gonos pro&iacute;be que se transite por qualquer ponto de intersec&ccedil;&atilde;o entre o pol&iacute;gono e as ruas. Este tipo de barreira pode ser utilizado para delinear inunda&ccedil;&otilde;es que abranjam &aacute;reas da rede de estradas e n&atilde;o permitam que se transite por elas. Se o n&uacute;mero de elementos da rua intersetado por todas as barreiras de pol&iacute;gonos for superior a 2000 elementos, a ferramenta devolve um erro.
+            </p>
         </div>
     </div>
     <div id="DissolveType">
@@ -144,13 +161,35 @@
             </p>
         </div>
     </div>
+    <div id="showHoles">
+        <div><h2>Exibir áreas não acessíveis como buracos</h2></div>
+        <hr/>
+        <div>
+            <p>Escolha se as &aacute;reas de sa&iacute;da incluir&atilde;o buracos no caso de algumas ruas n&atilde;o estarem acess&iacute;veis devido &agrave;  <b>Medida</b> de tempo ou dist&acirc;ncia ou por restri&ccedil;&otilde;es impostas pelo modo de viagem.
+            </p>
+            <p>As &aacute;reas de tempo do percurso criadas com este n&iacute;vel de par&acirc;metro t&ecirc;m um limite de 15 minutos ou 15 milhas (24 quil&oacute;metros).
+            </p>
+        </div>
+    </div>
     <div id="OutputLayer">
         <div><h2>Nome da Camada Resultante</h2></div>
         <hr/>
         <div>
-            <p>Este &eacute; o nome da camada que ser&aacute; criada em  <b>O Meu Conte&uacute;do</b> e adicionada ao mapa. O nome padr&atilde;o &eacute; baseado no nome da ferramenta e do nome da camada de entrada. Se a camada j&aacute; existir, ser-lhe-&aacute; pedido que forne&ccedil;a outro nome.
+            <p>O nome da camada que ser&aacute; criada em  <b>O Meu Conte&uacute;do</b> e adicionada ao mapa. O nome padr&atilde;o &eacute; baseado no nome da ferramenta e do nome da camada de entrada. Se o nome da camada j&aacute; existir, ser-lhe-&aacute; pedido que introduza outro nome.
             </p>
-            <p>Ao utilizar a caixa suspensa  <b>Guardar resultado em</b> pode definir o nome da pasta em <b>O Meu Conte&uacute;do</b> onde o resultado ser&aacute; guardado.
+            <p>Ao utilizar o menu suspenso  <b>Guardar resultado em</b> pode definir o nome da pasta em <b>O Meu Conte&uacute;do</b> onde o resultado ser&aacute; guardado.
+            </p>
+        </div>
+    </div>
+    <div id="includeReachableStreets">
+        <div><h2>Incluir ruas acessíveis</h2></div>
+        <hr/>
+        <div>
+            <p>Inclua as ruas que ser&atilde;o utilizadas para criar &aacute;reas de tempo do percurso como uma camada de sa&iacute;da. 
+            </p>
+            <p>Criar &Aacute;reas de Tempo do Percurso mede o alcance de uma instala&ccedil;&atilde;o ao longo de uma rede de ruas e, em seguida, cria &aacute;reas de tempo do percurso a partir das ruas percorridas. Por conseguinte, as &aacute;reas correspondem a uma aproxima&ccedil;&atilde;o das ruas percorridas. Se o objetivo da sua an&aacute;lise for determinar que ruas est&atilde;o cobertas dentro de um per&iacute;odo de tempo ou dist&acirc;ncia de percurso especifica de uma instala&ccedil;&atilde;o, gerar ruas acess&iacute;veis pode ser mais preciso do que utilizar &aacute;reas de tempo do percurso para avaliar se uma rua espec&iacute;fica estava acess&iacute;vel.
+            </p>
+            <p>As &aacute;reas de tempo do percurso criadas com este n&iacute;vel de par&acirc;metro t&ecirc;m um limite de 15 minutos ou 15 milhas (24 quil&oacute;metros).
             </p>
         </div>
     </div>

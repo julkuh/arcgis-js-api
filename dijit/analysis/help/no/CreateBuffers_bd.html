@@ -42,7 +42,7 @@
 <div id="topics">
     <div id="toolDescription" class="regularsize">
         <h2>Opprett buffere</h2><p/>
-        <h2><img src="../images/GUID-6E648C49-37F9-4673-82D5-DB646921A828-web.png" alt="Opprette buffere"></h2>
+        <h2><img src="../images/GUID-6E648C49-37F9-4673-82D5-DB646921A828-web.png" alt="Opprett buffere"></h2>
         <hr/>
     <p>En buffer er et omr&aring;de som dekker en gitt avstand fra et punkt-, linje- eller omr&aring;degeoobjekt. 
     </p>
@@ -51,12 +51,12 @@
     </div>
     <!--Parameter divs for each param-->
     <div id="inputLayer">
-        <div><h2>Valg lag som bufferen skal brukes på</h2></div>
+        <div><h2>Velg lag som bufferen skal lages fra</h2></div>
         <hr/>
         <div>
             <p>Punkt-, linje- eller omr&aring;degeoobjektene som skal bufres. Inndatalagene m&aring; v&aelig;re i et projisert koordinatsystem eller den geografiske referansen for behandling m&aring; v&aelig;re satt til et projisert koordinatsystem som bruker  <b>analysemilj&oslash;ene</b>.
             </p>
-            <p>I tillegg til &aring; velge et lag fra kartet kan du velge  <b>Bla gjennom lag</b>, som du finner nederst i rullegardinlisten, til &aring; bla deg frem til innholdet for et fildelingsdatasett for big data eller et geoobjektslag.
+            <p>I tillegg til &aring; velge et lag fra kartet kan du velge  <b>Velg analyselag</b> nederst i rullegardinlisten for &aring; g&aring; til innholdet ditt og finne et fildelingsomr&aring;de for stordata eller et geoobjektlag. Du kan velge om du vil bruke et filter p&aring; inndatalaget eller bruke et utvalg p&aring; hostede lag som er lagt til kartet. Filtre og utvalg brukes kun til analyser. 
             </p>
         </div>
     </div>
@@ -70,7 +70,7 @@
                     </li>
                     <li>Angi et felt p&aring; inndatalaget som inneholder avstandsverdien. Du kan bruke et strengfelt eller et numerisk felt. Dersom en line&aelig;r enhet ikke er definert, brukes enhetene til den geografiske referansen. Hvis du bruker et geografisk koordinatsystem, antas det at det enhetsl&oslash;se feltet er meter. 
                     </li>
-                    <li>Bygg et uttrykk med flere felt og matematiske operatorer.
+                    <li>Bygg et uttrykk med flere felt og matematiske operatorer. Hvis du for eksempel vil bufre etter 10 ganger verdien av et felt som heter  <i>vindhastighet</i>, legger du til uttrykket <i>$feature[&quot;wind_speed&quot;] x 10</i>.
                     </li>
                 </ul>
                 
@@ -124,9 +124,9 @@
         <div><h2>Legg til statistikk (valgfritt)</h2></div>
         <hr/>
         <div>
-            <p> Du kan beregne statistikk p&aring; geoobjekter som er summert. P&aring; numeriske felt kan du beregne f&oslash;lgende:
+            <p>Du kan beregne statistikk p&aring; geoobjekter som er summert. Du kan beregne f&oslash;lgende p&aring; numeriske felt: 
                 <ul>
-                    <li>Antall &ndash; Beregner antall verdier som ikke er null. Kan brukes p&aring; numeriske felt eller strenger. Antallet for [null, 0, 2] er 2.
+                    <li>Antall &ndash; Beregner antall verdier som ikke er null. Det kan brukes p&aring; numeriske felt eller strenger. Antallet for [null, 0, 2] er 2.
                     </li>
                     <li>Sum &ndash; Summen av numeriske verdier i et felt. Summen av [null, null, 3] er 3.
                     </li>
@@ -138,21 +138,21 @@
                     </li>
                     <li>Omr&aring;de &ndash; Omr&aring;det for et numerisk felt. Beregnes som den maksimale verdien minus minimumsverdien. Omr&aring;det av [0, null, 1] er 1. Omr&aring;det av [null, 4] er 0.
                     </li>
-                    <li>Varians &ndash; Variansen for et numerisk felt i et spor. Variansen for [1] er null. Variansen for [null, 1,1,1] er 1.
+                    <li>Varians &ndash; Variansen for et numerisk felt i et spor. Variansen for [1] er null. Variansen for [null, 1,0,1,1] er 0,25.
                     </li>
-                    <li>Standardavvik &ndash; Standardavviket for et numerisk felt. Standardavviket for [1] er null. Standardavviket for [null, 1,1,1] er 1. 
+                    <li>Standardavvik &ndash; Standardavviket for et numerisk felt. Standardavviket for [1] er null. Standardavviket for [null, 1,0,1,1] er 0,5. 
                     </li>
                 </ul>
                 
             </p>
-            <p>P&aring; strengfelter kan du beregne f&oslash;lgende:
+            <p>Du kan beregne f&oslash;lgende p&aring; strengfelter:
                 <ul>
                     <li>Antall &ndash; Antallet strenger som ikke er null.
                     </li>
                     <li>Noen &ndash; Denne statistikken er en tilfeldig pr&oslash;ve av en strengverdi i det spesifiserte feltet.
                     </li>
                 </ul>
-                All statistikk beregnes p&aring; ikke-nullverdier. Resultatlaget inneholder et nytt felt for hver beregnet statistikk. Du kan legge til flere statistikker ved &aring; velge et attributt og statistikk. 
+                All statistikk beregnes p&aring; ikke-nullverdier. Resultatlaget inneholder et nytt felt for hver beregnet statistikk. Du kan legge til flere statistikker ved &aring; velge et attributt og statistikk.
             </p>
         </div>
     </div>
@@ -160,16 +160,16 @@
         <div><h2>Velg ArcGIS Data Store som resultatene skal lagres i</h2></div>
         <hr/>
         <div>
-            <p>GeoAnalytics-resultater lagres i et ArcGIS Data Store og vises som et geoobjektslag i  Portal for ArcGIS. Resultatene b&oslash;r i de fleste tilfeller lagres i et spatiotemporalt datalager, og dette er standarden. I enkelte tilfeller er det en god l&oslash;sning &aring; lagre resultatene i relasjonsdatalageret. Du b&oslash;r lagre resultatene i relasjonsdatalageret av f&oslash;lgende &aring;rsaker: 
+            <p>GeoAnalytics-resultater lagres i et datalager og vises som et geoobjektlag i  Portal for ArcGIS. Resultatene b&oslash;r i de fleste tilfeller lagres i et geotemporalt datalager, og dette er standarden. I enkelte tilfeller er det en god l&oslash;sning &aring; lagre resultatene i relasjonsdatalageret. Du kan velge &aring; lagre resultatene i relasjonsdatalageret av f&oslash;lgende grunner: 
                 <ul>
-                    <li>Du kan bruke resultatene i portal til portal-samarbeid.
+                    <li>Du kan bruke resultater i portal-til-portal-samarbeid.
                     </li>
                     <li>Du kan aktivere synkroniseringsfunksjoner for resultatene dine.
                     </li>
                 </ul>
                 
             </p>
-            <p>Du b&oslash;r ikke bruke relasjonsdatalageret hvis du forventer at GeoAnalytics-resultatene kommer til &aring; &oslash;ke og du &oslash;nsker &aring; dra fordeler av det spatiotemporale stordatalagerets funksjoner til &aring; h&aring;ndtere store mengder data. 
+            <p>Du b&oslash;r ikke bruke relasjonsdatalageret hvis du forventer at GeoAnalytics-resultatene skal &oslash;ke, og du &oslash;nsker &aring; dra fordeler av det spatiotemporale stordatalagerets funksjoner til &aring; h&aring;ndtere store mengder data.
             </p>
         </div>
     </div>
@@ -177,9 +177,9 @@
         <div><h2>Navn på resultatlag</h2></div>
         <hr/>
         <div>
-            <p> Dette er navnet p&aring; laget som vil bli laget i <b>Mitt Innhold</b> og lagt til i kartet. Standardnavnet er basert p&aring; verkt&oslash;ynavnet og navnet p&aring; inndatalaget. Hvis laget allerede eksisterer, vil verkt&oslash;yet mislykkes.
+            <p> Navnet p&aring; laget som opprettes. Hvis du skriver til en ArcGIS Data Store, blir resultatene dine lagret i  <b>Mitt innhold</b> og lagt til i kartet. Hvis du skriver til en fildelingstjeneste for stordata, blir resultatene lagret i fildelingstjenesten for stordata og lagt til i innholdsoversikten for denne. De blir ikke lagt til i kartet. Standardnavnet er basert p&aring; verkt&oslash;ynavnet og navnet p&aring; inndatalaget. Hvis laget allerede eksisterer, vil verkt&oslash;yet mislykkes.
             </p>
-            <p>Bruk rullegardinlisten  <b>Lagre resultat</b> i til &aring; angi navnet p&aring; en mappe i <b>Mitt innhold</b> som resultatene skal lagres i.
+            <p>N&aring;r du skriver til  ArcGIS Data Store (fildelingsomr&aring;de for relasjons- eller geotemporale stordata) via rullegardinlisten  <b>Lagre resultat i</b>, kan du angi navnet p&aring; en mappe i <b>Mitt innhold</b> som resultatet skal lagres i.
             </p>
         </div>
     </div>

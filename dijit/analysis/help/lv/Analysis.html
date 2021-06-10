@@ -45,17 +45,19 @@
         </p>
     </div>
     <div id="SummarizeDataCategory" class="regularsize">
-        <h2>Datu kopsavilkums</h2>
+        <h2>Apkopot datus</h2>
         <hr/>
-        <p>&Scaron;ie rīki aprēķina elementu kopskaitu, garumu, teritoriju un pamata apraksto&scaron;o statistiku un to atribūtus teritorijās vai citus elementu tuvumā.
+        <p>&Scaron;ie rīki aprēķina elementu kopskaitu, garumu, laukumu un pamata apraksto&scaron;o statistiku un to atribūtus teritorijās vai citus elementu tuvumā.
             <ul>
-                <li> <b>Sakopotie punkti</b> aprēķina statistiku par punktiem, kas iekrīt norādītajās teritorijās.
+                <li> <b>Apkopot punktus</b> aprēķina statistiku par punktiem, kas atrodas norādītajās teritorijās.
                 </li>
                 <li> <b>Elementu savieno&scaron;ana</b> pārsūta atribūtus no viena slāņa vai tabulas uz citu, ņemot vērā telpiskās un atribūtu saistības.
                 </li>
-                <li> <b>Tuvējo elementu kopsavilkums</b> aprēķina statistiku par elementiem un to atribūtiem, kas atrodas norādītajā attālumā.
+                <li> <b>Apkopot tuvējo</b> aprēķina statistiku par elementiem un to atribūtiem, kas atrodas norādītajā attālumā.
                 </li>
-                <li> <b>Iek&scaron;ējo elementu kopsavilkums</b> aprēķina tādu teritorijas elementu un to atribūtu statistiku, kas viens otru pārklāj.
+                <li>Funkcija  <b>Apkopot ietvaros</b> aprēķina tādu teritorijas elementu un to atribūtu statistiku, kas viens otru pārklāj.
+                </li>
+                <li> <b>Apkopot centru un izkliedi</b> aprēķina centrālos elementus un virzienu sadalījumu.
                 </li>
             </ul>
             
@@ -67,18 +69,18 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Punktu sakopošana</h2></td>
+                    <td><h2>Apkopot punktus</h2></td>
                     <td>
-                    <img src="../images/GUID-60C59C66-3038-4D0E-8F6A-EC6C53FEAA02-web.png" class="titleImage" alt="Punktu sakopo&scaron;ana">
+                    <img src="../images/GUID-60C59C66-3038-4D0E-8F6A-EC6C53FEAA02-web.png" class="titleImage" alt="Punktu apkopo&scaron;ana">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Lietojot punktu un teritorijas elementu slāni, &scaron;is rīks nosaka, kuri punkti ietilpst kurā teritorijā, un aprēķina statistiku par visiem punktiem katrā teritorijā. Piemēram:
+            <p>Izmantojot punktu un teritorijas elementu slāņus, rīks nosaka teritoriju, kurā ietilpst punkti un aprēķina statistiku par punktiem katrā no teritorijām. Piemēram:
                 <ul>
-                    <li>Ja ir dotas kriminālnoziegumu veik&scaron;anas vietas, aprēķina noziegumu skaitu apgabalā vai citā administratīvajā vienībā.
+                    <li>Ja ir doti punkti, kuros veiktas noziedzīgas darbības, tiek aprēķināts noziegumu skaitu rajonā vai citā administratīvajā vienībā.
                     </li>
-                    <li>Nosaka lielāko un mazāko fran&scaron;īzes ieņēmumu izvietojumu pa &scaron;tatiem.
+                    <li>Nosaka augstākos un zemākos fran&scaron;īzes ieņēmumu novietojumus pa &scaron;tatiem.
                     </li>
                 </ul>
                 
@@ -89,9 +91,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Elementu savienošana</h2></td>
+                    <td><h2>Savienot elementus</h2></td>
                     <td>
-                    <img src="../images/GUID-2230E8B8-8956-475C-9C65-68A92359BB48-web.png" class="titleImage" alt="Elementu savieno&scaron;ana">
+                    <img src="../images/GUID-2230E8B8-8956-475C-9C65-68A92359BB48-web.png" class="titleImage" alt="Savienot elementus">
                     </td>
                 </tr></tbody>
             </table>
@@ -100,7 +102,7 @@
                 <ul>
                     <li>Datiem par negadījumiem pievienojiet informāciju par kopīgu robežu vai demogrāfiju.
                     </li>
-                    <li>Identificējiet zināmam izvietojumam tuvākās iestādes un būves.
+                    <li>Identificējiet zināmam novietojumam tuvākās iestādes un būves.
                     </li>
                     <li>Nosakiet, cik mājokļu atrodas plūdu apdraudētās teritorijās.
                     </li>
@@ -115,7 +117,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Apkopot tuvumā esošo</h2></td>
+                    <td><h2>Apkopot tuvējo</h2></td>
                     <td>
                     <img src="../images/GUID-A5033D27-81B6-42E7-BA38-50D25C1CCCCA-web.png" class="titleImage" alt="Apkopot blakus">
                     </td>
@@ -124,9 +126,9 @@
 <hr/>
             <p>Atrod elementus, kas atrodas noteiktā attālumā no ievades slāņa elementiem. Attālumu var izmērīt taisnā līnijā vai pa ceļo&scaron;anas veida ceļiem. Statistika tiek aprēķināta par tuvējiem elementiem. Piemēram:
                 <ul>
-                    <li>Aprēķina kopējo iedzīvotāju skaitu piecu minū&scaron;u attālumā no piedāvātā jaunā veikala izvietojuma.
+                    <li>Aprēķina kopējo iedzīvotāju skaitu piecu minū&scaron;u attālumā no piedāvātā jaunā veikala novietojuma.
                     </li>
-                    <li>Aprēķina uzbrauktuvju skaitu uz automaģistrālēm piecu minū&scaron;u attālumā no piedāvātā jaunā veikala izvietojuma, lai to izmantotu kā veikala pieejamības mēru.
+                    <li>Aprēķina uzbrauktuvju skaitu uz automaģistrālēm piecu minū&scaron;u attālumā no piedāvātā jaunā veikala novietojuma, lai to izmantotu kā veikala pieejamības mēru.
                     </li>
                 </ul>
                 
@@ -137,18 +139,44 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Iekšēja apkopošana</h2></td>
+                    <td><h2>Apkopot iekš</h2></td>
                     <td>
-                    <img src="../images/GUID-9B12DB3F-AA7B-41EB-87C6-D2DEC3D52DA9-web.png" class="titleImage" alt="Iek&scaron;ēja apkopo&scaron;ana">
+                    <img src="../images/GUID-9B12DB3F-AA7B-41EB-87C6-D2DEC3D52DA9-web.png" class="titleImage" alt="Apkopot iek&scaron;">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Atrod teritorijas (un teritoriju daļas), kas pārklājas starp diviem slāņiem un aprēķina statistiku par pārklā&scaron;anos. Piemēram:
+            <p>Atrod laukumus (un laukumu daļas), kas pārklājas starp diviem slāņiem un aprēķina statistiku par pārklā&scaron;anos. Piemēram:
                 <ul>
-                    <li>Ja ir dots ūdens&scaron;ķirtnes teritoriju slānis un zemes izmanto&scaron;anas slānis pēc zemes izmanto&scaron;anas veida, aprēķina kopējo zemes izmanto&scaron;anas veida platību katrā ūdens&scaron;ķirtnes teritorijā. 
+                    <li>Ja ir dots ūdenskrātuvju teritoriju slānis un zemes lietojuma slānis pēc zemes lietojuma veida, aprēķina kopējo zemes lietojuma veida platību katrā ūdenskrātuves teritorijā. 
                     </li>
-                    <li>Ņemot vērā parceļu slāni apgabalā un pilsētas robežu slāni, apkopo  brīvo parceļu vidējo vērtību katrā pilsētā.
+                    <li>Ņemot vērā zemes gabalu slāni apgabalā un pilsētas robežu slāni, apkopo  brīvo zemes gabalu vidējo vērtību katrā pilsētā.
+                    </li>
+                </ul>
+                
+            </p>
+            <br/>
+        </div>
+        <div id="SummarizeCenterAndDispersionTool" class="largesize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Apkopot centru un izkliedi</h2></td>
+                    <td>
+                    <img src="../images/GUID-D2D53CA4-8A35-4163-9765-77BF232E569D-web.png" class="titleImage" alt="Apkopot centru un izkliedi">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>&Scaron;is rīks izmanto punktu elementus, lai aprēķinātu centrālo elementu, vidējo centru, mediānas centru vai elipsi (sadalījumu). Piemēram:
+                <ul>
+                    <li>Izmantojot slāni ar bloka grupas centroīdiem, pēc iedzīvotāju skaita vērtētais centrālais elements var tikt izmantots, lai identificētu, kuri pilsētas mākslas objekti ir vispieejamākie izpildītājmākslas centram.
+                    </li>
+                    <li>Izmantojot datu slāni par aļņu novērojumiem parkā vairāku gadu garumā, vidējais centrs var tikt izmantots, lai novērotu, kur aļņi pulcējas vasarā un ziemā.
+                    </li>
+                    <li>Izmantojot ar uguns negadījumiem saistīto slāni, mediānas centrs var tikt izmantots, lai izmērītu ugunsgrēku izplatības centrālo tendenci, neņemot vērā izleco&scaron;ās perifērijas vērtības.
+                    </li>
+                    <li>Izmantojot gruntsūdens aku paraugu slāni, elipse var tikt izmantota, lai noteiktu, kā izplatās piesārņojums.
                     </li>
                 </ul>
                 
@@ -184,26 +212,28 @@
     <div id="FindLocationsCategory" class="largesize">
         <h2>Atrast novietojumus</h2>
         <hr/>
-        <p>&Scaron;ie rīki tiek lietoti, lai identificētu jūsu norādītajiem kritērijiem atbilsto&scaron;us apgabalus. &nbsp; &Scaron;ie kritēriji var balstīties uz atribūtu vaicājumiem (piem., brīvi zemes gabali) un telpiskajiem vaicājumiem (piem., 1&nbsp;km attālumā no upes). Atrastie lauki var tikt atlasīti no eso&scaron;iem elementiem (piemēram, eso&scaron;ie zemes gabali) vai var tikt izveidoti jauni elementi gadījumos, kad visi kritēriji ir izpildīti.
+        <p>&Scaron;os rīkus izmanto, lai noteiktu vai izveidotu elementus, kas atbilst kritērijiem, ko norādāt. Kritēriju veids ir atkarīgs no tā, kādu rīku izmantojat. Piemēram, jūsu kritēriju pamatā var būt telpiski vai ar atribūtiem saistīti vaicājumi, norādītajā augstumā redzamas teritorijas, norādītas kanalizācijas noteku lejteces vietas vai brauk&scaron;anas laiks konkrētos satiksmes apstākļos.
             <ul>
-                <li> <b>Izvēlēties labākās vietas</b> izvēlas labākos novietojumus vietām, nosakot, kur ir pieprasījums pēc konkrētās iespējas, tādā veidā, kas atbilst noteiktajam mērķim.
+                <li> <b>Izvēlēties labākās iespējas</b> izvēlas labākos novietojumus vietām, nosakot, kur ir pieprasījums pēc konkrētās iespējas, tādā veidā, kas atbilst noteiktajam mērķim.
                 </li>
-                <li> <b>Izveidot redzeslauku</b> balstoties uz norādītajām atra&scaron;anās vietām, izveido redzamos apgabalus.
+                <li> <b>Izveidot skata lauku</b> balstoties uz norādītajām atra&scaron;anās vietām, izveido redzamos apgabalus.
                 </li>
                 <li> <b>Ūdensgūtves baseinu izveide</b> balstoties uz norādītajām atra&scaron;anās vietām, izveido sateces apgabalus.
                 </li>
-                <li> <b>Iegūt jaunus novietojumus</b> izveido jaunus apgabalus no novietojumiem jūsu izpētes teritorijā, atbilsto&scaron;i jūsu kritēriju sērijām.
+                <li> <b>Iegūt jaunus novietojumus</b> izveido jaunus laukumus no novietojumiem jūsu izpētes teritorijā, atbilsto&scaron;i jūsu kritēriju sērijām.
+                </li>
+                <li> <b>Atrast centroīdus</b> atrod ievades elementu reprezentatīvo centru (centroīdu).
                 </li>
                 <li> <b>Atrast eso&scaron;as vietas</b> meklē eso&scaron;us apgabalus slānī, kas atbilst kritēriju sērijai.
                 </li>
                 <li> <b>Atrast līdzīgus novietojumus</b> atrod novietojumus, kas ir vislīdzīgākie vienam vai vairākiem atsauces novietojumiem, balstoties uz jūsu norādītajiem kritērijiem.
                 </li>
-                <li class="PortalOnly"> <b>Ģeokodu novietojums no tabulas</b> konvertē adreses no tabulas par koordinātām.
+                <li class="PortalOnly"> <b>Ģeokodu novietojums no tabulas</b> pārvēr&scaron; adreses no tabulas par koordinātām. 
                 </li>
                 <li> <b>Izsekot straumes lejteci</b> nosaka plūsmas ceļus lejteces virzienā no norādītajiem novietojumiem.
                 </li>
             </ul>
-             
+            
         </p>
         <p> 
         </p>
@@ -227,7 +257,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Izveidot skata aizsegumus</h2></td>
+                    <td><h2>Izveidot redzamības lauku</h2></td>
                     <td>
                     <img src="../images/GUID-491E9A75-30CC-4526-9F71-E47FD25536DE-web.png" class="titleImage" alt="Izveidot skata aizsegumu">
                     </td>
@@ -242,7 +272,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Izveidot ūdenskrātuves</h2></td>
+                    <td><h2>Izveidot ūdensšķirtnes</h2></td>
                     <td>
                     <img src="../images/GUID-4DE64CF6-2A02-46F6-8AE4-4D9227AAB71C-web.png" class="titleImage" alt="Izveidot ūdens&scaron;ķirtnes">
                     </td>
@@ -257,9 +287,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Iegūt jaunu izvietojumu</h2></td>
+                    <td><h2>Iegūt jaunus novietojumus</h2></td>
                     <td>
-                    <img src="../images/GUID-4A756008-8431-4AA5-BD42-7135296560DD-web.png" class="titleImage" alt="Iegūt jaunu izvietojumu">
+                    <img src="../images/GUID-4A756008-8431-4AA5-BD42-7135296560DD-web.png" class="titleImage" alt="Iegūt jaunus novietojumus">
                     </td>
                 </tr></tbody>
             </table>
@@ -268,18 +298,33 @@
             </p>
             <br/>
         </div>
-        <div id="FindExistingLocationsTool" class="regularsize">
+        <div id="FindCentroidsTool" class="smallsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Atrast pašreizējo izvietojumu</h2></td>
+                    <td><h2>Atrast centrus</h2></td>
                     <td>
-                    <img src="../images/GUID-FEF355B4-CF3B-48F6-9EC1-A00A1D53C81F-web.png" class="titleImage" alt="Atrast pa&scaron;reizējo izvietojumu">
+                    <img src="../images/GUID-75D9AF75-68C3-48BF-8062-D5499BD06978-web.png" class="titleImage" alt="Atrast centrus">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Izvēlas eso&scaron;u elementus jūsu pētāmajā teritorijā, kas atbilst norādīto kritēriju sērijai. &Scaron;ie kritēriji var balstīties uz atribūtu vaicājumiem (piem., brīvi zemes gabali) un telpiskajiem vaicājumiem (piem., 1 km attālumā no upes). 
+            <p>Atrod reprezentatīvu centru visiem ievades punktiem, līniju vai laukuma elementam.
+            </p>
+            <br/>
+        </div>
+        <div id="FindExistingLocationsTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Atrast pašreizējo novietojumu</h2></td>
+                    <td>
+                    <img src="../images/GUID-FEF355B4-CF3B-48F6-9EC1-A00A1D53C81F-web.png" class="titleImage" alt="Atrast pa&scaron;reizējo novietojumu">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Izvēlas eso&scaron;us elementus jūsu pētāmajā teritorijā, kas atbilst norādīto kritēriju sērijai. &Scaron;ie kritēriji var balstīties uz atribūtu vaicājumiem (piem., brīvi zemes gabali) un telpiskajiem vaicājumiem (piem., 1 km attālumā no upes). 
             </p>
             <br/>
         </div>
@@ -302,9 +347,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Atrast līdzīgus izvietojumus</h2></td>
+                    <td><h2>Atrast līdzīgus novietojumus</h2></td>
                     <td>
-                    <img src="../images/GUID-6262A84E-9087-4E48-930E-E9B89FECC836-web.png" class="titleImage" alt="Atrast līdzīgus izvietojumus">
+                    <img src="../images/GUID-6262A84E-9087-4E48-930E-E9B89FECC836-web.png" class="titleImage" alt="Līdzīgu izvietojumu atra&scaron;ana">
                     </td>
                 </tr></tbody>
             </table>
@@ -339,7 +384,9 @@
                 </li>
                 <li> <b>Atrast izleco&scaron;ās vērtības</b>nosaka, vai jūsu telpiskajos datos ir kādas statistiski nozīmīgas izleco&scaron;ās vērtības
                 </li>
-                <li>Rīks  <b>Interpolēt punktus</b> sniedz iespēju prognozēt vērtības jaunos izvietojumos, pamatojoties uz mērījumiem no punktu kolekcijas.
+                <li>Rīks  <b>Atrast punktu klasterus</b>atrod punktu elementu klasterus apkārtējā troksnī, ņemot vērā to telpisko sadalījumu.
+                </li>
+                <li>Rīks  <b>Interpolēt punktus</b> sniedz iespēju prognozēt vērtības jaunos novietojumos, pamatojoties uz mērījumiem no punktu kolekcijas.
                 </li>
             </ul>
             
@@ -379,14 +426,29 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Nepiederošu vienumu atrašana</h2></td>
+                    <td><h2>Nepiederošu vērtību atrašana</h2></td>
                     <td>
-                    <img src="../images/GUID-2FD18406-6333-45B9-8220-E930C1E154B2-web.png" class="titleImage" alt="Nepiedero&scaron;u vienumu atra&scaron;ana">
+                    <img src="../images/GUID-2FD18406-6333-45B9-8220-E930C1E154B2-web.png" class="titleImage" alt="Nepiedero&scaron;u vērtību atra&scaron;ana">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
             <p>&Scaron;is rīks izveido karti, kas rāda jebkurus statistiski nozīmīgus klasterus un telpiskās izleco&scaron;ās vērtības jūsu datos. Izmantojiet &scaron;o rīku, lai identificētu elementus, kuru vērtības ir nozīmīgi at&scaron;ķirīgas no blakus eso&scaron;o elementu vērtībām.  &Scaron;o rīku varat izmantot, piemēram, lai pētījumu teritorijā atrastu netipiskas izdevumu struktūras, noteiktu, kur ir viskrasākās at&scaron;ķirības starp bagātību un nabadzību, vai noteiktu, vai Amerikas Savienotajās Valstīs ir apgabali ar neparasti zemu paredzamo mūža ilgumu salīdzinājumā ar kaimiņu apgabaliem.
+            </p>
+            <br/>
+        </div>
+        <div id="FindPointClustersTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Atrast punktu klasterus</h2></td>
+                    <td>
+                    <img src="../images/GUID-025ADB1C-E4BF-4C8D-A35F-1D0E222627F9-web.png" class="titleImage" alt="Atrast punktu klasterus">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>&Scaron;is rīks nosaka teritorijas, kur ir koncentrēti punkti un kur tos atdala tuk&scaron;i vai izkliedēti laukumi. Klasterim nepiedero&scaron;ie punkti tiek atzīmēti kā troksnis.
             </p>
             <br/>
         </div>
@@ -401,7 +463,7 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>&Scaron;is rīks sniedz iespēju prognozēt vērtības jaunos izvietojumos, pamatojoties uz mērījumiem no punktu kolekcijas. Rīks izmanto punkta datus ar vērtībām katrā punktā un atgriež teritorijas, ko klasificē prognozētās vērtības. Varat izmantot &scaron;o rīku, piemēram, lai prognozētu lietusgāžu līmeni ūdens&scaron;ķirtnē, pamatojoties uz mērījumiem, kas iegūti no atsevi&scaron;ķām lietus mērierīcēm.
+            <p>&Scaron;is rīks sniedz iespēju prognozēt vērtības jaunos novietojumos, pamatojoties uz mērījumiem no punktu kolekcijas. Rīks izmanto punkta datus ar vērtībām katrā punktā un atgriež teritorijas, ko klasificē prognozētās vērtības. Varat izmantot &scaron;o rīku, piemēram, lai prognozētu lietusgāžu līmeni ūdens&scaron;ķirtnē, pamatojoties uz mērījumiem, kas iegūti no atsevi&scaron;ķām lietus mērierīcēm.
             </p>
             <br/>
         </div>
@@ -456,9 +518,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Izveidot buferus</h2></td>
+                    <td><h2>Izveidot buferzonu</h2></td>
                     <td>
-                    <img src="../images/GUID-7F4A8E4D-42E3-41C1-9238-16619CE65079-web.png" class="titleImage" alt="Izveidot buferus">
+                    <img src="../images/GUID-7F4A8E4D-42E3-41C1-9238-16619CE65079-web.png" class="titleImage" alt="Izveidot buferzonu">
                     </td>
                 </tr></tbody>
             </table>
@@ -473,9 +535,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Izveidot braukšanas laika laukumus</h2></td>
+                    <td><h2>Izveidot braukšanas laika teritorijas</h2></td>
                     <td>
-                    <img src="../images/GUID-6F629A09-768D-4C04-88A4-AB941811ADE9-web.png" class="titleImage" alt="Izveidot brauk&scaron;anas laika apgabalus">
+                    <img src="../images/GUID-6F629A09-768D-4C04-88A4-AB941811ADE9-web.png" class="titleImage" alt="Izveidot brauk&scaron;anas laika teritorijas">
                     </td>
                 </tr></tbody>
             </table>
@@ -499,9 +561,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Atrast tuvāk esošo</h2></td>
+                    <td><h2>Atrast tuvējo</h2></td>
                     <td>
-                    <img src="../images/GUID-150C2484-7459-405A-8835-B4E72CD49738-web.png" class="titleImage" alt="Atrast tuvāk eso&scaron;o">
+                    <img src="../images/GUID-150C2484-7459-405A-8835-B4E72CD49738-web.png" class="titleImage" alt="Atrast tuvējo">
                     </td>
                 </tr></tbody>
             </table>
@@ -516,7 +578,7 @@
                 <tbody><tr>
                     <td><h2>Maršrutu plānošana</h2></td>
                     <td>
-                    <img src="../images/GUID-09CC6D60-3C72-42D7-968E-B0663F0B1EBB-web.png" class="titleImage" alt="Plānot mar&scaron;rutus">
+                    <img src="../images/GUID-09CC6D60-3C72-42D7-968E-B0663F0B1EBB-web.png" class="titleImage" alt="Mar&scaron;rutu plāno&scaron;ana">
                     </td>
                 </tr></tbody>
             </table>
@@ -528,7 +590,7 @@
             <br/>
         </div>
     <div id="ManageDataCategory" class="regularsize">
-        <h2>Pārvaldīt datus</h2>
+        <h2>Datu pārvaldība</h2>
         <hr/>
         <p>&Scaron;ie rīki tiek izmantoti gan ikdienas ģeogrāfisko datu pārvaldī&scaron;anai, gan datu apvieno&scaron;anai pirms analīzes.  
             <ul>
@@ -536,9 +598,11 @@
                 </li>
                 <li> <b>Izvilkt datus</b> izveido jaunu datukopu, izvelkot elementus no eksistējo&scaron;iem datiem.
                 </li>
+                <li> <b>Ģenerēt mozaīkas veidojumus</b> izveido mozaīkas, pamatojoties uz jūsu datu apjomu.
+                </li>
                 <li> <b>Apvienot slāņus</b> tiek kopēti visi divu vai vairāku eso&scaron;u slāņu elementi jaunā slānī.
                 </li>
-                <li> <b>Pārklājuma slāņi</b> apvieno divus vai vairākus slāņus vienā slānī.  Jūs varat iedomāties pārklā&scaron;anu kā kar&scaron;u kaudzes izlīdzinā&scaron;anu, izveidojot vienotu karti, kas satur visu kaudzes informāciju.
+                <li> <b>Pārklājuma slāņi</b> apvieno divus vai vairākus slāņus vienā slānī.  Jūs varat iedomāties pārklā&scaron;anu kā kar&scaron;u kaudzes pārskatī&scaron;anu, izveidojot vienotu karti, kas satur visu kar&scaron;u kaudzes informāciju.
                 </li>
             </ul>
             
@@ -548,20 +612,20 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Izšķīdināt robežas</h2></td>
+                    <td><h2>Sapludināt robežas</h2></td>
                     <td>
-                    <img src="../images/GUID-7B5F69B0-3625-404F-8B52-2B562766C0BB-web.png" class="titleImage" alt="Noņemt robežas">
+                    <img src="../images/GUID-7B5F69B0-3625-404F-8B52-2B562766C0BB-web.png" class="titleImage" alt="Sapludināt robežas">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Laukumi, kas pārklājas, vai koplieto kopīgo robežu, tiek apvienoti kopā, izveidojot vienu laukumu.    
+            <p>Laukumi, kas pārklājas, kam ir kopīga robežu, tiek apvienoti, izveidojot vienu laukumu.    
             </p>
-            <p>Jūs varat kontrolēt, kuras robežas tiek apvienotas, norādot lauku. Piemēram, ja jums ir apgabalu slānis un katram slānim ir atribūts  <i>State_Name</i>, varat noņemt robežas, lietojot atribūtu <i>State_Name</i>.  Apgabali, kas pieskaras, tiks apvienoti, ja tiem ir tāda pati <i>State_Name</i> vērtība.  Rezultāts ir robežu slānis.
+            <p>Jūs varat kontrolēt, kuras robežas tiek apvienotas, norādot lauku. Piemēram, ja jums ir laukumu slānis un katram slānim ir atribūts  <i>State_Name</i>, jūs varat iz&scaron;ķīdināt robežas, lietojot atribūtu <i>State_Name</i>.  Laukumi, kas saskaras, tiks apvienoti, ja tiem ir vienāda vērtība laukā <i>State_Name</i>. Rezultāts ir robežu slānis.
             </p>
             <br/>
         </div>
-        <div id="ExtractDataTool" class="smallsize">
+        <div id="ExtractDataTool" class="regularsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
@@ -572,9 +636,25 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Izveido datu zip failu, CSV vai KMZ failu no slāņiem un jūsu norādītajiem interesējo&scaron;iem apgabaliem.
+            <p>Izveido datu zip failu, CSV vai KMZ failu no slāņiem un jūsu norādītajām interesējo&scaron;ajām teritorijām.
             </p>
+            <p>Rīkam Izgūt datus ir nepiecie&scaron;ams vismaz viens eksportējams slānis. Ja  Map Viewer Classic nav neviena eksportējama slāņa, rīks tiks atspējots. </p>
             <p> 
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateTessellationsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Ģenerēt mozaīkas veidojumus</h2></td>
+                    <td>
+                    <img src="../images/GUID-7D6FF8CB-15F3-4051-9C57-46E6C3708788-web.png" class="titleImage" alt="Ģenerēt mozaīkas veidojumus">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ģenerē mozaīkas veidojumus izpētes apgabalā, pamatojoties uz norādīto formu un lielumu.
             </p>
             <br/>
         </div>
@@ -591,9 +671,9 @@
 <hr/>
             <p>Jaunā slānī kopē elementus no diviem vai vairākiem eso&scaron;iem slāņiem, piemēram:
                 <ul>
-                    <li>Man ir trīs slāņi priek&scaron; Anglijas, Velsas un Skotijas, un es gribu vienu Lielbritānijas slāni. 
+                    <li>Man ir trīs slāņi Anglijai, Velsai un Skotijai, un es vēlos vienu Lielbritānijas slāni. 
                     </li>
-                    <li>Man ir 12 slāņi un katrs satur parceļu informāciju par kaimiņu apgabalu. Es vēlos savienot tos kopā vienā slānī, saglabājot tikai tos atribūtus, kuriem 12&nbsp;ievades slāņos ir tāds pats nosaukums un veids.
+                    <li>Man ir 12 slāņi un katrs satur zemesgabalu informāciju par kaimiņos eso&scaron;o apgabalu. Es vēlos savienot tos kopā vienā slānī, saglabājot tikai tos atribūtus, kuriem 12&nbsp;ievades slāņos ir tāds pats nosaukums un veids.
                     </li>
                 </ul>
                 
@@ -604,21 +684,21 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Pārklājuma slāņi</h2></td>
+                    <td><h2>Pārklāt slāņus</h2></td>
                     <td>
                     <img src="../images/GUID-CE1E0E84-F3B5-446B-9FDE-4DA057F106CC-web.png" class="titleImage" alt="Pārklāt slāņus">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Pārklā&scaron;ana apvieno divus vai vairāk slāņus vienā slānī. Pārklājuma izveide ir kā kar&scaron;u grēdas izskatī&scaron;ana, pēc kuras visa grēdā atrodamā informācija tiek apkopota vienā kartē, piemēram,
+            <p>Pārklā&scaron;ana apvieno divus vai vairāk slāņus vienā slānī. Pārklājuma izveidi varat iztēloties kā kar&scaron;u kaudzes izskatī&scaron;anu, pēc kuras visa kaudzē atrodamā informācija tiek apkopota vienā kartē, piemēram,
                 <ul>
-                    <li>Kuri zemes gabali atrodas 100 gadu palienē? (Ietvaros ir tikai vēl viens veids, kā pateikt, kas ir virsū kam.)
+                    <li>Kuri zemes gabali atrodas simtgadīgas palienes ietvaros? (Ietvaros ir tikai vēl viens veids, kā pateikt, kas virs kā atrodas.)
                           
                     </li>
                     <li>Kādi ceļi atrodas kuros apgabalos?
                     </li>
-                    <li>Kādi zemes lietojumi ir uz kura augsnes tipa?
+                    <li>Kādi zemes lietojuma veidi atrodas uz noteikta augsnes veida?
                          
                     </li>
                     <li>Kādas akas atrodas pamestajās militārajās bāzēs?

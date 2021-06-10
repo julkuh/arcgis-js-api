@@ -83,7 +83,7 @@
         <div>
             <p>Verwenden Sie dieses Ziel, wenn Sie keine neuen Einrichtungen suchen, sondern vorhandenen Einrichtungen einen Bedarf zuweisen m&ouml;chten.    
             </p>
-            <p>Anhand dieses Ziels wird Einrichtungen Bedarf basierend auf der Kapazit&auml;t der jeweiligen Einrichtung und der Bedarfsmenge des umliegenden Gebiets zugewiesen. Der n&auml;chstgelegenen Einrichtung wird Bedarf zugewiesen, bis die verf&uuml;gbare Kapazit&auml;t erreicht ist. Wenn Sie einen maximalen Reisebereich angeben, wird jeder Bedarfsstandort au&szlig;erhalb dieses Bereichs, auch dann keiner Einrichtung zugewiesen, wenn der gesamte Bedarf nicht vollst&auml;ndig zugewiesen wurde.
+            <p>Anhand dieses Ziels wird Einrichtungen Bedarf basierend auf der Kapazit&auml;t der jeweiligen Einrichtung und der Bedarfsmenge des umliegenden Gebiets zugewiesen. Der n&auml;chstgelegenen Einrichtung wird Bedarf zugewiesen, bis die verf&uuml;gbare Kapazit&auml;t erreicht ist. Wenn Sie einen maximalen Reisebereich angeben, wird jeder Bedarfsstandort au&szlig;erhalb dieses Bereichs auch dann keiner Einrichtung zugewiesen, wenn der gesamte Bedarf nicht vollst&auml;ndig zugewiesen wurde.
             </p> 
         </div>
     </div>
@@ -135,7 +135,7 @@
         <div><h2>Messen</h2></div>
         <hr/>
         <div>
-            <p>Wie bei anderen Werkzeugen, deren Analyse die Reise einbezieht, k&ouml;nnen Sie festlegen, ob die Reise anhand der Entfernung oder der Zeit gemessen werden soll. Zudem k&ouml;nnen Sie verschiedene Reisemodi wie Gehzeit, Fahrzeit, Fahrstrecke auf Landstra&szlig;en usw. ausw&auml;hlen. Die verf&uuml;gbaren Reisemodi werden vom Administrator Ihrer Organisation bestimmt. Bei der Verwendung von &quot;Fahrzeit&quot; oder &quot;Fahrstrecke auf Landstra&szlig;en&quot; k&ouml;nnen Sie optional Verkehr f&uuml;r einen bestimmten Wochentag oder eine bestimmt Tageszeit einbeziehen. 
+            <p>Wie bei anderen Werkzeugen, deren Analyse die Reise einbezieht, k&ouml;nnen Sie festlegen, ob die Reise anhand der Entfernung oder der Zeit gemessen werden soll. Zudem k&ouml;nnen Sie verschiedene Reisemodi wie Gehzeit, Fahrzeit, Fahrstrecke auf Landstra&szlig;en usw. ausw&auml;hlen. Die verf&uuml;gbaren Reisemodi werden vom Administrator Ihrer Organisation bestimmt. Bei Verwendung von  <b>Fahrzeit</b>, <b>Fahrzeit auf Landstra&szlig;en</b> oder <b>Lkw-Fahrzeit</b> k&ouml;nnen Sie optional die Verkehrslage f&uuml;r einen bestimmten Wochentag oder eine bestimmte Tageszeit einbeziehen.
             </p>
             <p> Um Bedarfsstandorte Einrichtungen pr&auml;zise zuzuweisen, geben Sie an, ob die Reise von den Einrichtungen zu den Bedarfsstandorten (z.&nbsp;B. von Feuerwachen zu H&auml;usern) oder in umgekehrter Richtung (wie bei Bibliotheksbenutzern) erfolgen soll. &quot;Optimale Einrichtungen ausw&auml;hlen&quot; ber&uuml;cksichtigt die Reiserichtung in Einbahnstra&szlig;en, ob Sie von einer Stra&szlig;e in die andere einbiegen k&ouml;nnen, ob an Kreuzungen nicht nach links abgebogen werden darf usw., je nachdem, ob die Reise ausw&auml;rts, von der Einrichtung zu den Bedarfsstandorten, oder einw&auml;rts, von den Bedarfsstandorten zu den Einrichtungen, erfolgt.
             </p>
@@ -153,7 +153,7 @@
             </p>
             <p>Wenn der Zieltyp  <b>Einen Bedarfsprozentsatz abdecken</b> lautet, m&uuml;ssen Sie den minimalen Bedarfsprozentsatz festlegen, den die Einrichtungen aufweisen sollen.
             </p>
-            <p class="OnlineOnly">Neben einem Layer aus Ihrer Karte k&ouml;nnen Sie auch die Option  <b>Analyse-Layer des Living Atlas ausw&auml;hlen</b> oder <b>Analyse-Layer ausw&auml;hlen</b> unten in der Dropdown-Liste ausw&auml;hlen. Hiermit wird eine Galerie mit einer Sammlung von Layern ge&ouml;ffnet, die f&uuml;r viele Analysen hilfreich sind. 
+            <p>Neben einem Layer aus Ihrer Karte k&ouml;nnen Sie auch die Option  <b>Analyse-Layer ausw&auml;hlen</b> unten in der Dropdown-Liste ausw&auml;hlen. Mit dieser Option &ouml;ffnen Sie eine Galerie, in der Sie zu Datasets aus verschiedenen Quellen navigieren und diese f&uuml;r Ihre Analysen ausw&auml;hlen k&ouml;nnen. 
             </p>
             <p>Das Werkzeug unterst&uuml;tzt bis zu 10.000&nbsp;Features im Layer f&uuml;r Bedarfsstandorte.
             </p>  
@@ -185,15 +185,29 @@
             </p>  
         </div>
     </div>
+    <div id="barrier_layers">
+        <div><h2>Barriere-Layer auswählen</h2></div>
+        <hr/>
+        <div>
+            <p> Mindestens ein Feature, das als vor&uuml;bergehende Einschr&auml;nkung (also Barriere) bei der Fahrt auf den zugrunde liegenden Stra&szlig;en fungiert Sie k&ouml;nnen die Barrieren anhand von Punkt-, Linien- oder Polygon-Features angeben.
+            </p>
+            <p>Eine Punkt-Barriere kann zum Modellieren eines umgefallenen Baumes, eines Unfalls, einer herabh&auml;ngenden Stromleitung oder eines beliebigen anderen Objekts, das den Verkehr an einer bestimmten Position auf der Stra&szlig;e blockiert, verwendet werden. Die Fahrt auf der Stra&szlig;e ist zul&auml;ssig, jedoch nicht die Fahrt durch die Barriere. Sie k&ouml;nnen bis zu 250&nbsp;Features, die als Punkt-Barrieren fungieren, hinzuf&uuml;gen.
+            </p>
+            <p>Eine Linien-Barriere unterbindet den Verkehr an allen Punkten, an denen die Barriere Stra&szlig;en schneidet. Mit einer Linien-Barriere kann beispielsweise eine Parade oder Demonstration modelliert werden, die den Verkehr &uuml;ber mehrere Stra&szlig;enz&uuml;ge hinweg blockiert. Wenn die Anzahl der Stra&szlig;en-Features, die sich mit allen Linien-Barrieren schneiden, 500 &uuml;berschreitet, gibt das Werkzeug einen Fehler zur&uuml;ck
+            </p>
+            <p>Eine Polygon-Barriere unterbindet den Verkehr an allen Punkten, an denen das Polygon Stra&szlig;en schneidet. Dieser Barrierentyp wird beispielsweise verwendet, um &uuml;berflutete Bereiche des Stra&szlig;ennetzes zu modellieren und den Stra&szlig;enverkehr in diesen Bereichen zu sperren. Wenn die Anzahl der Stra&szlig;en-Features, die sich mit allen Polygon-Barrieren schneiden, 2000 &uuml;berschreitet, gibt das Werkzeug einen Fehler zur&uuml;ck
+            </p>
+        </div>
+    </div>
     <div id="outputName">
         <div><h2>Name des Ergebnis-Layers</h2></div>
         <hr/>
         <div>
-            <p>Dies ist der Name des Layers, der in  <b>Eigene Inhalte</b> erstellt und der Karte hinzugef&uuml;gt wird.  Der Standardname basiert auf dem Werkzeugnamen und dem Namen des Eingabe-Layers. Wenn der Layer bereits vorhanden ist, werden Sie aufgefordert, einen anderen Namen einzugeben.
+            <p>Der Name des Layers, der in  <b>Eigene Inhalte</b> erstellt und der Karte hinzugef&uuml;gt wird. Der Standardname basiert auf dem Werkzeugnamen und dem Namen des Eingabe-Layers. Wenn der Layer-Name bereits vorhanden ist, werden Sie dazu aufgefordert, einen anderen Namen einzugeben.
             </p>
             <p>Der Ergebnis-Layer enth&auml;lt einen Layer f&uuml;r jedes der folgenden Elemente: Einrichtungen, denen Bedarf zugewiesen ist, Bedarfsstandorte, die Einrichtungen zugewiesen sind, sowie Zuweisungslinien, die Bedarfsstandorte mit ihren zugewiesenen Einrichtungen verbinden. Die Zuweisungslinien werden als gerade Linien dargestellt, die Reisezeit oder Reisestrecke zwischen der Einrichtung und dem Bedarfsstandort basiert jedoch immer auf dem angegebenen Reisemodus und nicht auf der Verwendung von geradlinigen Entfernungen.
             </p>
-            <p>&Uuml;ber das Dropdown-Feld  <b>Ergebnis speichern in</b> k&ouml;nnen Sie den Namen eines Ordners in <b>Eigene Inhalte</b> angeben, in dem das Ergebnis gespeichert werden soll.
+            <p>&Uuml;ber das Dropdown-Men&uuml;  <b>Ergebnis speichern in</b> k&ouml;nnen Sie den Namen eines Ordners in <b>Eigene Inhalte</b> angeben, in dem das Ergebnis gespeichert werden soll.
             </p>
         </div>
     </div>

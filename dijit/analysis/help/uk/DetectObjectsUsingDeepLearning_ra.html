@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="Stylesheet" href="../css/analysis.css" />
+    <script type="text/javascript">
+        function init() {
+            if (window.location.hash) {
+                var parentDiv, nodes, i, helpInfo, helpId, helpInfoArr, helpEnvFilter, envContent, hideEnvClass, hideNodes;
+                helpInfo = window.location.hash.substring(1);
+                    if(helpInfo.indexOf("-")) {
+                        helpInfoArr = helpInfo.split("-");
+                        helpId = helpInfoArr[0];
+                        helpEnvFilter = helpInfoArr[1];
+                    }
+                    else {
+                        helpId = helpInfo;
+                    }
+                parentDiv = document.getElementById("topics");
+                nodes = parentDiv.children;
+                    hideEnvClass = (helpEnvFilter === "OnlineOnly"? "PortalOnly": "OnlineOnly");
+                    if(document.getElementsByClassName) {
+                        hideNodes = document.getElementsByClassName(hideEnvClass);
+                    }
+                    else {
+                        hideNodes = document.querySelectorAll(hideEnvClass);
+                    }
+                for(i=0; i < nodes.length; i++) {
+                    if(nodes[i].id !== helpId) {
+                        nodes[i].style.display ="none";
+                    }
+                    }
+                    for(i=0; i < hideNodes.length; i++) {
+                        hideNodes[i].style.display ="none";
+                    }
+                }
+            }
+    </script>
+</head>
+<body onload="init()">
+<div id="topics">
+    <div id="toolDescription" class="smallsize">
+        <h2>Виявити об'єкти, використовуючи глибоке навчання</h2><p/>
+        <h2><img src="../images/GUID-EE76A33E-0B8F-48EE-94F8-782FAD241D72-web.png" alt="Виявити об'єкти, використовуючи глибоке навчання"></h2>
+        <hr/>
+    <p>Цей інструмент запускає навчену модель глибокого навчання на вхідному растрі, щоб створити клас об&rsquo;єктів, в якому містяться знайдені ним об&rsquo;єкти. Об&rsquo;єктами можуть бути обмежуючі рамки або полігони навколо знайдених об&rsquo;єктів, або точки по центру об&rsquo;єктів.
+    </p>
+    <p>Якщо вибрано опцію  <b>Використовувати поточний екстент карти</b>, буде аналізуватися тільки растрова область, видима в межах поточного екстенту карти. Якщо цю опцію не вибрано, буде аналізуватися весь растр, навіть якщо він знаходиться за межами поточного екстенту карти.
+    </p>
+    </div>
+    <!--Parameter divs for each param-->
+    <div id="inputRaster">
+        <div><h2>Оберіть зображення, використовуване для виявлення об’єктів</h2></div>
+        <hr/>
+        <div>
+            <p>Вхідне зображення, використовуване для виявлення об&rsquo;єктів.
+            </p> 
+        </div>
+    </div>
+    <div id="model">
+        <div><h2>Вибрати модель глибокого навчання, використовувану для виявлення об'єктів</h2></div>
+        <hr/>
+        <div>
+            <p>Елемент вхідного пакета глибокого навчання ( <code>.dlpk</code>).
+            </p>
+            <p>Пакет глибокого навчання містить JSON-файл визначення моделі Esri ( <code>.emd</code>), файл бінарної моделі глибокого навчання, та опціонально може використовуватися растрова функція Python.
+            </p>
+        </div>
+    </div>
+    <div id="modelArguments">
+        <div><h2>Вказати аргументи моделі глибокого навчання</h2></div>
+        <hr/>
+        <div>
+            <p>Аргументи функції визначаються у класі растрової функції Python, на яку посилається вхідна модель. Саме тут наводяться додаткові параметри і аргументи глибокого навчання для експериментів і доводження, такі як довірчий поріг для уточнення чутливості.
+            </p>
+            <p>Назви аргументів заповнюються даними, отриманими інструментом із модуля Python на сервері аналізу растрів.
+            </p>
+        </div>
+    </div>
+    <div id="runNMS">
+        <div><h2>Видалити об'єкти-дублікати з вихідних даних (опціонально)</h2></div>
+        <hr/>
+        <div>
+            <p>Виконує придушення немаксимумів, при якому об'єкти-дублікати ідентифікуються і вилучаються повторювані об'єкти з низьким рівнем достовірності.
+                <ul>
+                    <li>Не вибрано&mdash;Всі виявлені об&rsquo;єкти будуть у вихідному класі об&rsquo;єктів. Це значення за замовчуванням.
+                        
+
+                    </li>
+                    <li>Вибрано&mdash;Вилучає виявлені повторювані об&rsquo;єкти.
+                        
+
+                    </li>
+                </ul>
+                
+            </p>
+        </div>
+    </div>
+    <div id="confidenceScoreField">
+        <div><h2>Поле ступеня довіри</h2></div>
+        <hr/>
+        <div>
+            <p>Поле в сервісі об&rsquo;єктів, яке містить ступені довіри, видані методом виявлення об&rsquo;єктів.
+            </p>
+            <p>Цей параметр потрібен, коли вибраний параметр  <b>Придушення немаксимумів</b>.
+            </p>
+        </div>
+    </div>
+    <div id="classValueField">
+        <div><h2>Поле значення класу</h2></div>
+        <hr/>
+        <div>
+            <p>Поле значення класу у вихідному сервісі об&rsquo;єктів. Якщо не вказано, інструмент використовуватиме стандартні поля значень класів  <i>Classvalue</i> і <i>Value</i>. Якщо ці поля відсутні, всі об&rsquo;єкти будуть розглядатися як однаковий об&rsquo;єктний клас.
+            </p>
+        </div>
+    </div>
+    <div id="maxOverlapRatio">
+        <div><h2>Максимальний коефіцієнт накладення</h2></div>
+        <hr/>
+        <div>
+            <p>Максимальний коефіцієнт накладення для двох об&rsquo;єктів, що перекриваються, який визначається як відношення площі перетину до площі об&rsquo;єднання. За замовчуванням: 0.
+            </p>
+        </div>
+    </div>
+    <div id="outputObjects">
+        <div><h2>Ім'я шару результатів</h2></div>
+        <hr/>
+        <div>
+            
+            <p>Назва шару, який буде створено в  <b>Мої ресурси</b> і додано до карти. Ім'я за замовчуванням визначається на основі імені інструменту та імені вхідного шару. Якщо шар уже існує, вам буде запропоновано вказати іншу назву.
+            </p>
+            <p>Використовуючи розкривний список  <b>Зберегти результат у</b>, можна вказати ім'я папки в <b>Мій вміст</b>, де зберігатиметься результат.
+            </p>
+        </div>
+    </div>
+</div>
+</html>

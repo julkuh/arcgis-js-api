@@ -7,7 +7,7 @@
             <td class="esriAlignLeading esriAnalysisTitle" data-dojo-attach-point="_toolTitle">
               <label data-dojo-attach-point="_titleLbl">${i18n.deriveNewLocations}</label>
               <nav class="breadcrumbs"  data-dojo-attach-point="_analysisModeLblNode" style="display:none;">
-                <a href="#" class="crumb" style="font-size:12px;" data-dojo-attach-event="onclick:_handleModeCrumbClick" data-dojo-attach-point="_analysisModeCrumb"></a>
+                <a href="#" class="crumb breadcrumbs__modelabel" data-dojo-attach-event="onclick:_handleModeCrumbClick" data-dojo-attach-point="_analysisModeCrumb"></a>
                 <a href="#" class="crumb is-active" data-dojo-attach-point="_analysisTitleCrumb" style="font-size:16px;">${i18n.deriveNewLocations}</a>
               </nav>               
             </td>
@@ -29,20 +29,6 @@
     <div data-dojo-type="dijit/form/Form" data-dojo-attach-point="_form" readOnly="true">
        <table class="esriFormTable"  data-dojo-attach-point="_aggregateTable"  style="border-collapse:collapse;border-spacing:5px;" cellpadding="5px" cellspacing="5px"> 
          <tbody>
-          <tr data-dojo-attach-point="_analysisLabelRow" style="display:none;">
-            <td colspan="2" style="padding-bottom:0;">
-              <label class="esriFloatLeading  esriTrailingMargin025 esriAnalysisNumberLabel">${i18n.oneLabel}</label>
-              <label class="esriAnalysisStepsLabel">${i18n.analysisLayerLabel}</label>
-            </td>
-            <td class="shortTextInput" style="padding-bottom:0;">
-              <a href="#" class='esriFloatTrailing helpIcon' esriHelpTopic="analysisLayer"></a>
-            </td>
-          </tr>           
-          <tr data-dojo-attach-point="_selectAnalysisRow" style="display:none;">
-            <td  colspan="3" style="padding-top:0;">
-              <select class="esriLeadingMargin1 longInput esriLongLabel"  style="margin-top:1.0em;" data-dojo-type="dijit/form/Select" data-dojo-attach-point="_analysisSelect" data-dojo-attach-event="onChange:_handleAnalysisLayerChange"></select>
-            </td>
-          </tr>
           <tr>
             <td colspan="2">
               <label class="esriFloatLeading  esriTrailingMargin025 esriAnalysisNumberLabel">${i18n.oneLabel}</label>
@@ -87,7 +73,7 @@
      </div>
     <div data-dojo-attach-point="_aggregateToolContentButtons" style="padding:5px;margin-top:5px;border-top:solid 1px #BBB;">
       <div class="esriExtentCreditsCtr">
-        <a class="esriFloatTrailing esriSmallFont"  href="#" data-dojo-attach-point="_showCreditsLink" data-dojo-attach-event="onclick:_handleShowCreditsClick">${i18n.showCredits}</a>
+        <a class="esriFloatTrailing esriSmallFont"  href="#" data-dojo-attach-point="_showCreditsLink">${i18n.showCredits}</a>
        <label data-dojo-attach-point="_chooseExtentDiv" class="esriSelectLabel esriExtentLabel">
          <input type="radio" data-dojo-attach-point="_useExtentCheck" data-dojo-type="dijit/form/CheckBox" data-dojo-props="checked:true" name="extent" value="true"/>
            ${i18n.useMapExtent}

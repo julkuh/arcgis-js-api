@@ -31,6 +31,10 @@
   height: auto;
 }
 
+.esriMarkerSymbolPicker--custom-selected .itemSymbol {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .esriMarkerSymbolPicker .esriContainer {
   height: 180px;
   overflow: auto;
@@ -42,6 +46,12 @@
 
 .esriMarkerSymbolPicker .esriTypeInput .dijitButtonContents {
   width: 100%;
+}
+
+.esriMarkerSymbolPicker .dijitSelectLabel {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 17em; 
 }
 
 .esriMarkerSymbolPicker .esriOverlay {

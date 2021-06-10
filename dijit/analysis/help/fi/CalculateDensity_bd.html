@@ -42,22 +42,22 @@
 <div id="topics">
     <div id="toolDescription" class="largesize">
         <h2>Laske tiheys</h2><p/>
-        <h2><img src="../images/GUID-38AD3C19-0400-4E5A-9282-BDE42F2BBFC1-web.png" alt="Calculate Density"></h2>
+        <h2><img src="../images/GUID-38AD3C19-0400-4E5A-9282-BDE42F2BBFC1-web.png" alt="Laske tiheys"></h2>
         <hr/>
-    <p>The Calculate Density tool creates a density map from point features by spreading known quantities of some phenomenon (represented as attributes of the points) across the map. The result is a layer of areas classified from least dense to most dense.   
+    <p>Laske tiheys -ty&ouml;kalu luo tiheyskartan pistekohteista jakamalla tietyn ilmi&ouml;n tunnetut m&auml;&auml;r&auml;t (esitet&auml;&auml;n pisteiden ominaisuustietoina) kartan alueelle. Tuloksena syntyy karttataso, jonka alueet on luokiteltu v&auml;hiten tihe&auml;st&auml; tiheimp&auml;&auml;n.   
 
     </p>
-    <p>For point input, each point should represent the location of some event or incident, and the result layer represents a count of the incident per unit area.  A higher density value in a new location means that there are more points near that location.  In many cases, the result layer can be interpreted as a risk surface for future events. For example, if the input points represent locations of lightning strikes, the result layer can be interpreted as a risk surface for future lightning strikes.
+    <p>Pistel&auml;ht&ouml;aineiston kunkin pisteen tulee esitt&auml;&auml; jonkin tapahtuman tai tapauksen sijaintia. Tulostaso kuvaa tapausten m&auml;&auml;r&auml;&auml; tietyll&auml; yksik&ouml;n alueella. Korkeampi tiheysarvo uudessa sijainnissa tarkoittaa, ett&auml; kyseisen sijainnin l&auml;hell&auml; on enemm&auml;n pisteit&auml;. Useissa tapauksissa tulostasoa voidaan tulkita tulevien tapahtumien riskimallina. Jos pistel&auml;ht&ouml;aineisto esitt&auml;&auml; esimerkiksi salamaniskujen sijainteja, tulostasoa voidaan tulkita tulevien salamaniskujen riskimallina.
     </p>
-    <p>Other use cases of this tool include the following:
+    <p>Ty&ouml;kalua voi k&auml;ytt&auml;&auml; my&ouml;s esimerkiksi seuraaviin tarkoituksiin:
         <ul>
-            <li>Creating crime-density maps to help police departments properly allocate resources to high crime areas.
+            <li>Rikostiheyden karttojen luominen voi auttaa poliisilaitoksia kohdentamaan resurssejaan alueille, joilla rikollisuustaso on korkea.
             </li>
-            <li>Calculating densities of hospitals within a county.  The result layer will show areas with high and low accessibility to hospitals, and this information can be used to decide where new hospitals should be built.
+            <li>Maan sairaaloiden tiheyksien laskeminen. Tulostaso n&auml;ytt&auml;&auml; alueet, joilta sairaalaan p&auml;&auml;sy on helppoa tai vaikeaa. N&auml;it&auml; tietoja voidaan k&auml;ytt&auml;&auml; apuna p&auml;&auml;tett&auml;ess&auml; uusien sairaaloiden sijainneista.
             </li>
-            <li>Identifying areas that are at high risk of forest fires based on historical locations of forest fires.
+            <li>Mets&auml;paloille alttiiden alueiden tunnistaminen mets&auml;palojen historiallisten sijaintien perusteella.
             </li>
-            <li>Locating communities that are far from major highways in order to plan where new roads should be constructed.
+            <li>Kaukana valtateist&auml; sijaitsevien asutusten paikantaminen suunniteltaessa uusien teiden rakentamista.
             </li>
         </ul>
         
@@ -68,9 +68,9 @@
         <div><h2>Valitse pistekarttataso, joista tiheys lasketaan</h2></div>
         <hr/>
         <div>
-            <p>The point layer on which the density will be calculated.
+            <p>Pistekarttataso, jonka perusteella tiheys lasketaan.
             </p>
-            <p>Sen lis&auml;ksi, ett&auml; voit valita karttatason kartasta, voit valita  <b>Selaa karttatasoja</b> -vaihtoehdon avattavan luettelon alareunasta ja selata Big Data -tiedostoresurssin aineistoryhm&auml;n tai karttatason sis&auml;lt&ouml;&ouml;n.
+            <p>Sen lis&auml;ksi, ett&auml; voit valita karttatason kartasta, voit valita  <b>Valitse analyysikarttataso</b> -vaihtoehdon avattavan luettelon alareunasta ja selata Big Data -tiedostoresurssin aineistoryhm&auml;n tai karttatason sis&auml;lt&ouml;&ouml;n. Voit valinnaisesti k&auml;ytt&auml;&auml; suodatinta l&auml;ht&ouml;karttatasossa tai valintaa karttaan lis&auml;tyiss&auml; is&auml;nn&ouml;idyiss&auml; karttatasoissa. Suodattimia ja valintoja k&auml;ytet&auml;&auml;n vain analyyseissa. 
             </p>
         </div>
     </div>
@@ -78,9 +78,9 @@
         <div><h2>Valitse vähintään yksi kenttä, jonka tiheys lasketaan (valinnainen)</h2></div>
         <hr/>
         <div>
-            <p>Provide  one or more fields specifying the number of incidents at each location.  For example, if you have points that represent cities, you can use a field representing the population of the city as the count field, and the resulting population density layer will calculate larger population densities near cities with larger populations.
+            <p>M&auml;&auml;rit&auml; v&auml;hint&auml;&auml;n yksi kentt&auml;, joka osoittaa tapausten m&auml;&auml;r&auml;n kussakin sijainnissa. Jos pisteet esitt&auml;v&auml;t esimerkiksi kaupunkeja, voit k&auml;ytt&auml;&auml; m&auml;&auml;r&auml;kentt&auml;n&auml; kentt&auml;&auml;, joka osoittaa kaupungin asukasluvun. Tuloksena syntyv&auml; v&auml;est&ouml;tiheyden karttataso laskee korkean v&auml;est&ouml;tiheyden asukasluvultaan suurien kaupunkien alueille.
             </p>
-            <p>The density for the count of points will always be calculated.   If no fields are selected, each location will be assumed to represent a single count.
+            <p>Pisteiden m&auml;&auml;r&auml;n tiheys lasketaan aina.   Jos yht&auml;&auml;n kentt&auml;&auml; ei valita, kunkin sijainnin oletetaan esitt&auml;v&auml;n yht&auml; tapausta.
             </p>
         </div>
     </div>
@@ -88,9 +88,9 @@
         <div><h2>Valitse lohkon muoto</h2></div>
         <hr/>
         <div>
-            <p>The shape of bins that points are aggregated into and used for the density calculation.
+            <p>Niiden lohkojen muoto, joihin pisteet kootaan ja joita k&auml;ytet&auml;&auml;n tiheyden laskennassa.
             </p>
-            <p>Analysointi  <b>neli&ouml;</b>- tai <b>kuusikolmiolohkojen</b> avulla edellytt&auml;&auml; projisoitua koordinaattij&auml;rjestelm&auml;&auml;. Voit m&auml;&auml;ritt&auml;&auml; <b>k&auml;sittelev&auml;n koordinaattij&auml;rjestelm&auml;n</b> <b>Analyysiymp&auml;rist&ouml;t</b>-kohdassa. Jos k&auml;sittelev&auml;&auml; koordinaattij&auml;rjestelm&auml;&auml; ei ole m&auml;&auml;ritetty projisoiduksi koordinaattij&auml;rjestelm&auml;ksi, sinua pyydet&auml;&auml;n m&auml;&auml;ritt&auml;m&auml;&auml;n se sellaiseksi, kun valitset <b>Suorita analyysi</b>.
+            <p>Analysointi neli&ouml;- tai kuusikolmiolohkojen avulla edellytt&auml;&auml; projisoitua koordinaattij&auml;rjestelm&auml;&auml;. Voit m&auml;&auml;ritt&auml;&auml; k&auml;sittelev&auml;n koordinaattij&auml;rjestelm&auml;n Analyysiymp&auml;rist&ouml;t-kohdassa. Jos k&auml;sittelev&auml;&auml; koordinaattij&auml;rjestelm&auml;&auml; ei ole m&auml;&auml;ritetty projisoiduksi koordinaattij&auml;rjestelm&auml;ksi, sinua pyydet&auml;&auml;n m&auml;&auml;ritt&auml;m&auml;&auml;n se sellaiseksi, kun suoritat analyysin .
             </p>
         </div>
     </div>
@@ -98,7 +98,7 @@
         <div><h2>Valitse lohkon koko koostamista varten</h2></div>
         <hr/>
         <div>
-            <p>The size of the bins generated. For a square bin, the size represents the height of the square. For hexagon, the size represents the height of the hexagon (from parallel sides).
+            <p>Luotujen lohkojen koko. Neli&ouml;lohkoissa koko tarkoittaa neli&ouml;n korkeutta. Kuusikulmioissa koko tarkoittaa kuusikulmion korkeutta (rinnakkaisilta sivuilta).
             </p>
         </div>
     </div>
@@ -106,11 +106,11 @@
         <div><h2>Valitse käytettävä tiheyden painotus</h2></div>
         <hr/>
         <div>
-            <p>The type of weighting applied to the density calculation. There are two options:
+            <p>Tiheyslaskennassa k&auml;ytetty painotustapa. Vaihtoehtoja on kaksi:
                 <ul>
-                    <li> <b>Uniform</b>&mdash;This calculates a magnitude per area.
+                    <li> <b>Yhten&auml;inen</b> &ndash; T&auml;m&auml; laskee aluekohtaisen magnitudin.
                     </li>
-                    <li> <b>Kernel</b>&mdash;Applies a kernel function to fit a smooth tapered surface to each point.
+                    <li> <b>Ydin</b> &ndash; K&auml;ytt&auml;&auml; ydintoimintoa tasaisesti kaventuneen pinnan sovittamiseksi kuhunkin pisteeseen.
                     </li>
                 </ul>
                 
@@ -121,7 +121,7 @@
         <div><h2>Valitse naapuruston koko</h2></div>
         <hr/>
         <div>
-            <p>The size of the area used to calculate the density. The neighborhood size must be larger than the bin size.
+            <p>Sen alueen koko, jota k&auml;ytet&auml;&auml;n tiheyden laskennassa. Naapuruston koon on oltava suurempi kuin lohkon koko.
             </p>
         </div>
     </div>
@@ -129,7 +129,7 @@
         <div><h2>Valitse tiheyden tulosyksiköt</h2></div>
         <hr/>
         <div>
-            <p>The desired output units of the density values. By default, this is set to square kilometers or square miles based on the default units specified in your profile. If density values are very small, you can increase the size of the area units (for example, square meters to square kilometers) to return larger values. The values only scale the result.  
+            <p>Halutut tiheysarvojen tulosyksik&ouml;t. Oletusarvon mukaan t&auml;m&auml; on m&auml;&auml;ritetty neli&ouml;kilometreiksi tai neli&ouml;maileiksi profiilissasi m&auml;&auml;ritettyjen oletusyksik&ouml;iden mukaan. Jos tiheysarvot ovat hyvin pieni&auml;, voit lis&auml;t&auml; pinta-alayksik&ouml;n kokoa (esimerkiksi neli&ouml;metreist&auml; neli&ouml;kilometreiksi) suurempien arvojen palauttamiseksi. Arvot skaalautuvat vain tuloksen mukaan.  
 
             </p>
         </div>
@@ -149,9 +149,9 @@
                 </ul>
                 
             </p>
-            <p>Oletetaan, ett&auml; sinulla on vuotta kuvaava aineisto ja ett&auml; haluat k&auml;ytt&auml;&auml; analysointiin viikon mittaisia aikav&auml;lej&auml;. Voit tehd&auml; t&auml;m&auml;n m&auml;&auml;ritt&auml;m&auml;ll&auml;  <b>Aikav&auml;lijakso</b>-parametrin arvoksi <code>1 viikko</code>.
+            <p>Jos sinulla on esimerkiksi vuotta kuvaava aineisto ja  haluat k&auml;ytt&auml;&auml; analysointiin viikon mittaisia aikav&auml;lej&auml;, aseta  <b>Aikav&auml;li</b> -arvoksi <code>1 viikko</code>. 
             </p>
-            <p>Oletetaan, ett&auml; sinulla on vuotta kuvaava aineisto ja ett&auml; haluat k&auml;ytt&auml;&auml; analysointiin kuukauden ensimm&auml;ist&auml; viikkoa. Voit tehd&auml; t&auml;m&auml;n m&auml;&auml;ritt&auml;m&auml;ll&auml;  <b>Aikav&auml;lijakso</b>-parametrin arvoksi <code>1 viikko</code>, <b>Miten usein aikav&auml;li&auml; toistetaan</b> -parametrin arvoksi <code>1 kuukausi</code> ja <b>Aika, johon aikav&auml;lit kohdistetaan</b> -parametrin arvoksi <code>1. tammikuuta klo 24.00</code>.
+            <p>Jos sinulla on esimerkiksi vuotta kuvaava aineisto ja haluat k&auml;ytt&auml;&auml; sen analysointiin kuukauden ensimm&auml;ist&auml; viikkoa, aseta  <b>Aikav&auml;li</b>-arvoksi <code>1 viikko</code>, <b>Miten usein aikav&auml;li&auml; toistetaan</b> -arvoksi <code>1 kuukausi</code> ja <b>Aika, johon aikav&auml;lit kohdistetaan</b>  -arvoksi <code>1. tammikuuta kello 12.00</code>.
             </p>
         </div>
     </div>
@@ -159,9 +159,9 @@
         <div><h2>Aikavälijakso</h2></div>
         <hr/>
         <div>
-            <p>Aikav&auml;li, jota k&auml;ytet&auml;&auml;n aikav&auml;lien luomiseen. Aikav&auml;lijakso-parametria voidaan k&auml;ytt&auml;&auml; yksin tai  <b>Miten usein aikav&auml;li&auml; toistetaan</b>- tai <b>Aika, johon aikav&auml;lit kohdistetaan</b> -parametrin kanssa.
+            <p>Aikav&auml;li, jota k&auml;ytet&auml;&auml;n aikav&auml;lien luomiseen.  <b>Aikav&auml;lijakso</b>-parametria voidaan k&auml;ytt&auml;&auml; yksin taikka <b>Miten usein aikav&auml;li&auml; toistetaan</b>- tai <b>Aika, johon aikav&auml;lit kohdistetaan</b> -parametrin kanssa.
             </p>
-            <p>Jos haluat luoda aikaleikkeit&auml;, joiden aikav&auml;li on maanantaina klo 9.00&ndash;10.00, m&auml;&auml;rit&auml;  <b>Aikav&auml;lijakso</b>-parametrin arvoksi <code>1 tunti</code>, <b>Miten usein aikav&auml;li&auml; toistetaan</b> -parametrin arvoksi <code>1 viikko</code> ja <b>Aika, johon aikav&auml;lit kohdistetaan</b> -parametrin arvoksi <code>9.00 maanantaina</code>.
+            <p>Jos haluat esimerkiksi  luoda aikav&auml;lit, jotka toteutuvat aina maanantaina klo 9.00&ndash;10.00, m&auml;&auml;rit&auml;  <b>Aikav&auml;lijakso</b>-parametrin arvoksi <code>1 tunti</code>, <b>Miten usein aikav&auml;li&auml; toistetaan</b> -parametrin arvoksi <code>1 viikko</code> ja <b>Aika, johon aikav&auml;lit kohdistetaan</b> -parametrin arvoksi <code>9.00 maanantaina</code>.
             </p>
         </div>
     </div>
@@ -169,9 +169,9 @@
         <div><h2>Miten usein aikaväliä toistetaan</h2></div>
         <hr/>
         <div>
-            <p> Askel, jota k&auml;ytet&auml;&auml;n aikaleikkeen laskemiseen. <b>Miten usein aikav&auml;li&auml; toistetaan</b> -parametria voidaan k&auml;ytt&auml;&auml; yksin tai <b>Aikav&auml;lijakso</b>- tai <b>Viiteaika</b>-parametrin kanssa taikka sek&auml; <b>Aikav&auml;lijakso</b>- ett&auml; <b>Aika, johon aikav&auml;lit kohdistetaan</b> -parametrien kanssa.
+            <p> Aika, jota k&auml;ytet&auml;&auml;n aikav&auml;lin laskemiseen. <b>Miten usein aikav&auml;li&auml; toistetaan</b> -parametria voidaan k&auml;ytt&auml;&auml; yksin tai <b>Aikav&auml;lijakso</b>- tai <b>Viiteaika</b>-parametrin kanssa taikka sek&auml; <b>Aikav&auml;lijakso</b>- ett&auml; <b>Aika, johon aikav&auml;lit kohdistetaan</b> -parametrien kanssa.
             </p>
-            <p> Jos haluat luoda aikaleikkeit&auml;, joiden aikav&auml;li on maanantaina klo 9.00&ndash;10.00, m&auml;&auml;rit&auml; <b>Aikav&auml;lijakso</b>-parametrin arvoksi <code>1 tunti</code>, <b>Miten usein aikav&auml;li&auml; toistetaan</b> -parametrin arvoksi <code>1 viikko</code> ja <b>Aika, johon aikav&auml;lit kohdistetaan</b> -parametrin arvoksi <code>9.00 maanantaina</code>.
+            <p>Jos haluat esimerkiksi  luoda aikav&auml;lit, jotka toteutuvat aina maanantaina klo 9.00&ndash;10.00, m&auml;&auml;rit&auml;  <b>Aikav&auml;lijakso</b>-parametrin arvoksi <code>1 tunti</code>, <b>Miten usein aikav&auml;li&auml; toistetaan</b> -parametrin arvoksi <code>1 viikko</code> ja <b>Aika, johon aikav&auml;lit kohdistetaan</b> -parametrin arvoksi <code>9.00 maanantaina</code>.
             </p>
         </div>
     </div>
@@ -179,9 +179,9 @@
         <div><h2>Aika, johon aikavälit kohdistetaan</h2></div>
         <hr/>
         <div>
-            <p>P&auml;iv&auml;m&auml;&auml;r&auml; ja kellonaika, joita k&auml;ytet&auml;&auml;n aikaleikkeiden kohdistamiseen. Aikav&auml;li alkaa t&auml;st&auml; ajasta ja jatkuu siit&auml; taaksep&auml;in. Jos viiteaikaa ei valita, aikav&auml;li kohdistetaan aikaan 1.1.1970. 
+            <p>P&auml;iv&auml;m&auml;&auml;r&auml; ja kellonaika, joita k&auml;ytet&auml;&auml;n aikaleikkeiden kohdistamiseen. Aikav&auml;li alkaa kohdasta ja jatkuu t&auml;st&auml; ajasta taaksep&auml;in. Jos viiteaikaa ei valita, aikav&auml;li kohdistetaan aikaan 1.1.1970. 
             </p>
-            <p> Jos haluat luoda aikaleikkeit&auml;, joiden aikav&auml;li on maanantaina klo 9.00&ndash;10.00, m&auml;&auml;rit&auml; <b>Aikav&auml;lijakso</b>-parametrin arvoksi <code>1 tunti</code>, <b>Miten usein aikav&auml;li&auml; toistetaan</b> -parametrin arvoksi <code>1 viikko</code> ja <b>Aika, johon aikav&auml;lit kohdistetaan</b> -parametrin arvoksi <code>9.00 maanantaina</code>.
+            <p>Jos haluat esimerkiksi  luoda aikav&auml;lit, jotka toteutuvat aina maanantaina klo 9.00&ndash;10.00, m&auml;&auml;rit&auml;  <b>Aikav&auml;lijakso</b>-parametrin arvoksi <code>1 tunti</code>, <b>Miten usein aikav&auml;li&auml; toistetaan</b> -parametrin arvoksi <code>1 viikko</code> ja <b>Aika, johon aikav&auml;lit kohdistetaan</b> -parametrin arvoksi <code>9.00 maanantaina</code>.
             </p>
         </div>
     </div>
@@ -197,16 +197,16 @@
         <div><h2>Valitse aineistosäilö</h2></div>
         <hr/>
         <div>
-            <p>GeoAnalytics-tulokset tallennetaan ArcGIS Data Store -tietokantaan ja julkaistaan karttatasona  Portal for ArcGIS -portaalissa. Useimmissa tapauksissa tulokset pit&auml;&auml; tallentaa spatiotemporaaliseen tietokantaan (t&auml;m&auml; on oletusarvo). Joissakin tapauksissa tulosten tallentaminen relaatiotietokantaan on hyv&auml; vaihtoehto. Tiedot kannattaa tallentaa relaatiotietokantaan seuraavista syist&auml;: 
+            <p>GeoAnalytics-tulokset tallennetaan aineistos&auml;il&ouml;&ouml;n ja julkaistaan kohdekarttatasona   Portal for ArcGIS -portaalissa. Useimmissa tapauksissa tulokset pit&auml;&auml; tallentaa spatiotemporaaliseen tietokantaan (t&auml;m&auml; on oletusarvo). Joissakin tapauksissa tulosten tallentaminen relaatiotietokantaan on hyv&auml; vaihtoehto. Tiedot kannattaa tallentaa relaatiotietokantaan seuraavista syist&auml;: 
                 <ul>
-                    <li>Haluat k&auml;ytt&auml;&auml; portaalissa olevia tietoja portaaliyhteisty&ouml;h&ouml;n.
+                    <li>Voit k&auml;ytt&auml;&auml; portaalissa olevia tuloksia portaaliyhteisty&ouml;h&ouml;n.
                     </li>
-                    <li>Haluat ottaa k&auml;ytt&ouml;&ouml;n tulosten synkronointitoiminnot.
+                    <li>Voit ottaa k&auml;ytt&ouml;&ouml;n tulosten synkronointitoiminnot.
                     </li>
                 </ul>
                 
             </p>
-            <p>Relaatiotietokantaa ei tule k&auml;ytt&auml;&auml;, jos GeoAnalytics-tulosten m&auml;&auml;r&auml; kasvaa ja sinun t&auml;ytyy hy&ouml;dynt&auml;&auml; spatiotemporaalisen big data -tietokannan toimintoja suurten tietom&auml;&auml;rien k&auml;sittelyyn. 
+            <p>Relaatiotietokantaa ei tule k&auml;ytt&auml;&auml;, jos GeoAnalytics-tulosten m&auml;&auml;r&auml; kasvaa ja sinun t&auml;ytyy hy&ouml;dynt&auml;&auml; spatiotemporaalisen big data -tietokannan toimintoja suurten tietom&auml;&auml;rien k&auml;sittelyyn.
             </p>
         </div>
     </div>
@@ -214,9 +214,9 @@
         <div><h2>Tulostason nimi</h2></div>
         <hr/>
         <div>
-            <p> Sen tason nimi, joka luodaan kohtaan <b>Oma sis&auml;lt&ouml;</b> ja joka lis&auml;t&auml;&auml;n karttaan. Oletusnimi perustuu ty&ouml;kalun nimeen ja l&auml;ht&ouml;karttatason nimeen. Jos karttataso on jo olemassa, ty&ouml;kalua ei voi suorittaa.
+            <p> Luotavan karttatason nimi. Jos kirjoitat ArcGIS Data Store -aineistos&auml;il&ouml;&ouml;n, tulokset tallennetaan  <b>Oma sis&auml;lt&ouml;</b> -osioon ja lis&auml;t&auml;&auml;n karttaan. Jos kirjoitat Big Data -tiedostojakoon, tulokset tallennetaan Big Data -tiedostojakoon ja lis&auml;t&auml;&auml;n sen manifest-tiedostoon. Tuloksia  ei lis&auml;t&auml; karttaan. Oletusnimi perustuu ty&ouml;kalun nimeen ja l&auml;ht&ouml;karttatason nimeen. Jos karttataso on jo olemassa, ty&ouml;kalua ei voi suorittaa.
             </p>
-            <p>Avattavan  <b>Tallenna tulos kohteeseen</b> -valikon avulla voit m&auml;&auml;ritt&auml;&auml; sen <b>Oma sis&auml;lt&ouml;</b> -kansion nimen, johon tulos tallennetaan.
+            <p>Kun kirjoitat kohteeseen  ArcGIS Data Store  (relaatiotietokantaan perustuvaan tai spatiotemporaaliseen Big Data -s&auml;il&ouml;&ouml;n) k&auml;ytt&auml;m&auml;ll&auml; avattavaa  <b>Tallenna tulos kohteeseen</b> -luetteloa, voit m&auml;&auml;ritt&auml;&auml; kansion nimen <b>Oma sis&auml;lt&ouml;</b> -osiossa, johon tulos tallennetaan.
             </p>
         </div>
     </div>

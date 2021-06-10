@@ -63,6 +63,8 @@ relationships.
                 </li>
                 <li> <b>Summarize Within</b> calculates statistics for area features and attributes that overlap each other.
                 </li>
+                <li> <b>Summarize Center and Dispersion</b> calculates central features and directional distributions.
+                </li>
             </ul>
             
         </p>
@@ -171,6 +173,32 @@ layers and calculates statistics about the overlap. For example:
             </p>
             <br/>
         </div>
+        <div id="SummarizeCenterAndDispersionTool" class="largesize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Summarize Center and Dispersion</h2></td>
+                    <td>
+                    <img src="./images/GUID-D2D53CA4-8A35-4163-9765-77BF232E569D-web.png" class="titleImage" alt="Summarize Center and Dispersion">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>This tool uses point features to calculate the central feature, mean center, median center, or ellipse (distribution). For example:
+                <ul>
+                    <li>Given a layer of block group centroids, the central feature weighted by population could be used to identify which part of town is the most accessible for a performing arts center.
+                    </li>
+                    <li>Given a layer of elk observations within a park over several years, mean center can be used to see where the elk congregate in summer and winter.
+                    </li>
+                    <li>Given a layer of fire incidents, the median center can be used to measure the central tendency of the fires without being affected by peripheral outliers.
+                    </li>
+                    <li>Given a layer of groundwater well samples, an ellipse can be used to determine how a contaminant is spreading.
+                    </li>
+                </ul>
+                
+            </p>
+            <br/>
+        </div>
     <div id="EnrichLocationsCategory" class="smallsize">
         <h2>Data Enrichment</h2>
         <hr/>
@@ -203,11 +231,8 @@ statistics are returned for your chosen areas.
     <div id="FindLocationsCategory" class="largesize">
         <h2>Find Locations</h2>
         <hr/>
-        <p>These tools are used to identify areas that
-meet a number of different criteria you specify.  These criteria can be based on attribute queries (for example, parcels that are vacant) and spatial queries (for example, within 1 kilometer of a river).  The
-areas that are found can be selected from existing features (such as existing
-land parcels) or new features can be created where all the
-requirements are met.
+        <p>These tools are used to identify or create features that
+meet criteria you specify.  The type of criteria will depend on which tool you use;  for example, your criteria  may be based on spatial or attribute queries, visible areas from a specified height, downstream areas for specific drainage points, or driving time in specific traffic conditions.
             <ul>
                 <li> <b>Choose Best Facilities</b> chooses the best locations for facilities by allocating locations that have demand for these facilities in a way that satisfies a given goal.
                 </li>
@@ -217,6 +242,8 @@ requirements are met.
                 </li>
                 <li> <b>Derive New Locations</b> creates new areas from locations in your
 study area that meet a series of criteria.
+                </li>
+                <li> <b>Find Centroids</b> finds the representative center (centroid) for input features.
                 </li>
                 <li> <b>Find Existing Locations</b>  searches for existing areas in a layer that meet a series of criteria.
                 </li>
@@ -228,7 +255,7 @@ study area that meet a series of criteria.
 locations you specify.
                 </li>
             </ul>
-             
+            
         </p>
         <p> 
         </p>
@@ -292,6 +319,21 @@ locations you specify.
             <p>Creates new features in your
 study area that meet a series of criteria you specify. These criteria can be based on attribute queries (for example, parcels that are vacant) and spatial queries (for example,  within 1 mile of a river).
 
+            </p>
+            <br/>
+        </div>
+        <div id="FindCentroidsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Find Centroids</h2></td>
+                    <td>
+                    <img src="./images/GUID-75D9AF75-68C3-48BF-8062-D5499BD06978-web.png" class="titleImage" alt="Find Centroids">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Finds the representative center (centroid) for each input multipoint, line, or area feature.
             </p>
             <br/>
         </div>
@@ -369,6 +411,8 @@ locations you specify.
                 </li>
                 <li> <b>Find Outliers</b> determines if there are any statistically significant outliers in the spatial pattern of your data.
                 </li>
+                <li> <b>Find Point Clusters</b> finds clusters of point features within surrounding noise based on their spatial distribution.
+                </li>
                 <li> <b>Interpolate Points</b> predicts values at new locations based on measurements found in a collection of points.
                 </li>
             </ul>
@@ -417,6 +461,21 @@ locations you specify.
             </table>
 <hr/>
             <p>This tool creates a map showing any statistically significant clusters and spatial outliers present in your data. Use this tool to identify features that have values that are significantly different from their neighbors.  You can use this tool, for example, to find anomalous spending patterns, determine where are the sharpest boundaries between affluence and poverty in a study area or determine if  there are counties in the United States with unusually low life expectancy compared to their neighbors.
+            </p>
+            <br/>
+        </div>
+        <div id="FindPointClustersTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Find Point Clusters</h2></td>
+                    <td>
+                    <img src="./images/GUID-025ADB1C-E4BF-4C8D-A35F-1D0E222627F9-web.png" class="titleImage" alt="Find Point Clusters">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>This tool detects areas where points are concentrated and where they are separated by areas that are empty or sparse. Points that are not part of a cluster are labeled as noise.
             </p>
             <br/>
         </div>
@@ -571,6 +630,8 @@ facilities along with the  travel cost (time and distance) of each route.  For e
                 </li>
                 <li> <b>Extract Data</b> creates new datasets by extracting features from your existing data.
                 </li>
+                <li> <b>Generate Tessellations</b> creates tessellations based on the extent of your data.
+                </li>
                 <li> <b>Merge Layers</b> copies all the features from two or more existing layers
 into a new layer.
                 </li>
@@ -597,7 +658,7 @@ into a new layer.
             </p>
             <br/>
         </div>
-        <div id="ExtractDataTool" class="smallsize">
+        <div id="ExtractDataTool" class="regularsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
@@ -610,7 +671,23 @@ into a new layer.
 <hr/>
             <p>Creates a zip file, CSV, or KMZ of data from your layers and an area of interest that you specify.
             </p>
+            <p>The Extract Data tool requires at least one exportable layer. If you do not have any exportable layers in  Map Viewer Classic, the tool will be disabled. </p>
             <p> 
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateTessellationsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Generate Tessellations</h2></td>
+                    <td>
+                    <img src="./images/GUID-7D6FF8CB-15F3-4051-9C57-46E6C3708788-web.png" class="titleImage" alt="Generate Tessellations">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Generates tessellations over a study area based on specified shape and size.
             </p>
             <br/>
         </div>

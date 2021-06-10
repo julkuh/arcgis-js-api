@@ -110,7 +110,7 @@
         </div>
     </div>
     <div id="maximizeCoverageWithCapacity">
-        <div><h2>Maximale dekking met capaciteit</h2></div>
+        <div><h2>Maximaliseer de dekking op basis van de capaciteit</h2></div>
         <hr/>
         <div>
             <p>Gebruik dit doel als u zo'n groot mogelijke vraag wilt laten afdekken door de voorzieningen maar de voorzieningen beperkte capaciteit hebben.    
@@ -135,14 +135,14 @@
         <div><h2>Meten</h2></div>
         <hr/>
         <div>
-            <p>Net als bij andere tools die reizen opnemen in de analyse, kunt u opgeven of reizen wordt gemeten met afstand of tijd, en u kunt kiezen uit verschillende manieren van reizen zoals wandeltijd, reistijd, landelijke rijafstand, enzovoort. De beschikbare manieren van reizen worden bepaald door de beheerder van uw organisatie. Bij gebruik van de reistijd of landelijke reistijd, kunt u eventueel ook verkeer voor een bepaalde dag van de week of tijd van de dag opnemen. 
+            <p>Net als bij andere tools die reizen opnemen in de analyse, kunt u opgeven of reizen wordt gemeten met afstand of tijd, en u kunt kiezen uit verschillende manieren van reizen zoals wandeltijd, reistijd, landelijke rijafstand, enzovoort. De beschikbare manieren van reizen worden bepaald door de beheerder van uw organisatie. Bij gebruik van  <b>Reistijd</b>, <b>Landelijke reistijd</b> of <b>Reistijd per vrachtwagen</b> kunt u eventueel ook verkeer voor een bepaalde dag van de week of tijd van de dag opnemen.
             </p>
             <p> Om doelgericht vraaglocaties toe te wijzen aan voorzieningen, moet u opgeven of er gereisd moet worden van de voorzieningen naar de vraaglocaties (van brandweerkazernes naar woningen bijvoorbeeld) of van vraaglocaties naar voorzieningen (zoals leden naar bibliotheken). De beste voorzieningen kiezen houdt rekening met eenrichtingswegen, of u kunt afslaan van de ene straat naar de andere, of u links kunt op kruispunten, enzovoorts, afhankelijk van of de rijrichting van de voorziening naar de vraaglocatie loopt of andersom.
             </p>
         </div>
     </div>
     <div id="demandLocationsLayer">
-        <div><h2>Laag vraag locaties</h2></div>
+        <div><h2>Laag met locaties waar vraag is</h2></div>
         <hr/>
         <div>
             <p>De puntobjecten die locaties vertegenwoordigen met vraag naar de diensten aangeboden door de voorzieningen. De tool wijst deze vraaglocaties toe aan de juiste voorzieningen op basis van het geselecteerde doel.
@@ -153,7 +153,7 @@
             </p>
             <p>Als het doel is  <b>Dekken van een percentage van de vraag</b>, dan moet u het minimumpercentage opgeven van de vraag die u wilt dat de voorzieningen ondervangen.
             </p>
-            <p class="OnlineOnly">Naast het kiezen van een laag uit uw kaart, kunt u  <b>Analyselaag Levende Atlas kiezen</b> of <b>Analyselaag kiezen</b> selecteren onderaan de vervolgkeuzelijst. Er wordt een galerij geopend met een verzameling lagen die handig zijn voor veel analyses. 
+            <p>Naast het kiezen van een laag uit uw kaart, kunt u  <b>Analyselaag kiezen</b> selecteren onderaan de vervolgkeuzelijst. Met deze optie wordt een galerij geopend waarin u kunt bladeren naar en datasets van verschillende bronnen kunt selecteren die u in uw analyse kunt gebruiken. 
             </p>
             <p>De tool ondersteunt maximaal 10.000 objecten in de Vraaglocatieslaag.
             </p>  
@@ -185,15 +185,29 @@
             </p>  
         </div>
     </div>
+    <div id="barrier_layers">
+        <div><h2>Barrièrelagen selecteren</h2></div>
+        <hr/>
+        <div>
+            <p> E&eacute;n of meerdere objecten die dienen als tijdelijke beperkingen (barri&egrave;res) tijdens het reizen op de onderliggende straten. U kunt de barri&egrave;res specificeren door gebruik van punt-, lijn-, of polygoonobjecten.
+            </p>
+            <p>Een puntbarri&egrave;re kan een weergave zijn van een omgevallen boom, een ongeval, een omgewaaide elektriciteitspaal of iets anders waardoor een bepaald punt op straat volledig ontoegankelijk is voor verkeer. Verkeer heeft toegang tot de straat maar kan de barri&egrave;re niet passeren. U kunt tot 250 objecten aanduiden als puntbarri&egrave;re.
+            </p>
+            <p>Een lijnbarri&egrave;re verhindert de doorgang voor het verkeer daar waar de barri&egrave;re de straat kruist. Een optocht of protestmars bijvoorbeeld waardoor het verkeer geen toegang heeft tot verschillende straatsegmenten kan weergegeven worden met een lijnbarri&egrave;re. Indien het aantal straatobjecten dat wordt doorkruist door alle lijnbarri&egrave;res meer dan 500 is, geeft de tool een foutmelding.
+            </p>
+            <p>Een polygoonbarri&egrave;re verhindert de doorgang voor het verkeer daar waar de polygoon de straat kruist. Een manier waarop deze barri&egrave;re gebruikt wordt is voor het weergeven van een overstroming in een bepaald gebied of van een bepaald netwerk van straten waar geen verkeer mogelijk is. Indien het aantal straatobjecten dat wordt doorkruist door alle polygoonbarri&egrave;res meer dan 2000 is, geeft de tool een foutmelding.
+            </p>
+        </div>
+    </div>
     <div id="outputName">
         <div><h2>Resultaat laagnaam</h2></div>
         <hr/>
         <div>
-            <p>Dit is de naam van de laag die in  <b>Mijn Content</b> wordt gemaakt en aan de kaart wordt toegevoegd. De standaardnaam is gebaseerd op de toolnaam en de naam van de invoerlaag. Als de laag al bestaat, wordt u gevraagd een nieuwe naam te geven.
+            <p>De naam van de laag die in  <b>Mijn Content</b> wordt gemaakt en aan de kaart wordt toegevoegd. De standaardnaam is gebaseerd op de toolnaam en de naam van de invoerlaag. Als de laagnaam al bestaat, wordt u gevraagd een nieuwe naam te verschaffen.
             </p>
             <p>De resultaatlaag bevat een laag voor elk van het volgende: voorzieningen waaraan een vraag is toegewezen, vraaglocaties die zijn toegewezen aan voorzieningen en toewijzingslijnen die de vraaglocaties koppelen aan de toegewezen voorzieningen. De toewijzingslijnen worden getekend als rechte lijnen maar de reistijd of de reisafstand tussen de voorziening en de vraaglocatie is altijd gebaseerd op de manier van reizen die u opgeeft en niet op afstanden in rechte lijn.
             </p>
-            <p>Als u in de vervolgkeuzelijst  <b>Resultaat opslaan</b> gebruikt, kunt u de naam opgeven van een map in <b>Mijn Content</b> waarin het resultaat wordt opgeslagen.
+            <p>Met behulp van het vervolgkeuzemenu  <b>Resultaat opslaan in</b> kunt u de naam van een map opgeven in <b>Mijn Content</b> waar het resultaat wordt opgeslagen.
             </p>
         </div>
     </div>

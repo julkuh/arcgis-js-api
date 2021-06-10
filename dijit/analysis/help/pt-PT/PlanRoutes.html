@@ -77,7 +77,7 @@
         <div>
             <p>Escolher a camada de pontos que as rotas (ou ve&iacute;culos) dever&atilde;o visitar.  Estes pontos tornam-se paragens atribuidas e n&atilde;o atribuidas de sa&iacute;da. 
             </p>
-            <p class="OnlineOnly">Al&eacute;m de escolher uma camada para o seu mapa, pode selecionar  <b>Escolher Camada de An&aacute;lise do Living Atlas</b> ou <b>Escolher Camada de An&aacute;lise</b> que se encontra no final da lista. Esta abre uma galeria contendo um conjunto de camadas &uacute;teis para v&aacute;rias an&aacute;lises. 
+            <p>Al&eacute;m de escolher uma camada do seu mapa, pode selecionar  <b>Escolher Camada de An&aacute;lise</b> que se encontra na parte inferior da lista pendente. Esta op&ccedil;&atilde;o abre uma galeria, na qual pode navegar e selecionar conjuntos de dados de v&aacute;rias fontes para utilizar na sua an&aacute;lise. 
             </p>
             <p>A ferramenta suporta at&eacute; 2&nbsp;000 elementos de entrada. 
             </p>
@@ -92,7 +92,7 @@
         </div>
     </div>
     <div id="startLayer">
-        <div><h2>As rotas começam em</h2></div>
+        <div><h2>Os percursos iniciam-se em paragens</h2></div>
         <hr/>
         <div>
             <p>Especifica onde e quando os ve&iacute;culos come&ccedil;am as suas percursos.
@@ -110,7 +110,7 @@
         </div>
     </div>
     <div id="endLayer">
-        <div><h2>As rotas terminam em</h2></div>
+        <div><h2>Os percursos terminam em paragens</h2></div>
         <hr/>
         <div>
             <p>Especifique o local onde os ve&iacute;culos terminam o seus percursos.
@@ -131,6 +131,20 @@
             <p>Para encaminhar todos os ve&iacute;culos para um ponto final comum que n&atilde;o seja o ponto de partida, desmarque  <b>Voltar ao inicio</b> e adicionar um ponto ao mapa ou escolher a camada que cont&ecirc;m exactamente um ponto.
             </p>
             <p>Para ter percursos a terminar em locais &uacute;nicos, desmarque  <b>Voltar ao inicio</b> e escolha uma camada que contenha mais de um ponto.  O n&uacute;mero de ve&iacute;culos tem de ser igual ao n&uacute;mero de pontos na camada escolhida. No campo da lista deslizante <b>Identifica&ccedil;&atilde;o de Rota (Route ID)</b>, escolha um campo que identifique as rotas individuais, ve&iacute;culos ou condutores.  Se os ve&iacute;culos est&atilde;o a partir de v&aacute;rios locais e a terminar em v&aacute;rios locais, os IDs da rota escolhida para as camadas come&ccedil;ar e terminar precisam corresponder.
+            </p>
+        </div>
+    </div>
+    <div id="barrier_layers">
+        <div><h2>Selecionar camadas de barreiras</h2></div>
+        <hr/>
+        <div>
+            <p> Um ou mais elementos que atuem como restri&ccedil;&otilde;es tempor&aacute;rias (barreiras) ao transitar pelas ruas subjacentes. Pode especificar as barreiras utilizando elementos de pontos, linhas ou pol&iacute;gonos.
+            </p>
+            <p>Uma barreira de pontos pode delinear uma &aacute;rvore ca&iacute;da, um acidente, uma linha el&eacute;trica derrubada ou algo que bloqueie completamente o tr&acirc;nsito numa posi&ccedil;&atilde;o espec&iacute;fica ao longo da rua. &Eacute; poss&iacute;vel transitar na rua, mas n&atilde;o pela barreira. Pode especificar at&eacute; 250 elementos para atuarem como barreiras de pontos.
+            </p>
+            <p>Uma barreira de linhas pro&iacute;be que se transite por qualquer ponto de intersec&ccedil;&atilde;o entre a barreira e as ruas. Por exemplo, um desfile ou protesto que bloqueie o tr&aacute;fego por v&aacute;rios segmentos de ruas pode ser delineado com uma barreira de linhas. Se o n&uacute;mero de elementos da rua intersetado por todas as barreiras de linhas for superior a 500 elementos, a ferramenta devolve um erro.
+            </p>
+            <p>Uma barreira de pol&iacute;gonos pro&iacute;be que se transite por qualquer ponto de intersec&ccedil;&atilde;o entre o pol&iacute;gono e as ruas. Este tipo de barreira pode ser utilizado para delinear inunda&ccedil;&otilde;es que abranjam &aacute;reas da rede de estradas e n&atilde;o permitam que se transite por elas. Se o n&uacute;mero de elementos da rua intersetado por todas as barreiras de pol&iacute;gonos for superior a 2000 elementos, a ferramenta devolve um erro.
             </p>
         </div>
     </div>
@@ -216,9 +230,9 @@
         <div>
             <p>O nome da camada de elementos que ser&aacute; criada em  <b>O Meu Conte&uacute;do</b> e adicionada ao mapa. Se a camada de elementos j&aacute; existir, ser-lhe-&aacute; pedido que forne&ccedil;a outro nome. A camada de elementos conter&aacute; uma camada para cada um dos seguintes: rotas, paragens designadas e paragens n&atilde;o designadas, no caso de algumas paragens introduzidas n&atilde;o poderem ser atribu&iacute;das a quaisquer rotas.
             </p>
-            <p>Caso selecione  <b>Incluir camadas de rotas</b>, cada rota do resultado ser&aacute; tamb&eacute;m guardada como camada de rota. Uma camada de rota inclui todas as informa&ccedil;&otilde;es referentes a uma rota em particular, como as paragens designadas para a rota, bem como as dire&ccedil;&otilde;es de viagem. Criar camadas de rotas &eacute; &uacute;til caso pretenda partilhar as rotas individuais com outros membros da sua organiza&ccedil;&atilde;o ou caso pretenda aplicar mais modifica&ccedil;&otilde;es &agrave;s rotas utilizando o bot&atilde;o <b>Dire&ccedil;&otilde;es</b> no visualizador de mapas.  As camadas de rotas utilizam o nome introduzido para a camada de elementos como prefixo e o nome da rota gerada como parte da an&aacute;lise &eacute; adicionado para criar um nome &uacute;nico para cada camada de rotas.
+            <p>Caso selecione  <b>Incluir camadas de rotas</b>, cada rota do resultado ser&aacute; tamb&eacute;m guardada como camada de rota. Uma camada de rota inclui todas as informa&ccedil;&otilde;es de uma rota espec&iacute;fica, tais como as paragens atribu&iacute;das &agrave; rota, assim como, as dire&ccedil;&otilde;es do percurso. Criar camadas de rotas &eacute; &uacute;til caso pretenda partilhar as rotas individuais com outros membros da sua organiza&ccedil;&atilde;o ou para aplicar modifica&ccedil;&otilde;es adicionais &agrave;s rotas utilizando o bot&atilde;o <b>Dire&ccedil;&otilde;es</b> no visualizador de mapas. As camadas de rotas utilizam o nome introduzido para a camada de elementos como prefixo e o nome da rota gerada como parte da an&aacute;lise, que &eacute; adicionado para criar um nome &uacute;nico para cada camada de rotas.
             </p>
-            <p>Ao utilizar a lista pendente  <b>Guardar resultado em</b> , pode especificar o nome de uma pasta em <b>O Meu Conte&uacute;do</b> onde a camada de elementos e as camadas de rotas, caso sejam criadas, ser&atilde;o guardadas.
+            <p>Ao utilizar o menu pendente  <b>Guardar resultado em</b>, pode especificar o nome de uma pasta em <b>O Meu Conte&uacute;do</b> onde a camada de elementos e as camadas de rotas, caso sejam criadas, ser&atilde;o guardadas.
             </p>
         </div>
     </div>

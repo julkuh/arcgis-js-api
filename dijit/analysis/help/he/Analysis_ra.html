@@ -41,61 +41,63 @@
 <body onload="init()">
 <div id="topics">
     <div id="raToolbox">
-        <p>Raster analysis allows you to perform analysis of large raster datasets using the  ArcGIS Image Server. This allows you to analyze more data faster by harnessing the power of the server. The toolsets currently available through the  Portal for ArcGIS web user experience are  <b>Summarize Data</b>, <b>Analyze Patterns</b>, <b>Analyze Image</b>, <b>Analyze Terrain</b>, and <b>Manage Data</b>.
+        <p>ניתוח רסטר מאפשר לך לבצע ניתוח של סטי נתוני רסטר גדולים תוך שימוש ב- ArcGIS Image Server. הדבר מאפשר לך לנתח יותר נתונים מהר יותר על ידי ניצול העוצמה של השרת.ערכות הכלים שזמינות כעת דרך חוויית השימוש באינטרנט Portal for ArcGIS הן  <b>סיכום נתונים</b>, <b>ניתוח דפוסים</b>, <b>שימוש בקרבה</b>, <b>ניתוח תמונה</b>, <b>ניתוח פני שטח</b>, <b>ניהול נתונים</b>, <b>למידה עמוקה</b> ו <b>ניתוח רב-ממדי</b>.
         </p>
     </div>
     <div id="SummarizeDataCategory" class="smallsize">
-        <h2>Summarize Data</h2>
+        <h2>סיכום נתונים</h2>
         <hr/>
-        <p>This toolset contains a tool for calculating some statistics for a raster layer within area boundaries that you define.
-
+        <p>כלים אלה משמשים לחישוב נתונים סטטיסטיים עבור שכבת רסטר בתוך גבולות אזור (אזורים) שאתה מגדיר.
             <ul>
-                <li> <b>Summarize Raster Within</b> calculates statistics for raster cells that fall within defined area boundaries.
+                <li> <b>סכם רסטר בתוך</b> מחשב נתונים סטטיסטיים עבור תאי רסטר שנמצאים בתוך גבולות אזור מוגדר.
+                </li>
+                <li> <b>סטטיסטיקה אזורית כטבלה</b> מסכם את הערכים של רסטר בתוך האזורים של סט נתונים אחר ומדווח על התוצאות לטבלה.
                 </li>
             </ul>
             
         </p>
     </div>
-        <div id="SummarizeRasterWithinTool" class="largesize">
+        <div id="SummarizeRasterWithinTool" class="smallsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Summarize Raster Within</h2></td>
+                    <td><h2>סכם רסטר בתוך</h2></td>
                     <td>
-                    <img src="../images/GUID-D61C156C-2B2C-488C-BF28-B6CB9277BF4B-web.png" class="titleImage" alt="Summarize Raster Within tool">
+                    <img src="../images/GUID-D61C156C-2B2C-488C-BF28-B6CB9277BF4B-web.png" class="titleImage" alt="כלי 'סכם רסטר בתוך'">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Calculates some summary statistics for raster cells within defined areas.
+            <p>כלי זה מסכם את הערכים של רסטר באזורים של סט נתונים אחר.
             </p>
-            <p>Some example applications are the following: 
-
-                <ul>
-                    <li>Given a layer of watershed areas and an elevation raster layer, calculate the range of elevations within each watershed in order to determine which ones will have the highest energy streamflow.
-                        
-
-                    </li>
-                    <li>Given a layer of administrative management units and a raster layer of land-use categories, calculate the variety of land-use values within each management area to identify which ones require the most work to determine a management plan.
-                        
-
-                    </li>
-                </ul>
-                
+            <br/>
+        </div>
+        <div id="ZonalStatisticsAsTableTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>סטטיסטיקה אזורית כטבלה</h2></td>
+                    <td>
+                    <img src="../images/GUID-2847466F-BF22-4545-BDCE-7EB7B1D15F2D-web.png" class="titleImage" alt="סטטיסטיקה אזורית כתרשים טבלה">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>כלי זה מסכם את הערכים של הרסטר בתוך האזורים של סט נתונים אחר ומדווח על התוצאות לטבלה.
             </p>
             <br/>
         </div>
     <div id="AnalyzePatternsCategory" class="smallsize">
-        <h2>Analyze Patterns</h2>
+        <h2>ניתוח דפוסים</h2>
         <hr/>
-        <p>These tools help you identify, quantify, and visualize spatial patterns in your data. 
+        <p>כלים אלה עוזרים לזהות, לכמת ולהציג דפוסים מרחביים בנתונים. 
 
             <ul>
-                <li> <b>Calculate Density</b> takes known quantities of some phenomenon and creates a density map by spreading these quantities across the map.
+                <li> <b>חשב צפיפות</b> יוצר מפת צפיפות מישויות נקודה, על ידי פיזור כמויות ידועות של תופעה מסוימת על פני המפה.
                     
 
                 </li>
-                <li> <b>Interpolate Points</b> predicts values at new locations based on measurements found in a collection of points.
+                <li> <b>בצע אינטרפולציה לנקודות</b> צופה ערכים במיקומים חדשים בהתבסס על מדידות שנמצאו באוסף של נקודות.
                     
 
                 </li>
@@ -107,14 +109,14 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Calculate Density</h2></td>
+                    <td><h2>חשב צפיפות</h2></td>
                     <td>
-                    <img src="../images/GUID-4EE4838C-E210-43CE-99C7-1A648A18C10B-web.png" class="titleImage" alt="Calculate Density tool">
+                    <img src="../images/GUID-4EE4838C-E210-43CE-99C7-1A648A18C10B-web.png" class="titleImage" alt="כלי חישוב צפיפות">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Density analysis takes known quantities of some phenomenon and creates a density map by spreading these quantities across the map. You can use this tool, for example, to show concentrations of lightning strikes or tornadoes, access to health care facilities, and population densities.
+            <p>ניתוח צפיפות לוקח כמויות ידועות של תופעה מסוימת ויוצר מפת צפיפות על ידי פיזור כמויות אלה על פני המפה. באפשרותך להשתמש בכלי זה, לדוגמה, כדי להציג ריכוזים של פגיעות ברק או סופות טורנדו, גישה למתקנים רפואיים וצפיפויות אוכלוסין.
             </p>
             <br/>
         </div>
@@ -122,24 +124,182 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Interpolate Points</h2></td>
+                    <td><h2>בצע אינטרפולציה לנקודות</h2></td>
                     <td>
-                    <img src="../images/GUID-06D80BB3-7154-4FAA-9C9B-D665450EF3BC-web.png" class="titleImage" alt="Interpolate Points tool">
+                    <img src="../images/GUID-06D80BB3-7154-4FAA-9C9B-D665450EF3BC-web.png" class="titleImage" alt="כלי 'בצע אינטרפולציה לנקודות'">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>This tool allows you to predict values at new locations based on measurements found in a collection of points. The tool takes point data with values at each point and returns areas classified by predicted values. You can use this tool, for example, to predict rainfall levels across a watershed based on measurements taken at individual rain gauges.
+            <p>כלי זה מאפשרת לחזות ערכים במיקומים חדשים בהתבסס על מדידות שנמצאו באוסף של נקודות. הכלי נוטל נתוני נקודות עם ערכים בכל נקודה ומחזיר אזורים שמסווגים על ידי ערכים חזויים. ניתן להשתמש בכלי זה, לדוגמה, כדי לחזות מפלסי משקעים על פני קו פרשת מים בהתבסס על מדידות שנלקחו במודדי משקעים בודדים.
+            </p>
+            <br/>
+        </div>
+    <div id="UseProximityCategory" class="largesize">
+        <h2>שימוש בסמיכות</h2>
+        <hr/>
+        <p>כלים אלה עוזרים לענות על כמה מהשאלות הנפוצות ביותר בניתוח מרחבי: מה נמצא ליד מה? ומה הנתיב המיטבי ביותר?
+            <ul>
+                <li> <b>חשב מרחק</b> מחשב את המרחק האוקלידי, הכיוון וההקצאה ממקור יחיד או מקבוצת מקורות.
+                    
+
+                </li>
+                <li> <b>קבע רשת עלויות נסיעה מיטבית</b> מחשב את רשת העלות המיטבית מקבוצה של אזורי קלט.
+                    
+
+                </li>
+                <li> <b>קבע מסלול עלות נסיעה בתור פולי קו</b> מחשב את נתיב הפולי-קו עם העלות הנמוכה ביותר בין יעדים ידועים למקורות.
+                    
+
+                </li>
+                <li> <b>צבירת מרחק</b> מחשב את המרחק המצטבר עבור כל תא למקורות, ומאפשר מרחק בקו ישר, מרחק עלות ומרחק פני שטח אמיתי וכן גורמים אנכיים ואופקיים.
+                    
+
+                </li>
+                <li> <b>הקצאת מרחק</b> מחשב הקצאת מרחק עבור כל תא למקורות שצוינו, על בסיס מרחק בקו ישר, מרחק עלות ומרחק פני שטח אמיתי וכן גורמים אנכיים ואופקיים.
+                    
+
+                </li>
+                <li> <b>נתיב מיטבי בתור קו</b> מחשב את הנתיב המיטבי מיעדים למקורות כקו.
+                    
+
+                </li>
+                <li> <b>נתיב מיטבי בתור רסטר</b> מחשב את הניתב המיטבי מיעדים למקורות כרסטר.
+                    
+
+                </li>
+                <li> <b>חיבורי אזור מיטביים</b> מחשב את רשת הקישוריות המיטבית בין שני אזורי קלט או יותר.
+                </li>
+            </ul>
+            
+        </p>
+    </div>
+        <div id="CalculateDistanceTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>חשב מרחק</h2></td>
+                    <td>
+                    <img src="../images/GUID-34E2E6F3-2F60-43F5-B499-D5735DE08602-web.png" class="titleImage" alt="חשב מרחק">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>כלי זה מחשב מרחק אוקלידי, כיוון והקצאה ממקור אחד או מקבוצת מקורות.
+            </p>
+            <br/>
+        </div>
+        <div id="DetermineOptimumTravelCostNetworkTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>קבע רשת עלויות נסיעה מיטבית</h2></td>
+                    <td>
+                    <img src="../images/GUID-097BDD6E-0AD8-44F2-BB70-C5395F4B1AF4-web.png" class="titleImage" alt="איור של הכלי 'קבע רשת עלויות נסיעה מיטבית">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>כלי זה מחשב את רשת העלות המיטבית מקבוצה של אזורי קלט.
+            </p>
+            <br/>
+        </div>
+        <div id="DetermineTravelCostPathAsPolylineTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>קבע מסלול עלות נסיעה בתור קו</h2></td>
+                    <td>
+                    <img src="../images/GUID-9A27DEB7-0276-483C-A12F-3E70D636550D-web.png" class="titleImage" alt="איור הכלי 'קבע מסלול עלות הנסיעה בתור קו'">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>כלי זה מחשב את נתיב הפולי-קו עם העלות הנמוכה ביותר בין יעדים ומקורות.
+            </p>
+            <br/>
+        </div>
+        <div id="DistanceAccumulationTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>הצטברות מרחק</h2></td>
+                    <td>
+                    <img src="../images/GUID-758B6DFA-6820-45B8-8089-5A2B7AB20A0D-web.png" class="titleImage" alt="איור של הכלי 'הצטברות מרחק'">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>כלי זה מחשב מחשב את המרחק המצטבר עבור כל תא למקורות, ומאפשר מרחק בקו ישר, מרחק עלות, מרחק פני שטח אמיתי וגורמים אנכיים ואופקיים.
+            </p>
+            <br/>
+        </div>
+        <div id="DistanceAllocationTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>הקצאת מרחק</h2></td>
+                    <td>
+                    <img src="../images/GUID-2843B88C-B69A-43FB-A93B-B8D7ABCF95EA-web.png" class="titleImage" alt="איור של הכלי 'הקצאת מרחק'">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>כלי זה מחשב הקצאת מרחק עבור כל תא למקורות שצוינו, על בסיס מרחק בקו ישר, מרחק עלות, מרחק פני שטח אמיתי וגורמים אנכיים ואופקיים.
+            </p>
+            <br/>
+        </div>
+        <div id="OptimalPathAsLineTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>נתיב מיטבי בתור קו</h2></td>
+                    <td>
+                    <img src="../images/GUID-754B49AB-28D7-4758-A24C-5C67339666BA-web.png" class="titleImage" alt="איור של כלי 'נתיב מיטבי בתור קו'">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>כלי זה מחשב את הנתיב המיטבי מיעדים למקורות כקו.
+            </p>
+            <br/>
+        </div>
+        <div id="OptimalPathAsRasterTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>נתיב מיטבי בתור רסטר</h2></td>
+                    <td>
+                    <img src="../images/GUID-75C94369-AAAA-4556-8F89-9B6AA39012C9-web.png" class="titleImage" alt="איור של כלי 'נתיב מיטבי בתור רסטר'">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>כלי זה מחשב את הניתב המיטבי מיעדים למקורות כרסטר.
+            </p>
+            <br/>
+        </div>
+        <div id="OptimalRegionConnectionsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>חיבורי אזור מיטביים</h2></td>
+                    <td>
+                    <img src="../images/GUID-85027C62-D35A-428B-B050-4F52D2B4ADE4-web.png" class="titleImage" alt="איור של הכלי 'חיבורי אזור מיטביים'">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>כלי זה מחשב את רשת הקישוריות המיטבית בין שני אזורי קלט או יותר.
             </p>
             <br/>
         </div>
     <div id="AnalyzeImageCategory" class="smallsize">
-        <h2>Analyze Image</h2>
+        <h2>נתח תמונה</h2>
         <hr/>
-        <p>The following tool helps you analyze images to determine areas with vegetation.
-
+        <p>הכלי הבא בקטגוריית הכלים  <b>ניתוח תמונה</b> עוזר לך לנתח תמונות:
             <ul>
-                <li> <b>Monitor Vegetation</b> detects vegetation within an image, based on arithmetic operations on the bands.
+                <li> <b>ניטור צמחייה</b> מזהה כיסוי צמחייה יחסי בתמונה, על בסיס פעולות חישוב על ערוצים. קיימים מספר מדדי צמחייה עבור ניתוח תמונה.
                     
 
                 </li>
@@ -147,36 +307,39 @@
             
         </p>
     </div>
-        <div id="MonitorVegetationTool" class="regularsize">
+        <div id="MonitorVegetationTool" class="smallsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Monitor Vegetation</h2></td>
+                    <td><h2>ניטור צמחייה</h2></td>
                     <td>
-                    <img src="../images/GUID-7763FCC0-2EA1-463B-98D0-4EBDF6150907-web.png" class="titleImage" alt="Monitor Vegetation tool for Portal">
+                    <img src="../images/GUID-7763FCC0-2EA1-463B-98D0-4EBDF6150907-web.png" class="titleImage" alt="כלי ניטור צמחייה עבור פורטל">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Performs an arithmetic operation on the bands of a multiband raster layer to reveal vegetation coverage information of the study area.
+            <p>מבצע פעולת חישוב על הערוצים של שכבת רסטר מרובה-ערוצים כדי לחשוף מידע על כיסוי צמחייה.
             </p>
             <br/>
         </div>
-    <div id="AnalyzeTerrainCategory" class="smallsize">
-        <h2>Analyze Terrain</h2>
+    <div id="AnalyzeTerrainCategory" class="regularsize">
+        <h2>נתח פני שטח</h2>
         <hr/>
-        <p>These tools help you analyze raster surfaces.
-
+        <p>כלים אלה עוזרים לך לנתח משטח רסטר. 
             <ul>
-                <li> <b>Calculate Slope</b> calculates the steepness of terrain.
+                <li> <b>חישוב שיפוע</b> מחשב את התלילות של קרקע.
                     
 
                 </li>
-                <li> <b>Derive Aspect</b> calculates the direction of steepest slope for each location.
+                <li> <b>גזירת מפנה</b> מחשב את הכיוון של השיפוע התלול ביותר עבור כל מיקום.
                     
 
                 </li>
-                <li> <b>Create Viewshed</b> identifies what can be seen from any point on the landscape.
+                <li> <b>צור שטח נצפה</b> מזהה מה ניתן לראות מכל נקודה בנוף.
+                    
+
+                </li>
+                <li> <b>קו פרשת מים</b> מחשב את האזור התורם מעל מיקום/ים מזוהה/ים על משטח.
                     
 
                 </li>
@@ -184,33 +347,33 @@
             
         </p>
     </div>
-        <div id="CalculateSlopeTool" class="regularsize">
+        <div id="CalculateSlopeTool" class="smallsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Calculate Slope</h2></td>
+                    <td><h2>חישוב שיפוע</h2></td>
                     <td>
-                    <img src="../images/GUID-D33862C6-01BB-445E-B0C3-BC8B8C1858DA-web.png" class="titleImage" alt="Calculate Slope tool for Portal">
+                    <img src="../images/GUID-D33862C6-01BB-445E-B0C3-BC8B8C1858DA-web.png" class="titleImage" alt="כלי חישוב שיפוע עבור פורטל">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Identifies a surface that shows the slope of the input elevation data. Slope represents the rate of change of elevation for each digital elevation model (DEM) cell.
+            <p>מזהה פני שטח שמראים את השיפוע של נתוני גובה של הקלט. השיפוע מייצג את שיעור השינוי בגובה לכל תא במודל הגובה הדיגיטלי (DEM).
             </p>
             <br/>
         </div>
-        <div id="DeriveAspectTool" class="regularsize">
+        <div id="DeriveAspectTool" class="smallsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Derive Aspect</h2></td>
+                    <td><h2>גזירת מפנה</h2></td>
                     <td>
-                    <img src="../images/GUID-D03FF025-0530-4D0D-87A3-B25D6716F8F0-web.png" class="titleImage" alt="Derive Aspect tool for Portal">
+                    <img src="../images/GUID-D03FF025-0530-4D0D-87A3-B25D6716F8F0-web.png" class="titleImage" alt="כלי גזירת מפנה עבור פורטל">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Identifies the downslope direction of the maximum rate of change in value from each cell to its neighbors. Aspect can be thought of as the slope direction.
+            <p>מזהה את כיוון השיפוע של שינוי בערך, בהיקף המקסימלי, בכל תא ביחס לתאים הסמוכים לו אפשר לחשוב על היבט כעל כיוון השיפוע.
             </p>
             <br/>
         </div>
@@ -218,38 +381,54 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Create Viewshed</h2></td>
+                    <td><h2>צור שטחים נצפים</h2></td>
                     <td>
-                    <img src="../images/GUID-BB8B8CAF-330E-4C41-9D94-AF4728D0D0F3-web.png" class="titleImage" alt="Create Viewshed tool">
+                    <img src="../images/GUID-BB8B8CAF-330E-4C41-9D94-AF4728D0D0F3-web.png" class="titleImage" alt="כלי יצירת שטחים נצפים">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Determines the locations on a raster surface that are visible to a set of observers.
+            <p>קובע את המיקומים על משטח רסטר שנראים לסט של צופים.
+            </p>
+            <br/>
+        </div>
+        <div id="WatershedTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Watershed</h2></td>
+                    <td>
+                    <img src="../images/GUID-AF749369-8C2D-46FF-9D74-2CF7CAB7C7B0-web.png" class="titleImage" alt="משימת קו פרשת מים">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>קובע מהו האזור הרלוונטי מעל לסט תאים ברסטר.
             </p>
             <br/>
         </div>
     <div id="ManageDataCategory" class="regularsize">
-        <h2>Manage Data</h2>
+        <h2>נהל נתונים</h2>
         <hr/>
-        <p>These tools are used for both the day-to-day management of geographic data and for combining data prior to analysis.
-
+        <p>כלים אלה משמשים הן עבור הניהול היום-יומי של נתונים גאוגרפיים והן עבור שילוב נתונים לפני ניתוח. 
             <ul>
-                <li> <b>Extract Raster</b> clips out portions from a raster dataset for further analysis.
+                <li> <b>חילוץ רסטר</b> חותך החוצה חלקים מסט נתוני רסטר לצורך ניתוח נוסף.
                     
 
                 </li>
-                <li> <b>Remap Values</b> assigns different values to raster cells.
+                <li> <b>מיפוי ערכים מחדש</b> מקצה ערכים שונים לתאי רסטר.
                     
 
                 </li>
-                <li> <b>Convert Feature to Raster</b> rasterizes vector data.
+                <li> <b>המר ישות לרסטר</b> משנה את הגודל של נתוני רסטר.
                     
 
                 </li>
-                <li> <b>Convert Raster to Feature</b> vectorizes raster data.
+                <li> <b>המר רסטר לישות</b> מבצע ווקטוריזציה לנתוני רסטר.
                     
 
+                </li>
+                <li> <b>דוגמה</b> מחלץ נתונים במיקומים מוגדרים מהרסטר, או ערכת הרסטרים.
                 </li>
             </ul>
             
@@ -259,14 +438,14 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Extract Raster</h2></td>
+                    <td><h2>חילוץ רסטר</h2></td>
                     <td>
-                    <img src="../images/GUID-DC9CBCB9-A07C-42D3-A0CB-2FB1483CBF4C-web.png" class="titleImage" alt="Extract Raster tool for Portal">
+                    <img src="../images/GUID-DC9CBCB9-A07C-42D3-A0CB-2FB1483CBF4C-web.png" class="titleImage" alt="כלי חילוץ&nbsp;רסטר עבור פורטל">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Extract cells from a raster based on value, shape, or the extent of a different dataset.
+            <p>חלץ תאים מרסטר על בסיס ערך, צורה או התיחום של סט נתונים שונה.
             </p>
             <br/>
         </div>
@@ -274,14 +453,14 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Remap Values</h2></td>
+                    <td><h2>מיפוי ערכים מחדש</h2></td>
                     <td>
-                    <img src="../images/GUID-4006E442-A60B-469A-891D-5ED442F64CB8-web.png" class="titleImage" alt="Remap Values tool for Portal">
+                    <img src="../images/GUID-4006E442-A60B-469A-891D-5ED442F64CB8-web.png" class="titleImage" alt="כלי מיפוי ערכים מחדש עבור פורטל">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Change the individual or ranges of cell values to new values.
+            <p>שנה את הערכים של תאים בודדים או של טווח תאים לערכים חדשים.
             </p>
             <br/>
         </div>
@@ -289,14 +468,14 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Convert Feature to  Raster</h2></td>
+                    <td><h2>המר ישות לרסטר</h2></td>
                     <td>
-                    <img src="../images/GUID-FC535A9C-A946-419A-9A85-95EB31E4D3A0-web.png" class="titleImage" alt="Convert Feature to Raster tool">
+                    <img src="../images/GUID-FC535A9C-A946-419A-9A85-95EB31E4D3A0-web.png" class="titleImage" alt="כלי 'המר ישות לרסטר'">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Create a new raster dataset from an existing feature dataset.
+            <p>צור סט נתוני רסטר חדש מסט נתוני ישות קיימת.
             </p>
             <br/>
         </div>
@@ -304,14 +483,187 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Convert Raster to Feature</h2></td>
+                    <td><h2>המר רסטר לישות</h2></td>
                     <td>
-                    <img src="../images/GUID-7BBBCE28-2FDA-46B8-99D7-65F560AB2F2B-web.png" class="titleImage" alt="Convert Raster to Feature tool">
+                    <img src="../images/GUID-7BBBCE28-2FDA-46B8-99D7-65F560AB2F2B-web.png" class="titleImage" alt="הכלי 'המר רסטר לישות'">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Create a new feature dataset from an existing raster dataset.
+            <p>צור סט נתוני ישויות חדש מסט נתוני רסטר קיים.
+            </p>
+            <br/>
+        </div>
+        <div id="SampleTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>דוגמה</h2></td>
+                    <td>
+                    <img src="../images/GUID-3950CCA3-C1D0-493F-A33D-93673443ADD2-web.png" class="titleImage" alt="דוגמה">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>יוצר טבלה או קבוצת ישויות נקודה עם ערכי נתונים במיקומים מוגדרים שחולצו מרסטר או מערכת רסטרים.
+            </p>
+            <br/>
+        </div>
+    <div id="DeepLearningCategory" class="regularsize">
+        <h2>למידה עמוקה (Deep Learning)</h2>
+        <hr/>
+        <p>כלים אלה משמשים לזיהוי או לסיווג של ישויות ספציפיות בתמונה או לסיווג פיקסלים בסט נתוני רסטר. למידה עמוקה (Deep Learning) היא סוג של שיטת למידת מכונה בבינה מלאכותית אשר מזהה ישויות בתמונה באמצעות שכבות מרובות ברשתות ניטרליות שבהן כל שכבה מסוגלת לחלץ ישות אחת או יותר בתמונה. כלים אלה צורכים את המודלים שאומנו לזהות ישויות ספציפיות במסגרות למידה עמוקה של צד שלישי - כגון TensorFlow&rlm;, CNTK ו-Keras - וישויות פלט או מפות מחלקה.
+            <ul>
+                <li> <b>סיווג פיקסלים באמצעות למידה עמוקה</b> יוצר רסטר מסווג תוך שימוש במודל למידה עמוקה מאומן.
+                </li>
+                <li> <b>זיהוי אובייקטים באמצעות למידה עמוקה</b> מפיק קבוצת ישויות שמכילה אובייקטים שנמצאו ברסטר קלט באמצעות מודל למידה עמוקה מאומן.
+                </li>
+                <li> <b>סיווג אובייקטים באמצעות למידה עמוקה</b> מפיק קבוצת ישויות או טבלה שבה לכל אובייקט קלט ברסטר קלט מוקצית תווית קבוצה תוך שימוש במודל למידה עמוקה מאומן.
+                </li>
+            </ul>
+            
+        </p>
+    </div>
+        <div id="ClassifyPixelsUsingDeepLearningTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>סווג פיקסלים באמצעות למידה לעומק</h2></td>
+                    <td>
+                    <img src="../images/GUID-88BE63A6-B06C-4C61-9AB1-8DA5A08C6783-web.png" class="titleImage" alt="סווג פיקסלים באמצעות למידה לעומק">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>כלי זה מריץ מודל למידה לעומק מאומן על רסטר קלט כדי להפיק רסטר מסווג, ולכל פיקסל תקף יש תווית מחלקה משויכת.
+            </p>
+            <br/>
+        </div>
+        <div id="DetectObjectsUsingDeepLearningTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>מזהה אובייקטים באמצעות למידה לעומק</h2></td>
+                    <td>
+                    <img src="../images/GUID-EE76A33E-0B8F-48EE-94F8-782FAD241D72-web.png" class="titleImage" alt="מזהה אובייקטים באמצעות למידה לעומק">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>כלי זה מריץ מודל למידה לעומק מאומן על רסטר קלט כדי להפיק קבוצת ישויות שמכילה את האובייקטים שנמצאו. הישויות יכולות להיות מלבנים תוחמים או פוליגונים סביב האובייקטים שנמצאו, או נקודות במרכזים של האובייקטים.
+            </p>
+            <br/>
+        </div>
+        <div id="ClassifyObjectsUsingDeepLearningTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>סווג אובייקטים באמצעות למידה עמוקה</h2></td>
+                    <td>
+                    <img src="../images/GUID-F31B4A21-3E5C-4667-B66B-155CC35CD62B-web.png" class="titleImage" alt="סווג אובייקטים באמצעות למידה עמוקה">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>כלי זה מריץ מודל למידה לעומק מאומן על רסטר קלט וקבוצת ישויות אופציונלית כדי להפיק קבוצת ישויות או טבלה שבה כל לכל אובייקט קלט יש תווית קבוצה משויכת.
+            </p>
+            <br/>
+        </div>
+    <div id="MultidimensionalAnalysisCategory" class="largesize">
+        <h2>ניתוח רב-ממדי</h2>
+        <hr/>
+        <p>הכלים בערכת הכלים 'ניתוח רב-ממדי' מאפשרים לך לבצע ניתוח של נתונים מדעיים על פני משתנים וממדים מרובים.
+        </p>
+        <p>נתונים מרובי-ממדים מייצגים נתונים שנלכדו במגוון של זמנים, עומקים וגבהים. סוג נתונים זה בדרך משמש במדעי האטמוספרה, האוקיינוסים וכדור הארץ. עם ערכת כלים זו, באפשרותך לנתח נתוני רסטר מרובי-ממדים בתבניות שונות, כולל netCDF&rlm;, HDF&rlm;, GRIB, סט נתוני המוזאיקה הרב-ממדיים ו-Cloud Raster Format &rlm;(CRF) של Esri.
+        </p>
+        <p>טבלה הבאה מפרטתת את כלי הניתוח הרב-ממדי ומספקת תיאור קצר של כל אחד מהם.
+            <ul>
+                <li> <b>צבירת רסטר רב-ממדי</b> מפיק סט נתוני רסטר מרובי-ממדים על ידי צבירת משתני רסטר מרובי-ממדים קיימים לאורך ממד.
+                </li>
+                <li> <b>הפק אנומליה רב-ממדית</b> מחשב את האנומליה עבור כל פלח ברסטר רב-ממדי כדי להפיק רסטר רב-ממדי.
+                </li>
+                <li> <b>צור רסטר מגמה</b> מעריך את המגמות עבור כל פיקסל לאורך ממד עבור משתנה אחד או יותר ברסטר רב-ממדי.
+                </li>
+                <li> <b>חיזוי באמצעות רסטר מגמה</b> מחשב רסטר רב-ממדי חזוי תוך שימוש ברסטר המגמה של הפלט מהכלי <b>צור קו מגמה</b>.
+                </li>
+                <li> <b>מצא סטטיסטיקות של ארגומנט</b> מחלץ את ערך הממד או אינדקס הערוץ שבו סטטיסטיקה נתונה מושגת עבור כל פקסל ברסטר רב-ממדי או רב-ערוצי.
+                </li>
+            </ul>
+            
+        </p>
+    </div>
+        <div id="AggregateMultidimensionalRasterTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>צבירת רסטר רב-ממדי</h2></td>
+                    <td>
+                    <img src="../images/GUID-2C2320A3-EC6E-4FFC-B59B-9551BB02C545-web.png" class="titleImage" alt="צבירת רסטר רב-ממדי">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>הכלי מפיק סט נתוני רסטר מרובי-ממדים על ידי צבירת משתני רסטר מרובי-ממדים קיימים לאורך ממד.
+            </p>
+            <br/>
+        </div>
+        <div id="FindArgumentStatisticsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>מצב סטטיסטיקות של ארגומנט</h2></td>
+                    <td>
+                    <img src="../images/GUID-6DE9D49F-C9CA-48B8-B14F-C8EF05FBFA42-web.png" class="titleImage" alt="מצב סטטיסטיקות של ארגומנט">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>כלי זה מחלץ את ערך הממד או אינדקס הערוץ שבו סטטיסטיקה נתונה מושגת עבור כל פקסל ברסטר רב-ממדי או רב-ערוצי.
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateMultidimensionalAnomalyTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>הפק אנומליה רב-ממדית</h2></td>
+                    <td>
+                    <img src="../images/GUID-8D54C66F-5C16-4EE5-93E9-80722D10AF12-web.png" class="titleImage" alt="הפק אנומליה רב-ממדית">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>כלי זה מחשב מחשב את האנומליה עבור כל פלח ברסטר רב-ממדי כדי להפיק רסטר רב-ממדי.
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateTrendRasterTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>הפק רסטר מגמה</h2></td>
+                    <td>
+                    <img src="../images/GUID-A95F821A-8CAF-45F3-93E5-14BDF5DA0BCD-web.png" class="titleImage" alt="הפק רסטר מגמה">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>כלי זה אומד את המגמה עבור כל פיקסל לאורך ממד עבור משתנה אחד או יותר ברסטר רב-ממדי.
+            </p>
+            <br/>
+        </div>
+        <div id="PredictUsingTrendRasterTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>חיזוי באמצעות רסטר קו מגמה</h2></td>
+                    <td>
+                    <img src="../images/GUID-E3758820-51A9-46DE-AAF6-E27B68DE4012-web.png" class="titleImage" alt="חיזוי באמצעות רסטר קו מגמה">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>כלי זה מחשב רסטר רב-ממדי חזוי תוך שימוש ברסטר המגמה של הפלט מהכלי  <b>צור קו מגמה</b>.
             </p>
             <br/>
         </div>

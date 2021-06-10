@@ -1,0 +1,51 @@
+
+
+
+
+.esriGEToggleButton {
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 32px;
+    height: 16px;
+    cursor: pointer;
+}
+
+    .esriGEToggleButton.disabled {
+        cursor: default;
+    }
+
+    
+
+    .esriGEToggleButton.toggle.unchecked {
+        background-image: url("./images/toggle/toggleOff.svg");
+    }
+
+        .esriGEToggleButton.toggle.unchecked.disabled {
+            background-image: url("./images/toggle/toggleOffDisabled.svg");
+        }
+
+    .esriGEToggleButton.toggle.checked {
+        background-image: url("./images/toggle/toggleOn.svg");
+    }
+
+        .esriGEToggleButton.toggle.checked.disabled {
+            background-image: url("./images/toggle/toggleOnDisabled.svg");
+        }
+
+    
+
+    .esriGEToggleButton.switch.unchecked {
+        background-image: url("./images/toggle/toggleOffDark.svg");
+    }
+
+        .esriGEToggleButton.switch.unchecked.disabled {
+            background-image: url("./images/toggle/toggleOffDarkDisabled.svg");
+        }
+
+    .esriGEToggleButton.switch.checked {
+        background-image: url("./images/toggle/toggleOn.svg");
+    }
+
+        .esriGEToggleButton.switch.checked.disabled {
+            background-image: url("./images/toggle/toggleOnDisabled.svg");
+        }

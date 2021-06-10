@@ -44,7 +44,7 @@
         <h2>Grupiši tačke</h2><p/>
         <h2><img src="../images/GUID-60C59C66-3038-4D0E-8F6A-EC6C53FEAA02-web.png" alt="Aggregate Points"></h2>
         <hr/>
-    <p>Ova alatka radi sa slojem tačkastih geoobjekata i slojem geoobjekata oblasti. On prvo određuje koje tačke spadaju u svaku oblast. Nakon određivanja ove prostorne veze tačaka-u-oblasti, izračunava se statistika o svim tačkama u oblasti i vrednost se dodeljuje oblasti. Najosnovnija statistika jeste broj tačaka unutar oblasti, ali možete da dobijete i druge statističke podatke. 
+    <p>Ova alatka radi sa slojem tačkastih geoobjekata i slojem geoobjekata oblasti. On prvo određuje koje tačke spadaju u svaku oblast. Nakon određivanja ove prostorne veze tačaka-u-oblasti, izračunavaju se statistika o svim tačkama u oblasti i vrednost se dodeljuje oblasti. Najosnovnija statistika jeste broj tačaka unutar oblasti, ali možete da dobijete i druge statističke podatke. 
     </p>
     <p>Na primer, pretpostavimo da imate tačkaste geoobjekte lokacija kafeterija i geoobjekte oblasti okruga, a želite da sumirate prodaju kafe po okrugu. Pretpostavljajući da kafeterije imaju atribut  <i>TOTAL_SALES</i>, možete da dobijete zbir svih <i>TOTAL_SALES</i> unutar svakog okruga ili minimalnu i maksimalnu vrednost za <i>TOTAL_SALES</i>
 unutar svakog okruga ili standardnu devijaciju celokupne prodaje unutar svakog okruga.
@@ -59,7 +59,7 @@ unutar svakog okruga ili standardnu devijaciju celokupne prodaje unutar svakog o
         <div>
             <p>Tačkasti sloj koji će biti grupisan u oblasti.
             </p>
-            <p class="OnlineOnly">Pored izbora sloja sa mape, možete da izaberete  <b>Odaberite Living Atlas sloj za analizu</b> ili <b>Odaberite sloj za analizu</b> u dnu padajuće liste. Ovim se otvara galerija koja sadrži kolekciju slojeva korisnih za veliki broj analiza. 
+            <p>Pored biranja sloja sa mape, možete da selektujete  <b>Izaberi sloj za analizu</b> koji se nalazi na dnu padajuće liste. Ova opcija otvara galeriju gde možete da pregledate i birate skupove podataka iz raznih izvora za kori&scaron;ćenje u va&scaron;oj analizi. 
             </p>
         </div>
     </div>
@@ -67,9 +67,11 @@ unutar svakog okruga ili standardnu devijaciju celokupne prodaje unutar svakog o
         <div><h2>Odaberite sloj koji sadrži oblasti grupisanja</h2></div>
         <hr/>
         <div>
-            <p>Sloj oblasti u koji će tačke biti grupisane. Sve tačke koje padnu unutar granica oblasti u ovom sloju biće uračunate i opciono sumirane koristeći statistiku po va&scaron;em izboru.
+            <p>Sloj oblasti u koji će tačke biti grupisane. Sve tačke koje padnu unutar granica oblasti u ovom sloju biće uračunate i opciono sumirane koristeći statistiku po va&scaron;em izboru.  
             </p>
-            <p class="OnlineOnly">Pored izbora sloja sa mape, možete da izaberete  <b>Odaberite Living Atlas sloj za analizu</b> ili <b>Odaberite sloj za analizu</b> u dnu padajuće liste. Ovim se otvara galerija koja sadrži kolekciju slojeva korisnih za veliki broj analiza. 
+            <p>Možete da birate između sloja oblasti koji ćete vi obezbediti ili blokova koji se generi&scaron;u kada je pokrenut alat. Pri pravljenju blokova, za  <b>Kvadrat</b>, navedeni broj i jedinice određuju visinu i dužinu kvadrata. Za <b>&Scaron;estougao</b>, navedeni broj i jedinice određuju rastojanje između paralelnih stranica.
+            </p>
+            <p>Pored biranja sloja sa mape, možete da selektujete  <b>Izaberi sloj za analizu</b> koji se nalazi na dnu padajuće liste. Ova opcija otvara galeriju gde možete da pregledate i birate skupove podataka iz raznih izvora za kori&scaron;ćenje u va&scaron;oj analizi. 
             </p>
         </div>
     </div>
@@ -87,6 +89,8 @@ unutar svakog okruga ili standardnu devijaciju celokupne prodaje unutar svakog o
         <div>
             <p>Možete da izračunate statistiku o atributima ulaznog tačkastog sloja kao &scaron;to je zbir, srednja vrednost, minimum, maksimum i standardna devijacija. Sloj sa rezultatima sadržaće novi atribut za svaki izračunati statistički podatak. Možete da dodate bilo koji broj statističkih podataka tako &scaron;to ćete da odaberete atribut i statistiku (prikazaće se novo padajuće polje).
  
+            </p>
+            <p>Ako sloj za sumiranje nema nijedno numeričko polje, dodatna statistika neće biti dostupna.
             </p>
         </div>
     </div>
@@ -120,9 +124,9 @@ unutar svakog okruga ili standardnu devijaciju celokupne prodaje unutar svakog o
         <div><h2>Naziv sloja sa rezultatima</h2></div>
         <hr/>
         <div>
-            <p>Ovo je naziv sloja koji će biti kreiran u  <b>Mom sadržaju</b> i dodat na mapu. Podrazumevani naziv je zasnovan na nazivu alatke i nazivu ulaznog sloja. Ako sloj već postoji, bićete upitani da unesete drugi naziv.
+            <p>Naziv sloja koji će biti kreiran u opciji  <b>Moj sadržaj</b> i dodat mapi. Podrazumevani naziv je zasnovan na nazivu alatke i nazivu ulaznog sloja. Ako naziv sloja već postoji, bićete upitani da unesete drugi naziv.
             </p>
-            <p>Koristeći padajuće polje  <b>Sačuvaj rezultat u</b> možete da navedete ime fascikle u <b>Mom sadržaju</b> u kojoj će rezultat biti sačuvan.
+            <p>Koristeći padajući meni  <b>Sačuvaj rezultat u</b>, možete da navedete ime fascikle u <b>Mom sadržaju</b> u kojoj će rezultat biti sačuvan.
             </p>
         </div>
     </div>

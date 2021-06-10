@@ -45,17 +45,19 @@
         </p>
     </div>
     <div id="SummarizeDataCategory" class="regularsize">
-        <h2>데이터 요약</h2>
+        <h2>데이터 요약(Summarize Data)</h2>
         <hr/>
         <p>이러한 도구는 영역 내에 있거나 다른 피처 주변에 있는 피처와 해당 속성에 대한 총 개수, 길이, 면적, 설명이 포함된 기본 통계 등을 계산합니다.
             <ul>
-                <li> <b>포인트 집약</b> - 지정된 영역 내에 속한 포인트에 대한 통계를 계산합니다.
+                <li> <b>포인트 집계(Aggregate Points)</b> - 지정된 영역 내에 속한 포인트에 대한 통계를 계산합니다.
                 </li>
-                <li> <b>조인 피처</b> - 공간 및 속성 관계에 따라 하나의 레이어 또는 테이블에서 다른 레이어 또는 테이블까지 전송합니다.
+                <li> <b>조인 피처(Join Features)</b> - 공간 및 속성 관계에 따라 하나의 레이어 또는 테이블에서 다른 레이어 또는 테이블까지 전송합니다.
                 </li>
-                <li> <b>다음 주변 요약</b> - 지정된 거리 내에 있는 피처와 해당 속성에 대한 통계를 계산합니다.
+                <li> <b>다음 주변 요약(Summarize Nearby)</b> - 지정된 거리 내에 있는 피처와 해당 속성에 대한 통계를 계산합니다.
                 </li>
-                <li> <b>다음 범위 내 요약</b> - 서로 겹치는 영역 피처 및 속성에 대한 통계를 계산합니다.
+                <li> <b>다음 범위 내 요약(Summarize Within)</b> - 서로 겹치는 영역 피처 및 속성에 대한 통계를 계산합니다.
+                </li>
+                <li> <b>중심 및 분산 요약</b>은 중심 피처와 방향 분포를 계산합니다.
                 </li>
             </ul>
             
@@ -67,14 +69,14 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>포인트 집약(Aggregate Points)</h2></td>
+                    <td><h2>포인트 집계(Aggregate Points)</h2></td>
                     <td>
-                    <img src="../images/GUID-60C59C66-3038-4D0E-8F6A-EC6C53FEAA02-web.png" class="titleImage" alt="포인트 집약">
+                    <img src="../images/GUID-60C59C66-3038-4D0E-8F6A-EC6C53FEAA02-web.png" class="titleImage" alt="포인트 집계">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>이 도구는 포인트 피처 레이어 및 영역 피처 레이어를 사용하여 각 영역 내에 속한 포인트를 확인하고 각 영역 내의 모든 포인트에 대한 통계를 계산합니다. 예를 들면 다음과 같습니다.
+            <p>이 도구는 포인트 피처 레이어 및 영역 피처 레이어를 사용하여 각 영역 내에 속한 포인트를 확인하고 각 영역 내의 모든 포인트에 대한 통계를 계산합니다. 예시:
                 <ul>
                     <li>범죄 사건의 포인트 위치가 주어진 경우 도시별 또는 다른 행정 구역별 범죄 건수를 계산합니다.
                     </li>
@@ -96,13 +98,13 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>조인 피처는 공간 및 속성 관계에 따라 하나의 레이어 또는 테이블에서 다른 레이어 또는 테이블까지 전송합니다. 예를 들면 다음과 같습니다.
+            <p>조인 피처는 공간 및 속성 관계에 따라 하나의 레이어 또는 테이블에서 다른 레이어 또는 테이블까지 전송합니다. 예시:
                 <ul>
                     <li>공통 경계 또는 인구 통계 정보를 사건 데이터에 추가합니다.
                     </li>
                     <li>알려진 위치에 대한 가장 가까운 시설을 식별합니다.
                     </li>
-                    <li>홍수권 내에 있는 거주지 수를 파악합니다.
+                    <li>홍수 지역 내에 있는 거주지 수를 파악합니다.
                     </li>
                     <li>다양한 야생 생물 종의 일반 서식지를 확인합니다.
                     </li>
@@ -115,14 +117,14 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>주변 요약</h2></td>
+                    <td><h2>다음 주변 요약(Summarize Nearby)</h2></td>
                     <td>
-                    <img src="../images/GUID-A5033D27-81B6-42E7-BA38-50D25C1CCCCA-web.png" class="titleImage" alt="주변 요약">
+                    <img src="../images/GUID-A5033D27-81B6-42E7-BA38-50D25C1CCCCA-web.png" class="titleImage" alt="다음 주변 요약">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>입력 레이어의 피처로부터 지정된 거리 이내에 있는 피처를 찾습니다.   거리는 직선 거리 또는 이동 모드의 가능한 경로를 따라 측정될 수 있습니다. 그런 다음 주변 피처에 대한 통계가 계산됩니다. 예를 들면 다음과 같습니다.
+            <p>입력 레이어의 피처로부터 지정된 거리 이내에 있는 피처를 찾습니다.   거리는 직선 거리 또는 이동 모드의 가능한 경로를 따라 측정될 수 있습니다. 그런 다음 주변 피처에 대한 통계가 계산됩니다. 예시:
                 <ul>
                     <li>제안된 새 매장 위치에서 5분 이내에 있는 총 인구를 계산합니다.
                     </li>
@@ -137,18 +139,44 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>다음 범위 내 요약(Summarize Within)</h2></td>
+                    <td><h2>범위 내 요약</h2></td>
                     <td>
-                    <img src="../images/GUID-9B12DB3F-AA7B-41EB-87C6-D2DEC3D52DA9-web.png" class="titleImage" alt="다음 범위 내 요약">
+                    <img src="../images/GUID-9B12DB3F-AA7B-41EB-87C6-D2DEC3D52DA9-web.png" class="titleImage" alt="범위 내 요약">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>두 레이어 간에 겹치는 영역(및 영역의 일부)을 찾아서 해당 영역에 대한 통계를 계산합니다. 예를 들면 다음과 같습니다.
+            <p>두 레이어 간에 겹치는 영역(및 영역의 일부)을 찾아서 해당 영역에 대한 통계를 계산합니다. 예시:
                 <ul>
                     <li>하천 유역 레이어와 토지 이용 유형별 토지 이용 영역 레이어가 주어진 경우 각 하천 유역에 대한 토지 이용 유형의 총 면적을 계산합니다. 
                     </li>
                     <li>도시 내 필지 레이어와 도시 경계 레이어가 주어진 경우 각 도시 내의 공지에 대한 평균 지가를 요약합니다.
+                    </li>
+                </ul>
+                
+            </p>
+            <br/>
+        </div>
+        <div id="SummarizeCenterAndDispersionTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>중심 및 분산 요약</h2></td>
+                    <td>
+                    <img src="../images/GUID-D2D53CA4-8A35-4163-9765-77BF232E569D-web.png" class="titleImage" alt="중심 및 분산 요약">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>이 도구는 포인트 피처를 사용하여 중심 피처, 평균 중심, 중앙값 중심 또는 타원(분산)을 계산합니다. 예시:
+                <ul>
+                    <li>블록 그룹 중심의 레이어가 주어진 경우, 인구별 가중치가 적용되는 중심 피처를 사용하여 예술 센터 수행에 가장 접근하기 쉬운 마을을 식별할 수 있습니다.
+                    </li>
+                    <li>몇 년 동안 공원 내 사슴 관찰의 레이어가 주어진 경우, 평균 중심을 사용하여 여름과 겨울에 사슴이 어디로 모이는지 확인할 수 있습니다.
+                    </li>
+                    <li>화재 사고의 레이어가 주어진 경우, 중앙값 중심을 사용하여 주변의 이상치에 영향을 받지 않고 화재의 중심 경향을 측정할 수 있습니다.
+                    </li>
+                    <li>지하수 우물 샘플의 레이어가 주어진 경우, 타원을 사용하여 오염 범위를 확인할 수 있습니다.
                     </li>
                 </ul>
                 
@@ -182,10 +210,10 @@
             </p>
             <br/>
         </div>
-    <div id="FindLocationsCategory" class="regularsize">
-        <h2>위치 찾기</h2>
+    <div id="FindLocationsCategory" class="largesize">
+        <h2>위치 찾기 (Find Locations)</h2>
         <hr/>
-        <p>이러한 도구는 지정한 여러 조건을 충족하는 영역을 식별하는 데 사용됩니다.  이러한 조건은 속성 쿼리(예: 비어 있는 필지) 및 공간 쿼리(예: 강에서 1Km 이내)를 기반으로 할 수 있습니다.  기존 피처(예: 기존 필지)에서 영역을 선택하거나 모든 요구 사항을 충족하는 새 피처를 생성할 수 있습니다.
+        <p>이 도구를 사용하여 지정한 기준을 충족하는 피처를 식별 또는 생성합니다.  기준 유형은 사용하는 도구에 따라 다릅니다. 예를 들어, 기준은 공간 또는 속성 쿼리, 지정된 높이에서의 가시 영역, 특정 배수로 포인트의 하류 영역, 특정 교통 상황에서의 운전 시간을 기반으로 설정할 수 있습니다.
             <ul>
                 <li> <b>최상의 시설 선택</b> - 주어진 목표를 만족시키는 방식으로 시설에 필요한 위치를 할당하여 가장 적합한 위치를 선택합니다.
                 </li>
@@ -195,16 +223,18 @@
                 </li>
                 <li> <b>새 위치 파생</b> - 처리 범위의 위치에서 일련의 조건을 충족하는 새 영역을 생성합니다.
                 </li>
+                <li> <b>중심 찾기</b>는 입력 피처의 대표 중심(Centroid)을 찾습니다.
+                </li>
                 <li> <b>기존 위치 찾기</b> - 레이어에서 일련의 조건을 충족하는 기존 영역을 검색합니다.
                 </li>
                 <li> <b>유사한 위치 찾기</b> - 지정한 조건에 따라 하나 이상의 참조 위치와 가장 유사한 위치를 찾습니다.
                 </li>
-                <li class="PortalOnly"> <b>테이블의 지오코드 위치</b> - 테이블의 주소를 좌표로 변환합니다.
+                <li class="PortalOnly"> <b>테이블의 지오코드 위치</b> - 테이블의 주소를 좌표로 변환합니다. 
                 </li>
                 <li> <b>하류 추적</b> - 지정한 위치에서 하류 방향의 흐름 경로를 결정합니다.
                 </li>
             </ul>
-             
+            
         </p>
         <p> 
         </p>
@@ -228,7 +258,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>가시권역 생성</h2></td>
+                    <td><h2>가시권역 생성(Create Viewshed)</h2></td>
                     <td>
                     <img src="../images/GUID-491E9A75-30CC-4526-9F71-E47FD25536DE-web.png" class="titleImage" alt="가시권역 생성">
                     </td>
@@ -243,7 +273,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>유역 생성</h2></td>
+                    <td><h2>유역 생성(Create Watersheds)</h2></td>
                     <td>
                     <img src="../images/GUID-4DE64CF6-2A02-46F6-8AE4-4D9227AAB71C-web.png" class="titleImage" alt="유역 생성">
                     </td>
@@ -258,7 +288,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>새 위치 파생</h2></td>
+                    <td><h2>새 위치 파생(Derive New Locations)</h2></td>
                     <td>
                     <img src="../images/GUID-4A756008-8431-4AA5-BD42-7135296560DD-web.png" class="titleImage" alt="새 위치 파생">
                     </td>
@@ -266,6 +296,21 @@
             </table>
 <hr/>
             <p>처리 범위에서 지정한 일련의 조건을 충족하는 새 피처를 생성합니다. 이러한 조건은 속성 쿼리(예: 비어 있는 필지) 및 공간 쿼리(예: 강에서 1.6Km 이내)를 기반으로 할 수 있습니다. 
+            </p>
+            <br/>
+        </div>
+        <div id="FindCentroidsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>중심 찾기</h2></td>
+                    <td>
+                    <img src="../images/GUID-75D9AF75-68C3-48BF-8062-D5499BD06978-web.png" class="titleImage" alt="중심 찾기">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>입력 다중 포인트, 라인 또는 영역 피처의 대표 중심(centroid)을 찾습니다.
             </p>
             <br/>
         </div>
@@ -318,7 +363,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>하류 추적</h2></td>
+                    <td><h2>하류 추적(Trace Downstream)</h2></td>
                     <td>
                     <img src="../images/GUID-1700E318-5F2D-4D4D-BF21-B12663F5D3C4-web.png" class="titleImage" alt="하류 추적">
                     </td>
@@ -329,8 +374,8 @@
             </p>
             <br/>
         </div>
-    <div id="AnalyzePatternsCategory" class="smallsize">
-        <h2>패턴 분석</h2>
+    <div id="AnalyzePatternsCategory" class="regularsize">
+        <h2>패턴 분석 (Analyze Patterns)</h2>
         <hr/>
         <p>이러한 도구는 데이터에 있는 공간 패턴을 식별, 수량화 및 시각화합니다.  
             <ul>
@@ -340,7 +385,9 @@
                 </li>
                 <li> <b>이상치 찾기</b> - 데이터의 공간 패턴에 통계적으로 유의한 이상치가 있는지 확인합니다.
                 </li>
-                <li> <b>포인트 내삽</b> - 포인트 컬렉션에서 발견된 측정을 기반으로 한 새 위치에서 값을 예측합니다.
+                <li> <b>포인트 군집 찾기</b>는 공간 분포에 따라 주변 노이즈 내 포인트 피처의 군집을 찾습니다.
+                </li>
+                <li> <b>포인트 보간</b> - 포인트 컬렉션에서 발견된 측정을 기반으로 한 새 위치에서 값을 예측합니다.
                 </li>
             </ul>
             
@@ -361,11 +408,11 @@
             </p>
             <br/>
         </div>
-        <div id="FindHotSpotsTool" class="regularsize">
+        <div id="FindHotSpotsTool" class="smallsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>핫 스팟 찾기(Find Hot Spots)</h2></td>
+                    <td><h2>핫 스팟 찾기</h2></td>
                     <td>
                     <img src="../images/GUID-D4A59131-AC88-4C7A-85BA-67861D5C1CF8-web.png" class="titleImage" alt="핫 스팟 찾기">
                     </td>
@@ -388,6 +435,21 @@
             </table>
 <hr/>
             <p>이 도구는 데이터에 있는 통계적으로 유의한 모든 군집점 및 공간 군집도를 보여 주는 맵을 생성합니다. 이 도구를 사용하여 해당 네이버와 크게 다른 값이 있는 피처를 식별할 수 있습니다.  예를 들면 이 도구를 사용하여 비정상적인 소비 패턴을 찾고, 연구 영역에서 빈부 격차가 가장 뚜렷한 위치를 확인하거나, 인근 주와 비교하여 기대 수명이 낮은 특히 낮은 미국 내 주가 있는지 확인할 수 있습니다.
+            </p>
+            <br/>
+        </div>
+        <div id="FindPointClustersTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>포인트 군집 찾기(Find Point Clusters)</h2></td>
+                    <td>
+                    <img src="../images/GUID-025ADB1C-E4BF-4C8D-A35F-1D0E222627F9-web.png" class="titleImage" alt="포인트 군집 찾기(Find Point Clusters)">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>이 도구는 포인트가 군집된 영역과 빈 영역 또는 희소 영역으로 구분된 영역을 감지합니다. 군집의 일부가 아닌 포인트는 노이즈로 레이블이 지정됩니다.
             </p>
             <br/>
         </div>
@@ -463,7 +525,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>버퍼 생성</h2></td>
+                    <td><h2>버퍼 생성 (Create Buffers)</h2></td>
                     <td>
                     <img src="../images/GUID-7F4A8E4D-42E3-41C1-9238-16619CE65079-web.png" class="titleImage" alt="버퍼 생성">
                     </td>
@@ -480,7 +542,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>운전 시간 영역 생성</h2></td>
+                    <td><h2>운전 시간 영역 생성(Create Drive-Time Areas)</h2></td>
                     <td>
                     <img src="../images/GUID-6F629A09-768D-4C04-88A4-AB941811ADE9-web.png" class="titleImage" alt="운전 시간 영역 생성">
                     </td>
@@ -534,8 +596,8 @@
             </p>
             <br/>
         </div>
-    <div id="ManageDataCategory" class="smallsize">
-        <h2>데이터 관리</h2>
+    <div id="ManageDataCategory" class="regularsize">
+        <h2>데이터 관리하기(Manage Data)</h2>
         <hr/>
         <p>지리 데이터의 일상적인 관리 및 분석 전 데이터 통합에 사용되는 도구입니다.  
             <ul>
@@ -543,9 +605,11 @@
                 </li>
                 <li> <b>데이터 추출</b> - 기존 데이터에서 피처를 추출하여 새 데이터셋을 생성합니다.
                 </li>
+                <li> <b>공간 분할 생성</b> - 데이터의 범위를 기반으로 공간 분할을 생성합니다.
+                </li>
                 <li> <b>레이어 병합</b> - 둘 이상의 기존 레이어에 있는 모든 피처를 하나의 새 레이어에 복사합니다.
                 </li>
-                <li> <b>레이어 중첩</b> - 둘 이상의 레이어를 하나의 단일 레이어로 결합합니다.  맵 스택을 살펴보고 스택에서 확인한 모든 정보를 포함하는 단일 맵을 생성하는 작업을 중첩이라고 생각하면 됩니다.
+                <li> <b>레이어 중첩</b> - 둘 이상의 레이어를 하나의 단일 레이어로 결합합니다.  여러 맵을 포개어 모든 정보를 포함하는 단일 맵을 생성하는 작업을 중첩이라고 생각하면 됩니다.
                 </li>
             </ul>
             
@@ -564,11 +628,11 @@
 <hr/>
             <p>공통 경계를 공유하거나 중첩되는 영역이 병합되어 단일 영역을 형성합니다.    
             </p>
-            <p>필드를 지정하여 병합할 경계를 제어할 수 있습니다. 예를 들어 카운티 레이어가 있는 경우 각 카운티에  <i>State_Name</i> 속성이 있으면 <i>State_Name</i> 속성을 사용하여 경계를 디졸브할 수 있습니다.  인접 카운티는 <i>State_Name</i> 값이 같은 경우에 병합됩니다.  이 도구에서 생성되는 최종 결과는 주 경계 레이어입니다.
+            <p>필드를 지정하여 병합할 경계를 제어할 수 있습니다. 예를 들어 카운티 레이어가 있는 경우 각 카운티에  <i>State_Name</i> 속성이 있으면 <i>State_Name</i> 속성을 사용하여 경계를 디졸브할 수 있습니다.  인접 카운티는 <i>State_Name</i> 값이 동일한 경우에 병합됩니다.  이 도구에서 생성되는 최종 결과는 주 경계 레이어입니다.
             </p>
             <br/>
         </div>
-        <div id="ExtractDataTool" class="smallsize">
+        <div id="ExtractDataTool" class="regularsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
@@ -581,7 +645,23 @@
 <hr/>
             <p>지정한 관심 영역 및 레이어의 데이터에 대한 zip 파일, CSV 또는 KMZ를 생성합니다.
             </p>
+            <p>데이터 추출 도구를 사용하려면 내보낼 수 있는 레이어가 하나 이상 있어야 합니다.  Map Viewer Classic에 내보낼 수 있는 레이어가 없으면 도구는 비활성화됩니다. </p>
             <p> 
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateTessellationsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>공간 분할 생성(Generate Tessellations)</h2></td>
+                    <td>
+                    <img src="../images/GUID-7D6FF8CB-15F3-4051-9C57-46E6C3708788-web.png" class="titleImage" alt="공간 분할 생성(Generate Tessellations)">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>지정된 쉐이프와 크기를 기반으로 연구 영역에 공간 분할을 생성합니다.
             </p>
             <br/>
         </div>
@@ -618,13 +698,15 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>중첩은 둘 이상의 레이어를 하나의 단일 레이어로 결합합니다.  여러 맵을 포개어 모든 정보를 포함하는 단일 맵을 생성하는 작업을 중첩이라고 생각하면 됩니다. 예를 들면 다음과 같습니다.
+            <p>중첩은 둘 이상의 레이어를 하나의 단일 레이어로 결합합니다. 여러 맵을 포개어 모든 정보를 포함하는 단일 맵을 생성하는 작업을 중첩이라고 생각하면 됩니다. 예를 들면 다음과 같습니다.
                 <ul>
-                    <li>100년 홍수 지역 내에 있는 필지는 무엇입니까?(여기에서 '내에 있다'는 '겹침'을 의미하는 또 다른 표현 방법)
+                    <li>100년 홍수 지역 내에 있는 필지는 무엇입니까? (&lsquo;내에 있다'는 '겹침'을 의미하는 또 다른 표현 방식임)
+                          
                     </li>
                     <li>어떤 도시 내에 어떤 도로가 있습니까?
                     </li>
                     <li>토질 유형별 토지 이용 현황이 어떻습니까?
+                         
                     </li>
                     <li>버려진 군사 기지에 어떤 우물이 있습니까?
                     </li>

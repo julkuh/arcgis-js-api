@@ -57,6 +57,8 @@
                 </li>
                 <li> <b>Sažmi unutar</b> računa statistike za poligonalne geoobjekte i atribute koji se preklapaju.
                 </li>
+                <li> <b>Sažmi sredinu i disperziju</b> izračunava sredi&scaron;nje geoobjekte i distribucije smjerova.
+                </li>
             </ul>
             
         </p>
@@ -122,7 +124,7 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Pronađite geoobjekte koji se nalaze unutar određene udaljenosti geoobjekata u sloju unosa.   Udaljenost se može mjeriti uz ravne linije ili uz izvedive putove ovisne o načinu putovanja.  Tada se izračunavaju statistike za obližnje geoobjekte.  Na primjer:
+            <p>Pronađite geoobjekte koji se nalaze unutar određene udaljenosti geoobjekata u sloju unosa.   Udaljenost se može mjeriti uz ravne linije ili uz izvedive putove ovisne o načinu putovanja. Tada se izračunavaju statistike za obližnje geoobjekte. Na primjer:
                 <ul>
                     <li>Izračunajte ukupnu populaciju unutar pet minuta od predložene lokacije nove trgovine.
                     </li>
@@ -149,6 +151,32 @@
                     <li>Ako imate poligonalni sloj sliva i poligonalni sloj uporabe zemlji&scaron;ta prema vrsti uporabe zemlji&scaron;ta, izračunajte ukupnu poljoprivrednu povr&scaron;inu za svaki sliv. 
                     </li>
                     <li>Ako imate sloj parcela u okrugu i sloj granica grada, sažmite prosječnu vrijednost praznih parcela unutar svakog grada.
+                    </li>
+                </ul>
+                
+            </p>
+            <br/>
+        </div>
+        <div id="SummarizeCenterAndDispersionTool" class="largesize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Sažmi sredinu i disperziju</h2></td>
+                    <td>
+                    <img src="../images/GUID-D2D53CA4-8A35-4163-9765-77BF232E569D-web.png" class="titleImage" alt="Sažmi sredinu i disperziju">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ovaj alat upotrebljava točkaste geoobjekte za izračun sredi&scaron;njeg geoobjekta, srednje sredine, prosječne sredine ili elipse (distribucije). Na primjer:
+                <ul>
+                    <li>S obzirom na sloj grupe centroida gradskih blokova, izračun sredi&scaron;njeg geoobjekta prema stanovni&scaron;tvu može se upotrijebiti za određivanje dijela grada koji je najpristupačniji za kulturni centar.
+                    </li>
+                    <li>S obzirom sloj zapažanja losova u parku tijekom nekoliko godina, može se upotrijebiti srednja sredina kako bi se vidjelo gdje se losovi okupljaju ljeti i zimi.
+                    </li>
+                    <li>S obzirom na sloj pojavljivanja požara, prosječna sredina može se upotrijebiti za mjerenje sredi&scaron;nje tendencije nastanka požara bez utjecanja na periferna odstupanja.
+                    </li>
+                    <li>S obzirom na sloj uzoraka podzemnih voda, može se izraditi elipsa kako bi se odredio način &scaron;irenja oneči&scaron;ćenja.
                     </li>
                 </ul>
                 
@@ -184,7 +212,7 @@
     <div id="FindLocationsCategory" class="largesize">
         <h2>Pronalaženje lokacija</h2>
         <hr/>
-        <p>Ovi se alati upotrebljavaju za identificiranje područja koja ispunjavaju vi&scaron;e različitih kriterija koje odredite. Ti se kriteriji mogu temeljiti na atributnim upitima (npr. parcele koje su prazne) i prostornim upitima (npr. unutar 1 kilometra od rijeke). Povr&scaron;ine koje se pronađu mogu se odabrati iz postojećih geoobjekata (kao &scaron;to su postojeće parcele zemlji&scaron;ta) ili se mogu stvoriti novi geoobjekti koji ispunjavaju sve zahtjeve.
+        <p>Ovi se alati upotrebljavaju za utvrđivanje ili stvaranje geoobjekata koji ispunjavaju kriterije koje odredite.  Vrsta kriterija ovisit će o alatu koji upotrebljavate. Primjerice, va&scaron;i se kriteriji mogu temeljiti na prostornim ili atributnim upitima, vidljivim područjima s određene visine, područjima nizvodno za određene točke odvoda ili vremenu vožnje u određenim prometnim uvjetima.
             <ul>
                 <li> <b>Izaberite najbolje ustanove</b> izabire najbolje lokacije za ustanove dodjeljivanjem lokacija koje imaju potražnju za tim ustanovama na način koji ispunjava zadani cilj.
                 </li>
@@ -192,18 +220,20 @@
                 </li>
                 <li> <b>Stvori sliv</b> stvara poligone razvođa na temelju lokacija koje odredite.
                 </li>
-                <li> <b>Izvedi nove lokacije</b> stvara nove poligone od lokacija u području proučavanja koji zadovoljavaju niz kriterija.
+                <li> <b>Izvedi nove lokacije</b> stvara nove poligone od lokacija u radnom području koji zadovoljavaju niz kriterija.
                 </li>
-                <li> <b>Pronađi postojeće lokacije</b> pretražuje postojeće povr&scaron;ine u sloju koje ispunjavaju niz kriterija.
+                <li> <b>Pronalazak centroida</b> pronalazi reprezentativni centar (centroid) za ulazne geoobjekte.
+                </li>
+                <li> <b>Pronađi postojeće lokacije</b> pretražuje postojeće poligone u sloju koje ispunjavaju niz kriterija.
                 </li>
                 <li> <b>Pronađi slične lokacije</b> pronalazi lokacije najsličnije jednoj ili vi&scaron;e referentnih lokacija na temelju kriterija koje odredite.
                 </li>
-                <li class="PortalOnly"> <b>Geokodiranje lokacije iz tablice</b> pretvara adrese iz tablice u koordinate.
+                <li class="PortalOnly"> <b>Geokodiranje lokacije</b> iz tablice pretvara adrese iz tablice u koordinate. 
                 </li>
                 <li> <b>Prati nizvodno</b> određuje putanju protoka nizvodno od lokacija koje odredite.
                 </li>
             </ul>
-             
+            
         </p>
         <p> 
         </p>
@@ -264,7 +294,22 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Stvara nove geoobjekte u području proučavanja koji zadovoljavaju niz kriterija koji odredite. Ti se kriteriji mogu temeljiti na atributnim upitima (npr. parcele koje su prazne) i prostornim upitima (npr. unutar 1 milje od rijeke). 
+            <p>Stvara nove geoobjekte u radnom području koji zadovoljavaju niz kriterija koji odredite. Ti se kriteriji mogu temeljiti na atributnim upitima (npr. parcele koje su prazne) i prostornim upitima (npr. unutar 1 milje od rijeke). 
+            </p>
+            <br/>
+        </div>
+        <div id="FindCentroidsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Pronađi centroide</h2></td>
+                    <td>
+                    <img src="../images/GUID-75D9AF75-68C3-48BF-8062-D5499BD06978-web.png" class="titleImage" alt="Pronađi centroide">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Pronalazi reprezentativni centar (centroid) za svaki vi&scaron;e točkasti, linijski ili poligonalni geoobjekt.
             </p>
             <br/>
         </div>
@@ -279,7 +324,7 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Odabire postojeće geoobjekte u području proučavanja koji zadovoljavaju niz kriterija koji odredite. Ti se kriteriji mogu temeljiti na atributnim upitima (npr. parcele koje su prazne) i prostornim upitima (npr. unutar 1 milje od rijeke). 
+            <p>Odabire postojeće geoobjekte u radnom području koji zadovoljavaju niz kriterija koji odredite. Ti se kriteriji mogu temeljiti na atributnim upitima (npr. parcele koje su prazne) i prostornim upitima (npr. unutar 1 milje od rijeke). 
             </p>
             <br/>
         </div>
@@ -339,6 +384,8 @@
                 </li>
                 <li> <b>Pronađi odstupanja</b> određuje ima li statistički značajnih odstupanja u prostornom obrascu va&scaron;ih podataka.
                 </li>
+                <li> <b>Pronađi klastere točaka</b> pronalazi klastere točkastih geoobjekata u okolnim podacima na temelju njihove prostorne distribucije.
+                </li>
                 <li> <b>Interpoliraj točke</b> predviđa vrijednosti na novim lokacijama na temelju mjera dobivenih iz skupa točaka.
                 </li>
             </ul>
@@ -387,6 +434,21 @@
             </table>
 <hr/>
             <p>Ovaj alat stvara kartu s prikazom svih statistički značajnih klastera i prostornih odstupanja prisutnih u va&scaron;im podacima. Upotrijebite ovaj alat kako biste identificirali geoobjekte s vrijednostima koje su značajno drugačije od vrijednosti susjednih geoobjekata.  Primjerice, možete upotrijebiti ovaj alat kako biste prona&scaron;li abnormalne obrasce potro&scaron;nje, utvrdili gdje su najo&scaron;trije granice između bogatstva i siroma&scaron;tva u radnom području ili utvrdili postoje li okruzi u Sjedinjenim Američkim Državama s neobično niskim životnim vijekom s obzirom na susjedne okruge.
+            </p>
+            <br/>
+        </div>
+        <div id="FindPointClustersTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Pronađi klastere točaka</h2></td>
+                    <td>
+                    <img src="../images/GUID-025ADB1C-E4BF-4C8D-A35F-1D0E222627F9-web.png" class="titleImage" alt="Pronađi klastere točaka">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Ovaj alat otkriva područja gdje su koncentrirane točke i područja gdje su točke razdvojene praznim područjima ili rijetke. Točke koje nisu dio klastera smatraju se nevažnima.
             </p>
             <br/>
         </div>
@@ -528,13 +590,15 @@
             <br/>
         </div>
     <div id="ManageDataCategory" class="regularsize">
-        <h2>Upravljanje podacima</h2>
+        <h2>Upravljaj podacima</h2>
         <hr/>
         <p>Ovi se alati upotrebljavaju za svakodnevno upravljanje geografskim podacima i kombiniranje podataka prije analize.  
             <ul>
                 <li> <b>Ukloni granice</b> spaja povr&scaron;ine koje dijele zajedničku granicu i zajedničku atributnu vrijednost.
                 </li>
                 <li> <b>Izdvoji podatke</b> stvara nove skupove podataka izdvajanjem geoobjekata iz postojećih podataka.
+                </li>
+                <li> <b>Generiranje teselacija</b> stvara teselacije na temelju obuhvata podataka.
                 </li>
                 <li> <b>Spoji slojeve</b> kopira sve geoobjekte iz dva ili vi&scaron;e postojećih slojeva u novi sloj.
                 </li>
@@ -557,11 +621,11 @@
 <hr/>
             <p>Poligoni koji se preklapaju ili koji dijele zajedničku granicu međusobno se spajaju da bi oblikovali jedinstveni poligon.    
             </p>
-            <p>Možete upravljati koje će se granice spojiti tako da odredite polje. Na primjer, ako imate sloj okruga i ako svaki okrug ima atribut  <i>State_Name</i>, možete ukloniti granice uporabom atributa <i>State_Name</i>.  Okruzi koji su jedan pored drugog međusobno će se spojiti ako imaju istu vrijednost za <i>State_Name</i>.  Konačni rezultat je sloj državnih granica.
+            <p>Možete upravljati koje će se granice spojiti tako da odredite polje. Na primjer, ako imate sloj općina i ako svaka općina ima atribut  <i>State_Name</i>, možete ukloniti granice upotrebom atributa <i>State_Name</i>. Susjedne općine će se spojiti ako imaju istu vrijednost za <i>State_Name</i>. Konačni je rezultat sloj granica županija.
             </p>
             <br/>
         </div>
-        <div id="ExtractDataTool" class="smallsize">
+        <div id="ExtractDataTool" class="regularsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
@@ -574,7 +638,23 @@
 <hr/>
             <p>Stvara zip datoteku, CSV ili KMZ iz podataka s va&scaron;ih slojeva i povr&scaron;ine interesa koju odredite.
             </p>
+            <p>Alat Izdvoji podatke zahtijeva barem jedan sloj koji se može izvesti. Alat će biti onemogućen ako u  Map Viewer Classicnemate slojeve koji se mogu izvesti. </p>
             <p> 
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateTessellationsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Generiranje teselacija</h2></td>
+                    <td>
+                    <img src="../images/GUID-7D6FF8CB-15F3-4051-9C57-46E6C3708788-web.png" class="titleImage" alt="Generiranje teselacija">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Generira teselacije preko radnog područja na temelju određenog oblika i veličine.
             </p>
             <br/>
         </div>
@@ -604,9 +684,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Preklapanje slojeva</h2></td>
+                    <td><h2>Preklopi slojeve</h2></td>
                     <td>
-                    <img src="../images/GUID-CE1E0E84-F3B5-446B-9FDE-4DA057F106CC-web.png" class="titleImage" alt="Preklapanje slojeva">
+                    <img src="../images/GUID-CE1E0E84-F3B5-446B-9FDE-4DA057F106CC-web.png" class="titleImage" alt="Preklopi slojeve">
                     </td>
                 </tr></tbody>
             </table>

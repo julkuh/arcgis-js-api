@@ -1,4 +1,4 @@
-// COPYRIGHT © 2017 Esri
+// COPYRIGHT © 2021 Esri
 //
 // All rights reserved under the copyright laws of the United States
 // and applicable international laws, treaties, and conventions.
@@ -20,6 +20,6 @@
 //
 // email: contracts@esri.com
 //
-// See http://js.arcgis.com/3.21/esri/copyright.txt for details.
+// See http://js.arcgis.com/3.36/esri/copyright.txt for details.
 
-define(["../../declare","dojo/Deferred","dojo/promise/all","../../graphic","./LocationProviderBase","../../SpatialReference","../../geometry/jsonUtils"],function(e,t,n,o,r,i,a){var c=100,s=25;return e("esri.tasks.locationproviders.LocationProviderClientBase",r,{inSpatialReference:null,constructor:function(e){this.inSpatialReference||(this.inSpatialReference=new i(4326))},_locate:function(e,o){function r(){setTimeout(function(){for(var t=+new Date+c,s=[];t>+new Date&&u<e.length;){var p=e[u],h=f.getGeometry(p);p.geometry=h,h&&s.push(p),++u}o.outSpatialReference?i.push(f._project(s,o.outSpatialReference).then(function(){a=a.concat(s),l.progress(s)})):(a=a.concat(s),l.progress(s)),u<e.length?r():n(i).then(function(){l.resolve(a)})},s)}var i=[],a=[],l=new t,f=this,u=0;return r(),l.promise}})});
+define(["../../declare","dojo/Deferred","dojo/promise/all","../../graphic","./LocationProviderBase","../../SpatialReference","../../geometry/jsonUtils"],(function(e,t,n,o,r,i,a){return e("esri.tasks.locationproviders.LocationProviderClientBase",r,{inSpatialReference:null,constructor:function(e){this.inSpatialReference||(this.inSpatialReference=new i(4326))},_locate:function(e,o){var r=[],i=[],a=new t,c=this,s=0;return function t(){setTimeout((function(){for(var l=+new Date+100,f=[];l>+new Date&&s<e.length;){var u=e[s],p=c.getGeometry(u);u.geometry=p,p&&f.push(u),++s}o.outSpatialReference?r.push(c._project(f,o.outSpatialReference).then((function(){i=i.concat(f),a.progress(f)}))):(i=i.concat(f),a.progress(f)),s<e.length?t():n(r).then((function(){a.resolve(i)}))}),25)}(),a.promise}})}));

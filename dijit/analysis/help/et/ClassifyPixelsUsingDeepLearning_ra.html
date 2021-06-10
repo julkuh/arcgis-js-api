@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="Stylesheet" href="../css/analysis.css" />
+    <script type="text/javascript">
+        function init() {
+            if (window.location.hash) {
+                var parentDiv, nodes, i, helpInfo, helpId, helpInfoArr, helpEnvFilter, envContent, hideEnvClass, hideNodes;
+                helpInfo = window.location.hash.substring(1);
+                    if(helpInfo.indexOf("-")) {
+                        helpInfoArr = helpInfo.split("-");
+                        helpId = helpInfoArr[0];
+                        helpEnvFilter = helpInfoArr[1];
+                    }
+                    else {
+                        helpId = helpInfo;
+                    }
+                parentDiv = document.getElementById("topics");
+                nodes = parentDiv.children;
+                    hideEnvClass = (helpEnvFilter === "OnlineOnly"? "PortalOnly": "OnlineOnly");
+                    if(document.getElementsByClassName) {
+                        hideNodes = document.getElementsByClassName(hideEnvClass);
+                    }
+                    else {
+                        hideNodes = document.querySelectorAll(hideEnvClass);
+                    }
+                for(i=0; i < nodes.length; i++) {
+                    if(nodes[i].id !== helpId) {
+                        nodes[i].style.display ="none";
+                    }
+                    }
+                    for(i=0; i < hideNodes.length; i++) {
+                        hideNodes[i].style.display ="none";
+                    }
+                }
+            }
+    </script>
+</head>
+<body onload="init()">
+<div id="topics">
+    <div id="toolDescription" class="smallsize">
+        <h2>Pikslite klassifitseerimine süvaõppe teel</h2><p/>
+        <h2><img src="../images/GUID-88BE63A6-B06C-4C61-9AB1-8DA5A08C6783-web.png" alt="Pikslite klassifitseerimine s&uuml;va&otilde;ppe teel"></h2>
+        <hr/>
+    <p>This tool runs a trained deep learning model on an input raster to produce a classified raster, and each valid pixel has an assigned class label.
+    </p>
+    <p>Kui tingimus  <b>Kasuta praegust kaardi ulatust</b> on m&auml;rgitud, anal&uuml;&uuml;sitakse ainult neid rasterkihi piksleid, mis on kaardi praeguses ulatuses n&auml;htavad. Kui see ruut pole m&auml;rgitud, kasutatakse anal&uuml;&uuml;si koostamisel kogu rastrit ka siis, kui see on v&auml;ljaspool kaardi praegust ulatust.
+    </p>
+    </div>
+    <!--Parameter divs for each param-->
+    <div id="inputRaster">
+        <div><h2>Pikslite klassifitseerimiseks kasutatava pildi valimine</h2></div>
+        <hr/>
+        <div>
+            <p>Klassifitseeritav sisendpilt.
+            </p>
+            <p>See v&otilde;ib olla pilditeenuse URL, rastrikiht v&otilde;i pilditeenuse kiht.
+            </p>
+        </div>
+    </div>
+    <div id="model">
+        <div><h2>Valige pikslite klassifitseerimisel kasutatav süvaõppemudel</h2></div>
+        <hr/>
+        <div>
+            <p>Sisendi s&uuml;va&otilde;ppepaketi ( <code>.dlpk</code>) &uuml;ksus.
+            </p>
+            <p>S&uuml;va&otilde;ppepakett koosneb Esri mudeli m&auml;&auml;ratluse JSON-failist ( <code>.emd</code>), s&uuml;va&otilde;ppe binaarmudeli failist ja valikuliselt kasutatavast Python-rastri funktsioonist.
+            </p>
+        </div>
+    </div>
+    <div id="modelArguments">
+        <div><h2>Määrake süvaõppemudeli argumendid</h2></div>
+        <hr/>
+        <div>
+            <p>The function arguments are defined in the Python raster function class referenced by the input model. Seal loetletakse t&auml;iendavad s&uuml;va&otilde;ppe parameetrid ning eksperimentide ja t&auml;psustuste argumendid, n&auml;iteks tundlikkuse reguleerimise usaldatavuse l&auml;viv&auml;&auml;rtus.
+            </p>
+            <p>T&ouml;&ouml;riist t&auml;idab rasteranal&uuml;&uuml;si serveris Pythoni mudeli lugemise teel argumendid nimedega.
+            </p>  
+            <p> 
+            </p>
+        </div>
+    </div>
+    <div id="processing_mode">
+        <div><h2>Töötlusrežiim</h2></div>
+        <hr/>
+        <div>
+            <p>M&auml;&auml;rab, kuidas k&otilde;iki mosaiikandmestiku rastri&uuml;ksusi pilditeenuses t&ouml;&ouml;deldakse. See parameeter rakendatakse, kui sisendraster on mosaiikandmestik v&otilde;i pilditeenus.
+            </p>
+            <ul>
+                <li>PROCESS_AS_MOSAICKED_IMAGE &mdash; 
+K&otilde;ik mosaiikandmestiku v&otilde;i pilditeenuse rastri&uuml;ksused &uuml;hendatakse mosaiiktehnikaga ja neid t&ouml;&ouml;deldakse mosaiigina. See on vaikevalik.
+
+                </li>
+                <li>PROCESS_ITEMS_SEPARATELY &mdash; 
+K&otilde;ik mosaiikandmestiku v&otilde;i pilditeenuse rastri&uuml;ksused t&ouml;&ouml;deldakse eraldi piltidena.
+
+                </li>
+            </ul>
+            <del><strong>&#60&#62</strong></del>
+            
+        </div>
+    </div>
+    <div id="outputClassifiedRaster">
+        <div><h2>Tulemkihi nimi</h2></div>
+        <hr/>
+        <div>
+            
+            <p>Selle kihi nimi, mis luuakse jaotises  <b>Minu sisu</b> ja lisatakse kaardile. Vaikimisi nimi p&otilde;hineb t&ouml;&ouml;riista nimel ja sisendkihi nimel. Kui kiht on juba olemas, palutakse teil sisestada m&otilde;ni muu nimi.
+            </p>
+            <p>You can specify the name of a folder in  <b>My Content</b> where the result will be saved using the <b>Save result in</b> drop-down box.
+            </p>
+        </div>
+    </div>
+</div>
+</html>

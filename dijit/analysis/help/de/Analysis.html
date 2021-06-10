@@ -44,7 +44,7 @@
         <p>Die Toolbox &quot;Feature-Analyse&quot; enth&auml;lt eine Reihe von Werkzeugen, auf die Sie zugreifen und die Sie nutzen k&ouml;nnen.  Diese Tasks sind nachfolgend in Kategorien organisiert. Die Kategorien sind lediglich logische Gruppen und haben keinerlei Auswirkungen darauf, wie Sie auf die Tasks zugreifen oder sie verwenden.
         </p>
     </div>
-    <div id="SummarizeDataCategory" class="regularsize">
+    <div id="SummarizeDataCategory" class="largesize">
         <h2>Daten zusammenfassen</h2>
         <hr/>
         <p>Mit diesen Werkzeugen werden Gesamtzahlen, L&auml;ngen, Fl&auml;chen und grundlegende beschreibende Statistiken von Features und ihren Attributen innerhalb von Fl&auml;chen oder in der N&auml;he anderer Features berechnet.
@@ -56,6 +56,8 @@
                 <li> <b>Zusammenfassen (in der N&auml;he)</b> berechnet Statistiken f&uuml;r Features und ihre Attribute, die sich innerhalb einer angegebenen Entfernung befinden.
                 </li>
                 <li> <b>Zusammenfassen (innerhalb)</b> berechnet Statistiken f&uuml;r Fl&auml;chen-Features und Attribute, die sich &uuml;berlappen.
+                </li>
+                <li> <b>Zentrierung und Verteilung zusammenfassen</b> berechnet zentrale Features und Richtungsverteilungen.
                 </li>
             </ul>
             
@@ -144,11 +146,37 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Ermittelt Fl&auml;chen (und Teile von Fl&auml;chen), die sich zwischen zwei Layern &uuml;berlappen, und berechnet Statistiken zu der &Uuml;berlappung. Beispiel:
+            <p>Findet Fl&auml;chen (und Teile von Fl&auml;chen), die sich zwischen zwei Layern &uuml;berlappen, und berechnet Statistiken zu der &Uuml;berlappung. Beispiel:
                 <ul>
                     <li>Ermitteln Sie anhand eines Layers mit Abflussgebieten und eines Layers mit Landnutzungsfl&auml;chen nach Landnutzungstyp die Gesamtlandwirtschaftsfl&auml;che des Landnutzungstyps f&uuml;r jedes Abflussgebiet. 
                     </li>
                     <li>Fassen Sie den Durchschnittswert unbebauter Flurst&uuml;cke innerhalb jeder Stadt anhand eines Flurst&uuml;cks-Layers in einem Landkreis und eines Stadtgrenzen-Layers zusammen.
+                    </li>
+                </ul>
+                
+            </p>
+            <br/>
+        </div>
+        <div id="SummarizeCenterAndDispersionTool" class="largesize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Zentrierung und Verteilung zusammenfassen</h2></td>
+                    <td>
+                    <img src="../images/GUID-D2D53CA4-8A35-4163-9765-77BF232E569D-web.png" class="titleImage" alt="Zentrierung und Verteilung zusammenfassen">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Dieses Werkzeug verwendet Punkt-Features, um das zentrale Feature, den Mittelwert f&uuml;r den Mittelpunkt, den Medianwert f&uuml;r den Mittelpunkt oder die Ellipse (Verteilung) zu berechnen. Beispiel:
+                <ul>
+                    <li>Wenn Sie &uuml;ber einen Layer f&uuml;r Schwerpunkte der Blockgruppen verf&uuml;gen, kann mit dem zentralen, anhand der Bev&ouml;lkerungszahlen gewichteten Feature ermittelt werden, in welchem Teil der Stadt ein Zentrum f&uuml;r darstellende K&uuml;nste am besten zu erreichen w&auml;re.
+                    </li>
+                    <li>Angenommen, Sie verf&uuml;gen &uuml;ber einen Layer f&uuml;r Elchbeobachtungen in einem Park f&uuml;r einen Zeitraum von mehreren Jahren, so kann anhand des Mittelwertes f&uuml;r den Mittelpunkt festgestellt werden, wo die Elche sich im Sommer und im Winter versammeln.
+                    </li>
+                    <li>Wenn Sie einen Layer f&uuml;r Brandereignisse haben, kann anhand des Medianwertes f&uuml;r den Mittelpunkt die zentrale Tendenz der Feuer ohne Beeintr&auml;chtigung durch Ausrei&szlig;er der Peripherie gemessen werden.
+                    </li>
+                    <li>Ist ein Layer f&uuml;r Stichproben von Grundwasserbrunnen vorhanden, kann mithilfe einer Ellipse ermittelt werden, wie eine Verunreinigung sich verbreitet.
                     </li>
                 </ul>
                 
@@ -184,7 +212,7 @@
     <div id="FindLocationsCategory" class="largesize">
         <h2>Positionen suchen</h2>
         <hr/>
-        <p>Mithilfe dieser Werkzeuge lassen sich Fl&auml;chen identifizieren, die verschiedenen von Ihnen definierten Kriterien entsprechen. Diese Kriterien k&ouml;nnen auf Attributabfragen (beispielsweise unbebaute Flurst&uuml;cke) und r&auml;umlichen Abfragen (beispielsweise innerhalb einer Entfernung von einem Kilometer von einem Fluss) basieren. Die gefundenen Fl&auml;chen k&ouml;nnen aus vorhandenen Features (wie vorhandene Flurst&uuml;cke) ausgew&auml;hlt oder es k&ouml;nnen neue Features dort erstellt werden, wo alle Anforderungen erf&uuml;llt sind.
+        <p>Mithilfe dieser Werkzeuge lassen sich Features, die den von Ihnen angegebenen Kriterien entsprechen, identifizieren oder erstellen. Dabei h&auml;ngt der Typ der Kriterien vom verwendeten Werkzeug ab. Zum Beispiel k&ouml;nnen Ihre Kriterien auf r&auml;umlichen oder Attributabfragen, auf Gebieten, die von einer bestimmten H&ouml;he aus sichtbar sind, auf Gebieten, die hinter bestimmen Drainagepunkten flussabw&auml;rts liegen, oder auf Fahrzeiten bei bestimmten Verkehrsbedingungen basieren.
             <ul>
                 <li>Mit  <b>Optimale Einrichtungen ausw&auml;hlen</b> werden die besten Standorte f&uuml;r Einrichtungen ausgew&auml;hlt. Dabei werden Standorte mit einem Bedarf den Einrichtungen so zugewiesen, dass eine spezifische Zielsetzung erf&uuml;llt wird.
                 </li>
@@ -195,16 +223,18 @@
                 <li> <b>Neue Positionen ableiten</b> erstellt neue Fl&auml;chen aus Positionen des
 Untersuchungsgebiets, die eine Reihe von Kriterien erf&uuml;llen.
                 </li>
+                <li> <b>Schwerpunkte suchen</b> sucht den repr&auml;sentativen Mittelpunkt (Schwerpunkt) f&uuml;r Eingabe-Features.
+                </li>
                 <li>Mit der Option  <b>Vorhandene Positionen suchen</b> werden vorhandene Fl&auml;chen in einem Layer gesucht, die eine Reihe von Kriterien erf&uuml;llen.
                 </li>
                 <li>Mit dem neuen Werkzeug  <b>&Auml;hnliche Positionen suchen</b> ermitteln Sie Positionen, die basierend auf den angegebenen Kriterien mindestens einer Referenzposition am &auml;hnlichsten sind.
                 </li>
-                <li class="PortalOnly">Mit  <b>Positionen aus Tabelle geokodieren</b> werden Adressen aus einer Tabelle in Koordinaten umgewandelt.
+                <li class="PortalOnly">Mit  <b>Positionen aus Tabelle geokodieren</b> werden Adressen aus einer Tabelle in Koordinaten umgewandelt. 
                 </li>
                 <li> <b>Flussabw&auml;rts verfolgen</b> ermittelt von den angegebenen Positionen aus die Flie&szlig;richtungen flussabw&auml;rts.
                 </li>
             </ul>
-             
+            
         </p>
         <p> 
         </p>
@@ -243,9 +273,9 @@ Untersuchungsgebiets, die eine Reihe von Kriterien erf&uuml;llen.
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Wassereinzugsgebiete erstellen</h2></td>
+                    <td><h2>Abflussgbiete erstellen</h2></td>
                     <td>
-                    <img src="../images/GUID-4DE64CF6-2A02-46F6-8AE4-4D9227AAB71C-web.png" class="titleImage" alt="Wassereinzugsgebiete erstellen">
+                    <img src="../images/GUID-4DE64CF6-2A02-46F6-8AE4-4D9227AAB71C-web.png" class="titleImage" alt="Abflussgebiete erstellen">
                     </td>
                 </tr></tbody>
             </table>
@@ -266,6 +296,21 @@ Untersuchungsgebiets, die eine Reihe von Kriterien erf&uuml;llen.
             </table>
 <hr/>
             <p>Mit dieser Funktion werden neue Features im Untersuchungsgebiet erstellt, die den angegebenen Kriterien entsprechen. Diese Kriterien k&ouml;nnen auf Attributabfragen (beispielsweise unbebaute Flurst&uuml;cke) und r&auml;umlichen Abfragen (beispielsweise innerhalb einer Entfernung von einem Kilometer von einem Fluss) basieren. 
+            </p>
+            <br/>
+        </div>
+        <div id="FindCentroidsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Schwerpunkte suchen</h2></td>
+                    <td>
+                    <img src="../images/GUID-75D9AF75-68C3-48BF-8062-D5499BD06978-web.png" class="titleImage" alt="Schwerpunkte suchen">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Sucht den repr&auml;sentativen Mittelpunkt (Schwerpunkt) f&uuml;r jedes Multipoint-, Linien- oder Fl&auml;chen-Feature.
             </p>
             <br/>
         </div>
@@ -318,7 +363,7 @@ Untersuchungsgebiets, die eine Reihe von Kriterien erf&uuml;llen.
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Verfolgung flussabwärts</h2></td>
+                    <td><h2>Flussabwärts verfolgen</h2></td>
                     <td>
                     <img src="../images/GUID-1700E318-5F2D-4D4D-BF21-B12663F5D3C4-web.png" class="titleImage" alt="Verfolgung flussabw&auml;rts">
                     </td>
@@ -329,7 +374,7 @@ Untersuchungsgebiets, die eine Reihe von Kriterien erf&uuml;llen.
             </p>
             <br/>
         </div>
-    <div id="AnalyzePatternsCategory" class="regularsize">
+    <div id="AnalyzePatternsCategory" class="largesize">
         <h2>Muster analysieren</h2>
         <hr/>
         <p>Mit diesen Werkzeugen k&ouml;nnen Sie r&auml;umliche Muster in Daten identifizieren, quantifizieren und visualisieren.  
@@ -339,6 +384,8 @@ Untersuchungsgebiets, die eine Reihe von Kriterien erf&uuml;llen.
                 <li>Mit  <b>Hot-Spots suchen</b> werden statistisch signifikante Cluster im r&auml;umlichen Muster Ihrer Daten identifiziert.
                 </li>
                 <li>Mit dem Werkzeug  <b>Ausrei&szlig;er suchen</b> wird ermittelt, ob die r&auml;umlichen Muster in den Daten statistisch signifikante Ausrei&szlig;er aufweisen.
+                </li>
+                <li>Das Werkzeug  <b>Punkt-Cluster suchen</b> findet Cluster aus Punkt-Features im Datenrauschen des Umfelds basierend auf deren r&auml;umlicher Verteilung.
                 </li>
                 <li>Mit dem Werkzeug  <b>Punkte interpolieren</b> k&ouml;nnen Sie Werte an neuen Positionen basierend auf Messwerten aus einer Sammlung von Punkten vorhersagen.
                 </li>
@@ -357,7 +404,7 @@ Untersuchungsgebiets, die eine Reihe von Kriterien erf&uuml;llen.
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Das Werkzeug &quot;Dichte berechnen&quot; verwendet bekannte Mengen einiger Ph&auml;nomene und verteilt sie auf der Karte. Mit diesem Werkzeug k&ouml;nnen beispielsweise Konzentrationen von Blitzeinschl&auml;gen oder Tornados, die Erreichbarkeit von Gesundheitseinrichtungen und Bev&ouml;lkerungsdichten angezeigt werden.
+            <p>Das Werkzeug &quot;Dichte berechnen&quot; verwendet bekannte Mengen eines bestimmten Ph&auml;nomens und verteilt sie auf der Karte. Mit diesem Werkzeug k&ouml;nnen beispielsweise Konzentrationen von Blitzeinschl&auml;gen oder Tornados, die Erreichbarkeit von Gesundheitseinrichtungen und Bev&ouml;lkerungsdichten angezeigt werden.
             </p>
             <br/>
         </div>
@@ -388,6 +435,21 @@ Untersuchungsgebiets, die eine Reihe von Kriterien erf&uuml;llen.
             </table>
 <hr/>
             <p>Dieses Werkzeug erstellt eine Karte mit statistisch signifikanten Clustern und r&auml;umlichen Ausrei&szlig;ern, die in den Daten vorhanden sind. Verwenden Sie dieses Werkzeug, um Features mit Werten zu ermitteln, die erheblich von ihren Nachbarn abweichen.  Mit diesem Werkzeug k&ouml;nnen Sie beispielsweise herausfinden, wo anomales Ausgabeverhalten zu beobachten ist, ermitteln, wo die sch&auml;rfsten Grenzen zwischen Reichtum und Armut in einem Untersuchungsgebiet liegen oder ob in den USA Landkreise mit ungew&ouml;hnlich niedriger Lebenserwartung im Vergleich zu ihren Nachbarschaften vorhanden sind.
+            </p>
+            <br/>
+        </div>
+        <div id="FindPointClustersTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Punkt-Cluster suchen</h2></td>
+                    <td>
+                    <img src="../images/GUID-025ADB1C-E4BF-4C8D-A35F-1D0E222627F9-web.png" class="titleImage" alt="Punkt-Cluster suchen">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Dieses Werkzeug erkennt Fl&auml;chen, auf denen Punkte konzentriert auftreten und auf denen sie durch leere Fl&auml;chen oder Fl&auml;chen mit geringer Dichte getrennt sind. Punkte, die nicht Teil eines Clusters sind, werden als Rauschen gekennzeichnet.
             </p>
             <br/>
         </div>
@@ -528,7 +590,7 @@ Untersuchungsgebiets, die eine Reihe von Kriterien erf&uuml;llen.
             </p>
             <br/>
         </div>
-    <div id="ManageDataCategory" class="regularsize">
+    <div id="ManageDataCategory" class="largesize">
         <h2>Daten verwalten</h2>
         <hr/>
         <p>Diese Werkzeuge werden f&uuml;r die t&auml;gliche Verwaltung geographischer Daten und zum Kombinieren von Daten vor Analysen herangezogen.  
@@ -536,6 +598,8 @@ Untersuchungsgebiets, die eine Reihe von Kriterien erf&uuml;llen.
                 <li> <b>Grenzen zusammenf&uuml;hren</b> f&uuml;hrt Fl&auml;chen mit gemeinsamer Grenze und gemeinsamem Attributwert zusammen.
                 </li>
                 <li> <b>Daten extrahieren</b> erstellt neue Datasets, indem Features aus vorhandenen Daten extrahiert werden.
+                </li>
+                <li> <b>Mosaike generieren</b> erstellt Mosaike basierend auf der Ausdehnung Ihrer Daten.
                 </li>
                 <li> <b>Layer zusammenf&uuml;hren</b> kopiert alle Features aus mindestens zwei vorhandenen Layern in einen neuen Layer.
                 </li>
@@ -547,7 +611,7 @@ Sie k&ouml;nnen sich eine &Uuml;berlagerung als einen Stapel von Karten vorstell
             
         </p>
     </div>
-        <div id="DissolveBoundariesTool" class="largesize">
+        <div id="DissolveBoundariesTool" class="regularsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
@@ -560,11 +624,11 @@ Sie k&ouml;nnen sich eine &Uuml;berlagerung als einen Stapel von Karten vorstell
 <hr/>
             <p>Fl&auml;chen, die sich &uuml;berlappen oder eine gemeinsame Grenze haben, werden zu einer Fl&auml;che zusammengef&uuml;hrt.    
             </p>
-            <p>Durch Angabe eines Feldes k&ouml;nnen Sie steuern, welche Grenzen zusammengef&uuml;hrt werden. Wenn Sie beispielsweise &uuml;ber einen Landkreis-Layer verf&uuml;gen und jeder Landkreis das Attribut  <i>State_Name</i> aufweist, k&ouml;nnen Sie Grenzen anhand des Attributs <i>State_Name</i> aufl&ouml;sen.  Benachbarte Landkreise werden zusammengef&uuml;hrt, wenn sie den gleichen Wert f&uuml;r <i>State_Name</i> haben.  Das Endresultat ist ein Layer der Bundeslandgrenzen.
+            <p>Durch Angabe eines Feldes k&ouml;nnen Sie steuern, welche Grenzen zusammengef&uuml;hrt werden. Wenn Sie beispielsweise &uuml;ber einen Landkreis-Layer verf&uuml;gen und jeder Landkreis das Attribut  <i>State_Name</i> aufweist, k&ouml;nnen Sie Grenzen anhand des Attributs <i>State_Name</i> zusammenf&uuml;hren. Benachbarte Landkreise werden zusammengef&uuml;hrt, wenn sie den gleichen Wert f&uuml;r <i>State_Name</i> haben. Der Ergebnis-Layer zeigt Bundeslandgrenzen.
             </p>
             <br/>
         </div>
-        <div id="ExtractDataTool" class="smallsize">
+        <div id="ExtractDataTool" class="regularsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
@@ -577,7 +641,23 @@ Sie k&ouml;nnen sich eine &Uuml;berlagerung als einen Stapel von Karten vorstell
 <hr/>
             <p>Erstellt eine ZIP-, CSV- oder KMZ-Datei aus den Daten der Layer sowie einen angegebenen Interessenbereich.
             </p>
+            <p>F&uuml;r das Werkzeug &quot;Daten extrahieren&quot; muss mindestens ein Layer exportiert werden k&ouml;nnen. Wenn  Map Viewer Classic keine exportierbaren Layer aufweist, wird das Werkzeug deaktiviert. </p>
             <p> 
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateTessellationsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Mosaike generieren</h2></td>
+                    <td>
+                    <img src="../images/GUID-7D6FF8CB-15F3-4051-9C57-46E6C3708788-web.png" class="titleImage" alt="Mosaike generieren">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Generiert Mosaike in einem Untersuchungsgebiet basierend auf der festgelegten Form und Gr&ouml;&szlig;e.
             </p>
             <br/>
         </div>
@@ -594,7 +674,7 @@ Sie k&ouml;nnen sich eine &Uuml;berlagerung als einen Stapel von Karten vorstell
 <hr/>
             <p>Kopiert Features aus mindestens zwei vorhandenen Layern in einen neuen Layer. Beispiel:
                 <ul>
-                    <li>Sie verf&uuml;gen &uuml;ber drei Layer, f&uuml;r England, Wales und Schottland, und Sie m&ouml;chten einen einzelnen Gro&szlig;britannien-Layer erstellen. 
+                    <li>Sie verf&uuml;gen &uuml;ber drei Layer, f&uuml;r England, Wales und Schottland, und Sie m&ouml;chten einen Layer von Gesamt-Gro&szlig;britannien erstellen. 
                     </li>
                     <li>Sie verf&uuml;gen &uuml;ber 12 Layer, die jeweils Flurst&uuml;cksinformationen f&uuml;r zusammenh&auml;ngende Stadtgebiete enthalten. Sie m&ouml;chten sie zu einem einzelnen Layer zusammenf&uuml;hren und nur die Attribute beibehalten, die in den 12 Eingabe-Layern den gleichen Namen und Typ aufweisen.
                     </li>
@@ -624,7 +704,7 @@ Sie k&ouml;nnen sich eine &Uuml;berlagerung als einen Stapel von Karten vorstell
                     <li>Welche Landnutzung liegt &uuml;ber welchem Bodentyp?
                          
                     </li>
-                    <li>Welche Quellen befinden sich in aufgegebenen milit&auml;rischen Einrichtungen?
+                    <li>Welche Quellen befinden sich auf verlassenen Milit&auml;rst&uuml;tzpunkten?
                     </li>
                 </ul>
                 

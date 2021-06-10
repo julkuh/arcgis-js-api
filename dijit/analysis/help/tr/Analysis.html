@@ -44,18 +44,20 @@
         <p>Detay Analizi ara&ccedil; kutusunda erişiminize ve kullanımınıza a&ccedil;ık bir grup ara&ccedil; bulunur.  Bu g&ouml;revler aşağıda kategorilere ayrılmıştır; kategoriler basit mantıksal gruplandırmalardır ve g&ouml;revlere erişim veya kullanım bi&ccedil;iminizi herhangi bir şekilde etkilemez.
         </p>
     </div>
-    <div id="SummarizeDataCategory" class="regularsize">
+    <div id="SummarizeDataCategory" class="largesize">
         <h2>Veriyi Özetle</h2>
         <hr/>
         <p>Bu ara&ccedil;lar, alanlardaki detayların ya da yakın diğer detayların toplam sayısını, uzunluğunu, alanını ve temel a&ccedil;ıklayıcı istatistiklerini ve bunların &ouml;zniteliklerini hesaplar.
             <ul>
-                <li> <b>Noktaları Birleştir</b>, belirtilen alanlar i&ccedil;inde kalan noktalar hakkındaki istatistikleri hesaplar.
+                <li> <b>Noktaları K&uuml;mele</b>, belirtilen alanlar i&ccedil;inde kalan noktalar hakkındaki istatistikleri hesaplar.
                 </li>
                 <li> <b>Detayları Birleştir</b>; mekan ve &ouml;znitelik ilişkilerine bağlı olarak &ouml;znitelikleri bir katmandan veya tablodan bir diğerine aktarır.
                 </li>
                 <li> <b>Yakındakini &Ouml;zetle</b>, belirtilen bir mesafedeki &ouml;zelliklerin istatistiklerini ve bunların &ouml;zniteliklerini hesaplar.
                 </li>
-                <li> <b>Dahilinde &Ouml;zetle</b>, alanın birbiriyle &ouml;rt&uuml;şen detayların ve &ouml;zniteliklerinin istatistiklerini hesaplar.
+                <li> <b>İ&ccedil;inde &Ouml;zetle</b>, alanın birbiriyle &ouml;rt&uuml;şen detayların ve &ouml;zniteliklerinin istatistiklerini hesaplar.
+                </li>
+                <li> <b>Merkez ve Dağılımı &Ouml;zetle</b>, merkezi detayları ve y&ouml;nsel dağılımları hesaplar.
                 </li>
             </ul>
             
@@ -67,9 +69,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Noktaları Birleştir</h2></td>
+                    <td><h2>Noktaları Kümele</h2></td>
                     <td>
-                    <img src="../images/GUID-60C59C66-3038-4D0E-8F6A-EC6C53FEAA02-web.png" class="titleImage" alt="Noktaları Birleştir">
+                    <img src="../images/GUID-60C59C66-3038-4D0E-8F6A-EC6C53FEAA02-web.png" class="titleImage" alt="Noktaları K&uuml;mele">
                     </td>
                 </tr></tbody>
             </table>
@@ -89,9 +91,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Ekleme Detayları</h2></td>
+                    <td><h2>Detayları Birleştir</h2></td>
                     <td>
-                    <img src="../images/GUID-2230E8B8-8956-475C-9C65-68A92359BB48-web.png" class="titleImage" alt="Ekleme Detayları">
+                    <img src="../images/GUID-2230E8B8-8956-475C-9C65-68A92359BB48-web.png" class="titleImage" alt="Detayları Birleştir">
                     </td>
                 </tr></tbody>
             </table>
@@ -155,6 +157,32 @@
             </p>
             <br/>
         </div>
+        <div id="SummarizeCenterAndDispersionTool" class="largesize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Merkez ve Dağılımı Özetle</h2></td>
+                    <td>
+                    <img src="../images/GUID-D2D53CA4-8A35-4163-9765-77BF232E569D-web.png" class="titleImage" alt="Merkez ve Dağılımı &Ouml;zetle">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil; merkez detayını, ortalama merkezi, medyan merkezi veya elipsi (dağılımı) hesaplamak i&ccedil;in nokta detaylarını kullanır. &Ouml;rneğin:
+                <ul>
+                    <li>Belirli bir engelleme grubu ağırlık merkezi i&ccedil;in pop&uuml;lasyona g&ouml;re ağırlıklandırılmış merkezi &ouml;zellik, bir performans sanatları merkezi i&ccedil;in şehrin hangi kısmının en erişilebilir olduğunu belirlemek i&ccedil;in kullanılabilir.
+                    </li>
+                    <li>Bir park i&ccedil;inde birka&ccedil; yıl boyunca yapılan bir elk geyiği g&ouml;zlemleri katmanı belli olduğunda, elklerin yaz ve kış aylarında nerelerde toplandıklarını g&ouml;rmek i&ccedil;in ortalama merkez kullanılabilir.
+                    </li>
+                    <li>Bir yangın olayları katmanı belli olduğunda, orta merkez, &ccedil;evresel dışsallıklardan etkilenmeden yangınların merkezi eğilimlerini &ouml;l&ccedil;mek i&ccedil;in kullanılabilir.
+                    </li>
+                    <li>Bir yeraltı suyu kuyu numuneleri belli olduğunda, bir kirleticinin nasıl yayıldığını belirlemek i&ccedil;in bir elips kullanılabilir.
+                    </li>
+                </ul>
+                
+            </p>
+            <br/>
+        </div>
     <div id="EnrichLocationsCategory" class="smallsize">
         <h2>Veri Zenginleştirme</h2>
         <hr/>
@@ -185,7 +213,7 @@
     <div id="FindLocationsCategory" class="largesize">
         <h2>Konum Bulma</h2>
         <hr/>
-        <p>Bu ara&ccedil;lar, belirlediğiniz bir dizi farklı kriteri karşılayan alanları tanımlamak i&ccedil;in kullanılır. Bu kriterler &ouml;znitelik sorgularını (&ouml;rneğin boş parseller) ve mekansal (&ouml;rneğin, bir nehre bir kilometre mesafedeki t&uuml;m parseller) sorguları temel alabilir. Bulunan alanlar mevcut detaylardan (mevcut arazi parselleri gibi) se&ccedil;ilebilir ya da t&uuml;m gereksinimleri karşılayan yeni detaylar oluşturulabilir.
+        <p>Bu ara&ccedil;lar belirttiğiniz kriterleri karşılayan detayları tanımlamak veya oluşturmak i&ccedil;in kullanılır. Kriterlerin t&uuml;r&uuml;, hangi aracı kullandığınıza bağlı olacaktır. &Ouml;rneğin, kriteriniz mekansal veya nitelik sorgularına, belirli y&uuml;kseklikten g&ouml;r&uuml;n&uuml;r alanlara, belirli drenaj noktaları i&ccedil;in aşağı alanlara veya belirli trafik koşullarındaki s&uuml;r&uuml;ş s&uuml;relerine dayanabilir.
             <ul>
                 <li> <b>En İyi Tesisleri Se&ccedil;</b> kendilerine olan talebe g&ouml;re yer tahsis ederek, belirli bir amacı ger&ccedil;ekleştirmek &uuml;zere en uygun tesis konumlarını se&ccedil;er.
                 </li>
@@ -195,16 +223,18 @@
                 </li>
                 <li> <b>Yeni Konumlar T&uuml;ret</b>, &ccedil;alışma alanınızdaki konumlardan, bir dizi kriteri karşılayan yeni alanlar &uuml;retir.
                 </li>
+                <li> <b>Ağırlık Merkezi Bul</b> girdi detayları i&ccedil;in temsili merkezi (k&uuml;tle merkezi) bulur.
+                </li>
                 <li> <b>Mevcut Konumları Bul</b>, katmanda bir dizi kriteri karşılayan mevcut alanları arar.
                 </li>
                 <li> <b>Benzer Konumları Bul</b> belirlediğiniz kriterlere g&ouml;re bir ya da daha fazla referans konuma en benzeyen konumları bulur.
                 </li>
-                <li class="PortalOnly"> <b>Tablodan Alınan Coğrafi Kod Konumları</b> tablodan aldığı adresleri koordinatlara d&ouml;n&uuml;şt&uuml;r&uuml;r.
+                <li class="PortalOnly"> <b>Tablodan Alınan Coğrafi Kod Konumları</b> tablodan aldığı adresleri koordinatlara d&ouml;n&uuml;şt&uuml;r&uuml;r. 
                 </li>
                 <li> <b>Akış Y&ouml;n&uuml;nde İzle</b>, belirttiğiniz konumlardan aşağı y&ouml;nl&uuml; akış yollarını belirler.
                 </li>
             </ul>
-             
+            
         </p>
         <p> 
         </p>
@@ -228,7 +258,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Görüş Alanı Oluştur</h2></td>
+                    <td><h2>Görüş Alanı Oluşturma</h2></td>
                     <td>
                     <img src="../images/GUID-491E9A75-30CC-4526-9F71-E47FD25536DE-web.png" class="titleImage" alt="G&ouml;r&uuml;ş Alanı Oluştur">
                     </td>
@@ -269,6 +299,21 @@
             </p>
             <br/>
         </div>
+        <div id="FindCentroidsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Ağırlık Merkezi Bul</h2></td>
+                    <td>
+                    <img src="../images/GUID-75D9AF75-68C3-48BF-8062-D5499BD06978-web.png" class="titleImage" alt="Ağırlık Merkezi Bul">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Girilen her &ccedil;ok noktalı, &ccedil;izgi veya alan detayı i&ccedil;in temsili merkezi (k&uuml;tle merkezi) bulur.
+            </p>
+            <br/>
+        </div>
         <div id="FindExistingLocationsTool" class="regularsize">
             <table class="toolSummaryTable">
                 <thead></thead>
@@ -280,7 +325,7 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>&Ccedil;alışma alanınızda belirlediğiniz bir dizi kritere uygun mevcut &ouml;zellikleri se&ccedil;er. Bu kriterler &ouml;znitelik sorgularını (&ouml;rneğin boş parseller) ve mekansal (&ouml;rneğin, bir nehre 1 mil mesafedeki t&uuml;m parseller) sorguları temel alabilir. 
+            <p>&Ccedil;alışma alanınızda belirlediğiniz bir dizi kritere uygun mevcut detayları se&ccedil;er. Bu kriterler &ouml;znitelik sorgularını (&ouml;rneğin boş parseller) ve mekansal (&ouml;rneğin, bir nehre 1 mil mesafedeki t&uuml;m parseller) sorguları temel alabilir. 
             </p>
             <br/>
         </div>
@@ -329,7 +374,7 @@
             </p>
             <br/>
         </div>
-    <div id="AnalyzePatternsCategory" class="regularsize">
+    <div id="AnalyzePatternsCategory" class="largesize">
         <h2>Modelleri Analiz Et</h2>
         <hr/>
         <p>Bu ara&ccedil;lar, mekansal modelleri tanımlamanıza, sayısallaştırmanıza ve g&ouml;rselleştirmenize yardımcı olur.  
@@ -339,6 +384,8 @@
                 <li> <b>Etkin Nokta Bul</b> aracı, verilerinizin mekansal modelindeki istatistiksel a&ccedil;ıdan anlamlı olan k&uuml;melenmeyi tanımlar.
                 </li>
                 <li> <b>Aykırı Değerleri Bul</b>, verilerinizin mekansal modelinde istatistiksel olarak anlamlı olan aykırı değerler bulunup bulunmadığını belirler.
+                </li>
+                <li> <b>Nokta K&uuml;melerini Bul</b> aracı, ortam g&uuml;r&uuml;lt&uuml;s&uuml;ndeki nokta &ouml;zellikli k&uuml;melerini mekansal dağılımlarına g&ouml;re bulur.
                 </li>
                 <li> <b>Nokta Ara Değerlerini Hesaplama</b> aracı, toplama noktalarında bulunan &ouml;l&ccedil;&uuml;mlere dayanarak yeni konumlardaki değerleri tahmin eder.
                 </li>
@@ -367,7 +414,7 @@
                 <tbody><tr>
                     <td><h2>Duyarlı Noktaları Bul</h2></td>
                     <td>
-                    <img src="../images/GUID-D4A59131-AC88-4C7A-85BA-67861D5C1CF8-web.png" class="titleImage" alt="Etkin Nokta Bul">
+                    <img src="../images/GUID-D4A59131-AC88-4C7A-85BA-67861D5C1CF8-web.png" class="titleImage" alt="Duyarlı Noktaları Bul">
                     </td>
                 </tr></tbody>
             </table>
@@ -388,6 +435,21 @@
             </table>
 <hr/>
             <p>Bu ara&ccedil;, verilerinizde bulunan istatistiksel a&ccedil;ıdan anlamlı k&uuml;meleri ve mekansal aykırı değerleri g&ouml;steren bir harita oluşturur. Bu aracı kullanarak komşularından &ouml;nemli miktarda farklı olan değerlere sahip detayları tanımlayabilirsiniz.  Bu aracı kullanarak &ouml;rneğin, anormal harcama modellerini bulabilir, belirli bir araştırma alanı i&ccedil;in zenginlik ve yoksulluk arasında en belirgin farkların nerede bulunduğunu belirleyebilir veya komşularıyla kıyaslandığında ABD i&ccedil;inde anormal derecede d&uuml;ş&uuml;k ortalama yaşam s&uuml;resine sahip b&ouml;lgeler olup olmadığını tespit edebilirsiniz.
+            </p>
+            <br/>
+        </div>
+        <div id="FindPointClustersTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Nokta Kümelerini Bul</h2></td>
+                    <td>
+                    <img src="../images/GUID-025ADB1C-E4BF-4C8D-A35F-1D0E222627F9-web.png" class="titleImage" alt="Nokta K&uuml;melerini Bul">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Bu ara&ccedil;, noktaların yoğunlaştığı ve boş veya seyrek olan alanlar ile ayrıldığı alanları algılar. Bir k&uuml;menin par&ccedil;ası olmayan noktalar g&uuml;r&uuml;lt&uuml; olarak etiketlenir.
             </p>
             <br/>
         </div>
@@ -429,7 +491,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Çıkışları Hedeflere Bağla</h2></td>
+                    <td><h2>Başlangıç Noktalarını Varış Noktalarına Bağla</h2></td>
                     <td>
                     <img src="../images/GUID-7266D30B-0250-4132-B1A5-9B59F0212FAD-web.png" class="titleImage" alt="&Ccedil;ıkışları Hedeflere Bağla">
                     </td>
@@ -457,7 +519,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Tampon Bölge Oluştur</h2></td>
+                    <td><h2>Tampon Bölge Oluşturma</h2></td>
                     <td>
                     <img src="../images/GUID-7F4A8E4D-42E3-41C1-9238-16619CE65079-web.png" class="titleImage" alt="Tampon Oluştur">
                     </td>
@@ -502,7 +564,7 @@
                 <tbody><tr>
                     <td><h2>En Yakındakini Bul</h2></td>
                     <td>
-                    <img src="../images/GUID-150C2484-7459-405A-8835-B4E72CD49738-web.png" class="titleImage" alt="En Yakın Bul">
+                    <img src="../images/GUID-150C2484-7459-405A-8835-B4E72CD49738-web.png" class="titleImage" alt="En Yakındakini Bul">
                     </td>
                 </tr></tbody>
             </table>
@@ -528,18 +590,20 @@
             </p>
             <br/>
         </div>
-    <div id="ManageDataCategory" class="regularsize">
-        <h2>Veri Yönet</h2>
+    <div id="ManageDataCategory" class="largesize">
+        <h2>Verileri Yönet</h2>
         <hr/>
         <p>Bu ara&ccedil;lar hem g&uuml;nl&uuml;k coğrafi veri y&ouml;netimi hem de analiz &ouml;ncesinde verinin y&ouml;netimi i&ccedil;in kullanılır.  
             <ul>
-                <li> <b>Sınırları Birleştir</b> ortak bir sınırı ya da ortak bir &ouml;znitelik değerini paylaşan alanları birleştirir.
+                <li> <b>Sınırları B&uuml;t&uuml;nleştir</b>, ortak bir sınırı ve ortak bir &ouml;znitelik değerini paylaşan alanları bir araya getirir.
                 </li>
-                <li> <b>Veri &Ccedil;ıkart</b>, mevcut veriden detaylar &ccedil;ıkartarak yeni veri k&uuml;meleri oluşturur.
+                <li> <b>Verileri Ayıkla</b>, mevcut verilerinizden detaylar &ccedil;ıkararak yeni veri k&uuml;meleri oluşturur.
                 </li>
-                <li> <b>Katmanları Birleştir</b> iki ya da daha fazla mevcut katmandaki t&uuml;m detayları yeni bir katmana kopyalar.
+                <li> <b>Mozaikler Oluştur</b>, verilerinizin yayılımına g&ouml;re mozaikler oluşturur.
                 </li>
-                <li> <b>Katmanları Bindir</b>, iki ya da daha fazla katmanı tek bir katmana birleştirir. Bir &ccedil;akıştırmayı bir dizi haritanın &uuml;st &uuml;ste getirilerek istifteki t&uuml;m bilgileri i&ccedil;eren tek bir harita oluşturulması olarak d&uuml;ş&uuml;nebilirsiniz.
+                <li> <b>Katmanları Birleştir</b>, iki veya daha fazla mevcut katmandaki t&uuml;m detayları yeni bir katmana kopyalar.
+                </li>
+                <li> <b>Katmanları &Ccedil;akıştır</b>, iki veya daha fazla katmanı birleştirerek tek bir katman haline getirir. Bir &ccedil;akıştırmayı bir dizi haritanın &uuml;st &uuml;ste getirilerek istifteki t&uuml;m bilgileri i&ccedil;eren tek bir harita oluşturulması olarak d&uuml;ş&uuml;nebilirsiniz.
                 </li>
             </ul>
             
@@ -551,18 +615,18 @@
                 <tbody><tr>
                     <td><h2>Sınırları Bütünleştir</h2></td>
                     <td>
-                    <img src="../images/GUID-7B5F69B0-3625-404F-8B52-2B562766C0BB-web.png" class="titleImage" alt="Sınırları Birleştir">
+                    <img src="../images/GUID-7B5F69B0-3625-404F-8B52-2B562766C0BB-web.png" class="titleImage" alt="Sınırları B&uuml;t&uuml;nleştir">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Bindirilen ya da ortak bir sınırı paylaşan alanlar tek bir alan oluşturmak i&ccedil;in birleştirilir.    
+            <p>&Ouml;rt&uuml;şen ya da ortak bir sınırı paylaşan alanlar tek bir alan oluşturmak i&ccedil;in birleştirilir.    
             </p>
-            <p>Hangi sınırların birleştirileceğini bir alan belirleyerek denetleyebilirsiniz. &Ouml;rneğin, bir il&ccedil;eler katmanınız varsa ve her il&ccedil;enin bir  <i>State_Name</i> &ouml;zniteliği varsa, <i>State_Name</i> &ouml;zniteliğini kullanarak sınırları birleştirebilirsiniz. Bitişik il&ccedil;eler aynı <i>State_Name</i> değerine sahipse birleştirilecektir. Nihai sonu&ccedil; bir il&ccedil;e sınırları katmandır.
+            <p>Hangi sınırların birleştirileceğini bir alan belirleyerek denetleyebilirsiniz. &Ouml;rneğin, bir il&ccedil;eler katmanınız varsa ve her il&ccedil;enin bir  <i>State_Name</i> &ouml;zniteliği varsa, <i>State_Name</i> &ouml;zniteliğini kullanarak sınırları b&uuml;t&uuml;nleştirebilirsiniz. Aynı <i>State_Name</i> değerine sahip olan bitişik il&ccedil;eler birleştirilir. Nihai sonu&ccedil; bir il&ccedil;e sınırları katmanıdır.
             </p>
             <br/>
         </div>
-        <div id="ExtractDataTool" class="smallsize">
+        <div id="ExtractDataTool" class="regularsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
@@ -575,7 +639,23 @@
 <hr/>
             <p>Katmanlarınızdan ve belirlediğiniz ilgi alanından zip dosyası, CSV veya KMZ verileri oluşturur.
             </p>
+            <p>Verileri Ayıkla aracı en az bir dışa aktarılabilir katman gerektirir.  Map Viewer Classic&lsquo;da dışa aktarılabilir katman yoksa ara&ccedil; devre dışı bırakılır. </p>
             <p> 
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateTessellationsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Mozaikler Oluştur</h2></td>
+                    <td>
+                    <img src="../images/GUID-7D6FF8CB-15F3-4051-9C57-46E6C3708788-web.png" class="titleImage" alt="Mozaikler Oluştur">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Belirtilen şekil ve b&uuml;y&uuml;kl&uuml;ğe bağlı olarak &ccedil;alışma alanı &uuml;zerinde mozaik oluşturur.
             </p>
             <br/>
         </div>
@@ -614,12 +694,12 @@
 <hr/>
             <p>&Ccedil;akıştırma aracı iki ya da daha fazla katmanı tek bir katmana &ccedil;akıştırır. Bindirmeyi bir dizi haritanın &uuml;st &uuml;ste getirilerek istifteki t&uuml;m bilgileri i&ccedil;eren tek bir harita oluşturulması olarak d&uuml;ş&uuml;nebilirsiniz, &ouml;rneğin:
                 <ul>
-                    <li>Hangi parseller 100 ayaklık a&ccedil;ış d&uuml;zlemi i&ccedil;inde? (&quot;Dahilinde&quot;, &quot;&uuml;st&uuml;nde&quot; demenin bir diğer yoludur.)
+                    <li>Hangi parseller 100 yıllık taşkın yatağı d&uuml;zlemi i&ccedil;indedir? (&quot;İ&ccedil;erisinde&quot;, &quot;&uuml;st&uuml;nde&quot; demenin bir diğer yoludur.)
                           
                     </li>
                     <li>Hangi yollar hangi il&ccedil;eler dahilinde?
                     </li>
-                    <li>Hangi arası kullanımı hangi toprak t&uuml;r&uuml; &uuml;zerinde?
+                    <li>Hangi arazi kullanımı hangi toprak t&uuml;r&uuml; &uuml;zerinde?
                          
                     </li>
                     <li>Hangi kuyular terk edilmiş askeri &uuml;slerin i&ccedil;inde?

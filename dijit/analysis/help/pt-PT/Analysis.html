@@ -44,7 +44,7 @@
         <p>A caixa de ferramentas An&aacute;lise de Elementos cont&eacute;m uma s&eacute;rie de ferramentas &agrave;s quais pode aceder e que pode utilizar.  Estas tarefas encontram-se agrupadas abaixo em categorias; as categorias s&atilde;o simplesmente agrupamentos l&oacute;gicos e n&atilde;o afetam de modo algum o modo como acede ou utiliza as tarefas.
         </p>
     </div>
-    <div id="SummarizeDataCategory" class="regularsize">
+    <div id="SummarizeDataCategory" class="largesize">
         <h2>Resumir Dados</h2>
         <hr/>
         <p>Esta ferramenta calcula as contagens totais, comprimentos, &aacute;reas, e estat&iacute;sticas descritivas b&aacute;sicas de elementos e dos seus atributos dentro de &aacute;reas ou de elementos vizinhos.
@@ -56,6 +56,8 @@
                 <li> <b>Resumir Pr&oacute;ximo</b> c&aacute;lcula estat&iacute;sticas para elementos e seus atributos que est&atilde;o dentro de uma distancia especifica.
                 </li>
                 <li> <b>Resumir Dentro</b> calcula estat&iacute;sticas para elementos e atributos que se sobrep&otilde;em uns aos outros da &aacute;rea
+                </li>
+                <li> <b>Resumir Centro e DIspers&atilde;o</b> calcula elementos centrais e distribui&ccedil;&otilde;es direcionais.
                 </li>
             </ul>
             
@@ -91,7 +93,7 @@
                 <tbody><tr>
                     <td><h2>Ligar Elementos</h2></td>
                     <td>
-                    <img src="../images/GUID-2230E8B8-8956-475C-9C65-68A92359BB48-web.png" class="titleImage" alt="Fei&ccedil;&otilde;es de Liga&ccedil;&atilde;o">
+                    <img src="../images/GUID-2230E8B8-8956-475C-9C65-68A92359BB48-web.png" class="titleImage" alt="Ligar Elementos">
                     </td>
                 </tr></tbody>
             </table>
@@ -137,7 +139,7 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Resumir Dentro</h2></td>
+                    <td><h2>Resumir no Interior</h2></td>
                     <td>
                     <img src="../images/GUID-9B12DB3F-AA7B-41EB-87C6-D2DEC3D52DA9-web.png" class="titleImage" alt="Resumir no Interior">
                     </td>
@@ -149,6 +151,32 @@
                     <li>Dada uma camada com a &aacute;rea da watershed e uma camada de uso do solo com as &aacute;reas por tipo de uso, calcular &aacute;rea total do tipo de uso do solo para cada watershed. 
                     </li>
                     <li>Tendo em conta uma camada de parcelas num concelho e uma camada de limites urbanos, resumir o valor m&eacute;dio de parcelas vazias dentro de cada cidade.
+                    </li>
+                </ul>
+                
+            </p>
+            <br/>
+        </div>
+        <div id="SummarizeCenterAndDispersionTool" class="largesize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Resumir Centro e Dispersão</h2></td>
+                    <td>
+                    <img src="../images/GUID-D2D53CA4-8A35-4163-9765-77BF232E569D-web.png" class="titleImage" alt="Resumir Centro e Dispers&atilde;o">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Esta ferramenta utiliza elementos de ponto para calcular o elemento central, centro m&eacute;dio, centro mediano, ou elipse (distribui&ccedil;&atilde;o). Por exemplo:
+                <ul>
+                    <li>Tendo em conta uma camada de centroides de grupo de bloco, o elemento central ponderado por popula&ccedil;&atilde;o pode ser utilizado para identificar qual a parte da cidade mais acess&iacute;vel para um centro de artes c&eacute;nicas.
+                    </li>
+                    <li>Tendo em conta uma camada de observa&ccedil;&otilde;es de alces num parque ao longo de v&aacute;rios anos, o centro m&eacute;dio pode ser utilizado para ver onde os alces se congregam no ver&atilde;o e no inverno.
+                    </li>
+                    <li>Tendo em conta uma camada de incidentes de inc&ecirc;ndios, o centro m&eacute;dio pode ser utilizado para medir a tend&ecirc;ncia central dos inc&ecirc;ndios sem serem afetados por valores at&iacute;picos perif&eacute;ricos.
+                    </li>
+                    <li>Tendo em conta uma camada de amostras de &aacute;gua de po&ccedil;os, pode ser utilizada uma elipse para determinar como um contaminante est&aacute; a espalhar-se.
                     </li>
                 </ul>
                 
@@ -185,7 +213,7 @@
     <div id="FindLocationsCategory" class="largesize">
         <h2>Encontrar Locais</h2>
         <hr/>
-        <p>Estas ferramentas s&atilde;o utilizadas para identificar &aacute;reas que cumprem um determinado n&uacute;mero de crit&eacute;rios diferentes definidos por si. Estes crit&eacute;rios podem ser baseados em consultas de atributos (por exemplo, parcelas vazias) e consultas espaciais (por exemplo, a 1 quil&oacute;metro do rio).  As &aacute;reas encontradas podem ser seleccionadas a partir de elementos existentes (como parcelas de terrenos existentes) ou novos elementos podem ser criados onde todos os requisitos sejam cumpridos.
+        <p>Estas ferramentas s&atilde;o utilizadas para identificar ou criar elementos que correspondem aos crit&eacute;rios que especifica.  O tipo de crit&eacute;rios depender&aacute; da ferramenta utilizada;  por exemplo, os seus crit&eacute;rios podem ser baseados em consultas espaciais ou de atributos, &aacute;reas vis&iacute;vesi a partir de uma altura especificada, &aacute;reas a jusante para pontos de drenagem espec&iacute;ficos, ou tempo de condu&ccedil;&atilde;o para condi&ccedil;&otilde;es de tr&acirc;nsito espec&iacute;ficas.
             <ul>
                 <li> <b>Escolher Melhores Instala&ccedil;&otilde;es</b> seleciona os melhores locais para instala&ccedil;&otilde;es, alocando localiza&ccedil;&otilde;es que t&ecirc;m necessidade das ditas instala&ccedil;&otilde;es, por forma a cumprir determinado objetivo.
                 </li>
@@ -195,16 +223,18 @@
                 </li>
                 <li> <b>Derivar Novas Localiza&ccedil;&otilde;es</b> cria novas &aacute;reas a partir de localiza&ccedil;&otilde;es na &aacute;rea de estudo que cumprem um conjunto de crit&eacute;rios.
                 </li>
+                <li> <b>Encontrar Centr&oacute;ides</b> encontra o centro representativo (centr&oacute;ide) para elementos de entrada.
+                </li>
                 <li> <b>Encontrar Locais Existentes</b> procura por &aacute;reas existentes numa camada que atendam a uma s&eacute;rie de crit&eacute;rios.
                 </li>
                 <li> <b>Encontrar Locais Semelhantes</b> encontra locais mais semelhantes a um ou mais locais de refer&ecirc;ncia com base em crit&eacute;rios especificados.
                 </li>
-                <li class="PortalOnly"> <b>Geocodificar Locais a partir de Tabela</b> converte endere&ccedil;os de uma tabela em coordenadas.
+                <li class="PortalOnly"> <b>Geocodificar Locais a partir de Tabela</b> converte endere&ccedil;os de uma tabela em coordenadas. 
                 </li>
                 <li> <b>Localizar a Jusante</b> determina os percursos de fluxos em dire&ccedil;&atilde;o a jusante a partir dos locais que especificar.
                 </li>
             </ul>
-             
+            
         </p>
         <p> 
         </p>
@@ -245,7 +275,7 @@
                 <tbody><tr>
                     <td><h2>Criar Watersheds</h2></td>
                     <td>
-                    <img src="../images/GUID-4DE64CF6-2A02-46F6-8AE4-4D9227AAB71C-web.png" class="titleImage" alt="Criar Bacias Hidrogr&aacute;ficas">
+                    <img src="../images/GUID-4DE64CF6-2A02-46F6-8AE4-4D9227AAB71C-web.png" class="titleImage" alt="Criar Watersheds">
                     </td>
                 </tr></tbody>
             </table>
@@ -266,6 +296,21 @@
             </table>
 <hr/>
             <p>Cria novos elementos na &aacute;rea de estudo que cumprem um conjunto de crit&eacute;rios definidos por si. Estes crit&eacute;rios podem ser baseados em consultas de atributos (por exemplo, parcelas que est&atilde;o vazias) e rela&ccedil;&otilde;es (por exemplo, a 1 milha do rio). 
+            </p>
+            <br/>
+        </div>
+        <div id="FindCentroidsTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Encontrar Centróides</h2></td>
+                    <td>
+                    <img src="../images/GUID-75D9AF75-68C3-48BF-8062-D5499BD06978-web.png" class="titleImage" alt="Encontrar Centr&oacute;ides">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Encontra o centro representativo (centr&oacute;ide) para cada elemento de m&uacute;ltiplos pontos, de linha ou de &aacute;rea de entrada.
             </p>
             <br/>
         </div>
@@ -329,7 +374,7 @@
             </p>
             <br/>
         </div>
-    <div id="AnalyzePatternsCategory" class="regularsize">
+    <div id="AnalyzePatternsCategory" class="largesize">
         <h2>Analisar Modelos</h2>
         <hr/>
         <p>Estas ferramentas ajudam-no a identificar, quantificar, e visualizar modelos espaciais nos seus dados.  
@@ -339,6 +384,8 @@
                 <li> <b>Localizar Hot Spots</b> permite identificar clustering com relev&acirc;ncia estat&iacute;stica no padr&atilde;o espacial dos dados.
                 </li>
                 <li> <b>Encontrar Valores At&iacute;picos</b> determina se existem valores at&iacute;picos com relev&acirc;ncia estat&iacute;stica no padr&atilde;o espacial dos seus dados.
+                </li>
+                <li> <b>Encontrar Clusters de Ponto</b> encontra clusters de elementos de ponto em ru&iacute;do circundante com base na respetiva distribui&ccedil;&atilde;o espacial.
                 </li>
                 <li> <b>Interpolar Pontos</b> prev&ecirc; valores em novos locais baseados em medi&ccedil;&otilde;es encontradas numa colec&ccedil;&atilde;o de pontos.
                 </li>
@@ -365,9 +412,9 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Localizar Hot Spots</h2></td>
+                    <td><h2>Localizar Pontos Ativos</h2></td>
                     <td>
-                    <img src="../images/GUID-D4A59131-AC88-4C7A-85BA-67861D5C1CF8-web.png" class="titleImage" alt="Localizar Pontos de Incid&ecirc;ncia">
+                    <img src="../images/GUID-D4A59131-AC88-4C7A-85BA-67861D5C1CF8-web.png" class="titleImage" alt="Localizar Pontos Ativos">
                     </td>
                 </tr></tbody>
             </table>
@@ -388,6 +435,21 @@
             </table>
 <hr/>
             <p>Esta ferramenta cria um mapa que mostra quaisquer clusters e valores at&iacute;picos com relev&acirc;ncia estat&iacute;stica presentes nos dados. Utilize esta ferramenta para identificar elementos que t&ecirc;m valores que s&atilde;o significativamente diferentes dos valores vizinhos.  Pode utilizar esta ferramenta, por exemplo, para encontrar padr&otilde;es de despesa an&oacute;malos, determinar onde se encontram os limites mais acentuados entre riqueza e pobreza numa &aacute;rea de estudo ou determinar se existem condados nos Estados Unidos com n&iacute;veis de esperan&ccedil;a de vida excecionalmente reduzidos em compara&ccedil;&atilde;o com os respetivos estados vizinhos.
+            </p>
+            <br/>
+        </div>
+        <div id="FindPointClustersTool" class="regularsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Encontrar Clusters de Ponto</h2></td>
+                    <td>
+                    <img src="../images/GUID-025ADB1C-E4BF-4C8D-A35F-1D0E222627F9-web.png" class="titleImage" alt="Encontrar Clusters de Ponto">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Esta ferramenta deteta &aacute;reas em que os pontos se encontram concentrados e onde s&atilde;o separados por &aacute;reas vazias ou dispersas. Pontos que n&atilde;o pertencem a um cluster s&atilde;o rotulados como ru&iacute;do.
             </p>
             <br/>
         </div>
@@ -528,18 +590,20 @@
             </p>
             <br/>
         </div>
-    <div id="ManageDataCategory" class="regularsize">
+    <div id="ManageDataCategory" class="largesize">
         <h2>Gerir Dados</h2>
         <hr/>
         <p>Esta ferramenta &eacute; utilizada para a administra&ccedil;&atilde;o de dados geogr&aacute;ficos, e para conciliar os dados antes da an&aacute;lise.  
             <ul>
-                <li> <b>Dissolver Limites</b> funde &aacute;reas que partilham uma fronteira comum e um valor de atributo comum.
+                <li> <b>Dissolver Limites</b> funde &aacute;reas que partilham um limite comum e um valor de atributo comum.
                 </li>
-                <li> <b>Extrair Dados</b> cria novos conjuntos de dados extraindo elementos dos dados existentes.
+                <li> <b>Extrair Dados</b> cria novos conjuntos de dados extraindo elementos dos seus dados existentes.
                 </li>
-                <li> <b>Juntar Camadas</b> copia todos os elementos de duas ou mais camadas existentes para uma nova camada.
+                <li> <b>Gerar Tessela&ccedil;&otilde;es</b> cria tessela&ccedil;&otilde;es baseadas na extens&atilde;o dos seus dados.
                 </li>
-                <li> <b>Sobrepor Camadas</b> combina uma ou mais camadas numa camada individual. Pode pensar na sobreposi&ccedil;&atilde;o como um conjunto de mapas e cria&ccedil;&atilde;o de um &uacute;nico mapa que cont&eacute;m todas as informa&ccedil;&otilde;es encontradas nesse conjunto de mapas.
+                <li> <b>Fundir Camadas</b> copia todos os elementos de duas ou mais camadas existentes para uma nova camada.
+                </li>
+                <li> <b>Sobrepor Camadas</b> combina duas ou mais camadas numa camada individual.  Pode pensar na sobreposi&ccedil;&atilde;o como um conjunto de mapas e cria&ccedil;&atilde;o de um &uacute;nico mapa que cont&eacute;m todas as informa&ccedil;&otilde;es encontradas nesse conjunto de mapas.
                 </li>
             </ul>
             
@@ -562,7 +626,7 @@
             </p>
             <br/>
         </div>
-        <div id="ExtractDataTool" class="smallsize">
+        <div id="ExtractDataTool" class="regularsize">
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
@@ -575,7 +639,23 @@
 <hr/>
             <p>Cria um ficheiro zip, CSV ou KMZ de dados das suas camadas e uma &aacute;rea de interesse especificada por si.
             </p>
+            <p>A ferramenta Extrair Dados requer, pelo menos, uma camada export&aacute;vel. Caso n&atilde;o possua camadas export&aacute;veis em  Map Viewer Classic, ferramenta ser&aacute; desativada. </p>
             <p> 
+            </p>
+            <br/>
+        </div>
+        <div id="GenerateTessellationsTool" class="smallsize">
+            <table class="toolSummaryTable">
+                <thead></thead>
+                <tbody><tr>
+                    <td><h2>Gerar Tesselações</h2></td>
+                    <td>
+                    <img src="../images/GUID-7D6FF8CB-15F3-4051-9C57-46E6C3708788-web.png" class="titleImage" alt="Gerar Tessela&ccedil;&otilde;es">
+                    </td>
+                </tr></tbody>
+            </table>
+<hr/>
+            <p>Gera tessela&ccedil;&otilde;es sobre uma &aacute;rea de estudo baseada numa forma e tamanho espec&iacute;ficos.
             </p>
             <br/>
         </div>
@@ -583,14 +663,14 @@
             <table class="toolSummaryTable">
                 <thead></thead>
                 <tbody><tr>
-                    <td><h2>Juntar Camadas</h2></td>
+                    <td><h2>Unir Camadas</h2></td>
                     <td>
-                    <img src="../images/GUID-BDDD6517-4EE7-4EEC-AE15-15DD9B709131-web.png" class="titleImage" alt="Fundir Camadas">
+                    <img src="../images/GUID-BDDD6517-4EE7-4EEC-AE15-15DD9B709131-web.png" class="titleImage" alt="Juntar Camadas">
                     </td>
                 </tr></tbody>
             </table>
 <hr/>
-            <p>Copia elementos a partir de duas ou mais camadas existentes para uma nova camada, por exemplo:
+            <p>Copia elementos de duas ou mais camadas existentes para uma nova camada, por exemplo:
                 <ul>
                     <li>Eu tenho tr&ecirc;s camadas para a Inglaterra, Gales e Esc&oacute;cia, e eu quero uma &uacute;nica camada da Gr&atilde;-Bretanha. 
                     </li>
@@ -612,7 +692,7 @@
                 </tr></tbody>
             </table>
 <hr/>
-            <p>A ferramenta Sobrepor permite combinar uma ou mais camadas numa camada individual. Pode imaginar a sobreposi&ccedil;&atilde;o como o ato de olhar para uma pilha de mapas e criar um s&oacute; mapa que cont&eacute;m todas as informa&ccedil;&otilde;es encontradas na pilha, por exemplo:
+            <p>A ferramenta Sobrepor permite combinar uma ou mais camadas numa camada individual. Pode imaginar a sobreposi&ccedil;&atilde;o como o ato de olhar para uma pilha de mapas e criar um s&oacute; mapa que cont&eacute;m toda a informa&ccedil;&atilde;o encontrada na pilha, por exemplo:
                 <ul>
                     <li>Que parcelas est&atilde;o dentro da &aacute;rea de inunda&ccedil;&atilde;o de 100 anos? (Dentro &eacute; apenas outra maneira de dizer sobre.)
                           
